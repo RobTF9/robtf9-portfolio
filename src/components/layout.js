@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
+import Archive from "./archive";
 import "./layout.css";
 
 const Layout = ({ children }) => {
@@ -41,6 +42,7 @@ const Layout = ({ children }) => {
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
+        <Archive />
       </div>
     </>
   );
