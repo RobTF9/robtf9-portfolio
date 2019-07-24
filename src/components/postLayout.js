@@ -1,5 +1,6 @@
 import React from "react";
-import Layout from './layout';
+import { graphql } from "gatsby";
+import Layout from "./layout";
 
 const postLayout = () => {
   return (
@@ -8,5 +9,18 @@ const postLayout = () => {
     </Layout>
   );
 };
+
+export const query = graphql`
+  query ProjectQuery {
+    markdownRemark(frontmatter: { slug: { eq: "/panasonic" } }) {
+      html
+      frontmatter {
+        title
+        date
+        slug
+      }
+    }
+  }
+`;
 
 export default postLayout;
