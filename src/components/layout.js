@@ -35,7 +35,6 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <h1>{data.site.siteMetadata.title}</h1>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with

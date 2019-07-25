@@ -4,7 +4,6 @@ date: "2019-07-25"
 title: "Panasonic"
 ---
 
-#Panasonic
 ##A global, brand and application design system
 
 ###Problem

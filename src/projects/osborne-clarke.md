@@ -4,7 +4,6 @@ date: "2019-07-22"
 title: "Osborne Clarke"
 ---
 
-#Osborne Clarke
 ##Creating a mobile first type system
 
 ###Problem

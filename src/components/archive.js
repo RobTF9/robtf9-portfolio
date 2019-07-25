@@ -31,7 +31,6 @@ const Archive = () => {
           return (
             <div key={project.node.frontmatter.slug}>
               <h4>{project.node.frontmatter.title}</h4>
-              <p>{project.node.excerpt}</p>
               <Link to={`/projects${project.node.frontmatter.slug}`}>
                 View project
               </Link>
