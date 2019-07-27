@@ -2,11 +2,11 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-
+import colors from "../shared/colors";
 import logo from "../images/gatsby-icon.png";
 
 const HeaderWrapper = styled.header`
-  background-color: #222222;
+  background-color: ${colors.black};
   margin-bottom: 1.45rem;
 
   div {
