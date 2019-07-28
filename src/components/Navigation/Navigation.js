@@ -4,19 +4,19 @@ import colors from "../../shared/colors";
 import NavLink from "./NavLink";
 
 const Navigation = ({ visible }) => (
-  <NavWrapper visible={visible}>
-    <ul>
+  <Nav visible={visible}>
+    <Container>
       <NavLink text="Projects" />
       <NavLink text="Experience" />
       <NavLink text="About" />
       <NavLink text="Contact" />
-    </ul>
-  </NavWrapper>
+    </Container>
+  </Nav>
 );
 
 export default Navigation;
 
-const NavWrapper = styled.nav`
+const Nav = styled.nav`
   position: fixed;
   transform: translateY(${({ visible }) => (!visible ? -15 : 0)}rem);
   z-index: 2;
@@ -27,14 +27,13 @@ const NavWrapper = styled.nav`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   min-height: 15rem;
-
   transition: transform 0.3s ease-in-out;
+`;
 
-  ul {
-    grid-column: 3 / 11;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+const Container = styled.ul`
+  grid-column: 3 / 11;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;

@@ -37,5 +37,6 @@ const CopyrightBar = styled.div`
 
   p {
     grid-column: 3 / 11;
+    padding: 0 1rem;
   }
 `;

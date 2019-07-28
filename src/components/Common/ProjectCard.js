@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import colors from "../../shared/colors";
 import { Link } from "gatsby";
 
 const ProjectCard = ({ client, title, slug, color }) => {
@@ -8,9 +9,11 @@ const ProjectCard = ({ client, title, slug, color }) => {
     <Card color={color}>
       <Container className="container">
         <Copy className="copy">
-          <h4>{client}</h4>
-          <h1>{title}</h1>
-          <Link to={`/projects/${slug}`}>Read more</Link>
+          <p>{client}</p>
+          <h2>{title}</h2>
+          <Link to={`/projects/${slug}`}>
+            <Button color={color}>Read more</Button>
+          </Link>
         </Copy>
         <div className="image"></div>
       </Container>
@@ -59,5 +62,22 @@ const Copy = styled.div`
 
   h4 {
     margin-bottom: 2rem;
+  }
+`;
+
+const Button = styled.button`
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  background-color: ${colors.white};
+  color: ${({ color }) => color};
+  padding: 2rem 4.5rem;
+  transform: translateY(0rem);
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+
+  ${Container}:hover & {
+    transform: translateY(-5rem);
+    opacity: 1;
   }
 `;
