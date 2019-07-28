@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "./layout";
+import Layout from "../Layout/Layout";
 
 const postLayout = ({ data }) => {
   return (
