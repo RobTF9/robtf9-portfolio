@@ -31,7 +31,6 @@ export default Layout;
 
 const Main = styled.main`
   position: relative;
-  width: 100vw;
   z-index: 0;
   padding: 0 1rem;
   margin-bottom: 60rem;

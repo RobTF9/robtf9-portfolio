@@ -4,6 +4,7 @@ date: "2019-07-25"
 client: "Panasonic"
 title: "An international design system."
 color: "#0062AF"
+image: "panasonic.png"
 ---
 
 Lorem ipsum dolor amet 8-bit food truck direct trade neutra copper mug put a bird on it poutine slow-carb sriracha iPhone. Pour-over synth pok pok pug vice gluten-free. Cornhole YOLO organic VHS woke viral selvage vinyl fashion axe swag tilde. Palo santo prism tumeric beard air plant ramps bitters plaid irony authentic.

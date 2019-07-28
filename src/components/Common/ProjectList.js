@@ -31,6 +31,7 @@ const ProjectList = () => {
           color={node.frontmatter.color}
           title={node.frontmatter.title}
           slug={node.frontmatter.slug}
+          image={node.frontmatter.image}
         />
       ))}
     </Container>

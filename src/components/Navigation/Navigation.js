@@ -20,12 +20,13 @@ const Nav = styled.nav`
   position: fixed;
   transform: translateY(${({ visible }) => (!visible ? -15 : 0)}rem);
   z-index: 2;
-  width: 100%;
+  width: calc(100% - 2rem);
   background-color: ${colors.blue};
   color: ${colors.white};
   padding: 0 1rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1rem;
   min-height: 15rem;
   transition: transform 0.3s ease-in-out;
 `;

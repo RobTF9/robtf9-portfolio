@@ -60,7 +60,7 @@ const Copy = styled.div`
   grid-column: 1;
   grid-row: 1;
 
-  h4 {
+  p {
     margin-bottom: 2rem;
   }
 `;

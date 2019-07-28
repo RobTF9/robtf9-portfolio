@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import colors from "../../shared/colors";
 
 const HomeHero = () => {
   const { placeholderImage } = useStaticQuery(graphql`
@@ -20,7 +21,9 @@ const HomeHero = () => {
     <Container>
       <Text>
         <h4>Robert Squires</h4>
-        <h1>I create user centred digital products &amp; interfaces.</h1>
+        <h1>
+          I create user centred digital products <span>&amp;</span> interfaces.
+        </h1>
       </Text>
       <Img className="image" fluid={placeholderImage.childImageSharp.fluid} />
     </Container>
@@ -39,15 +42,22 @@ const Container = styled.header`
     position: absolute !important;
     bottom: 0;
     right: 0;
-    width: calc((100% / 8) * 4);
+    width: 50%;
   }
 `;
 
 const Text = styled.div`
   position: relative;
-  width: calc((100% / 8) * 5);
+  width: 50%;
 
   h4 {
     margin-bottom: 2rem;
+    color: ${colors.blue};
+  }
+
+  h1 {
+    span {
+      color: ${colors.blue};
+    }
   }
 `;

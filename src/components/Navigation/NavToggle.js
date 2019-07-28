@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBars, FaArrowDown, FaArrowUp } from "react-icons/fa";
+import { FaBars, FaArrowUp } from "react-icons/fa";
 import styled from "styled-components";
 import colors from "../../shared/colors";
 
@@ -15,6 +15,7 @@ export default NavToggle;
 
 const Button = styled.button`
   position: fixed;
+  cursor: pointer;
   z-index: 5;
   display: flex;
   justify-content: center;
@@ -26,6 +27,6 @@ const Button = styled.button`
   height: 5.6rem;
   background-color: ${colors.blue};
   color: ${colors.white};
-  transform: translateY(${({ visible }) => (visible ? 4 : 0)}rem);
+  transform: translateY(${({ visible }) => (visible ? 4.5 : 0)}rem);
   transition: transform 0.3s ease-in-out;
 `;
