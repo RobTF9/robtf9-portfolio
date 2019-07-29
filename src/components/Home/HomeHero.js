@@ -7,7 +7,7 @@ import colors from "../../shared/colors";
 const HomeHero = () => {
   const { placeholderImage } = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "me.png" }) {
+      placeholderImage: file(relativePath: { eq: "rs-hero.png" }) {
         childImageSharp {
           fluid(maxWidth: 1300) {
             ...GatsbyImageSharpFluid
