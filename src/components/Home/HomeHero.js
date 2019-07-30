@@ -5,9 +5,9 @@ import Img from "gatsby-image";
 import colors from "../../shared/colors";
 
 const HomeHero = () => {
-  const { placeholderImage } = useStaticQuery(graphql`
+  const { file } = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "rs-hero.png" }) {
+      file(relativePath: { eq: "rs-hero.png" }) {
         childImageSharp {
           fluid(maxWidth: 1300) {
             ...GatsbyImageSharpFluid
@@ -25,7 +25,7 @@ const HomeHero = () => {
           I create user centred digital products <span>&amp;</span> interfaces.
         </h1>
       </Text>
-      <Img className="image" fluid={placeholderImage.childImageSharp.fluid} />
+      <Img className="image" fluid={file.childImageSharp.fluid} />
     </Container>
   );
 };

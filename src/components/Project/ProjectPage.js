@@ -2,9 +2,9 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../Layout/Layout";
 
-const postLayout = ({ data }) => {
+const postLayout = ({ data, location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <h1>{data.markdownRemark.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </Layout>
