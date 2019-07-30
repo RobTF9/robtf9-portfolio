@@ -4,7 +4,7 @@ import styled from "styled-components";
 import colors from "../../shared/colors";
 import { Link } from "gatsby";
 
-const ProjectCard = ({ client, title, slug, color }) => {
+const ProjectCard = ({ client, title, slug, color, image }) => {
   return (
     <Card color={color}>
       <Container className="container">

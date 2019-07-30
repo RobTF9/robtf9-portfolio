@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const LISTING_QUERY = graphql`
   query ProjectListing {
-    allMarkdownRemark(limit: 4) {
+    allMarkdownRemark(limit: 5) {
       edges {
         node {
           frontmatter {
@@ -13,6 +13,7 @@ const LISTING_QUERY = graphql`
             client
             slug
             color
+            featuredimage
           }
         }
       }
@@ -31,7 +32,7 @@ const ProjectList = () => {
           color={node.frontmatter.color}
           title={node.frontmatter.title}
           slug={node.frontmatter.slug}
-          image={node.frontmatter.image}
+          image={node.frontmatter.featuredimage}
         />
       ))}
     </Container>
