@@ -3,6 +3,7 @@ date: 2019-07-30T19:07:24.917Z
 client: Morgan Materials
 title: An industry leading marketing website
 color: '#68cae2'
+slug: /morgan-materials
 featuredimage: /img/material_design-wallpaper-3840x2400-1-.jpg
 ---
 Lorem ipsum dolor amet bitters polaroid artisan authentic shaman. Bicycle rights pop-up letterpress subway tile wolf hammock pug cred jean shorts. Mustache helvetica palo santo asymmetrical slow-carb swag street art organic cardigan blue bottle adaptogen enamel pin leggings coloring book. Portland stumptown cornhole, jean shorts messenger bag vinyl af. Small batch sustainable green juice chicharrones hot chicken 90's DIY ugh jean shorts cred food truck. Beard freegan lomo offal biodiesel vexillologist taxidermy austin plaid.
