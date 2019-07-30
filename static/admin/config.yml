@@ -18,4 +18,5 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Color", name: "color", widget: "string" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }

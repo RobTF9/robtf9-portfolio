@@ -16,10 +16,9 @@ const ProjectCard = ({ client, title, slug, color, image }) => {
             <Button color={color}>Read more</Button>
           </Link>
         </Copy>
-
-        <div className="image">
-          <Img fluid={image} />
-        </div>
+        <Image>
+          <Img style={{}} fluid={image} />
+        </Image>
       </Container>
     </Card>
   );
@@ -34,11 +33,25 @@ ProjectCard.propTypes = {
 
 export default ProjectCard;
 
+const Image = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .gatsby-image-wrapper {
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+`;
+
 const Card = styled.article`
   position: relative;
   background-color: ${props => props.color};
   margin-bottom: 15rem;
   padding-top: 40%;
+  overflow: hidden;
 
   &:nth-of-type(2n) {
     .container {
