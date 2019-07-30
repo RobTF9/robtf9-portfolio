@@ -13,7 +13,13 @@ const LISTING_QUERY = graphql`
             client
             slug
             color
-            featuredimage
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 1300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
@@ -32,7 +38,7 @@ const ProjectList = () => {
           color={node.frontmatter.color}
           title={node.frontmatter.title}
           slug={node.frontmatter.slug}
-          image={node.frontmatter.featuredimage}
+          image={node.frontmatter.featuredimage.childImageSharp.fluid}
         />
       ))}
     </Container>

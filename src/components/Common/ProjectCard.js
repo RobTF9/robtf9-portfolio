@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import colors from "../../shared/colors";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 
 const ProjectCard = ({ client, title, slug, color, image }) => {
   return (
@@ -15,7 +16,10 @@ const ProjectCard = ({ client, title, slug, color, image }) => {
             <Button color={color}>Read more</Button>
           </Link>
         </Copy>
-        <div className="image"></div>
+
+        <div className="image">
+          <Img fluid={image} />
+        </div>
       </Container>
     </Card>
   );
