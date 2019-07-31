@@ -16,7 +16,7 @@ const LISTING_QUERY = graphql`
             featuredimage {
               childImageSharp {
                 fluid(maxWidth: 1300) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }
