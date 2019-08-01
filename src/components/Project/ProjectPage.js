@@ -3,17 +3,16 @@ import { graphql } from "gatsby";
 import Layout from "../Layout/Layout";
 import styled from "styled-components";
 import Img from "gatsby-image";
+// import ProjectCard from "../Common/ProjectCard";
 
 const postLayout = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  const { edges } = data.allSitePage;
+  const { edges } = data.allMarkdownRemark;
   const projects = edges.filter(edge => {
-    return (
-      edge.node.path.includes("/projects/") &&
-      edge.node.path !== "/projects/" &&
-      edge.node.path !== `/projects${frontmatter.slug}`
-    );
+    return edge.node.frontmatter.slug !== `${frontmatter.slug}`;
   });
+  console.log(projects);
+
   return (
     <Layout>
       <Hero color={frontmatter.color}>
@@ -25,7 +24,7 @@ const postLayout = ({ data }) => {
       </Hero>
       <Body dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       {projects.map(({ node }) => {
-        return <p key={node.id}>{node.path.substring(10)}</p>;
+        return <p key={node.frontmatter.slug}>{node.frontmatter.client}</p>;
       })}
     </Layout>
   );
@@ -49,11 +48,22 @@ export const query = graphql`
         }
       }
     }
-    allSitePage {
+    allMarkdownRemark {
       edges {
         node {
-          path
-          id
+          frontmatter {
+            title
+            client
+            slug
+            color
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 1300) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
         }
       }
     }
