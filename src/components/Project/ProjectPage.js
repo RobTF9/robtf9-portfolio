@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../Layout/Layout";
 import styled from "styled-components";
 import Img from "gatsby-image";
@@ -23,9 +23,9 @@ const postLayout = ({ data }) => {
         <Img fluid={frontmatter.featuredimage.childImageSharp.fluid} />
       </Hero>
       <Body dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-      {projects.map(({ node }) => {
-        return <p key={node.frontmatter.slug}>{node.frontmatter.client}</p>;
-      })}
+      {/* {projects.map(({ node }) => {
+        return <Link key={node.frontmatter.slug}>{node.frontmatter.client}</Link>;
+      })} */}
     </Layout>
   );
 };
