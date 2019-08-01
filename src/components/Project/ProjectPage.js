@@ -6,6 +6,14 @@ import Img from "gatsby-image";
 
 const postLayout = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
+  const { edges } = data.allSitePage;
+  const projects = edges.filter(edge => {
+    return (
+      edge.node.path.includes("/projects/") &&
+      edge.node.path !== "/projects/" &&
+      edge.node.path !== `/projects${frontmatter.slug}`
+    );
+  });
   return (
     <Layout>
       <Hero color={frontmatter.color}>
@@ -16,6 +24,9 @@ const postLayout = ({ data }) => {
         <Img fluid={frontmatter.featuredimage.childImageSharp.fluid} />
       </Hero>
       <Body dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      {projects.map(({ node }) => {
+        return <p key={node.id}>{node.path.substring(10)}</p>;
+      })}
     </Layout>
   );
 };
@@ -35,6 +46,14 @@ export const query = graphql`
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }
+        }
+      }
+    }
+    allSitePage {
+      edges {
+        node {
+          path
+          id
         }
       }
     }
