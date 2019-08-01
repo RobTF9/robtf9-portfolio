@@ -3,12 +3,13 @@ module.exports = {
     title: `Robert Squires - Portfolio`,
     description: `The portfolio of design genius Robert Squires`,
     author: `@gatsbyjs`,
+    siteUrl: `https://robertsquires.netlify.com/`,
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `uploads`,
+        name: `img`,
         path: `${__dirname}/static/img`,
       },
     },

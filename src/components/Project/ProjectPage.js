@@ -72,4 +72,10 @@ const Body = styled.article`
   p {
     margin-bottom: 5rem;
   }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+  }
 `;
