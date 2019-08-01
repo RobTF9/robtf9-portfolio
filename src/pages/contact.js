@@ -2,16 +2,16 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/Layout/SEO";
 
-const About = () => {
+const Contact = () => {
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="Contact" />
       <div>
-        <h1>About us</h1>
+        <h1>Contact</h1>
         <p>Hello I'm Rob</p>
       </div>
     </Layout>
   );
 };
 
-export default About;
+export default Contact;

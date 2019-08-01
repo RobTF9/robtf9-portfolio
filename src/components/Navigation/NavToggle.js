@@ -27,6 +27,6 @@ const Button = styled.button`
   height: 5.6rem;
   background-color: ${colors.blue};
   color: ${colors.white};
-  transform: translateY(${({ visible }) => (visible ? 4.5 : 0)}rem);
+  transform: translateY(${({ visible }) => (visible ? 2.5 : 0)}rem);
   transition: transform 0.3s ease-in-out;
 `;

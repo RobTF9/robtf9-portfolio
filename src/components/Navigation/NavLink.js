@@ -6,7 +6,7 @@ const NavLink = ({ text, to }) => {
   return (
     <li>
       <Link to={to}>
-        <h3>{text}</h3>
+        <h4>{text}</h4>
       </Link>
     </li>
   );

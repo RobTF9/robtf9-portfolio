@@ -1,13 +1,15 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../Layout/Layout";
 import styled from "styled-components";
 import Img from "gatsby-image";
-// import ProjectCard from "../Common/ProjectCard";
+import SEO from "../Layout/SEO";
 
 const postLayout = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
   const { edges } = data.allMarkdownRemark;
+
+  // This is how you the other projects array
   const projects = edges.filter(edge => {
     return edge.node.frontmatter.slug !== `${frontmatter.slug}`;
   });
@@ -15,6 +17,7 @@ const postLayout = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={frontmatter.client} />
       <Hero color={frontmatter.color}>
         <Copy>
           <h4>{frontmatter.client}</h4>

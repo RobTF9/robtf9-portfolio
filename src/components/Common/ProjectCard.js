@@ -4,6 +4,7 @@ import styled from "styled-components";
 import colors from "../../shared/colors";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
+import breakpoints from "../../shared/breakpoints";
 
 const ProjectCard = ({ client, title, slug, color, image }) => {
   return (
@@ -17,7 +18,7 @@ const ProjectCard = ({ client, title, slug, color, image }) => {
           </Link>
         </Copy>
         <Image>
-          <Img style={{}} fluid={image} />
+          <Img fluid={image} />
         </Image>
       </Container>
     </Card>
@@ -52,11 +53,24 @@ const Card = styled.article`
   margin-bottom: 15rem;
   padding-top: 40%;
   overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 
   &:nth-of-type(2n) {
     .container {
       .copy {
         grid-column: 2;
+      }
+    }
+  }
+
+  ${breakpoints.tablet} {
+    margin-bottom: 1rem;
+
+    &:nth-of-type(2n) {
+      .container {
+        .copy {
+          grid-column: 1;
+        }
       }
     }
   }
