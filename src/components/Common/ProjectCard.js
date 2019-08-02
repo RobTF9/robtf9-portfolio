@@ -6,19 +6,19 @@ import { Link } from "gatsby";
 import Img from "gatsby-image";
 import breakpoints from "../../shared/breakpoints";
 
-const ProjectCard = ({ client, title, slug, color, image }) => {
+const ProjectCard = ({ project }) => {
   return (
-    <Card color={color}>
+    <Card color={project.color}>
       <Container className="container">
         <Copy className="copy">
-          <p>{client}</p>
-          <h2>{title}</h2>
-          <Link to={`/projects/${slug}`}>
-            <Button color={color}>Read more</Button>
+          <p>{project.client}</p>
+          <h2>{project.title}</h2>
+          <Link to={`/projects/${project.slug}`}>
+            <Button color={project.color}>Read more</Button>
           </Link>
         </Copy>
         <Image>
-          <Img fluid={image} />
+          <Img fluid={project.featuredimage.childImageSharp.fluid} />
         </Image>
       </Container>
     </Card>
@@ -26,10 +26,7 @@ const ProjectCard = ({ client, title, slug, color, image }) => {
 };
 
 ProjectCard.propTypes = {
-  client: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  slug: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
+  project: PropTypes.object.isRequired,
 };
 
 export default ProjectCard;

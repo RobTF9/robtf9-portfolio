@@ -32,14 +32,7 @@ const ProjectList = () => {
   return (
     <Container>
       {allMarkdownRemark.edges.map(({ node }) => (
-        <ProjectCard
-          key={node.frontmatter.slug}
-          client={node.frontmatter.client}
-          color={node.frontmatter.color}
-          title={node.frontmatter.title}
-          slug={node.frontmatter.slug}
-          image={node.frontmatter.featuredimage.childImageSharp.fluid}
-        />
+        <ProjectCard key={node.frontmatter.slug} project={node.frontmatter} />
       ))}
     </Container>
   );
