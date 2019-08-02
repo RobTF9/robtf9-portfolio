@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import Navigation from "../Navigation/Navigation";
 import colors from "../../shared/colors";
 import "./styles/init.css";
@@ -15,6 +15,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Body visible={visible} />
       <Navigation visible={visible} />
       <NavToggle visible={visible} toggle={toggleNav} />
       <Main visible={visible}>
@@ -31,6 +32,15 @@ Layout.propTypes = {
 };
 
 export default Layout;
+
+const Body = createGlobalStyle`
+
+body {
+  background-color: ${colors.black};
+  overflow: ${({ visible }) => (visible ? `hidden` : `visible`)};
+}
+  
+`;
 
 const Main = styled.main`
   position: relative;

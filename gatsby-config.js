@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Robert Squires - Portfolio`,
-    description: `The portfolio of design genius Robert Squires`,
-    author: `@gatsbyjs`,
+    title: `Robert Squires`,
+    description: `My portfolio site.`,
+    author: `@robtf9`,
     siteUrl: `https://robertsquires.netlify.com/`,
   },
   plugins: [
@@ -32,11 +32,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `robert-squires-portfolio`,
+        short_name: `portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#222222`,
+        theme_color: `#222222`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`,
       },
