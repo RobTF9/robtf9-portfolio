@@ -34,12 +34,10 @@ Layout.propTypes = {
 export default Layout;
 
 const Body = createGlobalStyle`
-
-body {
-  background-color: ${colors.black};
-  overflow: ${({ visible }) => (visible ? `hidden` : `visible`)};
-}
-  
+  body {
+    background-color: ${colors.black};
+    overflow: ${({ visible }) => (visible ? `hidden` : `visible`)};
+  }
 `;
 
 const Main = styled.main`

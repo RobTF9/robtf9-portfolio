@@ -16,7 +16,7 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Client", name: "client", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Color", name: "color", widget: "string" }
+      - { label: "Color", name: "color", widget: color }
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
