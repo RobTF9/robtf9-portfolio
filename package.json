@@ -28,6 +28,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
+    "react-waypoint": "^9.0.2",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {

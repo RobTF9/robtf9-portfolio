@@ -26,6 +26,6 @@ const Button = styled.button`
   width: 4.4rem;
   height: 4.4rem;
   color: ${colors.white};
-  transform: translateY(${({ visible }) => (visible ? 90 : 0)}vh);
+  transform: translateY(${({ visible }) => (visible ? 87.5 : 0)}vh);
   transition: transform 0.6s ease-in-out;
 `;

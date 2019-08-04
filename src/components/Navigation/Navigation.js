@@ -36,11 +36,8 @@ const Container = styled.ul`
   grid-column: 1 / -1;
   display: flex;
   margin-right: 3rem;
+  margin-top: 4rem;
   flex-direction: column;
   justify-content: start;
   text-align: right;
-
-  li {
-    padding: 4rem 0;
-  }
 `;
