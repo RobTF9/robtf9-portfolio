@@ -19,7 +19,7 @@ export default Navigation;
 
 const Nav = styled.nav`
   position: fixed;
-  transform: translateY(${({ visible }) => (!visible ? -10 : 0)}rem);
+  transform: translateY(${({ visible }) => (!visible ? -100 : 0)}vh);
   z-index: 2;
   width: 100%;
   background-color: ${colors.blue};
@@ -27,15 +27,20 @@ const Nav = styled.nav`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 1rem;
-  min-height: 10rem;
-  transition: transform 0.3s ease-in-out;
+  height: 100vh;
+  transition: transform 0.6s ease-in-out;
   box-shadow: inset 0 -0.5rem 1rem rgba(0, 0, 0, 0.2);
 `;
 
 const Container = styled.ul`
-  grid-column: 3 / 11;
+  grid-column: 1 / -1;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  margin-right: 3rem;
+  flex-direction: column;
+  justify-content: start;
+  text-align: right;
+
+  li {
+    padding: 4rem 0;
+  }
 `;

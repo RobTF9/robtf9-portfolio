@@ -21,12 +21,11 @@ const Button = styled.button`
   justify-content: center;
   align-content: center;
   font-size: 2.4rem;
-  top: 0;
-  left: 1rem;
-  width: 5.6rem;
-  height: 5.6rem;
-  background-color: ${colors.blue};
+  top: 1rem;
+  right: 1rem;
+  width: 4.4rem;
+  height: 4.4rem;
   color: ${colors.white};
-  transform: translateY(${({ visible }) => (visible ? 2.5 : 0)}rem);
-  transition: transform 0.3s ease-in-out;
+  transform: translateY(${({ visible }) => (visible ? 90 : 0)}vh);
+  transition: transform 0.6s ease-in-out;
 `;

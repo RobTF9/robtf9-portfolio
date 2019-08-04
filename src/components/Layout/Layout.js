@@ -43,14 +43,14 @@ const Body = createGlobalStyle`
 const Main = styled.main`
   position: relative;
   z-index: 0;
-  margin-bottom: 60rem;
+  margin-bottom: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 1rem;
-  background-color: ${colors.black};
   color: ${colors.white};
-  transform: translateY(${({ visible }) => (visible ? 10 : 0)}rem);
-  transition: all 0.3s ease-in-out;
+  background-color: ${colors.black};
+  transform: translateY(${({ visible }) => (visible ? 100 : 0)}vh);
+  transition: all 0.6s ease-in-out;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 `;
 

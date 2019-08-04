@@ -74,8 +74,8 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Roboto`,
-            variants: [`300`, `500`, `900`],
+            family: `Source Sans Pro`,
+            variants: [`300`, `400`, `600`, `900`],
           },
         ],
       },

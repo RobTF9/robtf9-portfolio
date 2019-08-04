@@ -42,6 +42,6 @@ export default ProjectList;
 
 const Container = styled.div`
   position: relative;
-  grid-column: 3 / 11;
+  grid-column: 1 / -1;
   display: grid;
 `;

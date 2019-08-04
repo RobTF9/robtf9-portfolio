@@ -25,7 +25,7 @@ const HomeHero = () => {
           I create user centred digital products <span>&amp;</span> interfaces.
         </h1>
       </Text>
-      <Img className="image" fluid={file.childImageSharp.fluid} />
+      <Img fluid={file.childImageSharp.fluid} />
     </Container>
   );
 };
@@ -34,24 +34,23 @@ export default HomeHero;
 
 const Container = styled.header`
   position: relative;
-  grid-column: 3 / 11;
+  grid-column: 1 / -1;
   height: 70vh;
-  margin-top: 25vh;
+  margin: 25vh 3rem 0rem 3rem;
 
-  .image {
+  .gatsby-image-wrapper {
     position: absolute !important;
     bottom: 0;
     right: 0;
-    width: 50%;
+    width: 80%;
   }
 `;
 
 const Text = styled.div`
   position: relative;
-  width: 50%;
 
   h4 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: ${colors.blue};
   }
 

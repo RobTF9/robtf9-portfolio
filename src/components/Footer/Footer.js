@@ -27,7 +27,7 @@ const Container = styled.footer`
   position: fixed;
   bottom: 0;
   width: 100vw;
-  height: 60rem;
+  height: 100vh;
   z-index: -1;
   background-color: ${colors.blue};
   color: ${colors.white};
@@ -40,15 +40,15 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 1rem;
-  padding: 0 1rem;
+  padding: 0 3rem;
 `;
 
 const UsefulLinks = styled.ul`
-  padding-top: 10rem;
-  grid-column: 3 / 7;
+  padding-top: 8rem;
+  grid-column: 1 / -1;
 
   * {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 `;
 
@@ -64,7 +64,7 @@ const CopyrightBar = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 
   p {
-    grid-column: 3 / 11;
-    padding: 0 1rem;
+    grid-column: 1 / 11;
+    padding: 0 3rem;
   }
 `;
