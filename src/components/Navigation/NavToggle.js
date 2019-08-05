@@ -2,10 +2,16 @@ import React from "react";
 import { FaBars, FaArrowUp } from "react-icons/fa";
 import styled from "styled-components";
 import colors from "../../shared/colors";
+import { useSpring, animated, config } from "react-spring";
 
 const NavToggle = ({ toggle, visible }) => {
+  const animation = useSpring({
+    transform: `translateY(${visible ? 87.5 : 0}vh)`,
+    config: config.slow,
+  });
+
   return (
-    <Button visible={visible} onClick={toggle}>
+    <Button style={animation} onClick={toggle}>
       {visible ? <FaArrowUp /> : <FaBars />}
     </Button>
   );
@@ -13,7 +19,7 @@ const NavToggle = ({ toggle, visible }) => {
 
 export default NavToggle;
 
-const Button = styled.button`
+const Button = styled(animated.button)`
   position: fixed;
   cursor: pointer;
   z-index: 5;
@@ -26,6 +32,4 @@ const Button = styled.button`
   width: 4.4rem;
   height: 4.4rem;
   color: ${colors.white};
-  transform: translateY(${({ visible }) => (visible ? 87.5 : 0)}vh);
-  transition: transform 0.6s ease-in-out;
 `;

@@ -79,7 +79,7 @@ const Card = styled.article`
   position: relative;
   cursor: pointer;
   background-color: ${props => props.color};
-  margin: 0 3rem 8rem 3rem;
+  margin-bottom: 8rem;
   padding: 4rem 2rem;
 `;
 

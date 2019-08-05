@@ -9,7 +9,7 @@ const postLayout = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
   const { edges } = data.allMarkdownRemark;
 
-  // This is how you the other projects array
+  // This is how you get the other projects array
   const projects = edges.filter(edge => {
     return edge.node.frontmatter.slug !== `${frontmatter.slug}`;
   });
@@ -87,27 +87,29 @@ const Hero = styled.header`
     position: absolute !important;
     bottom: 0;
     right: 0;
-    width: 50%;
+    width: 100%;
     height: auto;
   }
 `;
 
 const Copy = styled.div`
-  grid-column: 3 / 11;
+  position: relative;
+  z-index: 2;
+  grid-column: 2 / 12;
   margin: 15rem 0;
 `;
 
 const Body = styled.article`
-  grid-column: 3 / 11;
-  margin: 15rem 0;
+  grid-column: 2 / 12;
+  margin: 5rem 0;
 
   p {
-    margin-bottom: 5rem;
+    margin-bottom: 2.5rem;
   }
 
   .image-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-column-gap: 1rem;
   }
 `;

@@ -2,24 +2,36 @@ import React from "react";
 import styled from "styled-components";
 import colors from "../../shared/colors";
 import NavLink from "./NavLink";
+import { useSpring, animated, config } from "react-spring";
 
-const Navigation = ({ visible }) => (
-  <Nav visible={visible}>
-    <Container>
-      <NavLink text="Home" to="/" />
-      <NavLink text="Projects" to="/projects" />
-      <NavLink text="Experience" to="/experience" />
-      <NavLink text="About" to="/about" />
-      <NavLink text="Contact" to="/contact" />
-    </Container>
-  </Nav>
-);
+const Navigation = ({ animation, visible }) => {
+  const subAnimation = useSpring({
+    transform: `translateY(${visible ? 0 : -50}vh)`,
+    opacity: visible ? 1 : 0,
+    config: config.molasses,
+  });
+
+  return (
+    <Nav
+      style={{
+        transform: animation.negative.interpolate(y => `translateY(${-y}vh)`),
+      }}
+    >
+      <Container style={subAnimation}>
+        <NavLink text="Home" to="/" />
+        <NavLink text="Projects" to="/projects" />
+        <NavLink text="Experience" to="/experience" />
+        <NavLink text="About" to="/about" />
+        <NavLink text="Contact" to="/contact" />
+      </Container>
+    </Nav>
+  );
+};
 
 export default Navigation;
 
-const Nav = styled.nav`
+const Nav = styled(animated.nav)`
   position: fixed;
-  transform: translateY(${({ visible }) => (!visible ? -100 : 0)}vh);
   z-index: 2;
   width: 100%;
   background-color: ${colors.blue};
@@ -28,11 +40,10 @@ const Nav = styled.nav`
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 1rem;
   height: 100vh;
-  transition: transform 0.6s ease-in-out;
   box-shadow: inset 0 -0.5rem 1rem rgba(0, 0, 0, 0.2);
 `;
 
-const Container = styled.ul`
+const Container = styled(animated.ul)`
   grid-column: 1 / -1;
   display: flex;
   margin-right: 3rem;

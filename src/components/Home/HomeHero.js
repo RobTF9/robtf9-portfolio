@@ -34,9 +34,9 @@ export default HomeHero;
 
 const Container = styled.header`
   position: relative;
-  grid-column: 1 / -1;
+  grid-column: 2 / 12;
   height: 70vh;
-  margin: 25vh 3rem 0rem 3rem;
+  margin-top: 25vh;
 
   .gatsby-image-wrapper {
     position: absolute !important;

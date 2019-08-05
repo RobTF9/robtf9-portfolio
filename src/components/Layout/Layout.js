@@ -7,19 +7,28 @@ import "./styles/init.css";
 import "./styles/type.css";
 import NavToggle from "../Navigation/NavToggle";
 import Footer from "../Footer/Footer";
+import { useSpring, animated, config } from "react-spring";
 
 const Layout = ({ children }) => {
   const [visible, setVisible] = useState(false);
-
   const toggleNav = () => setVisible(!visible);
+
+  const animation = useSpring({
+    positive: visible ? 100 : 0,
+    negative: visible ? 0 : 100,
+    config: config.slow,
+  });
 
   return (
     <>
       <Body visible={visible} />
-      <Navigation visible={visible} />
+      <Navigation visible={visible} animation={animation} />
       <NavToggle visible={visible} toggle={toggleNav} />
-      <Main visible={visible}>
-        <Overlay visible={visible} />
+      <Main
+        style={{
+          transform: animation.positive.interpolate(y => `translateY(${y}vh)`),
+        }}
+      >
         {children}
       </Main>
       <Footer />
@@ -40,7 +49,7 @@ const Body = createGlobalStyle`
   }
 `;
 
-const Main = styled.main`
+const Main = styled(animated.main)`
   position: relative;
   z-index: 0;
   margin-bottom: 100vh;
@@ -49,20 +58,5 @@ const Main = styled.main`
   grid-column-gap: 1rem;
   color: ${colors.white};
   background-color: ${colors.black};
-  transform: translateY(${({ visible }) => (visible ? 100 : 0)}vh);
-  transition: all 0.6s ease-in-out;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-`;
-
-const Overlay = styled.div`
-  pointer-events: ${({ visible }) => (visible ? `all` : `none`)};
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: ${colors.black};
-  opacity: ${({ visible }) => (visible ? 0.5 : 0)};
-  transition: opacity 0.3s ease-in-out;
 `;
