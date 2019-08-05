@@ -6,9 +6,17 @@ import { Link } from "gatsby";
 import Img from "gatsby-image";
 import { MdArrowForward } from "react-icons/md";
 import { Waypoint } from "react-waypoint";
+import { useSpring, animated, config } from "react-spring";
 
 const ProjectCard = ({ project }) => {
   const [visible, setVisible] = useState(false);
+
+  const animation = useSpring({
+    y: visible ? 5 : 0,
+    o: visible ? 1 : 0,
+    s: visible ? 1.2 : 1,
+    config: config.stiff,
+  });
 
   const handleEnter = () => {
     setVisible(true);
@@ -27,14 +35,31 @@ const ProjectCard = ({ project }) => {
         topOffset="49%"
       >
         <Card color={project.color}>
-          <Copy visible={visible} className="copy">
+          <Copy
+            style={{
+              transform: animation.y.interpolate(y => `translateY(-${y}rem)`),
+              opacity: animation.o,
+            }}
+          >
             <p>{project.client}</p>
             <h2>{project.title}</h2>
           </Copy>
-          <Image visible={visible}>
+          <Image
+            style={{
+              transform: animation.s.interpolate(s => `scale(${s})`),
+              opacity: animation.o,
+            }}
+          >
             <Img fluid={project.featuredimage.childImageSharp.fluid} />
           </Image>
-          <ReadMore visible={visible} color={project.color}>
+          <ReadMore
+            style={{
+              transform: animation.y.interpolate(
+                y => `translateY(${y + 0.6}rem)`
+              ),
+              opacity: animation.o,
+            }}
+          >
             Read more
             <MdArrowForward />
           </ReadMore>
@@ -58,18 +83,15 @@ const Card = styled.article`
   padding: 4rem 2rem;
 `;
 
-const Copy = styled.div`
+const Copy = styled(animated.div)`
   margin-bottom: 4rem;
-  transform: translateY(${({ visible }) => (visible ? -5 : 0)}rem);
-  transition: transform 0.3s ease;
 `;
 
-const Image = styled.div`
+const Image = styled(animated.div)`
   position: relative;
   width: 100%;
   padding-bottom: 100%;
   margin-bottom: 4rem;
-  transform: scale(1.2); /* Change this to occur on waypoint. */
 
   .gatsby-image-wrapper {
     position: absolute !important;
@@ -81,7 +103,7 @@ const Image = styled.div`
   }
 `;
 
-const ReadMore = styled.h4`
+const ReadMore = styled(animated.h4)`
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -90,8 +112,6 @@ const ReadMore = styled.h4`
   bottom: 4rem;
   color: ${colors.white};
   text-align: center;
-  transform: translateY(${({ visible }) => (visible ? 5.6 : 0)}rem);
-  transition: transform 0.3s ease;
 
   svg {
     font-size: 3.2rem;
