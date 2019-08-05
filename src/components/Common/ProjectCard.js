@@ -20,20 +20,26 @@ const ProjectCard = ({ project }) => {
 
   return (
     <Link to={`/projects/${project.slug}`}>
-      <Card color={project.color}>
-        <Copy visible={visible} className="copy">
-          <p>{project.client}</p>
-          <h2>{project.title}</h2>
-        </Copy>
-        <Image visible={visible}>
-          <Waypoint onEnter={handleEnter} onLeave={handleExit} />
-          <Img fluid={project.featuredimage.childImageSharp.fluid} />
-        </Image>
-        <ReadMore visible={visible} color={project.color}>
-          Read more
-          <MdArrowForward />
-        </ReadMore>
-      </Card>
+      <Waypoint
+        onEnter={handleEnter}
+        onLeave={handleExit}
+        bottomOffset="49%"
+        topOffset="49%"
+      >
+        <Card color={project.color}>
+          <Copy visible={visible} className="copy">
+            <p>{project.client}</p>
+            <h2>{project.title}</h2>
+          </Copy>
+          <Image visible={visible}>
+            <Img fluid={project.featuredimage.childImageSharp.fluid} />
+          </Image>
+          <ReadMore visible={visible} color={project.color}>
+            Read more
+            <MdArrowForward />
+          </ReadMore>
+        </Card>
+      </Waypoint>
     </Link>
   );
 };
@@ -55,6 +61,7 @@ const Card = styled.article`
 const Copy = styled.div`
   margin-bottom: 4rem;
   transform: translateY(${({ visible }) => (visible ? -5 : 0)}rem);
+  transition: transform 0.3s ease;
 `;
 
 const Image = styled.div`
@@ -62,13 +69,15 @@ const Image = styled.div`
   width: 100%;
   padding-bottom: 100%;
   margin-bottom: 4rem;
+  transform: scale(1.2); /* Change this to occur on waypoint. */
 
   .gatsby-image-wrapper {
     position: absolute !important;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 `;
 
@@ -82,6 +91,7 @@ const ReadMore = styled.h4`
   color: ${colors.white};
   text-align: center;
   transform: translateY(${({ visible }) => (visible ? 5.6 : 0)}rem);
+  transition: transform 0.3s ease;
 
   svg {
     font-size: 3.2rem;
