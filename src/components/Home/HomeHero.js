@@ -24,7 +24,7 @@ const HomeHero = () => {
     transform: "translateY(0rem)",
     from: { opacity: 0, transform: "translateY(15rem)" },
     config: config.molasses,
-    delay: 500,
+    delay: 250,
   });
 
   return (
@@ -46,7 +46,7 @@ const Container = styled(animated.header)`
   position: relative;
   grid-column: 2 / 12;
   height: 70vh;
-  margin-top: 25vh;
+  margin-top: 20vh;
 
   .gatsby-image-wrapper {
     position: absolute !important;
@@ -61,6 +61,7 @@ const Container = styled(animated.header)`
 
   ${breakpoints.desktop} {
     grid-column: 3 / 11;
+    margin-top: 25vh;
   }
 `;
 
