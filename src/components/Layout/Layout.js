@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Body visible={visible} />
-      <Navigation visible={visible} animation={animation} />
+      <Navigation visible={visible} animation={animation} toggle={toggleNav} />
       <NavToggle visible={visible} toggle={toggleNav} />
       <Main
         style={{

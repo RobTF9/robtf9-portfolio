@@ -4,10 +4,10 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import colors from "../../shared/colors";
 
-const NavLink = ({ text, to }) => {
+const NavLink = ({ text, to, toggle }) => {
   return (
     <Wrapper>
-      <Link to={to} activeClassName="active">
+      <Link onClick={toggle} to={to} activeClassName="active">
         <h4>{text}</h4>
         <span></span>
       </Link>

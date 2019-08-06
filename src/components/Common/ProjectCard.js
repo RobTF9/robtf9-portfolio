@@ -28,7 +28,7 @@ const ProjectCard = ({ project }) => {
   };
 
   return (
-    <Link to={`/projects/${project.slug}`}>
+    <Link to={`/projects${project.slug}`}>
       <Waypoint
         onEnter={handleEnter}
         onLeave={handleExit}

@@ -4,7 +4,7 @@ import colors from "../../shared/colors";
 import NavLink from "./NavLink";
 import { useSpring, animated, config } from "react-spring";
 
-const Navigation = ({ animation, visible }) => {
+const Navigation = ({ animation, visible, toggle }) => {
   const subAnimation = useSpring({
     transform: `translateY(${visible ? 0 : -50}vh)`,
     opacity: visible ? 1 : 0,
@@ -18,11 +18,11 @@ const Navigation = ({ animation, visible }) => {
       }}
     >
       <Container style={subAnimation}>
-        <NavLink text="Home" to="/" />
-        <NavLink text="Projects" to="/projects" />
-        <NavLink text="Experience" to="/experience" />
-        <NavLink text="About" to="/about" />
-        <NavLink text="Contact" to="/contact" />
+        <NavLink toggle={toggle} text="Home" to="/" />
+        <NavLink toggle={toggle} text="Projects" to="/projects" />
+        <NavLink toggle={toggle} text="Experience" to="/experience" />
+        <NavLink toggle={toggle} text="About" to="/about" />
+        <NavLink toggle={toggle} text="Contact" to="/contact" />
       </Container>
     </Nav>
   );

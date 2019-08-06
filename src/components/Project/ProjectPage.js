@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../Layout/Layout";
 import styled from "styled-components";
 import Img from "gatsby-image";
 import SEO from "../Layout/SEO";
@@ -16,7 +15,7 @@ const postLayout = ({ data }) => {
   console.log(projects);
 
   return (
-    <Layout>
+    <>
       <SEO title={frontmatter.client} />
       <Hero color={frontmatter.color}>
         <Copy>
@@ -29,7 +28,7 @@ const postLayout = ({ data }) => {
       {/* {projects.map(({ node }) => {
         return <Link key={node.frontmatter.slug}>{node.frontmatter.client}</Link>;
       })} */}
-    </Layout>
+    </>
   );
 };
 
