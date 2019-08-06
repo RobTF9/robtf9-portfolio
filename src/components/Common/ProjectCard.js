@@ -80,15 +80,9 @@ const Card = styled.article`
   position: relative;
   cursor: pointer;
   background-color: ${props => props.color};
-  margin-bottom: 8rem;
   padding: 4rem 2rem;
 
-  ${breakpoints.tablet} {
-    margin-bottom: 16rem;
-  }
-
   ${breakpoints.desktop} {
-    margin-bottom: 26rem;
     padding: 0 5rem 5rem 5rem;
     padding-bottom: 30%;
   }
@@ -130,7 +124,7 @@ const Image = styled(animated.div)`
   ${breakpoints.desktop} {
     position: absolute;
     top: 0;
-    right: 15rem;
+    right: 5rem;
     width: 50%;
     padding-bottom: 50%;
     margin-bottom: 0;

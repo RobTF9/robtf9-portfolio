@@ -45,8 +45,17 @@ const Container = styled.div`
   position: relative;
   grid-column: 2 / 12;
   display: grid;
+  grid-row-gap: 8rem;
+  margin-bottom: 8rem;
+
+  ${breakpoints.tablet} {
+    grid-row-gap: 16rem;
+    margin-bottom: 16rem;
+  }
 
   ${breakpoints.desktop} {
     grid-column: 3 / 11;
+    grid-row-gap: 24rem;
+    margin-bottom: 24rem;
   }
 `;
