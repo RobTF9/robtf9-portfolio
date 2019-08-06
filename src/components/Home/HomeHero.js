@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import colors from "../../shared/colors";
 import breakpoints from "../../shared/breakpoints";
+import { useSpring, animated, config } from "react-spring";
 
 const HomeHero = () => {
   const { file } = useStaticQuery(graphql`
@@ -18,8 +19,16 @@ const HomeHero = () => {
     }
   `);
 
+  const animation = useSpring({
+    opacity: 1,
+    transform: "translateY(0rem)",
+    from: { opacity: 0, transform: "translateY(15rem)" },
+    config: config.molasses,
+    delay: 500,
+  });
+
   return (
-    <Container>
+    <Container style={animation}>
       <Text>
         <h4>Robert Squires</h4>
         <h1>
@@ -33,7 +42,7 @@ const HomeHero = () => {
 
 export default HomeHero;
 
-const Container = styled.header`
+const Container = styled(animated.header)`
   position: relative;
   grid-column: 2 / 12;
   height: 70vh;
