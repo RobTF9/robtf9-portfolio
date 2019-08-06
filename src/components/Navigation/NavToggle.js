@@ -6,7 +6,7 @@ import { useSpring, animated, config } from "react-spring";
 
 const NavToggle = ({ toggle, visible }) => {
   const animation = useSpring({
-    transform: `translateY(${visible ? 87.5 : 0}vh)`,
+    transform: `translateY(${visible ? 60 : 0}vh)`,
     config: config.slow,
   });
 

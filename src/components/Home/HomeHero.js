@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import colors from "../../shared/colors";
+import breakpoints from "../../shared/breakpoints";
 
 const HomeHero = () => {
   const { file } = useStaticQuery(graphql`
@@ -43,11 +44,23 @@ const Container = styled.header`
     bottom: 0;
     right: 0;
     width: 80%;
+
+    ${breakpoints.desktop} {
+      width: 40%;
+    }
+  }
+
+  ${breakpoints.desktop} {
+    grid-column: 3 / 11;
   }
 `;
 
 const Text = styled.div`
   position: relative;
+
+  ${breakpoints.desktop} {
+    width: 60%;
+  }
 
   h4 {
     margin-bottom: 1rem;

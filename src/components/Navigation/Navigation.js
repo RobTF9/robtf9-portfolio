@@ -8,7 +8,7 @@ const Navigation = ({ animation, visible, toggle }) => {
   const subAnimation = useSpring({
     transform: `translateY(${visible ? 0 : -50}vh)`,
     opacity: visible ? 1 : 0,
-    config: config.molasses,
+    config: config.slow,
   });
 
   return (

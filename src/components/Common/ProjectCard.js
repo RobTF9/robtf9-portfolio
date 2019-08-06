@@ -42,7 +42,7 @@ const ProjectCard = ({ project }) => {
               opacity: animation.o,
             }}
           >
-            <p>{project.client}</p>
+            <h4>{project.client}</h4>
             <h2>{project.title}</h2>
           </Copy>
           <Image
@@ -86,13 +86,29 @@ const Card = styled.article`
   ${breakpoints.tablet} {
     margin-bottom: 16rem;
   }
+
+  ${breakpoints.desktop} {
+    margin-bottom: 26rem;
+    padding: 0 5rem 5rem 5rem;
+    padding-bottom: 30%;
+  }
 `;
 
 const Copy = styled(animated.div)`
   margin-bottom: 4rem;
 
+  h4 {
+    font-weight: 400;
+  }
+
   ${breakpoints.tablet} {
     width: 50%;
+  }
+
+  ${breakpoints.desktop} {
+    margin-bottom: 0;
+    padding-top: 4rem;
+    width: 40%;
   }
 `;
 
@@ -109,6 +125,15 @@ const Image = styled(animated.div)`
     min-width: 100%;
     max-width: 100%;
     height: auto;
+  }
+
+  ${breakpoints.desktop} {
+    position: absolute;
+    top: 0;
+    right: 15rem;
+    width: 50%;
+    padding-bottom: 50%;
+    margin-bottom: 0;
   }
 `;
 
@@ -128,5 +153,9 @@ const ReadMore = styled(animated.h4)`
     ${breakpoints.tablet} {
       font-size: 3.6rem;
     }
+  }
+
+  ${breakpoints.desktop} {
+    right: 5rem;
   }
 `;
