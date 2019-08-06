@@ -96,7 +96,7 @@ const Copy = styled(animated.div)`
   }
 
   ${breakpoints.tablet} {
-    width: 50%;
+    width: 80%;
   }
 
   ${breakpoints.desktop} {

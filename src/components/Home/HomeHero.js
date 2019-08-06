@@ -46,7 +46,7 @@ const Container = styled(animated.header)`
   position: relative;
   grid-column: 2 / 12;
   height: 70vh;
-  margin-top: 20vh;
+  margin-top: 15vh;
 
   .gatsby-image-wrapper {
     position: absolute !important;
@@ -59,8 +59,12 @@ const Container = styled(animated.header)`
     }
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.tablet} {
     grid-column: 3 / 11;
+    margin-top: 20vh;
+  }
+
+  ${breakpoints.desktop} {
     margin-top: 25vh;
   }
 `;
