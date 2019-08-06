@@ -7,6 +7,7 @@ import Img from "gatsby-image";
 import { MdArrowForward } from "react-icons/md";
 import { Waypoint } from "react-waypoint";
 import { useSpring, animated, config } from "react-spring";
+import breakpoints from "../../shared/breakpoints";
 
 const ProjectCard = ({ project }) => {
   const [visible, setVisible] = useState(false);
@@ -60,7 +61,7 @@ const ProjectCard = ({ project }) => {
               opacity: animation.o,
             }}
           >
-            Read more
+            <h4>Read more</h4>
             <MdArrowForward />
           </ReadMore>
         </Card>
@@ -81,10 +82,18 @@ const Card = styled.article`
   background-color: ${props => props.color};
   margin-bottom: 8rem;
   padding: 4rem 2rem;
+
+  ${breakpoints.tablet} {
+    margin-bottom: 16rem;
+  }
 `;
 
 const Copy = styled(animated.div)`
   margin-bottom: 4rem;
+
+  ${breakpoints.tablet} {
+    width: 50%;
+  }
 `;
 
 const Image = styled(animated.div)`
@@ -115,5 +124,9 @@ const ReadMore = styled(animated.h4)`
 
   svg {
     font-size: 3.2rem;
+
+    ${breakpoints.tablet} {
+      font-size: 3.6rem;
+    }
   }
 `;

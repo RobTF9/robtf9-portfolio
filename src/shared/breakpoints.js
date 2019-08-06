@@ -1,5 +1,5 @@
 const breakpoints = {
-  tablet: `@media (max-width: 1280px)`,
+  tablet: `@media (min-width: 600px)`,
 };
 
 export default breakpoints;
