@@ -15,7 +15,9 @@ const Hero = ({ children }) => {
 
   return (
     <Container style={animation}>
-      <Text>{children}</Text>
+      <Text>
+        <h1>{children}</h1>
+      </Text>
     </Container>
   );
 };

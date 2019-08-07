@@ -7,9 +7,7 @@ const ProjectPage = () => (
   <>
     <SEO title="Projects" />
     <Hero>
-      <h1>
-        Latest <span>projects.</span>
-      </h1>
+      Latest <span>projects.</span>
     </Hero>
     <ProjectList />
   </>
