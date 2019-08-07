@@ -1,11 +1,16 @@
 import React from "react";
 import SEO from "../components/Layout/SEO";
 import ProjectList from "../components/Common/ProjectList";
+import Hero from "../components/Common/Hero";
 
 const ProjectPage = () => (
   <>
     <SEO title="Projects" />
-    <h1>Latest projects</h1>
+    <Hero>
+      <h1>
+        Latest <span>projects.</span>
+      </h1>
+    </Hero>
     <ProjectList />
   </>
 );

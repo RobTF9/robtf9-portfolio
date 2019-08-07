@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import colors from "../../shared/colors";
+import breakpoints from "../../shared/breakpoints";
 
 const Footer = () => {
   return (
@@ -41,6 +42,10 @@ const Wrapper = styled.div`
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 1rem;
   padding: 0 3rem;
+
+  ${breakpoints.desktop} {
+    padding: 0;
+  }
 `;
 
 const UsefulLinks = styled.ul`
@@ -49,6 +54,11 @@ const UsefulLinks = styled.ul`
 
   * {
     margin-bottom: 4rem;
+  }
+
+  ${breakpoints.tablet} {
+    padding-top: 16rem;
+    grid-column: 3 / 11;
   }
 `;
 
@@ -66,5 +76,10 @@ const CopyrightBar = styled.div`
   p {
     grid-column: 1 / 11;
     padding: 0 3rem;
+
+    ${breakpoints.tablet} {
+      grid-column: 3 / 11;
+      padding: 0;
+    }
   }
 `;
