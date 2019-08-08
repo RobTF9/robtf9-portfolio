@@ -8,7 +8,10 @@ import { useSpring, animated, config } from "react-spring";
 const ProjectList = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query ProjectListing {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { fileAbsolutePath: { regex: "/projects/" } }
+      ) {
         edges {
           node {
             frontmatter {
