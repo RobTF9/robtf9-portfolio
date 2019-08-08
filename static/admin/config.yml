@@ -28,8 +28,8 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "From", name: "from", widget: "date" }
-      - { label: "To", name: "to", widget: "date" }
+      - { label: "From", name: "from", widget: "date", format: "MMM YY" }
+      - { label: "To", name: "to", widget: "date", format: "MMM YY" }
       - { label: "Current", name: "current", widget: "boolean", default: false }
       - { label: "Company", name: "company", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
