@@ -34,8 +34,8 @@ const ProjectList = () => {
   `);
 
   const animation = useSpring({
-    transform: "translateY(0rem)",
-    from: { transform: "translateY(15rem)" },
+    transform: "translate3d(0, 0rem, 0)",
+    from: { transform: "translate3d(0, 15rem, 0)" },
     config: config.molasses,
   });
 

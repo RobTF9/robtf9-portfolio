@@ -26,7 +26,9 @@ const Layout = ({ children }) => {
       <NavToggle visible={visible} toggle={toggleNav} />
       <Main
         style={{
-          transform: animation.positive.interpolate(y => `translateY(${y}vh)`),
+          transform: animation.positive.interpolate(
+            y => `translate3d(0, ${y}vh, 0)`
+          ),
         }}
       >
         {children}

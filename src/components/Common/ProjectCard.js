@@ -38,7 +38,9 @@ const ProjectCard = ({ project }) => {
         <Card color={project.color}>
           <Copy
             style={{
-              transform: animation.y.interpolate(y => `translateY(-${y}rem)`),
+              transform: animation.y.interpolate(
+                y => `translate3d(0, -${y}rem, 0)`
+              ),
               opacity: animation.o,
             }}
           >
@@ -56,7 +58,7 @@ const ProjectCard = ({ project }) => {
           <ReadMore
             style={{
               transform: animation.y.interpolate(
-                y => `translateY(${y + 0.6}rem)`
+                y => `translate3d(0, ${y + 0.6}rem, 0)`
               ),
               opacity: animation.o,
             }}

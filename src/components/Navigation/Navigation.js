@@ -6,7 +6,7 @@ import { useSpring, animated, config } from "react-spring";
 
 const Navigation = ({ animation, visible, toggle }) => {
   const subAnimation = useSpring({
-    transform: `translateY(${visible ? 0 : -50}vh)`,
+    transform: `translate3d(0, ${visible ? 0 : -50}vh, 0)`,
     opacity: visible ? 1 : 0,
     config: config.slow,
   });
@@ -14,7 +14,9 @@ const Navigation = ({ animation, visible, toggle }) => {
   return (
     <Nav
       style={{
-        transform: animation.negative.interpolate(y => `translateY(${-y}vh)`),
+        transform: animation.negative.interpolate(
+          y => `translate3d(0, ${-y}vh, 0)`
+        ),
       }}
     >
       <Container style={subAnimation}>
