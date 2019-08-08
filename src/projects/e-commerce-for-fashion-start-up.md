@@ -1,5 +1,5 @@
 ---
-date: 2019-07-30T20:59:52.818Z
+date: 2019-07-01T20:59:00.000Z
 client: MaiBee
 title: E-commerce for fashion start up.
 color: '#E1AE2A'
