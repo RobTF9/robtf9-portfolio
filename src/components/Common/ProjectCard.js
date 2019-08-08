@@ -28,47 +28,49 @@ const ProjectCard = ({ project }) => {
   };
 
   return (
-    <Link to={`/projects${project.slug}`}>
-      <Waypoint
-        onEnter={handleEnter}
-        onLeave={handleExit}
-        bottomOffset="49%"
-        topOffset="49%"
-      >
-        <Card color={project.color}>
-          <Copy
-            style={{
-              transform: animation.y.interpolate(
-                y => `translate3d(0, -${y}rem, 0)`
-              ),
-              opacity: animation.o,
-            }}
-          >
-            <h4>{project.client}</h4>
-            <h2>{project.title}</h2>
-          </Copy>
-          <Image
-            style={{
-              transform: animation.s.interpolate(s => `scale(${s})`),
-              opacity: animation.o,
-            }}
-          >
-            <Img fluid={project.featuredimage.childImageSharp.fluid} />
-          </Image>
-          <ReadMore
-            style={{
-              transform: animation.y.interpolate(
-                y => `translate3d(0, ${y + 0.6}rem, 0)`
-              ),
-              opacity: animation.o,
-            }}
-          >
-            <h4>Read more</h4>
-            <MdArrowForward />
-          </ReadMore>
-        </Card>
-      </Waypoint>
-    </Link>
+    project && (
+      <Link to={`/projects${project.slug}`}>
+        <Waypoint
+          onEnter={handleEnter}
+          onLeave={handleExit}
+          bottomOffset="49%"
+          topOffset="49%"
+        >
+          <Card color={project.color}>
+            <Copy
+              style={{
+                transform: animation.y.interpolate(
+                  y => `translate3d(0, -${y}rem, 0)`
+                ),
+                opacity: animation.o,
+              }}
+            >
+              <h4>{project.client}</h4>
+              <h2>{project.title}</h2>
+            </Copy>
+            <Image
+              style={{
+                transform: animation.s.interpolate(s => `scale(${s})`),
+                opacity: animation.o,
+              }}
+            >
+              <Img fluid={project.featuredimage.childImageSharp.fluid} />
+            </Image>
+            <ReadMore
+              style={{
+                transform: animation.y.interpolate(
+                  y => `translate3d(0, ${y + 0.6}rem, 0)`
+                ),
+                opacity: animation.o,
+              }}
+            >
+              Read more
+              <MdArrowForward />
+            </ReadMore>
+          </Card>
+        </Waypoint>
+      </Link>
+    )
   );
 };
 
@@ -126,9 +128,12 @@ const Image = styled(animated.div)`
   ${breakpoints.desktop} {
     position: absolute;
     top: 0;
-    right: 5rem;
-    width: 50%;
-    padding-bottom: 50%;
+    right: 0;
+    width: auto;
+    min-height: 100%;
+    max-height: 100%;
+    padding-right: 40%;
+    padding-bottom: 0%;
     margin-bottom: 0;
   }
 `;

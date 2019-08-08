@@ -13,7 +13,6 @@ const postLayout = ({ data }) => {
   const projects = edges.filter(edge => {
     return edge.node.frontmatter.slug !== `${frontmatter.slug}`;
   });
-  console.log(projects);
 
   return (
     <>
@@ -119,7 +118,7 @@ const Body = styled.article`
 
   .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     grid-column-gap: 1rem;
   }
 `;
