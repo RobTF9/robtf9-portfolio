@@ -1,5 +1,5 @@
 ---
-date: 2019-07-30T20:58:07.565Z
+date: 2019-07-02T20:58:00.000Z
 client: Osborne Clarke
 title: Mobile first typography.
 color: '#133142'
