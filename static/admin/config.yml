@@ -27,8 +27,9 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "From", name: "from", widget: "datetime" }
-      - { label: "To", name: "to", widget: "datetime" }
+      - { label: "From", name: "from", widget: "date" }
+      - { label: "To", name: "to", widget: "date" }
+      - { label: "Current", name: "current", widget: "boolean", default: false }
       - { label: "Company", name: "company", widget: "string" }
       - { label: "Role", name: "role", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
