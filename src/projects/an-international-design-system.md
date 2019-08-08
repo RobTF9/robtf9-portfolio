@@ -1,5 +1,5 @@
 ---
-date: 2019-07-30T20:51:05.724Z
+date: 2019-07-04T20:51:00.000Z
 client: Panasonic
 title: An international design system.
 color: '#0062AF'
