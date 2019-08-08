@@ -9,6 +9,6 @@ description: |-
   * UI design for client apps and websites.
   * Design system creation and implementation.
   * Presenting concepts and solutions to clients.
-  * User research and wireframe prototyping.
+  * UX research and wireframe prototyping.
 ---
 
