@@ -1,7 +1,9 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { useSpring, config } from "react-spring";
+import styled from "styled-components";
 import Container from "../Common/Container";
+import ExperienceCard from "./ExperienceCard";
 
 const ExperienceList = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
@@ -15,6 +17,10 @@ const ExperienceList = () => {
             frontmatter {
               title
               to
+              from
+              current
+              role
+              description
             }
           }
         }
@@ -29,15 +35,19 @@ const ExperienceList = () => {
   });
 
   return (
-    <Container style={animation}>
+    <ExperienceContainer style={animation}>
       {allMarkdownRemark.edges.map(({ node }) => (
-        <p key={node.frontmatter.title}>
-          {node.frontmatter.title}
-          {node.frontmatter.to}
-        </p>
+        <ExperienceCard
+          key={node.frontmatter.title}
+          experience={node.frontmatter}
+        />
       ))}
-    </Container>
+    </ExperienceContainer>
   );
 };
 
 export default ExperienceList;
+
+const ExperienceContainer = styled(Container)`
+  grid-gap: 3rem;
+`;
