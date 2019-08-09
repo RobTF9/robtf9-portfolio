@@ -4,10 +4,10 @@ import Container from "../components/Common/Container";
 import Hero from "../components/Common/Hero";
 
 const Contact = () => {
-  const submitHandler = event => {
-    event.preventDefault();
-    console.log("Submitted");
-  };
+  // const submitHandler = event => {
+  //   event.preventDefault();
+  //   console.log("Submitted");
+  // };
   return (
     <>
       <SEO title="Contact" />
@@ -20,8 +20,6 @@ const Contact = () => {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          action="#"
-          onSubmit={submitHandler}
         >
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="Contact Form" />
