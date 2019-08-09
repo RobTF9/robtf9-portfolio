@@ -1,9 +1,9 @@
 ---
-title: UI/UX Designer
+title: Unite Students
 from: 07 16
 to: 03 17
 current: false
-company: Unite Students
+role: UI/UX Designer
 description: |-
   * UI/UX design and research for MyUnite and corporate website.
   * Created new accesible colour pallete and icon set.
