@@ -1,30 +1,20 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import ProjectCard from "./ProjectCard";
 import { useSpring, config } from "react-spring";
 import Container from "../Common/Container";
 
-const ProjectList = () => {
+const ExperienceList = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
-    query ProjectListing {
+    query ExperienceListQuery {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { fileAbsolutePath: { regex: "/projects/" } }
+        sort: { order: ASC, fields: [frontmatter___to] }
+        filter: { fileAbsolutePath: { regex: "/experience/" } }
       ) {
         edges {
           node {
             frontmatter {
               title
-              client
-              slug
-              color
-              featuredimage {
-                childImageSharp {
-                  fluid(maxWidth: 1300) {
-                    ...GatsbyImageSharpFluid_tracedSVG
-                  }
-                }
-              }
+              to
             }
           }
         }
@@ -41,10 +31,13 @@ const ProjectList = () => {
   return (
     <Container style={animation}>
       {allMarkdownRemark.edges.map(({ node }) => (
-        <ProjectCard key={node.frontmatter.slug} project={node.frontmatter} />
+        <p key={node.frontmatter.title}>
+          {node.frontmatter.title}
+          {node.frontmatter.to}
+        </p>
       ))}
     </Container>
   );
 };
 
-export default ProjectList;
+export default ExperienceList;

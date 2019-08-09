@@ -31,5 +31,5 @@ collections:
       - { label: "From", name: "from", widget: "date", format: "MM YY" }
       - { label: "To", name: "to", widget: "date", format: "MM YY" }
       - { label: "Current", name: "current", widget: "boolean", default: false }
-      - { label: "Company", name: "company", widget: "string" }
+      - { label: "Role", name: "role", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
