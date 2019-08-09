@@ -7,8 +7,11 @@ import breakpoints from "../../shared/breakpoints";
 const ExperienceCard = ({ experience }) => {
   return (
     <Card>
-      <Company>{experience.title}</Company>
       <Role>{experience.role}</Role>
+      <Company>{experience.title}</Company>
+      <Date>
+        {experience.from} - {!experience.current ? experience.to : "Present"}
+      </Date>
       <p>{experience.description}</p>
     </Card>
   );
@@ -35,10 +38,12 @@ const Card = styled.article`
 `;
 
 const Company = styled.h4`
-  font-weight: 500;
   color: ${colors.blue};
 `;
 
-const Role = styled.h3`
-  margin-bottom: 1rem;
+const Role = styled.h3``;
+
+const Date = styled.h4`
+  margin-bottom: 2rem;
+  font-weight: 400;
 `;

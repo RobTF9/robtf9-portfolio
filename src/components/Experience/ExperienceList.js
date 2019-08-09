@@ -9,7 +9,7 @@ const ExperienceList = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query ExperienceListQuery {
       allMarkdownRemark(
-        sort: { order: ASC, fields: [frontmatter___to] }
+        sort: { order: DESC, fields: [frontmatter___to] }
         filter: { fileAbsolutePath: { regex: "/experience/" } }
       ) {
         edges {

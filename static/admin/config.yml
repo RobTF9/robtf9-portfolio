@@ -32,4 +32,5 @@ collections:
       - { label: "To", name: "to", widget: "date", format: "MM YY" }
       - { label: "Current", name: "current", widget: "boolean", default: false }
       - { label: "Role", name: "role", widget: "string" }
+      - { label: "Order", name: "order", widget: "number" }
       - { label: "Description", name: "description", widget: "markdown" }
