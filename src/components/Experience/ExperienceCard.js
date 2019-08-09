@@ -24,12 +24,9 @@ ExperienceCard.propTypes = {
 export default ExperienceCard;
 
 const Card = styled.article`
-  background-color: ${colors.white};
-  color: ${colors.black};
   position: relative;
   cursor: pointer;
-  padding: 2rem;
-  padding-bottom: 4rem;
+  padding: 2rem 0;
 
   ${breakpoints.desktop} {
     padding: 0 5rem 5rem 5rem;
@@ -39,11 +36,13 @@ const Card = styled.article`
 
 const Company = styled.h4`
   color: ${colors.blue};
+  font-weight: 600;
 `;
 
-const Role = styled.h3``;
+const Role = styled.h4``;
 
 const Date = styled.h4`
   margin-bottom: 2rem;
   font-weight: 400;
+  font-style: italic;
 `;
