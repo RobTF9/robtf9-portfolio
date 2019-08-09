@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import colors from "../../shared/colors";
-import breakpoints from "../../shared/breakpoints";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -27,11 +26,6 @@ const Card = styled.article`
   position: relative;
   cursor: pointer;
   padding: 2rem 0;
-
-  ${breakpoints.desktop} {
-    padding: 0 5rem 5rem 5rem;
-    padding-bottom: 30%;
-  }
 `;
 
 const Company = styled.h4`

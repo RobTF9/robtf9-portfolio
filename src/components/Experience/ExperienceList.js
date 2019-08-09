@@ -4,6 +4,7 @@ import { useSpring, config } from "react-spring";
 import styled from "styled-components";
 import Container from "../Common/Container";
 import ExperienceCard from "./ExperienceCard";
+import breakpoints from "../../shared/breakpoints";
 
 const ExperienceList = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
@@ -51,4 +52,13 @@ export default ExperienceList;
 
 const ExperienceContainer = styled(Container)`
   grid-gap: 3rem;
+
+  ${breakpoints.tablet} {
+    grid-gap: 3rem;
+  }
+
+  ${breakpoints.desktop} {
+    grid-gap: 3rem;
+    grid-column: 7 / 11;
+  }
 `;
