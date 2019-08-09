@@ -23,14 +23,30 @@ const About = () => {
       </Hero>
       <AboutContainer style={animation}>
         <h4>
-          Originally trained as a graphic designer, it’s where my keen eye for
-          visual design and typography originated.
+          By day I work as a UI/UX designer with a focus on creating compelling
+          interactions. I spend my free time working on full-stack development
+          projects to broaden my knowledge.
         </h4>
         <p>
-          After finishing my degree in 2014 I jumped head first into the digital
-          industry learning all I could about from a variety of intern,
-          freelance and permanent positions. Take a look at my CV if you want to
-          see the full picture.
+          I originally trained as a graphic designer, studying at the Arts
+          University Bournemouth. My time here gave me a great foundation in
+          layout, hierarchy and visual design.
+        </p>
+        <p>
+          It’s also where my keen eye for typography originated. After finishing
+          my degree in 2014 I jumped head first into the digital industry
+          learning all I could about the world of user centred design and
+          research from a variety of intern, freelance and permanent positions.
+        </p>
+        <p>
+          It’s also where my keen eye for typography originated. After finishing
+          my degree in 2014 I jumped head first into the digital industry
+          learning all I could about the world of user centred design and
+          research from a variety of intern, freelance and permanent positions.
+        </p>
+        <p>
+          Take a look at my <Link to="/experience">experience</Link> if you want
+          to see the full picture.
         </p>
         <p>
           Five years later my day job is at renowned Bristol agency Proctor +
@@ -38,9 +54,11 @@ const About = () => {
           typical day. I could be working on anything from design systems for
           international companies, ux optimisation, or interaction design.
           Outside of work I like to challenge myself by working on full stack
-          freelance projects or learning new skills. If that sounds like someone
-          you’d like to collaborate with then
-          <Link to="/contact"> get in touch.</Link>
+          freelance projects or learning new skills.
+        </p>
+        <p>
+          If that sounds like someone you’d like to collaborate with then{" "}
+          <Link to="/contact">get in touch.</Link>
         </p>
       </AboutContainer>
     </>
@@ -51,7 +69,6 @@ export default About;
 
 const AboutContainer = styled(Container)`
   grid-gap: 3rem;
-  padding-bottom: 20vh;
 
   ${breakpoints.tablet} {
     grid-gap: 3rem;
