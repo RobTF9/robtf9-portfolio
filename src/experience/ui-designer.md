@@ -4,6 +4,9 @@ from: 03 18
 to: 10 18
 current: false
 role: UI Designer
-description: "* UI/UX design overhaul of payment journeys.\r\n* Creation of pattern library UI kit.\n* Interaction design to enhance user experience.\n* Design and development of animated display adverts.\r\n* Conducted user testing of journeys and competitors."
+description: >-
+  UI/UX design overhaul of payment journeys. Creation of pattern library UI kit.
+  Interaction design to enhance user experience. Design and development of
+  animated display adverts. Conducted user testing of journeys and competitors.
 ---
 
