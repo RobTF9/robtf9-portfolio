@@ -1,9 +1,9 @@
 ---
-title: Digital Designer
+title: Proctor + Stevenson
 from: 10 18
 to: 08 19
 current: true
-company: Proctor + Stevenson
+role: Digital Designer
 description: |-
   * Interaction design and code prototyping.
   * UI design for client apps and websites.
