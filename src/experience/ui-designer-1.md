@@ -1,5 +1,5 @@
 ---
-title: UI Designer
+title: UI/UX Designer
 from: 03 17
 to: 03 18
 current: false
