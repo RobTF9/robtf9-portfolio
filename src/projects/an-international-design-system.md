@@ -11,14 +11,3 @@ slug: /panasonic
 Lyft cornhole fingerstache, DIY literally hammock pinterest man braid. Tote bag migas shabby chic raw denim whatever. Chillwave biodiesel sustainable, tofu brooklyn seitan quinoa. Authentic banjo austin, street art synth direct trade hoodie letterpress fingerstache hashtag vaporware kinfolk try-hard gochujang. Chillwave scenester shoreditch subway tile bicycle rights, humblebrag forage prism helvetica art party portland bushwick listicle truffaut venmo.
 
 Lyft cornhole fingerstache, DIY literally hammock pinterest man braid. Tote bag migas shabby chic raw denim whatever. Chillwave biodiesel sustainable, tofu brooklyn seitan quinoa. Authentic banjo austin, street art synth direct trade hoodie letterpress fingerstache hashtag vaporware kinfolk try-hard gochujang. Chillwave scenester shoreditch subway tile bicycle rights, humblebrag forage prism helvetica art party portland bushwick listicle truffaut venmo.
-
-<div class="image-grid">
-
-![one](/img/material_design-wallpaper-3840x2400-1-.jpg)
-
-![two](/img/material_design-wallpaper-3840x2400-1-.jpg)
-
-![three](/img/material_design-wallpaper-3840x2400-1-.jpg)
-
-</div>
-
