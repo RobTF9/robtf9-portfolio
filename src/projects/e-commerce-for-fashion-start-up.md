@@ -1,9 +1,9 @@
 ---
 date: 2019-07-01T20:59:00.000Z
 client: MaiBee
-title: E-commerce for fashion start up.
+title: Mobile e-commerce for fashion start up.
 color: '#E1AE2A'
-featuredimage: /img/maibee.png
+featuredimage: /img/maibee-cover-image.png
 slug: /maibee
 ---
 ![maibee-first image](/img/material_design-wallpaper-3840x2400-1-.jpg)
