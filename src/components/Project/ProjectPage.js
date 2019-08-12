@@ -51,7 +51,7 @@ export const query = graphql`
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 1300) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -71,7 +71,7 @@ export const query = graphql`
             featuredimage {
               childImageSharp {
                 fluid(maxWidth: 1300) {
-                  ...GatsbyImageSharpFluid_tracedSVG
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

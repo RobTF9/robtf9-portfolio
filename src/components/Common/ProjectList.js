@@ -21,7 +21,7 @@ const ProjectList = () => {
               featuredimage {
                 childImageSharp {
                   fluid(maxWidth: 1300) {
-                    ...GatsbyImageSharpFluid_tracedSVG
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
