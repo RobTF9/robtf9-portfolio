@@ -5,16 +5,7 @@ title: Mobile first typography.
 slug: /osborne-clarke
 color: '#133142'
 featuredimage: /img/oc-cover-image.png
-logo: /img/logo-panasonic.png
-type: /img/din-pro-cond-font-large-preview.png
-colours:
-  five: '#ffffff'
-  four: '#ffffff'
-  one: '#ffffff'
-  six: '#ffffff'
-  three: '#ffffff'
-  two: '#ffffff'
-outline: Problem that I had to solve with my genius.
+outline: Problem that I had to solve with my genius. blah blah
 ---
 Lorem ipsum dolor amet 8-bit food truck direct trade neutra copper mug put a bird on it poutine slow-carb sriracha iPhone. Pour-over synth pok pok pug vice gluten-free. Cornhole YOLO organic VHS woke viral selvage vinyl fashion axe swag tilde. Palo santo prism tumeric beard air plant ramps bitters plaid irony authentic.
 
