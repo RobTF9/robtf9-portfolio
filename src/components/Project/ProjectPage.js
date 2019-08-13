@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import { Link } from "gatsby";
 import Img from "gatsby-image";
 import SEO from "../Layout/SEO";
+import OtherProjects from "./OtherProjects";
 
 const postLayout = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
@@ -25,16 +25,7 @@ const postLayout = ({ data }) => {
         <Img fluid={frontmatter.featuredimage.childImageSharp.fluid} />
       </Hero>
       <Body dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-      {projects.map(({ node }) => {
-        return (
-          <Link
-            key={node.frontmatter.slug}
-            to={`/projects${node.frontmatter.slug}`}
-          >
-            {node.frontmatter.client}
-          </Link>
-        );
-      })}
+      <OtherProjects projects={projects} />
     </>
   );
 };
@@ -93,6 +84,7 @@ const Hero = styled.header`
   overflow: hidden;
 
   .gatsby-image-wrapper {
+    opacity: 0.25;
     position: absolute !important;
     bottom: 0;
     right: 0;
