@@ -23,15 +23,15 @@ collections:
       - { label: "Outline", name: "outline", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
       - label: "Colours"
-          name: "colours"
-          widget: "object"
-          fields: 
-            - {label: "One", name: "one", widget: "string"}
-            - {label: "Two", name: "two", widget: "string"}
-            - {label: "Three", name: "three", widget: "string"}
-            - {label: "Four", name: "four", widget: "string"}
-            - {label: "Five", name: "five", widget: "string"}
-            - {label: "Six", name: "six", widget: "string"}
+        name: "colours"
+        widget: "object"
+        fields:
+          - { label: "One", name: "one", widget: "string" }
+          - { label: "Two", name: "two", widget: "string" }
+          - { label: "Three", name: "three", widget: "string" }
+          - { label: "Four", name: "four", widget: "string" }
+          - { label: "Five", name: "five", widget: "string" }
+          - { label: "Six", name: "six", widget: "string" }
 
   - name: "experience"
     label: "Experience"
