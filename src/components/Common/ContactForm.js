@@ -4,7 +4,7 @@ import colors from "../../shared/colors";
 
 const ContactForm = ({ name }) => {
   return (
-    <div>
+    <>
       <form
         name={name}
         method="POST"
@@ -37,7 +37,7 @@ const ContactForm = ({ name }) => {
           <ButtonSpan />
         </Button>
       </form>
-    </div>
+    </>
   );
 };
 
