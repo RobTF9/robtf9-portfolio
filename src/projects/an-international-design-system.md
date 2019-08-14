@@ -1,13 +1,14 @@
 ---
 date: 2019-07-04T20:51:00.000Z
 client: Panasonic
-title: An international design system.
+title: An scalable design system.
 slug: /panasonic
 color: '#0062AF'
 featuredimage: /img/pansonic-cover-image.png
 outline: The problem was inconsistency and a lack of scalability. Blah blah
 ---
 ![Panasonic Logo](/img/logo-panasonic.png "Logo")
+
 
 ![Typography](/img/din-pro-cond-font-large-preview.png "Typography")
 
