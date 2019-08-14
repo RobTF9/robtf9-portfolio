@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import colors from "../../shared/colors";
 import breakpoints from "../../shared/breakpoints";
+import { Link } from "gatsby";
 
 const Footer = () => {
   return (
@@ -9,10 +10,21 @@ const Footer = () => {
       <Wrapper>
         <UsefulLinks>
           <h3>Useful links</h3>
-          <li>Projects</li>
-          <li>Experience</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link to="/experience">Experience</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
         </UsefulLinks>
       </Wrapper>
       <CopyrightBar>

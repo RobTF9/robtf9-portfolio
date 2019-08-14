@@ -1,11 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import colors from "../../shared/colors";
 import Img from "gatsby-image";
 import SEO from "../Layout/SEO";
 import OtherProjects from "./OtherProjects";
 import breakpoints from "../../shared/breakpoints";
+import Body from "./ProjectBody";
 
 const postLayout = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
@@ -112,62 +112,5 @@ const Copy = styled.div`
 
   ${breakpoints.desktop} {
     grid-column: 3 / 11;
-  }
-`;
-
-const Body = styled.article`
-  grid-column: 2 / 12;
-  margin: 5rem 0;
-
-  ${breakpoints.desktop} {
-    grid-column: 3 / 11;
-    margin: 15rem 0;
-  }
-
-  * {
-    box-shadow: none !important;
-  }
-
-  p {
-    margin-bottom: 2.5rem;
-  }
-
-  .OffsetContent {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    margin-bottom: 5rem;
-
-    p {
-      font-weight: 600;
-    }
-
-    img {
-      max-width: 30rem;
-    }
-
-    .title {
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      font-weight: 200;
-      border-bottom: 0.05rem ${colors.white} solid;
-    }
-
-    ${breakpoints.tablet} {
-      grid-template-columns: 1fr 3fr;
-      grid-column-gap: 2rem;
-      padding-top: 5rem;
-      margin-bottom: 10rem;
-      border-top: 0.05rem ${colors.white} solid;
-
-      .title {
-        border-bottom: none;
-        padding-right: 2rem;
-      }
-    }
-
-    ${breakpoints.desktop} {
-      grid-template-columns: 2fr 2fr;
-    }
   }
 `;

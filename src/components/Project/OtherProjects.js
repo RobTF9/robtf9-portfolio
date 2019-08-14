@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import breakpoints from "../../shared/breakpoints";
+import colors from "../../shared/colors";
 
 const OtherProjects = ({ projects }) => {
   return (
@@ -31,9 +32,16 @@ export default OtherProjects;
 const OtherProjectList = styled.div`
   grid-column: 2 / 12;
   margin-bottom: 5rem;
+  display: grid;
+
+  ${breakpoints.tablet} {
+    padding-top: 5rem;
+    border-top: 0.05rem ${colors.white} solid;
+  }
 
   ${breakpoints.desktop} {
     grid-column: 3 / 11;
+    grid-template-columns: 1fr 3fr;
   }
 `;
 
@@ -47,8 +55,15 @@ const Container = styled.div`
   }
 `;
 
-const Title = styled.h3`
+const Title = styled.p`
+  border-bottom: 0.05rem ${colors.white} solid;
+  padding-bottom: 0.5rem;
   margin-bottom: 2.5rem;
+  font-weight: 200;
+
+  ${breakpoints.tablet} {
+    border-bottom: none;
+  }
 `;
 
 const Card = styled.div`
@@ -56,5 +71,15 @@ const Card = styled.div`
   cursor: pointer;
   background-color: ${({ color }) => color};
   padding: 2rem;
+  padding-bottom: 4rem;
   margin-bottom: 2rem;
+
+  ${breakpoints.tablet} {
+    min-height: 10rem;
+    padding-bottom: 0;
+  }
+
+  ${breakpoints.desktop} {
+    min-height: 20rem;
+  }
 `;
