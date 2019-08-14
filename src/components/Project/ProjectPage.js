@@ -104,13 +104,11 @@ const Body = styled.article`
   grid-column: 2 / 12;
   margin: 5rem 0;
 
-  p {
-    margin-bottom: 2.5rem;
+  * {
+    box-shadow: none !important;
   }
 
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    grid-column-gap: 1rem;
+  p {
+    margin-bottom: 2.5rem;
   }
 `;
