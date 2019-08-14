@@ -13,7 +13,7 @@ outline: >-
 ---
 <div class="OffsetContent">
 
-<p>The brand</p>
+<p class="title">The brand</p>
 
 ![](/img/panasonic-brand-elements.svg)
 
