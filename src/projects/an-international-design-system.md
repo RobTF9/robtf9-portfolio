@@ -11,7 +11,13 @@ outline: >-
   the sites were not responsive and caused issues when trying to implement new
   features.
 ---
+<div class="OffsetContent">
+
+<p>The brand</p>
+
 ![](/img/panasonic-brand-elements.svg)
+
+</div>
 
 Lorem ipsum dolor amet 8-bit food truck direct trade neutra copper mug put a bird on it poutine slow-carb sriracha iPhone. Pour-over synth pok pok pug vice gluten-free. Cornhole YOLO organic VHS woke viral selvage vinyl fashion axe swag tilde. Palo santo prism tumeric beard air plant ramps bitters plaid irony authentic.
 
