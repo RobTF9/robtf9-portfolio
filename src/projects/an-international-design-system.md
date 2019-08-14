@@ -18,7 +18,7 @@ outline: >-
 ![](/img/panasonic-brand-elements.svg)
 
 </div>
-<div class="full-width-image">
+<div class="FullWidthImage">
 
 ![](/img/test-image.jpg)
 
