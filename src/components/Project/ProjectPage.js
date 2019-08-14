@@ -24,7 +24,15 @@ const postLayout = ({ data }) => {
         </Copy>
         <Img fluid={frontmatter.featuredimage.childImageSharp.fluid} />
       </Hero>
-      <Body dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      <Body>
+        <OffsetContent>
+          <p>The problem</p>
+          <h4>{frontmatter.outline}</h4>
+        </OffsetContent>
+        <div
+          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+        ></div>
+      </Body>
       <OtherProjects projects={projects} />
     </>
   );
@@ -39,6 +47,7 @@ export const query = graphql`
         client
         slug
         color
+        outline
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 1300) {
@@ -110,5 +119,17 @@ const Body = styled.article`
 
   p {
     margin-bottom: 2.5rem;
+  }
+`;
+
+const OffsetContent = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  margin-bottom: 5rem;
+
+  p {
+    margin-bottom: 0;
+    font-weight: 200;
   }
 `;
