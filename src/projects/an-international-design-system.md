@@ -1,11 +1,15 @@
 ---
 date: 2019-07-04T20:51:00.000Z
 client: Panasonic
-title: A scalable design system.
+title: 'A scalable, responsive design system.'
 slug: /panasonic
 color: '#0062AF'
 featuredimage: /img/pansonic-cover-image.png
-outline: The problem was inconsistency and a lack of scalability. Blah blah
+outline: >-
+  A lack of consistency, flexibility and scalability were leading to problems
+  with a number of Panasonics business sites. The old fashioned methodolgy meant
+  the sites were not responsive and caused issues when trying to implement new
+  features.
 ---
 ![](/img/panasonic-brand-elements.svg)
 
