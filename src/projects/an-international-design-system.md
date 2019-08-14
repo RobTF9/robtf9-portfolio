@@ -28,12 +28,9 @@ outline: >-
 <p class="title">The solution</p>
 
 <div class="content">
+We were tasked with improving the experience across three Panasonic B2B sites. <a href="https://biz.panasonic.com/">Panasonic Japan</a>, <a href="https://na.industrial.panasonic.com/"> Panasonic Industrial Devices Sales Company Of America</a> and Panasonic Business EU. This presented a unique challenge, creating a re-usable system of components that could be used within different brand and regional contexts.
 
-Lorem ipsum dolor amet 8-bit food truck direct trade neutra copper mug put a bird on it poutine slow-carb sriracha iPhone. Pour-over synth pok pok pug vice gluten-free. Cornhole YOLO organic VHS woke viral selvage vinyl fashion axe swag tilde. Palo santo prism tumeric beard air plant ramps bitters plaid irony authentic.
-
-Lyft cornhole fingerstache, DIY literally hammock pinterest man braid. Tote bag migas shabby chic raw denim whatever. Chillwave biodiesel sustainable, tofu brooklyn seitan quinoa. Authentic banjo austin, street art synth direct trade hoodie letterpress fingerstache hashtag vaporware kinfolk try-hard gochujang. Chillwave scenester shoreditch subway tile bicycle rights, humblebrag forage prism helvetica art party portland bushwick listicle truffaut venmo.
-
-Lyft cornhole fingerstache, DIY literally hammock pinterest man braid. Tote bag migas shabby chic raw denim whatever. Chillwave biodiesel sustainable, tofu brooklyn seitan quinoa. Authentic banjo austin, street art synth direct trade hoodie letterpress fingerstache hashtag vaporware kinfolk try-hard gochujang. Chillwave scenester shoreditch subway tile bicycle rights, humblebrag forage prism helvetica art party portland bushwick listicle truffaut venmo.
+We began by auditing all of the sites individually, searching for incositencies and making note of patterns that would be appropriate for re-use.
 
 </div>
 
