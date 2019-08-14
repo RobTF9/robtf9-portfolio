@@ -19,7 +19,7 @@ outline: >-
 
 </div>
 
-![](/img/pansonic-cover-image.png)
+![](/img/panasonic-image.jpg)
 
 <div class="OffsetContent">
 
