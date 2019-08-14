@@ -1,7 +1,7 @@
 ---
 date: 2019-07-04T20:51:00.000Z
 client: Panasonic
-title: An scalable design system.
+title: A scalable design system.
 slug: /panasonic
 color: '#0062AF'
 featuredimage: /img/pansonic-cover-image.png
