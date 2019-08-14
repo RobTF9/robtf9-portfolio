@@ -19,7 +19,7 @@ outline: >-
 
 </div>
 
-![](/img/panasonic-image.jpg)
+![](/img/test-image.jpg)
 
 <div class="OffsetContent">
 
