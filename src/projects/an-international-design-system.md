@@ -18,9 +18,11 @@ outline: >-
 ![](/img/panasonic-brand-elements.svg)
 
 </div>
+<div class="full-width-image">
 
 ![](/img/test-image.jpg)
 
+</div>
 <div class="OffsetContent">
 
 <p class="title">The solution</p>
