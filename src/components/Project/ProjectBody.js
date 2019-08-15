@@ -47,8 +47,8 @@ const Body = styled.article`
     }
 
     .title {
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 3rem;
       font-weight: 200;
       border-bottom: 0.05rem ${colors.white} solid;
     }

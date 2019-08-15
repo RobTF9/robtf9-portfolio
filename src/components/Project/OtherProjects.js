@@ -61,8 +61,8 @@ const Container = styled.div`
 
 const Title = styled.p`
   border-bottom: 0.05rem ${colors.white} solid;
-  padding-bottom: 0.5rem;
-  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 3rem;
   font-weight: 200;
 
   ${breakpoints.tablet} {
