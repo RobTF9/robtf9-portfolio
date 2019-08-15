@@ -101,6 +101,12 @@ const Hero = styled.header`
     right: 0;
     width: 100%;
     height: auto;
+
+    ${breakpoints.desktop} {
+      width: 50%;
+      top: 0;
+      margin: 0 auto;
+    }
   }
 `;
 
@@ -111,6 +117,6 @@ const Copy = styled.div`
   margin: 15rem 0;
 
   ${breakpoints.desktop} {
-    grid-column: 3 / 11;
+    grid-column: 3 / 9;
   }
 `;

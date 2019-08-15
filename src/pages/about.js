@@ -22,21 +22,17 @@ const About = () => {
         <span>About</span> me
       </Hero>
       <AboutContainer style={animation}>
-        <h4>
-          By day I work as a UI/UX designer with a focus on creating compelling
-          interactions. I spend my free time working on full-stack development
-          projects to broaden my knowledge.
-        </h4>
+        <p>
+          <strong>
+            By day I work as a UI/UX designer with a focus on creating
+            compelling interactions. I spend my free time working on full-stack
+            development projects to broaden my knowledge.
+          </strong>
+        </p>
         <p>
           I originally trained as a graphic designer, studying at the Arts
           University Bournemouth. My time here gave me a great foundation in
           layout, hierarchy and visual design.
-        </p>
-        <p>
-          It’s also where my keen eye for typography originated. After finishing
-          my degree in 2014 I jumped head first into the digital industry
-          learning all I could about the world of user centred design and
-          research from a variety of intern, freelance and permanent positions.
         </p>
         <p>
           It’s also where my keen eye for typography originated. After finishing

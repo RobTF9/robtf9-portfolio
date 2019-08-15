@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import breakpoints from "../../shared/breakpoints";
 import colors from "../../shared/colors";
+import Img from "gatsby-image";
 
 const OtherProjects = ({ projects }) => {
   return (
@@ -18,6 +19,9 @@ const OtherProjects = ({ projects }) => {
               <Card color={node.frontmatter.color}>
                 <p>{node.frontmatter.client}</p>
                 <h4>{node.frontmatter.title}</h4>
+                <Image
+                  fluid={node.frontmatter.featuredimage.childImageSharp.fluid}
+                />
               </Card>
             </Link>
           );
@@ -68,11 +72,18 @@ const Title = styled.p`
 
 const Card = styled.div`
   position: relative;
+  overflow: hidden;
   cursor: pointer;
   background-color: ${({ color }) => color};
   padding: 2rem;
   padding-bottom: 4rem;
   margin-bottom: 2rem;
+
+  p,
+  h4 {
+    position: relative;
+    z-index: 1;
+  }
 
   ${breakpoints.tablet} {
     min-height: 10rem;
@@ -82,4 +93,13 @@ const Card = styled.div`
   ${breakpoints.desktop} {
     min-height: 20rem;
   }
+`;
+
+const Image = styled(Img)`
+  position: absolute !important;
+  z-index: 0;
+  bottom: -65%;
+  right: -15%;
+  width: 100%;
+  opacity: 0.2;
 `;
