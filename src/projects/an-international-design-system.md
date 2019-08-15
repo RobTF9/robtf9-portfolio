@@ -15,7 +15,7 @@ outline: >-
 
 <p class="title">Logo</p>
 
-![](/img/logo-panasonic.png)
+![](/img/pansonic-logo.svg)
 
 </div>
 <div class="FullWidthImage">
