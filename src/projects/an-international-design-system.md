@@ -13,9 +13,9 @@ outline: >-
 ---
 <div class="OffsetContent">
 
-<p class="title">The brand</p>
+<p class="title">Logo</p>
 
-![](/img/panasonic-brand-elements.svg)
+![](/img/logo-panasonic.png)
 
 </div>
 <div class="FullWidthImage">
@@ -28,7 +28,6 @@ outline: >-
 <p class="title">The solution</p>
 
 <div class="content">
-
 
 We were tasked with improving the experience across three Panasonic B2B sites. <a href="https://biz.panasonic.com/">Panasonic Japan</a>, <a href="https://na.industrial.panasonic.com/"> Panasonic Industrial Devices Sales Company Of America</a> and Panasonic Business EU. This presented a unique challenge, creating a re-usable system of components that could be used within different brand and regional contexts.
 
