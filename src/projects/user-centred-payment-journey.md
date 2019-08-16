@@ -27,7 +27,7 @@ outline: Another problem I solved by being a legend. blah blah
 
 <p class="title">Palette</p>
 
-![](/img/panasonic-colours.svg)
+![](/img/rac-colours.svg)
 
 </div>
 <div class="FullWidthImage">
