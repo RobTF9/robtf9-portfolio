@@ -18,6 +18,14 @@ outline: >-
 ![](/img/pansonic-logo.svg)
 
 </div>
+
+<div class="OffsetContent">
+
+<p class="title">Typeface</p>
+
+![](/img/panasonic-typeface.svg)
+
+</div>
 <div class="FullWidthImage">
 
 ![](/img/test-image.jpg)
