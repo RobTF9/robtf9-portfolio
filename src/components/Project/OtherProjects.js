@@ -40,7 +40,7 @@ const OtherProjectList = styled.div`
 
   ${breakpoints.tablet} {
     padding-top: 5rem;
-    border-top: 0.05rem ${colors.white} solid;
+    border-top: 0.05rem ${colors.translucent} solid;
   }
 
   ${breakpoints.desktop} {
