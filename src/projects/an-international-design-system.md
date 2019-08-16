@@ -11,7 +11,7 @@ outline: >-
   the sites were not responsive and caused issues when trying to implement new
   features.
 ---
-<div class="OffsetContent">
+<div class="OffsetContent Logo">
 
 <p class="title">Logo</p>
 
