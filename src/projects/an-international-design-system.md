@@ -26,6 +26,14 @@ outline: >-
 ![](/img/panasonic-typeface.svg)
 
 </div>
+
+<div class="OffsetContent Colours">
+
+<p class="title">Palette</p>
+
+![](/img/panasonic-colours.svg)
+
+</div>
 <div class="FullWidthImage">
 
 ![](/img/test-image.jpg)
