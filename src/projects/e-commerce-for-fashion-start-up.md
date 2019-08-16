@@ -7,8 +7,44 @@ color: '#E1AE2A'
 featuredimage: /img/maibee-cover-image.png
 outline: There was a problem that I solved. Blah blah
 ---
-Lorem ipsum dolor amet 8-bit food truck direct trade neutra copper mug put a bird on it poutine slow-carb sriracha iPhone. Pour-over synth pok pok pug vice gluten-free. Cornhole YOLO organic VHS woke viral selvage vinyl fashion axe swag tilde. Palo santo prism tumeric beard air plant ramps bitters plaid irony authentic.
+<div class="OffsetContent Logo">
 
-Lyft cornhole fingerstache, DIY literally hammock pinterest man braid. Tote bag migas shabby chic raw denim whatever. Chillwave biodiesel sustainable, tofu brooklyn seitan quinoa. Authentic banjo austin, street art synth direct trade hoodie letterpress fingerstache hashtag vaporware kinfolk try-hard gochujang. Chillwave scenester shoreditch subway tile bicycle rights, humblebrag forage prism helvetica art party portland bushwick listicle truffaut venmo.
+<p class="title">Logo</p>
 
-Lyft cornhole fingerstache, DIY literally hammock pinterest man braid. Tote bag migas shabby chic raw denim whatever. Chillwave biodiesel sustainable, tofu brooklyn seitan quinoa. Authentic banjo austin, street art synth direct trade hoodie letterpress fingerstache hashtag vaporware kinfolk try-hard gochujang. Chillwave scenester shoreditch subway tile bicycle rights, humblebrag forage prism helvetica art party portland bushwick listicle truffaut venmo.
+![](/img/maibee-logo.webp)
+
+</div>
+
+<div class="OffsetContent">
+
+<p class="title">Typeface</p>
+
+![](/img/panasonic-typeface.svg)
+
+</div>
+
+<div class="OffsetContent Colours">
+
+<p class="title">Palette</p>
+
+![](/img/panasonic-colours.svg)
+
+</div>
+<div class="FullWidthImage">
+
+![](/img/test-image.jpg)
+
+</div>
+<div class="OffsetContent">
+
+<p class="title">The solution</p>
+
+<div class="content">
+
+We were tasked with improving the experience across three Panasonic B2B sites. <a href="https://biz.panasonic.com/">Panasonic Japan</a>, <a href="https://na.industrial.panasonic.com/"> Panasonic Industrial Devices Sales Company Of America</a> and Panasonic Business EU. This presented a unique challenge, creating a re-usable system of components that could be used within different brand and regional contexts.
+
+The objective was to create sites that had their own unique identity that represented their brand but that all shared a common component library and code base. This allowed the team to build a speed whilst minimising the cost of the project. This was achieved by first auditing all of the sites, highlighting inconsistencys and making note of patterns that would be suitable for re-use across the different front-ends. After we had gathered this information we created a component system that was divorced from the aesthetic and context from the individual 
+
+</div>
+
+</div>
