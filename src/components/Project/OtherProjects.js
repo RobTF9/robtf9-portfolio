@@ -40,6 +40,11 @@ const OtherProjectList = styled.div`
   border-top: 0.05rem ${colors.translucent} solid;
   padding-top: 1.5rem;
 
+  ${breakpoints.tablet} {
+    padding-top: 5rem;
+    grid-template-columns: 1fr 3fr;
+  }
+
   ${breakpoints.desktop} {
     grid-column: 3 / 11;
     grid-template-columns: 1fr 3fr;
