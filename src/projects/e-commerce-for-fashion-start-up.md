@@ -19,7 +19,7 @@ outline: There was a problem that I solved. Blah blah
 
 <p class="title">Typeface</p>
 
-![](/img/panasonic-typeface.svg)
+![](/img/maibee-typeface.svg)
 
 </div>
 
