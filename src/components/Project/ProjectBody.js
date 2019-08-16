@@ -45,7 +45,6 @@ const Body = styled.article`
 
     .title {
       padding-top: 1.5rem;
-      /* margin-bottom: 3rem; */
       font-weight: 200;
     }
 

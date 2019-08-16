@@ -37,11 +37,8 @@ const OtherProjectList = styled.div`
   grid-column: 2 / 12;
   margin-bottom: 5rem;
   display: grid;
-
-  ${breakpoints.tablet} {
-    padding-top: 5rem;
-    border-top: 0.05rem ${colors.translucent} solid;
-  }
+  border-top: 0.05rem ${colors.translucent} solid;
+  padding-top: 1.5rem;
 
   ${breakpoints.desktop} {
     grid-column: 3 / 11;
@@ -60,14 +57,9 @@ const Container = styled.div`
 `;
 
 const Title = styled.p`
-  border-bottom: 0.05rem ${colors.white} solid;
   padding-bottom: 1.5rem;
   margin-bottom: 3rem;
   font-weight: 200;
-
-  ${breakpoints.tablet} {
-    border-bottom: none;
-  }
 `;
 
 const Card = styled.div`
