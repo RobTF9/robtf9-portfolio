@@ -11,7 +11,7 @@ outline: There was a problem that I solved. Blah blah
 
 <p class="title">Logo</p>
 
-![](/img/maibee-logo.png)
+![](/img/maibe-logo.svg)
 
 </div>
 
