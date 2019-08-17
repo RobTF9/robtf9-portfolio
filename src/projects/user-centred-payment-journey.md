@@ -1,7 +1,7 @@
 ---
 date: 2019-07-03T20:51:00.000Z
 client: RAC
-title: User centred payment journey.
+title: A journey of understanding.
 slug: /rac
 color: '#EF6C00'
 featuredimage: /img/rac-cover-image.png
