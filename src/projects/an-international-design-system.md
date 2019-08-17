@@ -44,7 +44,7 @@ outline: >-
 </div>
 <div class="FullWidthImage">
 
-![](/img/test-image.jpg)
+![](/img/panasonic-resonsive-flat.png)
 
 </div>
 <div class="OffsetContent">
