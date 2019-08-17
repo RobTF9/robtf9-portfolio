@@ -52,7 +52,7 @@ export const query = graphql`
         outline
         featuredimage {
           childImageSharp {
-            fluid(maxWidth: 1300) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -72,7 +72,7 @@ export const query = graphql`
             color
             featuredimage {
               childImageSharp {
-                fluid(maxWidth: 1300) {
+                fluid(maxWidth: 1920) {
                   ...GatsbyImageSharpFluid
                 }
               }
