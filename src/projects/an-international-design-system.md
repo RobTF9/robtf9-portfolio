@@ -10,8 +10,7 @@ outline: >-
   presence that wasn’t responsive and was preventing them from implementing new
   innovative features to help them stand out in the industry. With very limited
   time and budget we had to deliver a web app that was accessible, responsive
-  and would allow PIDSA to scale and add new functionality, with ease, in the
-  future.
+  and would allow PIDSA to scale and add new functionality with ease.
 ---
 <div class="FullWidthImage">
 
@@ -53,13 +52,13 @@ outline: >-
 
 <div class="content">
 
-We had to start the design for this site from scratch, the old web site wasn’t up to standard so there was limited reuse from existing patterns. During customer research on our early prototypes we found users engaged more with the designs that focused on products, in particular used product imagery heavily, and used colour coding to aid with navigation emphasising which category tree the user was currently viewing. This information formed the basis for the visual design of the site and as you can see is an essential aspect of the design.
+As the old web site wasn’t up to standard there were limited opportunities for reuse from existing components, so we were starting from scratch in terms of both UI and assets. During customer research on our early prototypes we found users engaged more with the designs that focused on products, in particular those that used product imagery heavily. Users also responded well to the color coding emphasising which category tree they were currently viewing. This information formed the basis for the design system and the aesthetic of the UI.
 
-When delivering the design we took an atomic design based approach, making sure that all patterns were built up with flexibility to allow for maximum future reuse. This design methodology combined with the development approach has given us a robust design system that will, in future, allow us to build and implement new features a great speed without having to worry about generating entirely new unique designs.
+When designing the UI we took an atomic design based approach, making sure that all patterns were built up with flexibility to allow for maximum future reuse. This design methodology combined with the development approach has given us a robust design system that will, in future, allow us to build and implement new features a great speed without having to worry about generating entirely new unique designs. A great example of this is the upcoming parametric search feature, an incredibly complex addition has only taken two months to design, develop and test.
 
-With certain components we felt it was important to use mounting animations to introduce users to their functionality. We utilise a variety slider components to allow us to display large amounts of information so had these animate in from the side the user will be able to pull content from. Whilst creating these animations we paid close attention to easing and style so, when creating interactions for new features we would be consistent. Another aspect of interaction design I am currently working on are route transitions. Having interactions across different pages an areas of the site allow the users to create a better mental model of the navigation and help them to navigate through the site more fluidly.
+With certain components we felt it was important to use mounting animations to introduce users to their functionality. We utilise a variety of slider components to allow us to display large amounts of information. These animate in from the side the user will be able to pull content from. Whilst creating these animations we paid close attention to easing and style so, when creating interactions for new features, we would be consistent. Another aspect of interaction design I am currently working on are route transitions. Having interactions across different pages and areas of the site allow the users to create a better mental model of the navigation and help them to navigate through the site more fluidly.
 
-Overall this project has been a resounding success. The client is incredibly happy with what we have delivered and we have a fantastic design system in place for developing the site in the future.
+Overall this project has been a resounding success. The client is incredibly happy with what we have delivered and we have a fantastic design system in place for developing the site in the future. The website can be viewed <a href="https://na.industrial.panasonic.com/">here.</a>
 
 </div>
 
