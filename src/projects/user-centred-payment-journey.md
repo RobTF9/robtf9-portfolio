@@ -5,7 +5,13 @@ title: User centred payment journey.
 slug: /rac
 color: '#EF6C00'
 featuredimage: /img/rac-cover-image.png
-outline: Another problem I solved by being a legend. blah blah
+outline: >-
+  The RAC payment journey had to be bought in line with the new IDD regulations.
+  The general purpose of this regulation is to ensure that customers fully
+  understand the insurance products they purchase. The current journey already
+  had a very high conversion and the business were not keen to radically change.
+  Early research showed us that although people were buying the products none of
+  them could recall the details of their purchase.
 ---
 <div class="OffsetContent Logo">
 
@@ -41,9 +47,13 @@ outline: Another problem I solved by being a legend. blah blah
 
 <div class="content">
 
-We were tasked with improving the experience across three Panasonic B2B sites. <a href="https://biz.panasonic.com/">Panasonic Japan</a>, <a href="https://na.industrial.panasonic.com/"> Panasonic Industrial Devices Sales Company Of America</a> and Panasonic Business EU. This presented a unique challenge, creating a re-usable system of components that could be used within different brand and regional contexts.
+We began by conducting usability tests on the current RAC journey as well as major competitors. This helped us to identify not only where the RAC could improve but how the industry as a whole was failing it’s customers. A lack of understanding and logical flows were identified as the key flaws with most breakdown cover payment journeys. We rapidly prototyped and guerilla tested what we considered were viable solutions, this sparked the idea of conversational flow using either questions or statements to guide the user through the journey.
 
-The objective was to create sites that had their own unique identity that represented their brand but that all shared a common component library and code base. This allowed the team to build a speed whilst minimising the cost of the project. This was achieved by first auditing all of the sites, highlighting inconsistencys and making note of patterns that would be suitable for re-use across the different front-ends. After we had gathered this information we created a component system that was divorced from the aesthetic and context from the individual 
+The structure of the rest of the project was to work on two options for a week and then conduct a day of testing on the Friday. The team consisted of myself, one UI designer, one developer, two UX consultants and the technical lead. My role was to style the prototype with SCSS and introduce interactive elements with JavaScript all the while contributing to the UI design. This hands one approach meant we were essentially designing with code, it allowed us to tweak continually whilst letting the developer focus on the data and pricing model.
+
+After the first two weeks of testing we were seeing particularly good results with the questions route, people were able to fully list the details of the insurance products they had just purchased and we encountered very few usability issues. To view the project visit the RAC site and take a look at the breakdown cover payment journey. When the journey went live, not only did it meet IDD regulations but it also significantly outperformed the previous iteration. I was personally thanked by Dave Hobday CEO of the RAC for my contributions on this project.
+
+As I mentioned the breakdown cover journey is on the RAC site. However, the prototype I worked on is still active and can be viewed <a href="http://rac-idd.herokuapp.com/option-d-2a?paymentFrequency=1">here.</a>
 
 </div>
 
