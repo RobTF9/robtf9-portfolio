@@ -6,10 +6,12 @@ slug: /panasonic
 color: '#0062AF'
 featuredimage: /img/pansonic-cover-image.png
 outline: >-
-  A lack of consistency, flexibility and scalability were leading to problems
-  with a number of Panasonics business sites. The old fashioned methodolgy meant
-  the sites were not responsive and caused issues when trying to implement new
-  features.
+  PIDSA (Panasonic Industrial Devices Sales Company Of America) had a dated web
+  presence that wasn’t responsive and was preventing them from implementing new
+  innovative features to help them stand out in the industry. With very limited
+  time and budget we had to deliver a web app that was accessible, responsive
+  and would allow PIDSA to scale and add new functionality, with ease, in the
+  future.
 ---
 <div class="OffsetContent Logo">
 
@@ -45,9 +47,13 @@ outline: >-
 
 <div class="content">
 
-We were tasked with improving the experience across three Panasonic B2B sites. <a href="https://biz.panasonic.com/">Panasonic Japan</a>, <a href="https://na.industrial.panasonic.com/"> Panasonic Industrial Devices Sales Company Of America</a> and Panasonic Business EU. This presented a unique challenge, creating a re-usable system of components that could be used within different brand and regional contexts.
+We had to start the design for this site from scratch, the old web site wasn’t up to standard so there was limited reuse from existing patterns. During customer research on our early prototypes we found users engaged more with the designs that focused on products, in particular used product imagery heavily, and used colour coding to aid with navigation emphasising which category tree the user was currently viewing. This information formed the basis for the visual design of the site and as you can see is an essential aspect of the design.
 
-The objective was to create sites that had their own unique identity that represented their brand but that all shared a common component library and code base. This allowed the team to build a speed whilst minimising the cost of the project. This was achieved by first auditing all of the sites, highlighting inconsistencys and making note of patterns that would be suitable for re-use across the different front-ends. After we had gathered this information we created a component system that was divorced from the aesthetic and context from the individual 
+When delivering the design we took an atomic design based approach, making sure that all patterns were built up with flexibility to allow for maximum future reuse. This design methodology combined with the development approach has given us a robust design system that will, in future, allow us to build and implement new features a great speed without having to worry about generating entirely new unique designs.
+
+With certain components we felt it was important to use mounting animations to introduce users to their functionality. We utilise a variety slider components to allow us to display large amounts of information so had these animate in from the side the user will be able to pull content from. Whilst creating these animations we paid close attention to easing and style so, when creating interactions for new features we would be consistent. Another aspect of interaction design I am currently working on are route transitions. Having interactions across different pages an areas of the site allow the users to create a better mental model of the navigation and help them to navigate through the site more fluidly.
+
+Overall this project has been a resounding success. The client is incredibly happy with what we have delivered and we have a fantastic design system in place for developing the site in the future.
 
 </div>
 
