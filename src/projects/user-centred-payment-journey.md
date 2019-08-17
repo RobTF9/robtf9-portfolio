@@ -44,7 +44,7 @@ outline: >-
 </div>
 <div class="FullWidthImage">
 
-![](/img/test-image.jpg)
+![](/img/rac-desktop.jpg)
 
 </div>
 <div class="OffsetContent">
