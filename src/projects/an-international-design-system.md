@@ -13,6 +13,12 @@ outline: >-
   and would allow PIDSA to scale and add new functionality, with ease, in the
   future.
 ---
+<div class="FullWidthImage">
+
+![](/img/pansonic-tablet.jpg)
+
+</div>
+
 <div class="OffsetContent Logo">
 
 <p class="title">Logo</p>
