@@ -8,6 +8,6 @@ order: 1
 description: >-
   Interaction design and code prototyping. UI design for client apps and
   websites. Design system creation and implementation. Presenting concepts and
-  solutions to clients. UX research and wireframe prototyping.
+  solutions to clients. User research and wireframe prototyping.
 ---
 
