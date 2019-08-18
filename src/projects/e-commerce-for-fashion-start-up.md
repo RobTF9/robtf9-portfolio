@@ -36,9 +36,21 @@ outline: >-
 ![](/img/maibee-colours.svg)
 
 </div>
+
 <div class="FullWidthImage">
 
-![](/img/test-image.jpg)
+![](/img/maibee-mobile-1.jpg)
+
+</div>
+<div class="FullWidthImage">
+
+![](/img/maibee-combo.jpg)
+
+</div>
+
+<div class="FullWidthImage">
+
+![](/img/maibee-mobile-2.jpg)
 
 </div>
 <div class="OffsetContent">
