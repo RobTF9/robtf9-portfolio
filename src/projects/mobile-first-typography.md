@@ -42,6 +42,18 @@ outline: >-
 ![](/img/oc-combo.jpg)
 
 </div>
+
+<div class="FullWidthImage">
+
+![](/img/oc-combo-2.jpg)
+
+</div>
+
+<div class="FullWidthImage">
+
+![](/img/oc-mobile.jpg)
+
+</div>
 <div class="OffsetContent">
 
 <p class="title">The solution</p>
