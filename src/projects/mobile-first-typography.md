@@ -5,7 +5,14 @@ title: Mobile first typography.
 slug: /osborne-clarke
 color: '#133142'
 featuredimage: /img/oc-cover-image.png
-outline: Problem that I had to solve with my genius. blah blah
+outline: >-
+  Osborne Clarke were having a company wide re-position to present themselves as
+  industry leaders in digital transformation issues, this consisted of adding a
+  new section to the website and publishing a series of articles. From our
+  testing and analysis we found that people were not engaging with the content
+  on the current site so the primary objective was to not only implement the new
+  digital transformation section but also to engage users in content across the
+  site.
 ---
 <div class="OffsetContent Logo">
 
@@ -41,9 +48,11 @@ outline: Problem that I had to solve with my genius. blah blah
 
 <div class="content">
 
-We were tasked with improving the experience across three Panasonic B2B sites. <a href="https://biz.panasonic.com/">Panasonic Japan</a>, <a href="https://na.industrial.panasonic.com/"> Panasonic Industrial Devices Sales Company Of America</a> and Panasonic Business EU. This presented a unique challenge, creating a re-usable system of components that could be used within different brand and regional contexts.
+I started by using google analytics to get an idea of how people were using the website. One thing stood out to me;  people were engaging with content on large screens but on mobile and small tablets they were immediately bouncing from article pages. After taking a look myself I realised that a lot of the article headlines on mobile were taking up most of the page, making the reading experience on smaller screens incredibly awkward. All though this seemed like a relatively minor detail, introducing a responsive type system would be key to delivering a pleasant reading experience across all devices.
 
-The objective was to create sites that had their own unique identity that represented their brand but that all shared a common component library and code base. This allowed the team to build a speed whilst minimising the cost of the project. This was achieved by first auditing all of the sites, highlighting inconsistencys and making note of patterns that would be suitable for re-use across the different front-ends. After we had gathered this information we created a component system that was divorced from the aesthetic and context from the individual 
+The way the responsive type system works is to have a consistent body copy size across all devices and scale the the headers proportional to the resolution. This means a H1 on mobile would be much smaller than on desktop, whereas H5 would reduce less. This gives more striking contrast on larger screens where there is enough space to do so, but a more compact, refined reading experience on mobile. I presented my ideas back to the client and they were impressed with not only the thought that had gone into it but also could clearly see how such a small detail could have a big impact on the usability of the site.
+
+The type system was delivered as part of an atomic pattern library for Osborne Clarke’s digital products. As well as creating the type system I audited the whole site, an issue with the previous implementation was the number of unique patterns. When adding a new feature, section or microsite Osborne Clarke would usually start from scratch and create something that had very little in common, visually, with the rest of the site. I documented all the unique patterns that had the same function and visualised how the site would look if we introduced an atomic pattern library approach. Although this process will not be completed overnight the sites is currently being bought in line with my atomic design system and is already looking more consistent. The website can be viewed here.
 
 </div>
 
