@@ -3,7 +3,7 @@ title: Unite Students
 from: 07 16
 to: 03 17
 current: false
-role: UI/UX Designer
+role: UI Designer
 order: 4
 description: >-
   UI/UX design and research for MyUnite and corporate website. Created new
