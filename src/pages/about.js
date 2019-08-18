@@ -24,9 +24,9 @@ const About = () => {
       <AboutContainer style={animation}>
         <p>
           <strong>
-            By day I work as a UI/UX designer with a focus on creating
-            compelling interactions. I spend my free time working on full-stack
-            development projects to broaden my knowledge.
+            By day I work as a UI designer with a focus on creating compelling
+            interactions. I spend my free time working on full-stack development
+            projects to broaden my knowledge.
           </strong>
         </p>
         <p>
