@@ -1,7 +1,7 @@
 ---
 date: 2019-07-02T20:58:00.000Z
 client: Osborne Clarke
-title: Mobile first typography.
+title: A mobile first typography system.
 slug: /osborne-clarke
 color: '#133142'
 featuredimage: /img/oc-cover-image.png
