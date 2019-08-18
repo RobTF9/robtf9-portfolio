@@ -9,7 +9,7 @@ outline: >-
   MaiBee are a vintage clothing retailer run by sisters Liberty and Mathilda.
   They had gained a huge following on social media and their business was taking
   off. The only issue was the lack of a business website. They were selling
-  clothes on depop which, although working, was costing them a lot of money and
+  clothes on Depop which, although working, was costing them a lot of money and
   also didn’t allow them to have their own look which in the fashion industry is
   a must.
 ---
@@ -63,7 +63,7 @@ This was a full stack project; I consulted on the brand aesthetic, designed the 
 
 We had several meetings going back and forth discussing how we could achieve this aesthetic. It was eventually decided that I would work on the functional structure of the site and create a platform that allowed them to customise it as if it were an outfit, changing with the seasons and current trends. This solution has allowed MaiBee to express themselves and change their aesthetic when appropriate, all the while fitting within a brand system of components that still provides them with a recognisable identity. 
 
-When it came to the interface design and build I focused mostly on mobile devices. I had MaiBee announce the upcoming site on social media and added a landing page to view what sort of traffic the site would be receiving, mobile devices made up 99.17% of all traffic. This meant that the site had to be mobile focused and that led my design and build focus, everything is optimised so that entire journey from Instagram promotion to payment can be conducted seamlessly.
+When it came to the interface design and build I focused mostly on mobile devices. I had MaiBee announce the upcoming site on social media and added a landing page to view what sort of traffic the site would be receiving, mobile devices made up 99.17% of all traffic. This meant that the site had to be mobile focused and that led my design and build focus, everything is optimised so that the entire journey from Instagram promotion to payment can be conducted seamlessly.
 
 The web shop has been well received by their customers and MaiBee goes from strength to strength. The website can be viewed <a href="https://maibee.com/">here.</a>
 
