@@ -19,7 +19,7 @@ const About = () => {
     <>
       <SEO title="About" />
       <Hero>
-        <span>About</span> me
+        <span>About</span> me.
       </Hero>
       <AboutContainer style={animation}>
         <p>

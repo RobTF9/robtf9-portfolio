@@ -8,7 +8,7 @@ const Experience = () => {
     <>
       <SEO title="Experience" />
       <Hero>
-        My <span>experience</span>
+        My <span>experience.</span>
       </Hero>
       <ExperienceList />
     </>
