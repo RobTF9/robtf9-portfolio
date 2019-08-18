@@ -13,12 +13,6 @@ outline: >-
   Early research showed us that although people were buying the products none of
   them could recall the details of their purchase.
 ---
-<div class="FullWidthImage">
-
-![](/img/rac-mobile.jpg)
-
-</div>
-
 <div class="OffsetContent Logo">
 
 <p class="title">Logo</p>
@@ -40,6 +34,12 @@ outline: >-
 <p class="title">Palette</p>
 
 ![](/img/rac-colours.svg)
+
+</div>
+
+<div class="FullWidthImage">
+
+![](/img/rac-mobile.jpg)
 
 </div>
 <div class="FullWidthImage">
