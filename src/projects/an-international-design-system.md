@@ -41,9 +41,21 @@ outline: >-
 ![](/img/panasonic-desktop.jpg)
 
 </div>
+
 <div class="FullWidthImage">
 
-![](/img/panasonic-mobile.jpg)
+![](/img/panasonic-mobile-2.jpg)
+
+</div>
+
+<div class="FullWidthImage">
+
+![](/img/panasonic-desktop-2.jpg)
+
+</div>
+<div class="FullWidthImage">
+
+![](/img/panasonic-mobile-1.jpg)
 
 </div>
 <div class="OffsetContent">
