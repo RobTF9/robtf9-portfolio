@@ -8,7 +8,7 @@ const NavLink = ({ text, to, toggle }) => {
   return (
     <Wrapper>
       <Link onClick={toggle} to={to} activeClassName="active">
-        <h4>{text}</h4>
+        <p>{text}</p>
         <span></span>
       </Link>
     </Wrapper>

@@ -9,7 +9,7 @@ const Footer = () => {
     <Container>
       <Wrapper>
         <UsefulLinks>
-          <h3>Useful links</h3>
+          <h3>Navigation</h3>
           <li>
             <Link to="/">Home</Link>
           </li>
