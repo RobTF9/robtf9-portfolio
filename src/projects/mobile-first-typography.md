@@ -39,7 +39,7 @@ outline: >-
 </div>
 <div class="FullWidthImage">
 
-![](/img/oc-typography.jpg)
+![](/img/oc-combo.jpg)
 
 </div>
 <div class="OffsetContent">
