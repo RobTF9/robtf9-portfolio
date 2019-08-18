@@ -12,12 +12,6 @@ outline: >-
   time and budget we had to deliver a web app that was accessible, responsive
   and would allow PIDSA to scale and add new functionality with ease.
 ---
-<div class="FullWidthImage">
-
-![](/img/panasonic-desktop.jpg)
-
-</div>
-
 <div class="OffsetContent Logo">
 
 <p class="title">Logo</p>
@@ -41,6 +35,12 @@ outline: >-
 ![](/img/panasonic-colours.svg)
 
 </div>
+
+<div class="FullWidthImage">
+
+![](/img/panasonic-desktop.jpg)
+
+</div>
 <div class="FullWidthImage">
 
 ![](/img/panasonic-mobile.jpg)
@@ -58,7 +58,8 @@ When designing the UI we took an atomic design based approach, making sure that 
 
 With certain components we felt it was important to use mounting animations to introduce users to their functionality. We utilise a variety of slider components to allow us to display large amounts of information. These animate in from the side the user will be able to pull content from. Whilst creating these animations we paid close attention to easing and style so, when creating interactions for new features, we would be consistent. Another aspect of interaction design I am currently working on are route transitions. Having interactions across different pages and areas of the site allow the users to create a better mental model of the navigation and help them to navigate through the site more fluidly.
 
-Overall this project has been a resounding success. The client is incredibly happy with what we have delivered and we have a fantastic design system in place for developing the site in the future. The website can be viewed <a href="https://na.industrial.panasonic.com/">here.</a>
+Overall this project has been a resounding success. The client is incredibly happy with what we have delivered and we have a fantastic design system in place for developing the site in the future.
+ The website can be viewed <a href="https://na.industrial.panasonic.com/">here.</a>
 
 </div>
 
