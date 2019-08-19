@@ -39,7 +39,7 @@ outline: >-
 
 <div class="FullWidthImage">
 
-![](/img/rac-desktop-combo.jpg)
+![](/img/rac-combo-2.jpg)
 
 </div>
 
