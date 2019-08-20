@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import colors from "../../shared/colors";
+import breakpoints from "../../shared/breakpoints";
 import { FaArrowRight } from "react-icons/fa";
 import transitions from "../../shared/transitions";
 
@@ -63,16 +64,17 @@ const CustomLink = styled(Link)`
       ${transitions.quickSnap}
     }
   }
-
-  &:hover {
-    h3 {
-      transform: translate3d(-3rem, 0, 0);
-      ${transitions.quickSnap}
-
-      svg {
-        opacity: 0.25;
-        transform: translate3d(-0rem, 0, 0);
+  ${breakpoints.desktop} {
+    &:hover {
+      h3 {
+        transform: translate3d(-3rem, 0, 0);
         ${transitions.quickSnap}
+
+        svg {
+          opacity: 0.25;
+          transform: translate3d(-0rem, 0, 0);
+          ${transitions.quickSnap}
+        }
       }
     }
   }
