@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import colors from "../../shared/colors";
+import breakpoints from "../../shared/breakpoints";
 import NavLink from "./NavLink";
 import logo from "../../images/logo.svg";
 import { useSpring, animated, config } from "react-spring";
@@ -52,16 +53,24 @@ const Container = styled(animated.ul)`
   grid-column: 1 / -1;
   display: flex;
   margin-right: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 9rem;
   flex-direction: column;
   justify-content: flex-end;
   text-align: right;
+
+  ${breakpoints.desktop} {
+    margin-bottom: 3rem;
+  }
 `;
 
 const Logo = styled.img`
   position: absolute;
-  opacity: 0.2;
+  opacity: 0;
   left: 0;
   bottom: -1rem;
   width: 33%;
+
+  ${breakpoints.desktop} {
+    opacity: 0.25;
+  }
 `;
