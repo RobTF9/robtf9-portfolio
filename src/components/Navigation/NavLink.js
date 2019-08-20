@@ -57,14 +57,15 @@ const CustomLink = styled(Link)`
 
     svg {
       color: ${colors.black};
-      margin-top: 0.5rem;
+      margin-top: 0.7rem;
       font-size: 2.4rem;
       opacity: 0;
       transform: translate3d(5rem, 0, 0);
       ${transitions.quickSnap}
     }
   }
-  ${breakpoints.desktop} {
+
+  ${breakpoints.tablet} {
     &:hover {
       h3 {
         transform: translate3d(-3rem, 0, 0);

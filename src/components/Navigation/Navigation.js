@@ -70,7 +70,7 @@ const Logo = styled.img`
   bottom: -1rem;
   width: 33%;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.tablet} {
     opacity: 0.25;
   }
 `;
