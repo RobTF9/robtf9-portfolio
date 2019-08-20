@@ -11,7 +11,7 @@ const NavToggle = ({ toggle, visible }) => {
   });
 
   return (
-    <Button style={animation} onClick={toggle}>
+    <Button style={animation} onClick={toggle} aria-label="Navigation toggle">
       {visible ? <FaArrowUp /> : <FaBars />}
     </Button>
   );

@@ -28,7 +28,10 @@ const ProjectCard = ({ project }) => {
   };
 
   return (
-    <Link to={`/projects${project.slug}`}>
+    <Link
+      to={`/projects${project.slug}`}
+      aria-label={`Read more about ${project.title}`}
+    >
       <Waypoint
         onEnter={handleEnter}
         onLeave={handleExit}

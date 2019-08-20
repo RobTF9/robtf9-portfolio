@@ -3,7 +3,7 @@ date: 2019-07-03T20:51:00.000Z
 client: RAC
 title: A journey of understanding.
 slug: /rac
-color: '#EF6C00'
+color: "#EF6C00"
 featuredimage: /img/rac-cover-image.png
 outline: >-
   The RAC payment journey had to be brought in line with the new IDD
@@ -13,6 +13,7 @@ outline: >-
   radically change. Early research showed us that although people were buying
   the products none of them could recall the details of their purchase.
 ---
+
 <div class="OffsetContent Logo">
 
 <p class="title">Logo</p>

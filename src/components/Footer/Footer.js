@@ -9,7 +9,9 @@ const Footer = () => {
     <Container>
       <Wrapper>
         <UsefulLinks>
-          <h3>Navigation.</h3>
+          <li>
+            <h3>Navigation.</h3>
+          </li>
           <li>
             <Link to="/">Home</Link>
           </li>
