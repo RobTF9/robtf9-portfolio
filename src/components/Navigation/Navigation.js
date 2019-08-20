@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import colors from "../../shared/colors";
 import NavLink from "./NavLink";
+import logo from "../../images/logo.svg";
 import { useSpring, animated, config } from "react-spring";
 
 const Navigation = ({ animation, visible, toggle }) => {
@@ -26,6 +27,7 @@ const Navigation = ({ animation, visible, toggle }) => {
         <NavLink toggle={toggle} text="About" to="/about" />
         <NavLink toggle={toggle} text="Contact" to="/contact" />
       </Container>
+      <Logo src={logo} alt="Robert Squires - Logo" />
     </Nav>
   );
 };
@@ -36,6 +38,7 @@ const Nav = styled(animated.nav)`
   position: fixed;
   z-index: 2;
   width: 100%;
+  overflow: hidden;
   background-color: ${colors.blue};
   color: ${colors.white};
   display: grid;
@@ -49,8 +52,16 @@ const Container = styled(animated.ul)`
   grid-column: 1 / -1;
   display: flex;
   margin-right: 3rem;
-  margin-top: 4rem;
+  margin-bottom: 3rem;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-end;
   text-align: right;
+`;
+
+const Logo = styled.img`
+  position: absolute;
+  opacity: 0.2;
+  left: 0;
+  bottom: -1rem;
+  width: 33%;
 `;

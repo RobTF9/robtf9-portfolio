@@ -3,14 +3,17 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import colors from "../../shared/colors";
+import { FaArrowRight } from "react-icons/fa";
+import transitions from "../../shared/transitions";
 
 const NavLink = ({ text, to, toggle }) => {
   return (
     <Wrapper>
-      <Link onClick={toggle} to={to} activeClassName="active">
-        <p>{text}</p>
-        <span></span>
-      </Link>
+      <CustomLink onClick={toggle} to={to} activeClassName="active">
+        <h3>
+          {text} <FaArrowRight />
+        </h3>
+      </CustomLink>
     </Wrapper>
   );
 };
@@ -27,19 +30,50 @@ NavLink.defaultProps = {
 export default NavLink;
 
 const Wrapper = styled.li`
-  padding: 2rem 0;
+  padding: 1rem 0;
 
   .active {
     position: relative;
+    color: ${colors.black};
 
-    span {
-      position: absolute;
-      width: 0.8rem;
-      height: 1.6rem;
-      top: -2rem;
-      right: -3rem;
-      background-color: ${colors.black};
-      opacity: 0.5;
+    h3 {
+      opacity: 0.25;
+
+      svg {
+        opacity: 1 !important;
+      }
+    }
+  }
+`;
+
+const CustomLink = styled(Link)`
+  position: relative;
+  color: ${colors.white};
+
+  h3 {
+    transform: translate3d(2rem, 0, 0);
+    ${transitions.quickSnap}
+
+    svg {
+      color: ${colors.black};
+      margin-top: 0.3rem;
+      font-size: 2.4rem;
+      opacity: 0;
+      transform: translate3d(5rem, 0, 0);
+      ${transitions.quickSnap}
+    }
+  }
+
+  &:hover {
+    h3 {
+      transform: translate3d(-3rem, 0, 0);
+      ${transitions.quickSnap}
+
+      svg {
+        opacity: 0.25;
+        transform: translate3d(-0rem, 0, 0);
+        ${transitions.quickSnap}
+      }
     }
   }
 `;
