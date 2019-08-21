@@ -57,7 +57,7 @@ const CustomLink = styled(Link)`
 
     svg {
       color: ${colors.black};
-      margin-top: 0.7rem;
+      margin: 0 0 -0.2rem;
       font-size: 2.4rem;
       opacity: 0;
       transform: translate3d(5rem, 0, 0);
