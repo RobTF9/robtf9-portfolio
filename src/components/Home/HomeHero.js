@@ -31,9 +31,7 @@ const HomeHero = () => {
     <Container style={animation}>
       <Text>
         <h4>Robert Squires</h4>
-        <h1>
-          I create user centred digital products <span>&amp;</span> interfaces.
-        </h1>
+        <h1>I'm a User Interface Designer based in Bristol, UK.</h1>
       </Text>
       <Img fluid={file.childImageSharp.fluid} />
     </Container>
