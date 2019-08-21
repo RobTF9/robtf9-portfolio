@@ -23,7 +23,6 @@ const Navigation = ({ animation, visible, toggle }) => {
     >
       <Container style={subAnimation}>
         <NavLink toggle={toggle} text="Home" to="/" />
-        <NavLink toggle={toggle} text="Projects" to="/projects" />
         <NavLink toggle={toggle} text="Experience" to="/experience" />
         <NavLink toggle={toggle} text="About" to="/about" />
         <NavLink toggle={toggle} text="Contact" to="/contact" />

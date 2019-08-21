@@ -30,23 +30,6 @@ NavLink.defaultProps = {
 
 export default NavLink;
 
-const Wrapper = styled.li`
-  padding: 1rem 0;
-
-  .active {
-    position: relative;
-    color: ${colors.black};
-
-    h3 {
-      opacity: 0.25;
-
-      svg {
-        opacity: 1 !important;
-      }
-    }
-  }
-`;
-
 const CustomLink = styled(Link)`
   position: relative;
   color: ${colors.white};
@@ -75,6 +58,37 @@ const CustomLink = styled(Link)`
           opacity: 0.25;
           transform: translate3d(-0rem, 0, 0);
           ${transitions.quickSnap}
+        }
+      }
+    }
+  }
+`;
+
+const Wrapper = styled.li`
+  padding: 1rem 0;
+
+  .active {
+    display: block;
+    position: relative;
+    color: ${colors.black};
+    pointer-events: none;
+
+    h3 {
+      opacity: 0.25;
+
+      svg {
+        opacity: 1 !important;
+      }
+    }
+
+    ${breakpoints.tablet} {
+      &:hover {
+        h3 {
+          transform: translate3d(2rem, 0, 0);
+
+          svg {
+            transform: translate3d(5rem, 0, 0);
+          }
         }
       }
     }
