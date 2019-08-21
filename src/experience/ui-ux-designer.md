@@ -7,7 +7,7 @@ role: UI Designer
 order: 4
 description: >-
   UI/UX design and research for MyUnite and corporate website. Created new
-  accesible colour pallete and icon set. Made a branded animation library for
+  accessible colour pallete and icon set. Made a branded animation library for
   all video content.
 ---
 
