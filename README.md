@@ -17,7 +17,7 @@ Built with React, Gatsby and animated with React Spring. I use Netlify CMS to st
     I used yarn as my package manager. Use the yarn command in the terminal to install all dependencies.
     
     ```sh
-      cd my-default-starter/
+      cd gatsby-portfolio/
       yarn
     ```
     
