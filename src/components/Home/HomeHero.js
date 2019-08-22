@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -7,6 +7,19 @@ import breakpoints from "../../shared/breakpoints";
 import { useSpring, animated, config } from "react-spring";
 
 const HomeHero = () => {
+  const [distance, setDistance] = useState();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setDistance(window.pageYOffset);
+    });
+    return () => {
+      window.removeEventListener("scroll", () => {
+        setDistance(window.pageYOffset);
+      });
+    };
+  }, []);
+
   const { file } = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "rs-hero.png" }) {
@@ -27,13 +40,24 @@ const HomeHero = () => {
     delay: 250,
   });
 
+  const scrollAnimation = useSpring({
+    opacity: distance > window.innerHeight / 3 ? 0 : 1,
+    transform:
+      distance > window.innerHeight / 3
+        ? "translate3d(0, 15rem, 0)"
+        : "translate3d(0, 0rem, 0)",
+    config: config.slow,
+  });
+
   return (
     <Container style={animation}>
-      <Text>
+      <Text style={scrollAnimation}>
         <h4>Robert Squires</h4>
         <h1>I'm a User Interface Designer based in Bristol, UK.</h1>
       </Text>
-      <Img fluid={file.childImageSharp.fluid} />
+      <Image style={scrollAnimation}>
+        <Img fluid={file.childImageSharp.fluid} />
+      </Image>
     </Container>
   );
 };
@@ -46,17 +70,6 @@ const Container = styled(animated.header)`
   height: 70vh;
   margin-top: 15vh;
 
-  .gatsby-image-wrapper {
-    position: absolute !important;
-    bottom: 0;
-    right: 0;
-    width: 80%;
-
-    ${breakpoints.desktop} {
-      width: 40%;
-    }
-  }
-
   ${breakpoints.tablet} {
     grid-column: 3 / 11;
     margin-top: 20vh;
@@ -67,7 +80,7 @@ const Container = styled(animated.header)`
   }
 `;
 
-const Text = styled.div`
+const Text = styled(animated.div)`
   position: relative;
 
   ${breakpoints.desktop} {
@@ -83,5 +96,23 @@ const Text = styled.div`
     span {
       color: ${colors.blue};
     }
+  }
+`;
+
+const Image = styled(animated.div)`
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+
+  .gatsby-image-wrapper {
+    position: absolute !important;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  ${breakpoints.desktop} {
+    width: 40%;
   }
 `;
