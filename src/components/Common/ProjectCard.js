@@ -24,7 +24,7 @@ const ProjectCard = ({ project }) => {
   };
 
   const handleExit = () => {
-    setVisible(false);
+    setVisible(window.innerWidth < 1280 ? false : true);
   };
 
   return (
@@ -35,8 +35,8 @@ const ProjectCard = ({ project }) => {
       <Waypoint
         onEnter={handleEnter}
         onLeave={handleExit}
-        bottomOffset="49%"
-        topOffset="49%"
+        bottomOffset="300px"
+        topOffset="300px"
       >
         <Card color={project.color}>
           <Copy
@@ -88,7 +88,7 @@ const Card = styled.article`
   padding: 4rem 2rem;
 
   ${breakpoints.desktop} {
-    padding: 0 5rem 5rem 5rem;
+    padding: 0 2rem 5rem 2rem;
     padding-bottom: 30%;
   }
 `;
@@ -107,7 +107,7 @@ const Copy = styled(animated.div)`
   ${breakpoints.desktop} {
     margin-bottom: 0;
     padding-top: 4rem;
-    width: 40%;
+    width: 50%;
   }
 `;
 
@@ -121,21 +121,27 @@ const Image = styled(animated.div)`
     position: absolute !important;
     top: 0;
     left: 0;
-    min-width: 100%;
-    max-width: 100%;
+    width: 100%;
     height: auto;
+
+    ${breakpoints.desktop} {
+      position: relative !important;
+      max-height: 100%;
+      max-width: 50%;
+    }
   }
 
   ${breakpoints.desktop} {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: auto;
-    min-height: 100%;
-    max-height: 100%;
-    padding-right: 40%;
+    width: 100%;
+    height: 100%;
     padding-bottom: 0%;
-    margin-bottom: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 `;
 
@@ -158,6 +164,6 @@ const ReadMore = styled(animated.h4)`
   }
 
   ${breakpoints.desktop} {
-    right: 5rem;
+    right: 2rem;
   }
 `;
