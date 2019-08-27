@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
     o: visible ? 1 : 0,
     s: visible ? 1.2 : 1,
     h: visible ? 0.5 : 1,
-    r: visible ? 20 : 0,
+    r: visible ? 30 : 0,
     config: config.stiff,
   });
 
@@ -112,9 +112,10 @@ export default ProjectCard;
 
 const Line = styled(animated.div)`
   position: absolute;
-  background-color: ${({ color }) => color};
+  border-top: 0.1rem ${({ color }) => color} solid;
+  border-bottom: 0.1rem ${({ color }) => color} solid;
   width: 20%;
-  height: 0.5rem;
+  height: 1.5rem;
 `;
 
 const TopLine = styled(Line)`
@@ -219,7 +220,7 @@ const ReadMore = styled(animated.h4)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  right: 2rem;
+  right: 0;
   bottom: 4rem;
   color: ${colors.white};
   text-align: center;
@@ -231,9 +232,5 @@ const ReadMore = styled(animated.h4)`
     ${breakpoints.tablet} {
       font-size: 3.6rem;
     }
-  }
-
-  ${breakpoints.desktop} {
-    right: 0rem;
   }
 `;

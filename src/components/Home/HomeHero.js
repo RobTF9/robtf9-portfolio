@@ -5,6 +5,7 @@ import Img from "gatsby-image";
 import colors from "../../shared/colors";
 import breakpoints from "../../shared/breakpoints";
 import { useSpring, animated, config } from "react-spring";
+import { FiArrowDown } from "react-icons/fi";
 
 const HomeHero = () => {
   const [distance, setDistance] = useState();
@@ -42,7 +43,11 @@ const HomeHero = () => {
 
   const scrollAnimation = useSpring({
     opacity: distance > window.innerHeight / 3 ? 0 : 1,
-    config: config.slow,
+    transform:
+      distance > window.innerHeight / 3
+        ? "translate3d(0, -15rem, 0)"
+        : "translate3d(0, 0rem, 0)",
+    config: config.spring,
   });
 
   return (
@@ -54,12 +59,23 @@ const HomeHero = () => {
       <Image style={scrollAnimation}>
         <Img fluid={file.childImageSharp.fluid} />
       </Image>
+      <Projects style={scrollAnimation}>
+        <FiArrowDown />
+      </Projects>
       <Border style={scrollAnimation} />
     </Container>
   );
 };
 
 export default HomeHero;
+
+const Projects = styled(animated.h2)`
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0;
+  font-weight: 100;
+  color: ${colors.blue};
+`;
 
 const Container = styled(animated.header)`
   position: relative;
@@ -82,9 +98,10 @@ const Border = styled(animated.span)`
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 0.5rem;
+  height: 2.5rem;
   width: 100%;
-  background-color: ${colors.blue};
+  border-bottom: 0.1rem ${colors.blue} solid;
+  border-top: 0.1rem ${colors.blue} solid;
 `;
 
 const Text = styled(animated.div)`
