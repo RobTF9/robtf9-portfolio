@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import colors from "../../shared/colors";
@@ -11,11 +11,14 @@ import breakpoints from "../../shared/breakpoints";
 
 const ProjectCard = ({ project }) => {
   const [visible, setVisible] = useState(false);
+  const [height, setHeight] = useState(0);
+  const heightRef = useRef(null);
 
   const animation = useSpring({
     y: visible ? 5 : 0,
     o: visible ? 1 : 0,
     s: visible ? 1.2 : 1,
+    h: visible ? 0.5 : 1,
     config: config.stiff,
   });
 
@@ -24,8 +27,12 @@ const ProjectCard = ({ project }) => {
   };
 
   const handleExit = () => {
-    setVisible(window.innerWidth < 1280 ? false : true);
+    setVisible(false);
   };
+
+  useEffect(() => {
+    heightRef && setHeight(heightRef.current.clientHeight);
+  }, []);
 
   return (
     <Link
@@ -38,7 +45,7 @@ const ProjectCard = ({ project }) => {
         bottomOffset="300px"
         topOffset="300px"
       >
-        <Card color={project.color}>
+        <Card ref={heightRef}>
           <Copy
             style={{
               transform: animation.y.interpolate(
@@ -51,6 +58,7 @@ const ProjectCard = ({ project }) => {
             <h2>{project.title}</h2>
           </Copy>
           <Image
+            height={height}
             style={{
               transform: animation.s.interpolate(s => `scale(${s})`),
               opacity: animation.o,
@@ -69,6 +77,12 @@ const ProjectCard = ({ project }) => {
             Read more
             <MdArrowForward />
           </ReadMore>
+          <Background
+            color={project.color}
+            style={{
+              transform: animation.h.interpolate(h => `scale(1, ${h})`),
+            }}
+          />
         </Card>
       </Waypoint>
     </Link>
@@ -88,9 +102,19 @@ const Card = styled.article`
   padding: 4rem 2rem;
 
   ${breakpoints.desktop} {
-    padding: 0 2rem 5rem 2rem;
+    padding: 0 0rem 5rem 0rem;
     padding-bottom: 30%;
   }
+`;
+
+const Background = styled(animated.span)`
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: ${props => props.color};
 `;
 
 const Copy = styled(animated.div)`
@@ -106,8 +130,8 @@ const Copy = styled(animated.div)`
 
   ${breakpoints.desktop} {
     margin-bottom: 0;
-    padding-top: 4rem;
-    width: 50%;
+    padding-bottom: 4rem;
+    width: 33%;
   }
 `;
 
@@ -116,6 +140,15 @@ const Image = styled(animated.div)`
   width: 100%;
   padding-bottom: 100%;
   margin-bottom: 4rem;
+
+  ${breakpoints.desktop} {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: ${({ height }) => height}px !important;
+    width: ${({ height }) => height}px !important;
+  }
 
   .gatsby-image-wrapper {
     position: absolute !important;
@@ -127,7 +160,6 @@ const Image = styled(animated.div)`
     ${breakpoints.desktop} {
       position: relative !important;
       max-height: 100%;
-      max-width: 50%;
     }
   }
 
@@ -164,6 +196,6 @@ const ReadMore = styled(animated.h4)`
   }
 
   ${breakpoints.desktop} {
-    right: 2rem;
+    right: 0rem;
   }
 `;
