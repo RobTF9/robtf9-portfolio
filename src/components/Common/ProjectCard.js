@@ -19,6 +19,7 @@ const ProjectCard = ({ project }) => {
     o: visible ? 1 : 0,
     s: visible ? 1.2 : 1,
     h: visible ? 0.5 : 1,
+    r: visible ? 20 : 0,
     config: config.stiff,
   });
 
@@ -47,6 +48,7 @@ const ProjectCard = ({ project }) => {
       >
         <Card ref={heightRef}>
           <Copy
+            color={project.color}
             style={{
               transform: animation.y.interpolate(
                 y => `translate3d(0, -${y}rem, 0)`
@@ -67,9 +69,10 @@ const ProjectCard = ({ project }) => {
             <Img fluid={project.featuredimage.childImageSharp.fluid} />
           </Image>
           <ReadMore
+            color={project.color}
             style={{
               transform: animation.y.interpolate(
-                y => `translate3d(0, ${y + 0.6}rem, 0)`
+                y => `translate3d(0, ${y}rem, 0)`
               ),
               opacity: animation.o,
             }}
@@ -83,6 +86,18 @@ const ProjectCard = ({ project }) => {
               transform: animation.h.interpolate(h => `scale(1, ${h})`),
             }}
           />
+          <TopLine
+            style={{
+              transform: animation.r.interpolate(r => `rotate(${r + 0.6}deg)`),
+            }}
+            color={project.color}
+          />
+          <BottomLine
+            style={{
+              transform: animation.r.interpolate(r => `rotate(${r + 0.6}deg)`),
+            }}
+            color={project.color}
+          />
         </Card>
       </Waypoint>
     </Link>
@@ -95,11 +110,32 @@ ProjectCard.propTypes = {
 
 export default ProjectCard;
 
+const Line = styled(animated.div)`
+  position: absolute;
+  background-color: ${({ color }) => color};
+  width: 20%;
+  height: 0.5rem;
+`;
+
+const TopLine = styled(Line)`
+  top: 0;
+  right: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 0%;
+`;
+
+const BottomLine = styled(Line)`
+  bottom: 0;
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 0% 0%;
+`;
+
 const Card = styled.article`
   position: relative;
   cursor: pointer;
   background-color: ${props => props.color};
-  padding: 4rem 2rem;
+  padding: 4rem 0rem;
 
   ${breakpoints.desktop} {
     padding: 0 0rem 5rem 0rem;
@@ -121,6 +157,7 @@ const Copy = styled(animated.div)`
   margin-bottom: 4rem;
 
   h4 {
+    color: ${({ color }) => color};
     font-weight: 400;
   }
 
@@ -189,6 +226,7 @@ const ReadMore = styled(animated.h4)`
 
   svg {
     font-size: 3.2rem;
+    color: ${({ color }) => color};
 
     ${breakpoints.tablet} {
       font-size: 3.6rem;

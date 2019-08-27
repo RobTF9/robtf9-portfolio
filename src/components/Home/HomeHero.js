@@ -42,10 +42,6 @@ const HomeHero = () => {
 
   const scrollAnimation = useSpring({
     opacity: distance > window.innerHeight / 3 ? 0 : 1,
-    transform:
-      distance > window.innerHeight / 3
-        ? "translate3d(0, 15rem, 0)"
-        : "translate3d(0, 0rem, 0)",
     config: config.slow,
   });
 
@@ -58,6 +54,7 @@ const HomeHero = () => {
       <Image style={scrollAnimation}>
         <Img fluid={file.childImageSharp.fluid} />
       </Image>
+      <Border style={scrollAnimation} />
     </Container>
   );
 };
@@ -69,6 +66,7 @@ const Container = styled(animated.header)`
   grid-column: 2 / 12;
   height: 70vh;
   margin-top: 15vh;
+  margin-bottom: 15vh;
 
   ${breakpoints.tablet} {
     grid-column: 3 / 11;
@@ -78,6 +76,15 @@ const Container = styled(animated.header)`
   ${breakpoints.desktop} {
     margin-top: 25vh;
   }
+`;
+
+const Border = styled(animated.span)`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.5rem;
+  width: 100%;
+  background-color: ${colors.blue};
 `;
 
 const Text = styled(animated.div)`
