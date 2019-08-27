@@ -11,13 +11,15 @@ const HomeHero = () => {
   const [distance, setDistance] = useState();
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setDistance(window.pageYOffset);
-    });
-    return () => {
-      window.removeEventListener("scroll", () => {
+    window &&
+      window.addEventListener("scroll", () => {
         setDistance(window.pageYOffset);
       });
+    return () => {
+      window &&
+        window.removeEventListener("scroll", () => {
+          setDistance(window.pageYOffset);
+        });
     };
   }, []);
 
@@ -42,9 +44,9 @@ const HomeHero = () => {
   });
 
   const scrollAnimation = useSpring({
-    opacity: distance > window.innerHeight / 3 ? 0 : 1,
+    opacity: window && distance > window.innerHeight / 3 ? 0 : 1,
     transform:
-      distance > window.innerHeight / 3
+      window && distance > window.innerHeight / 3
         ? "translate3d(0, -15rem, 0)"
         : "translate3d(0, 0rem, 0)",
     config: config.spring,
