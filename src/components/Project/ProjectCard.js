@@ -88,13 +88,13 @@ const ProjectCard = ({ project }) => {
           />
           <TopLine
             style={{
-              transform: animation.r.interpolate(r => `rotate(${r + 0.6}deg)`),
+              transform: animation.r.interpolate(r => `rotate(${r}deg)`),
             }}
             color={project.color}
           />
           <BottomLine
             style={{
-              transform: animation.r.interpolate(r => `rotate(${r + 0.6}deg)`),
+              transform: animation.r.interpolate(r => `rotate(${r}deg)`),
             }}
             color={project.color}
           />
