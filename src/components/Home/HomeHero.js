@@ -103,7 +103,7 @@ const Border = styled(animated.span)`
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 2.5rem;
+  height: 1.5rem;
   width: 100%;
   border-bottom: 0.1rem ${colors.blue} solid;
   border-top: 0.1rem ${colors.blue} solid;
