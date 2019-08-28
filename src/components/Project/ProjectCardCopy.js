@@ -21,7 +21,7 @@ const ProjectCardCopy = ({ color, animation, client, title }) => {
 export default ProjectCardCopy;
 
 const Copy = styled(animated.div)`
-  width: 80%;
+  width: 100%;
 
   h4 {
     color: ${({ color }) => color};
@@ -35,6 +35,6 @@ const Copy = styled(animated.div)`
   ${breakpoints.desktop} {
     margin-bottom: 0;
     padding-bottom: 4rem;
-    width: 33%;
+    width: 40%;
   }
 `;

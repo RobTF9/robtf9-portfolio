@@ -26,8 +26,8 @@ const postLayout = ({ data }) => {
   });
 
   const heroAnimation = useSpring({
-    transform: "scale(1,1)",
-    from: { transform: "scale(1, 5)" },
+    transform: "translate3d(0, 0rem, 0)",
+    from: { transform: "translate3d(0, -50rem, 0)" },
     config: config.slow,
     delay: 250,
   });

@@ -20,7 +20,6 @@ const ProjectCard = ({ project }) => {
     o: visible ? 1 : 0,
     s: visible ? 1.2 : 1,
     h: visible ? 0.5 : 1,
-    r: visible ? 30 : 0,
     config: config.stiff,
   });
 
@@ -36,6 +35,9 @@ const ProjectCard = ({ project }) => {
 
   useEffect(() => {
     heightRef && setHeight(heightRef.current.clientHeight);
+    window.addEventListener("resize", () => {
+      setHeight(heightRef.current.clientHeight);
+    });
   }, []);
 
   return (
@@ -86,18 +88,8 @@ const ProjectCard = ({ project }) => {
               transform: animation.h.interpolate(h => `scale(1, ${h})`),
             }}
           />
-          <TopLine
-            style={{
-              transform: animation.r.interpolate(r => `rotate(${r}deg)`),
-            }}
-            color={project.color}
-          />
-          <BottomLine
-            style={{
-              transform: animation.r.interpolate(r => `rotate(${r}deg)`),
-            }}
-            color={project.color}
-          />
+          <TopLine color={project.color} />
+          <BottomLine color={project.color} />
         </Card>
       </Waypoint>
     </AniLink>
@@ -115,22 +107,30 @@ const Line = styled(animated.div)`
   z-index: -1;
   border-top: 0.1rem ${({ color }) => color} solid;
   border-bottom: 0.1rem ${({ color }) => color} solid;
-  width: 20%;
   height: 1.5rem;
+  width: 20%;
 `;
 
 const TopLine = styled(Line)`
   top: 0;
   right: 0;
-  transform: rotate(45deg);
   transform-origin: 100% 0%;
+  width: 0%;
+
+  ${breakpoints.desktop} {
+    width: 20%;
+  }
 `;
 
 const BottomLine = styled(Line)`
   bottom: 0;
   left: 0;
-  transform: rotate(45deg);
   transform-origin: 0% 0%;
+  width: 100%;
+
+  ${breakpoints.desktop} {
+    width: 20%;
+  }
 `;
 
 const Card = styled.article`
