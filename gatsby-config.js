@@ -92,9 +92,9 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-layout`,
+      resolve: `gatsby-plugin-transition-link`,
       options: {
-        component: require.resolve(`./src/components/Layout/Layout.js`),
+        layout: require.resolve(`./src/components/Layout/Layout.js`),
       },
     },
   ],

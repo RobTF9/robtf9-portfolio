@@ -52,14 +52,18 @@ const Body = createGlobalStyle`
 `;
 
 const Main = styled(animated.main)`
-  position: relative;
-  z-index: 0;
-  margin-bottom: 4.2rem;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 1rem;
-  color: ${colors.white};
-  background-color: ${colors.black};
-  min-height: 100vh;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  .tl-edges {
+    .tl-wrapper {
+      position: relative;
+      z-index: 0;
+      margin-bottom: 4.2rem;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-gap: 1rem;
+      color: ${colors.white};
+      background-color: ${colors.black};
+      min-height: 100vh;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+  }
 `;

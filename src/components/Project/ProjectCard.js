@@ -2,12 +2,13 @@ import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import colors from "../../shared/colors";
-import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Img from "gatsby-image";
 import { MdArrowForward } from "react-icons/md";
 import { Waypoint } from "react-waypoint";
 import { useSpring, animated, config } from "react-spring";
 import breakpoints from "../../shared/breakpoints";
+import ProjectCardCopy from "./ProjectCardCopy";
 
 const ProjectCard = ({ project }) => {
   const [visible, setVisible] = useState(false);
@@ -25,10 +26,12 @@ const ProjectCard = ({ project }) => {
 
   const handleEnter = () => {
     setVisible(true);
+    console.log("enter");
   };
 
   const handleExit = () => {
     setVisible(false);
+    console.log("exit");
   };
 
   useEffect(() => {
@@ -36,29 +39,21 @@ const ProjectCard = ({ project }) => {
   }, []);
 
   return (
-    <Link
+    <AniLink
       to={`/projects${project.slug}`}
       aria-label={`Read more about ${project.title}`}
+      cover
+      bg={project.color}
+      direction="up"
     >
-      <Waypoint
-        onEnter={handleEnter}
-        onLeave={handleExit}
-        bottomOffset="300px"
-        topOffset="300px"
-      >
+      <Waypoint onEnter={handleEnter} onLeave={handleExit}>
         <Card ref={heightRef}>
-          <Copy
+          <ProjectCardCopy
             color={project.color}
-            style={{
-              transform: animation.y.interpolate(
-                y => `translate3d(0, -${y}rem, 0)`
-              ),
-              opacity: animation.o,
-            }}
-          >
-            <h4>{project.client}</h4>
-            <h2>{project.title}</h2>
-          </Copy>
+            animation={animation}
+            client={project.client}
+            title={project.title}
+          />
           <Image
             height={height}
             style={{
@@ -100,7 +95,7 @@ const ProjectCard = ({ project }) => {
           />
         </Card>
       </Waypoint>
-    </Link>
+    </AniLink>
   );
 };
 
@@ -153,25 +148,6 @@ const Background = styled(animated.span)`
   width: 100%;
   height: 100%;
   background-color: ${props => props.color};
-`;
-
-const Copy = styled(animated.div)`
-  width: 80%;
-
-  h4 {
-    color: ${({ color }) => color};
-    font-weight: 400;
-  }
-
-  ${breakpoints.tablet} {
-    width: 80%;
-  }
-
-  ${breakpoints.desktop} {
-    margin-bottom: 0;
-    padding-bottom: 4rem;
-    width: 33%;
-  }
 `;
 
 const Image = styled(animated.div)`
