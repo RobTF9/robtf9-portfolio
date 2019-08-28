@@ -53,6 +53,8 @@ const Body = createGlobalStyle`
 
 const Main = styled(animated.main)`
   .tl-edges {
+    overflow-x: visible;
+
     .tl-wrapper {
       position: relative;
       z-index: 0;

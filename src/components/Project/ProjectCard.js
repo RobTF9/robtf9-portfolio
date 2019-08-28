@@ -46,7 +46,12 @@ const ProjectCard = ({ project }) => {
       bg={project.color}
       direction="up"
     >
-      <Waypoint onEnter={handleEnter} onLeave={handleExit}>
+      <Waypoint
+        onEnter={handleEnter}
+        onLeave={handleExit}
+        topOffset="300px"
+        bottomOffset="300px"
+      >
         <Card ref={heightRef}>
           <ProjectCardCopy
             color={project.color}
