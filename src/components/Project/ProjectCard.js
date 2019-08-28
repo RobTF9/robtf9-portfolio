@@ -112,6 +112,7 @@ export default ProjectCard;
 
 const Line = styled(animated.div)`
   position: absolute;
+  z-index: -1;
   border-top: 0.1rem ${({ color }) => color} solid;
   border-bottom: 0.1rem ${({ color }) => color} solid;
   width: 20%;
@@ -136,7 +137,7 @@ const Card = styled.article`
   position: relative;
   cursor: pointer;
   background-color: ${props => props.color};
-  padding: 4rem 0rem;
+  padding: 0rem 0rem;
 
   ${breakpoints.desktop} {
     padding: 0 0rem 5rem 0rem;
@@ -155,7 +156,7 @@ const Background = styled(animated.span)`
 `;
 
 const Copy = styled(animated.div)`
-  margin-bottom: 4rem;
+  width: 80%;
 
   h4 {
     color: ${({ color }) => color};
@@ -221,7 +222,7 @@ const ReadMore = styled(animated.h4)`
   flex-direction: row;
   align-items: center;
   right: 0;
-  bottom: 4rem;
+  bottom: 0rem;
   color: ${colors.white};
   text-align: center;
 
