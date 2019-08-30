@@ -13,32 +13,32 @@ import ProjectCardCopy from "./ProjectCardCopy";
 const ProjectCard = ({ project }) => {
   const [visible, setVisible] = useState(false);
   const [height, setHeight] = useState(0);
+  const [cardHeight, setCardheight] = useState(0);
   const heightRef = useRef(null);
+
+  const handleEnter = () => {
+    setVisible(true);
+  };
+
+  const handleExit = () => {
+    setVisible(false);
+  };
+
+  useEffect(() => {
+    heightRef && setHeight(heightRef.current.clientHeight);
+    setCardheight(window.innerWidth < 1025 ? 0 : 0.5);
+    window.addEventListener("resize", () => {
+      setHeight(heightRef.current.clientHeight);
+    });
+  }, []);
 
   const animation = useSpring({
     y: visible ? 5 : 0,
     o: visible ? 1 : 0,
     s: visible ? 1.2 : 1,
-    h: visible ? 0.5 : 1,
+    h: visible ? cardHeight : 1,
     config: config.stiff,
   });
-
-  const handleEnter = () => {
-    setVisible(true);
-    console.log("enter");
-  };
-
-  const handleExit = () => {
-    setVisible(false);
-    console.log("exit");
-  };
-
-  useEffect(() => {
-    heightRef && setHeight(heightRef.current.clientHeight);
-    window.addEventListener("resize", () => {
-      setHeight(heightRef.current.clientHeight);
-    });
-  }, []);
 
   return (
     <AniLink
