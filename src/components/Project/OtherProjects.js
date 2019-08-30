@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
 import breakpoints from "../../shared/breakpoints";
 import colors from "../../shared/colors";
 import Img from "gatsby-image";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const OtherProjects = ({ projects }) => {
   return (
@@ -12,9 +12,13 @@ const OtherProjects = ({ projects }) => {
       <Container>
         {projects.map(({ node }) => {
           return (
-            <Link
+            <AniLink
               key={node.frontmatter.slug}
               to={`/projects${node.frontmatter.slug}`}
+              aria-label={`Read more about ${node.frontmatter.title}`}
+              cover
+              bg={node.frontmatter.color}
+              direction="up"
             >
               <Card color={node.frontmatter.color}>
                 <p>{node.frontmatter.client}</p>
@@ -23,7 +27,7 @@ const OtherProjects = ({ projects }) => {
                   fluid={node.frontmatter.featuredimage.childImageSharp.fluid}
                 />
               </Card>
-            </Link>
+            </AniLink>
           );
         })}
       </Container>
