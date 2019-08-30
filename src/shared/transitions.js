@@ -4,5 +4,4 @@ const transitions = {
     transition-timing-function: cubic-bezier(0.060, 0.975, 0.195, 0.985);
   `,
 };
-
 export default transitions;

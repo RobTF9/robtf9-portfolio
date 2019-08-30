@@ -3,7 +3,7 @@ date: 2019-07-02T20:58:00.000Z
 client: Osborne Clarke
 title: A mobile first typography system.
 slug: /osborne-clarke
-color: '#133142'
+color: "#1D8BB5"
 featuredimage: /img/oc-cover-image.png
 outline: >-
   Osborne Clarke were having a company wide re-position to present themselves as
@@ -14,6 +14,7 @@ outline: >-
   digital transformation section but also to engage users in content across the
   site.
 ---
+
 <div class="OffsetContent Logo">
 
 <p class="title">Logo</p>
@@ -60,7 +61,7 @@ outline: >-
 
 <div class="content">
 
-I started by using google analytics to get an idea of how people were using the website. One thing stood out to me;  people were engaging with content on large screens but on mobile and small tablets they were immediately bouncing from article pages. After taking a look myself I realised that a lot of the article headlines on mobile were taking up most of the page, making the reading experience on smaller screens incredibly awkward. All though this seemed like a relatively minor detail, introducing a responsive type system would be key to delivering a pleasant reading experience across all devices.
+I started by using google analytics to get an idea of how people were using the website. One thing stood out to me; people were engaging with content on large screens but on mobile and small tablets they were immediately bouncing from article pages. After taking a look myself I realised that a lot of the article headlines on mobile were taking up most of the page, making the reading experience on smaller screens incredibly awkward. All though this seemed like a relatively minor detail, introducing a responsive type system would be key to delivering a pleasant reading experience across all devices.
 
 The way the responsive type system works is to have a consistent body copy size across all devices and scale the the headers proportional to the resolution. This means a H1 on mobile would be much smaller than on desktop, whereas H5 would reduce less. This gives more striking contrast on larger screens where there is enough space to do so, but a more compact, refined reading experience on mobile. I presented my ideas back to the client and they were impressed with not only the thought that had gone into it but also could clearly see how such a small detail could have a big impact on the usability of the site.
 

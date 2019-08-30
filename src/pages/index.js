@@ -1,14 +1,16 @@
 import React from "react";
 import SEO from "../components/Layout/SEO";
 import HomeHero from "../components/Home/HomeHero";
-import ProjectList from "../components/Common/ProjectList";
+import ProjectList from "../components/Project/ProjectList";
 
-const IndexPage = () => (
-  <>
-    <SEO title="Home" />
-    <HomeHero />
-    <ProjectList />
-  </>
-);
+const IndexPage = () => {
+  return (
+    <>
+      <SEO title="Home" />
+      <HomeHero />
+      <ProjectList />
+    </>
+  );
+};
 
 export default IndexPage;

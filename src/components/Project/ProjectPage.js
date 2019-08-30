@@ -6,6 +6,7 @@ import SEO from "../Layout/SEO";
 import OtherProjects from "./OtherProjects";
 import breakpoints from "../../shared/breakpoints";
 import Body from "./ProjectBody";
+import { useSpring, animated, config } from "react-spring";
 
 const postLayout = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
@@ -16,17 +17,51 @@ const postLayout = ({ data }) => {
     return edge.node.frontmatter.slug !== `${frontmatter.slug}`;
   });
 
+  const textAnimation = useSpring({
+    opacity: 1,
+    transform: "translate3d(0, 0rem, 0)",
+    from: { opacity: 0, transform: "translate3d(0, 30rem, 0)" },
+    config: config.slow,
+    delay: 250,
+  });
+
+  const heroAnimation = useSpring({
+    transform: "translate3d(0, 0rem, 0)",
+    from: { transform: "translate3d(0, -50rem, 0)" },
+    config: config.slow,
+    delay: 250,
+  });
+
+  const imageAnimation = useSpring({
+    opacity: 0.25,
+    transform: "translate3d(0, 0rem, 0)",
+    from: { opacity: 0, transform: "translate3d(0, 30rem, 0)" },
+    config: config.slow,
+    delay: 250,
+  });
+
+  const bodyAnimation = useSpring({
+    opacity: 1,
+    transform: "translate3d(0, 0rem, 0)",
+    from: { opacity: 0, transform: "translate3d(0, 30rem, 0)" },
+    config: config.slow,
+    delay: 500,
+  });
+
   return (
     <>
       <SEO title={frontmatter.client} />
-      <Hero color={frontmatter.color}>
-        <Copy>
+      <Hero style={heroAnimation} color={frontmatter.color}>
+        <Copy style={textAnimation}>
           <h4>{frontmatter.client}</h4>
           <h1>{frontmatter.title}</h1>
         </Copy>
-        <Img fluid={frontmatter.featuredimage.childImageSharp.fluid} />
+        <Image
+          style={imageAnimation}
+          fluid={frontmatter.featuredimage.childImageSharp.fluid}
+        />
       </Hero>
-      <Body>
+      <AnimatedBody style={bodyAnimation}>
         <div className="OffsetContent">
           <p className="title">The problem</p>
           <p>{frontmatter.outline}</p>
@@ -34,7 +69,7 @@ const postLayout = ({ data }) => {
         <div
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         ></div>
-      </Body>
+      </AnimatedBody>
       <OtherProjects projects={projects} />
     </>
   );
@@ -86,7 +121,11 @@ export const query = graphql`
 
 export default postLayout;
 
-const Hero = styled.header`
+const Image = animated(Img);
+
+const AnimatedBody = animated(Body);
+
+const Hero = styled(animated.header)`
   position: relative;
   grid-column: 1 / -1;
   background-color: ${({ color }) => color};
@@ -97,7 +136,7 @@ const Hero = styled.header`
   .gatsby-image-wrapper {
     opacity: 0.25;
     position: absolute !important;
-    bottom: 0;
+    top: 0;
     right: 0;
     width: 100%;
     height: auto;
@@ -110,7 +149,7 @@ const Hero = styled.header`
   }
 `;
 
-const Copy = styled.div`
+const Copy = styled(animated.div)`
   position: relative;
   z-index: 2;
   grid-column: 2 / 12;
