@@ -26,7 +26,7 @@ const ProjectCard = ({ project }) => {
 
   useEffect(() => {
     heightRef && setHeight(heightRef.current.clientHeight);
-    setCardheight(window.innerWidth < 1025 ? 0 : 0.5);
+    setCardheight(window.innerWidth < 1025 ? 0.1 : 0.5);
     window.addEventListener("resize", () => {
       setHeight(heightRef.current.clientHeight);
     });
@@ -152,7 +152,12 @@ const Background = styled(animated.span)`
   left: 0;
   width: 100%;
   height: 100%;
+  transform-origin: 100% 100%;
   background-color: ${props => props.color};
+
+  ${breakpoints.desktop} {
+    transform-origin: 50% 50%;
+  }
 `;
 
 const Image = styled(animated.div)`
