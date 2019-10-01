@@ -59,7 +59,9 @@ const HomeHero = () => {
     <Container style={animation}>
       <Text style={scrollAnimation}>
         <h4>Robert Squires</h4>
-        <h1>I'm a User Interface Designer based in Bristol, UK.</h1>
+        <h1>
+          I'm a <span>UI Designer</span> with a passion for UX and coding.
+        </h1>
       </Text>
       <Image style={scrollAnimation}>
         <Img fluid={file.childImageSharp.fluid} />
