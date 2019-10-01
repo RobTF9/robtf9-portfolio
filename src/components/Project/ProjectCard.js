@@ -26,7 +26,7 @@ const ProjectCard = ({ project }) => {
 
   useEffect(() => {
     heightRef && setHeight(heightRef.current.clientHeight);
-    setCardheight(window.innerWidth < 1025 ? 0.1 : 0.5);
+    setCardheight(window.innerWidth < 1025 ? 0 : 0.5);
     window.addEventListener("resize", () => {
       setHeight(heightRef.current.clientHeight);
     });
