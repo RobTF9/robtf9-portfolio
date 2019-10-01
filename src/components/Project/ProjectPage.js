@@ -133,6 +133,10 @@ const Hero = styled(animated.header)`
   grid-template-columns: repeat(12, 1fr);
   overflow: hidden;
 
+  h4 {
+    font-weight: 400;
+  }
+
   .gatsby-image-wrapper {
     opacity: 0.25;
     position: absolute !important;
