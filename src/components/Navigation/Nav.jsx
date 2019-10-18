@@ -6,7 +6,7 @@ import NavLink from "./NavLink";
 import logo from "../../images/favicon.jpg";
 import { Link } from "gatsby";
 
-const Nav = ({ animation, visible, toggle }) => {
+const Nav = () => {
   return (
     <Container>
       <Link to="/">
@@ -42,7 +42,6 @@ const Logo = styled.img`
 const LinkList = styled.ul`
   position: absolute;
   display: flex;
-  align-items: center;
   right: 5rem;
   height: 7rem;
 `;

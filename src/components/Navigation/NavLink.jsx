@@ -13,6 +13,7 @@ const NavLink = ({ text, to }) => {
       <CustomLink to={to} activeClassName="active">
         {text}
       </CustomLink>
+      <span />
     </Wrapper>
   );
 };
@@ -31,17 +32,32 @@ export default NavLink;
 const CustomLink = styled(Link)`
   position: relative;
   color: ${colors.white};
+  opacity: 0.6;
 `;
 
 const Wrapper = styled.li`
   position: relative;
   margin-left: 5rem;
-  display: inline;
+  display: flex;
+  align-items: center;
+  height: 7rem;
 
+  span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: ${colors.blue};
+    width: 100%;
+    height: 0rem;
+  }
   .active {
     display: block;
     position: relative;
-    color: ${colors.blue};
     pointer-events: none;
+    opacity: 1;
+  }
+
+  .active + span {
+    height: 0.3rem;
   }
 `;

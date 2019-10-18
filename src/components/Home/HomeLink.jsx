@@ -18,7 +18,7 @@ const HomeLink = ({ text, to }) => {
 const StyledLink = styled(Link)`
   position: relative;
   display: block;
-  color: ${colors.blue};
+  color: ${colors.white};
   margin-bottom: 2rem;
 
   svg {
