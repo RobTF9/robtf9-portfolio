@@ -1,7 +1,7 @@
 import { animated } from "react-spring";
 import Container from "../Common/Container";
 import styled from "styled-components";
-import colors from "../../shared/colors";
+// import colors from "../../shared/colors";
 import breakpoints from "../../shared/breakpoints";
 
 export const HomeContainer = styled(Container)`
@@ -21,8 +21,7 @@ export const HomeContainer = styled(Container)`
 
 export const Text = styled(animated.div)`
   p {
-    margin-top: 2rem;
-    color: ${colors.blue};
+    margin: 1rem 0 8rem 0;
   }
 `;
 

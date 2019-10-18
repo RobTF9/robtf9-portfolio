@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled, { createGlobalStyle } from "styled-components";
-import Navigation from "../Navigation/Navigation";
 import colors from "../../shared/colors";
 import "./styles/init.css";
 import "./styles/type.css";
-import NavToggle from "../Navigation/NavToggle";
+import Nav from "../Navigation/Nav";
 import Footer from "../Footer/Footer";
 import { useSpring, animated, config } from "react-spring";
 
@@ -21,6 +20,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Nav />
       <Main
         style={{
           transform: animation.positive.interpolate(
