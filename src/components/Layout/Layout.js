@@ -21,9 +21,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Body visible={visible} />
-      <Navigation visible={visible} animation={animation} toggle={toggleNav} />
-      <NavToggle visible={visible} toggle={toggleNav} />
       <Main
         style={{
           transform: animation.positive.interpolate(
@@ -33,7 +30,6 @@ const Layout = ({ children }) => {
       >
         {children}
       </Main>
-      <Footer />
     </>
   );
 };
@@ -45,6 +41,9 @@ Layout.propTypes = {
 export default Layout;
 
 const Body = createGlobalStyle`
+  html {
+    background-color: ${colors.black};
+  }
   body {
     background-color: ${colors.black};
     overflow: ${({ visible }) => (visible ? `hidden` : `visible`)};
@@ -58,7 +57,6 @@ const Main = styled(animated.main)`
     .tl-wrapper {
       position: relative;
       z-index: 0;
-      margin-bottom: 4.2rem;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-column-gap: 1rem;
