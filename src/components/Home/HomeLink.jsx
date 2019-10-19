@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import colors from "../../shared/colors";
 import breakpoints from "../../shared/breakpoints";
 import { FaArrowRight } from "react-icons/fa";
-import transitions from "../../shared/transitions";
+import { transitions } from "../../shared/transitions";
 
 const HomeLink = ({ text, to }) => {
   return (

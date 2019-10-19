@@ -1,19 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import colors from "../../shared/colors";
-import breakpoints from "../../shared/breakpoints";
-import { FaArrowRight } from "react-icons/fa";
-import transitions from "../../shared/transitions";
+import { transitions } from "../../shared/transitions";
 
-const NavLink = ({ text, to }) => {
+const NavLink = ({ text, to, mouseOver }) => {
+  const wrapperRef = useRef(null);
   return (
-    <Wrapper>
+    <Wrapper ref={wrapperRef} onMouseOver={() => mouseOver(wrapperRef.current)}>
       <CustomLink to={to} activeClassName="active">
         {text}
       </CustomLink>
-      <span />
     </Wrapper>
   );
 };
@@ -21,6 +19,7 @@ const NavLink = ({ text, to }) => {
 NavLink.propTypes = {
   text: PropTypes.string,
   to: PropTypes.string,
+  navBarPosition: PropTypes.func,
 };
 
 NavLink.defaultProps = {
@@ -31,8 +30,8 @@ export default NavLink;
 
 const CustomLink = styled(Link)`
   position: relative;
-  color: ${colors.white};
-  opacity: 0.6;
+  color: ${colors.blue};
+  ${transitions.satanSnap}
 `;
 
 const Wrapper = styled.li`
@@ -40,24 +39,12 @@ const Wrapper = styled.li`
   margin-left: 5rem;
   display: flex;
   align-items: center;
-  height: 7rem;
+  height: 5rem;
 
-  span {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: ${colors.blue};
-    width: 100%;
-    height: 0rem;
-  }
   .active {
     display: block;
     position: relative;
     pointer-events: none;
-    opacity: 1;
-  }
-
-  .active + span {
-    height: 0.3rem;
+    color: ${colors.white};
   }
 `;

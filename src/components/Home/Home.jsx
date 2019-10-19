@@ -1,9 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-import { useSpring, config } from "react-spring";
 import { HomeContainer, Text, Image } from "./HomeStyles";
 import HomeLink from "./HomeLink";
+import { animations } from "../../shared/transitions";
 
 const Home = () => {
   const { file } = useStaticQuery(graphql`
@@ -18,17 +18,9 @@ const Home = () => {
     }
   `);
 
-  const animation = useSpring({
-    opacity: 1,
-    transform: "translate3d(0, 0rem, 0)",
-    from: { opacity: 0, transform: "translate3d(0, 15rem, 0)" },
-    config: config.snap,
-    delay: 250,
-  });
-
   return (
     <HomeContainer>
-      <Text style={animation}>
+      <Text style={animations.verticleSlide(`-15rem`, 0)}>
         <h1>Hey, my name’s Rob.</h1>
         <p>
           I’m a freelance user interface designer and developer based in
@@ -39,7 +31,7 @@ const Home = () => {
         <HomeLink to="/contact" text="Get in touch" />
         <HomeLink to="/experience" text="Take a look at my CV" />
       </Text>
-      <Image style={animation}>
+      <Image style={animations.verticleSlide(`15rem`, 0)}>
         <Img fluid={file.childImageSharp.fluid} />
       </Image>
     </HomeContainer>
