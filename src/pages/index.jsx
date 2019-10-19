@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "../components/Layout/SEO";
 import Home from "../components/Home/Home";
 
-const IndexPage = () => {
+const Index = () => {
   return (
     <>
       <SEO title="Home" />
@@ -11,4 +11,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default Index;

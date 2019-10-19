@@ -22,16 +22,13 @@ export default ProjectCardCopy;
 
 const Copy = styled(animated.div)`
   width: 100%;
-
   h4 {
     color: ${({ color }) => color};
     font-weight: 400;
   }
-
   ${breakpoints.tablet} {
     width: 80%;
   }
-
   ${breakpoints.desktop} {
     margin-bottom: 0;
     padding-bottom: 4rem;

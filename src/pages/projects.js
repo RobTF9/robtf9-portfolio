@@ -1,16 +1,12 @@
 import React from "react";
 import SEO from "../components/Layout/SEO";
-import ExperienceList from "../components/Experience/ExperienceList";
-import Hero from "../components/Common/Hero";
+import ProjectList from "../components/Project/ProjectList";
 
 const Experience = () => {
   return (
     <>
-      <SEO title="Experience" />
-      <Hero>
-        My <span>experience.</span>
-      </Hero>
-      <ExperienceList />
+      <SEO title="Projects" />
+      <ProjectList />
     </>
   );
 };

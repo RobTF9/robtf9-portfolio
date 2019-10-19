@@ -1,7 +1,8 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import ProjectCard from "./ProjectCard";
-import { useSpring, config } from "react-spring";
+import styled from "styled-components";
+import ProjectCard from "./ProjectCard.js";
+import { animations } from "../../shared/transitions";
 import Container from "../Common/Container";
 
 const ProjectList = () => {
@@ -32,19 +33,18 @@ const ProjectList = () => {
     }
   `);
 
-  const animation = useSpring({
-    transform: "translate3d(0, 0rem, 0)",
-    from: { transform: "translate3d(0, 15rem, 0)" },
-    config: config.molasses,
-  });
-
   return (
-    <Container style={animation}>
+    <ProjectListContainer style={animations.verticleSlide(`15rem`, 0)}>
+      <h1>Projects</h1>
       {allMarkdownRemark.edges.map(({ node }) => (
         <ProjectCard key={node.frontmatter.slug} project={node.frontmatter} />
       ))}
-    </Container>
+    </ProjectListContainer>
   );
 };
+
+const ProjectListContainer = styled(Container)`
+  margin-top: 30vh;
+`;
 
 export default ProjectList;
