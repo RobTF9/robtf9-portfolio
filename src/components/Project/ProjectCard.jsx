@@ -44,13 +44,13 @@ const Card = styled.article`
 
 const Copy = styled.div`
   h3 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 `;
 
 const Client = styled.p`
   font-weight: 900;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: ${({ color }) => color};
 `;
 
