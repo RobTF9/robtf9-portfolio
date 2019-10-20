@@ -1,17 +1,14 @@
 ---
 date: 2019-07-03T20:51:00.000Z
 client: RAC
-title: A journey of understanding.
+title: Payment journey
 slug: /rac
-color: "#EF6C00"
+color: '#EF6C00'
 featuredimage: /img/rac-cover-image.png
 outline: >-
-  The RAC payment journey had to be brought in line with the new IDD
-  regulations. The general purpose of this regulation is to ensure that
-  customers fully understand the insurance products they purchase. The current
-  journey already had a very high conversion and the business were not keen to
-  radically change. Early research showed us that although people were buying
-  the products none of them could recall the details of their purchase.
+  Designed, prototyped and user tested a complex search solution for  Panasonic
+  Industrial Devices Sales Company Of America, allowing users to search their
+  vast product database.
 ---
 
 <div class="OffsetContent Logo">
