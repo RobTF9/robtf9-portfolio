@@ -15,7 +15,7 @@ const ProjectCard = ({ project }) => {
         <Client color={project.color}>{project.client}</Client>
         <p>{project.outline}</p>
       </Copy>
-      <Image fluid={project.featuredimage.childImageSharp.fluid} />
+      {/* <Image fluid={project.featuredimage.childImageSharp.fluid} /> */}
       <Button
         to={`/projects${project.slug}`}
         aria-label={`Read more about ${project.title}`}
@@ -38,7 +38,7 @@ const Card = styled.article`
   border: 0.1rem ${({ color }) => color} solid;
   padding: 4rem 4rem 12rem;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 4rem;
 `;
 
@@ -54,9 +54,7 @@ const Client = styled.p`
   color: ${({ color }) => color};
 `;
 
-const Image = styled(Img)`
-  background-color: aqua;
-`;
+const Image = styled(Img)``;
 
 const Button = styled(AniLink)`
   position: absolute;
