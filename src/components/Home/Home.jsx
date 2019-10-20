@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import { HomeContainer, Text, Image } from "./HomeStyles";
-import HomeLink from "./HomeLink";
+import TextLink from "../Common/TextLink";
 import { animations } from "../../shared/transitions";
 
 const Home = () => {
@@ -27,10 +27,10 @@ const Home = () => {
             I’m a freelance user interface designer and developer based in
             Bristol, UK.
           </p>
-          <HomeLink to="/about" text="More about me" />
-          <HomeLink to="/projects" text="My recent projects" />
-          <HomeLink to="/contact" text="Get in touch" />
-          <HomeLink to="/experience" text="Take a look at my CV" />
+          <TextLink to="/about" text="More about me" />
+          <TextLink to="/projects" text="My recent projects" />
+          <TextLink to="/contact" text="Get in touch" />
+          <TextLink to="/experience" text="Take a look at my CV" />
         </Text>
         <Image style={animations.verticleSlide(`15rem`, 0)}>
           <Img fluid={file.childImageSharp.fluid} />

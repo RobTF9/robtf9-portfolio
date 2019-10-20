@@ -7,7 +7,7 @@ import breakpoints from "../../shared/breakpoints";
 import { FaArrowRight } from "react-icons/fa";
 import { transitions } from "../../shared/transitions";
 
-const HomeLink = ({ text, to }) => {
+const TextLink = ({ text, to }) => {
   return (
     <StyledLink to={to}>
       {text} <FaArrowRight />
@@ -39,13 +39,13 @@ const StyledLink = styled(Link)`
   }
 `;
 
-HomeLink.propTypes = {
+TextLink.propTypes = {
   text: PropTypes.string,
   to: PropTypes.string,
 };
 
-HomeLink.defaultProps = {
+TextLink.defaultProps = {
   to: `/`,
 };
 
-export default HomeLink;
+export default TextLink;

@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
-import ProjectCard from "./ProjectCard.js";
+import ProjectCard from "./ProjectCard";
 import { animations } from "../../shared/transitions";
 import Container from "../Common/Container";
 
@@ -19,6 +19,7 @@ const ProjectList = () => {
               client
               slug
               color
+              outline
               featuredimage {
                 childImageSharp {
                   fluid(maxWidth: 1300) {

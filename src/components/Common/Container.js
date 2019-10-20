@@ -11,13 +11,6 @@ const Container = styled(animated.div)`
 
   ${breakpoints.tablet} {
     grid-column: 3 / 11;
-    grid-row-gap: 16rem;
-    margin-bottom: 16rem;
-  }
-
-  ${breakpoints.desktop} {
-    grid-row-gap: 24rem;
-    margin-bottom: 24rem;
   }
 `;
 
