@@ -1,5 +1,5 @@
 ---
-date: 2019-07-04T20:51:00.000Z
+date: 2019-10-21T20:51:00.000Z
 client: Panasonic America
 title: Parametric search
 slug: /panasonic-parametric-search
