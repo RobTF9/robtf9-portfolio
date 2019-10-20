@@ -1,16 +1,14 @@
 ---
 date: 2019-07-04T20:51:00.000Z
-client: Panasonic
-title: 'A scalable, responsive design system.'
-slug: /panasonic
-color: '#0062AF'
+client: Panasonic America
+title: Parametric search
+slug: /panasonic-parametric-search
+color: '#EF5F50'
 featuredimage: /img/pansonic-cover-image.png
 outline: >-
-  PIDSA (Panasonic Industrial Devices Sales Company Of America) had a dated web
-  presence that wasn’t responsive and was preventing them from implementing new
-  innovative features to help them stand out in the industry. With very limited
-  time and budget we had to deliver a web app that was accessible, responsive
-  and would allow PIDSA to scale and add new functionality with ease.
+  Designed, prototyped and user tested a complex search solution for Panasonic
+  Industrial Devices Sales Company Of America, allowing users to search their
+  vast product database.
 ---
 <div class="OffsetContent Logo">
 
