@@ -1,18 +1,14 @@
 ---
 date: 2019-07-02T20:58:00.000Z
 client: Osborne Clarke
-title: A mobile first typography system.
+title: Type first pattern library
 slug: /osborne-clarke
-color: "#1D8BB5"
+color: '#1D8BB5'
 featuredimage: /img/oc-cover-image.png
 outline: >-
-  Osborne Clarke were having a company wide re-position to present themselves as
-  industry leaders in digital transformation issues, this consisted of adding a
-  new section to the website and publishing a series of articles. From our
-  testing and analysis we found that people were not engaging with the content
-  on the current site so the primary objective was to not only implement the new
-  digital transformation section but also to engage users in content across the
-  site.
+  Designed, curated and implemented a typography first pattern library for
+  Osborne Clarke. A content heavy site with high number of articles focusing on
+  legal insights.
 ---
 
 <div class="OffsetContent Logo">
