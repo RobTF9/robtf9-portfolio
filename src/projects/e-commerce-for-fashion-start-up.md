@@ -1,17 +1,14 @@
 ---
 date: 2019-07-01T20:59:00.000Z
 client: MaiBee
-title: Mobile e-commerce for fashion start up.
+title: E-commerce site
 slug: /maibee
 color: '#E1AE2A'
 featuredimage: /img/maibee-cover-image.png
 outline: >-
-  MaiBee are a vintage clothing retailer run by sisters Liberty and Mathilda.
-  They had gained a huge following on social media and their business was taking
-  off. The only issue was the lack of a business website. They were selling
-  clothes on Depop which, although working, was costing them a lot of money and
-  also didn’t allow them to have their own look which in the fashion industry is
-  a must.
+  Created a flexible brand and design system, then created UI designs. Turned
+  visual designs into high fidelity prototypes to test. Built custome Shopify
+  theme from my design work.
 ---
 <div class="OffsetContent Logo">
 
