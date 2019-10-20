@@ -54,7 +54,13 @@ const Client = styled.p`
   color: ${({ color }) => color};
 `;
 
-const Image = styled(Img)``;
+const Image = styled(Img)`
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  width: 50%;
+  max-height: 100%;
+`;
 
 const Button = styled(AniLink)`
   position: absolute;
