@@ -1,39 +1,39 @@
 import React, { useRef } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Link } from "gatsby";
 import colors from "../../shared/colors";
 import { transitions } from "../../shared/transitions";
 
-const NavLink = ({ text, to, mouseOver }) => {
+const NavLinkIcon = ({ icon, to, mouseOver }) => {
   const wrapperRef = useRef(null);
   return (
     <Wrapper ref={wrapperRef} onMouseOver={() => mouseOver(wrapperRef.current)}>
-      <CustomLink to={to} activeClassName="active">
-        {text}
+      <CustomLink target="_blank" href={to} activeClassName="active">
+        {icon}
       </CustomLink>
     </Wrapper>
   );
 };
 
-NavLink.propTypes = {
-  text: PropTypes.string,
+NavLinkIcon.propTypes = {
   to: PropTypes.string,
   mouseOver: PropTypes.func,
 };
 
-NavLink.defaultProps = {
+NavLinkIcon.defaultProps = {
   to: `/`,
 };
 
-export default NavLink;
-
-const CustomLink = styled(Link)`
+const CustomLink = styled.a`
   position: relative;
   height: 100%;
   line-height: 7rem;
-  color: ${colors.white};
   ${transitions.satanSnap}
+
+  svg {
+    fill: ${colors.white};
+    transform: translateY(0.2rem);
+  }
 `;
 
 const Wrapper = styled.li`
@@ -42,11 +42,6 @@ const Wrapper = styled.li`
   display: flex;
   align-items: center;
   height: 7rem;
-
-  .active {
-    display: block;
-    position: relative;
-    pointer-events: none;
-    color: ${colors.blue};
-  }
 `;
+
+export default NavLinkIcon;

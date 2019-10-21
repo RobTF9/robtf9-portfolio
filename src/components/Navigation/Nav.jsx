@@ -1,20 +1,13 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import colors from "../../shared/colors";
 import NavLink from "./NavLink";
 import logo from "../../images/favicon.jpg";
+import navArray from "../../shared/navigationArray";
 import { Link } from "gatsby";
-import { transitions } from "../../shared/transitions";
+import { Container, Logo, LinkList, Bar, MenuButton } from "./NavStyles";
+import { FaGithub, FaLinkedinIn, FaBars, FaTimes } from "react-icons/fa";
+import NavLinkIcon from "./NavLinkIcon";
 
-const Nav = () => {
-  // Using an array to build the navigation.
-  const navArray = [
-    { text: "Projects", to: "/projects" },
-    { text: "About", to: "/about" },
-    { text: "Contact", to: "/contact" },
-    { text: "Experience", to: "/experience" },
-  ];
-
+const Nav = ({ toggleNav, visible, animation }) => {
   // This state handles the position of the sliding bar.
   const [position, setPosition] = useState({
     width: 0,
@@ -47,7 +40,15 @@ const Nav = () => {
   return (
     <Container>
       <Link to="/">
-        <Logo src={logo} alt="Robert Squires - Logo" />
+        <Logo
+          style={{
+            transform: animation.positive.interpolate(
+              y => `translate3d(0, ${y}rem, 0)`
+            ),
+          }}
+          src={logo}
+          alt="Robert Squires - Logo"
+        />
       </Link>
       <LinkList onMouseOver={mouseEnterList} onMouseOut={mouseLeaveList}>
         {navArray.map((item, key) => (
@@ -58,48 +59,23 @@ const Nav = () => {
             to={item.to}
           />
         ))}
+        <NavLinkIcon
+          to="https://github.com/robtf9"
+          icon={<FaGithub />}
+          mouseOver={mouseOver}
+        />
+        <NavLinkIcon
+          to="https://www.linkedin.com/in/robtf9/"
+          icon={<FaLinkedinIn />}
+          mouseOver={mouseOver}
+        />
       </LinkList>
       <Bar position={position} active={active} />
+      <MenuButton onClick={toggleNav}>
+        {!visible ? <FaBars /> : <FaTimes />}
+      </MenuButton>
     </Container>
   );
 };
-
-const Container = styled.nav`
-  z-index: 1000;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-`;
-
-const Logo = styled.img`
-  position: absolute;
-  left: calc(100vw / 12);
-  top: 0;
-  width: 7rem;
-`;
-
-const LinkList = styled.ul`
-  position: absolute;
-  display: flex;
-  right: calc(100vw / 12);
-  height: 7rem;
-`;
-
-const Bar = styled.span`
-  position: absolute;
-  background-color: ${colors.blue};
-  top: 6.8rem;
-  right: 0;
-  height: 0.2rem;
-  ${transitions.satanSnap};
-  opacity: ${({ active }) => active};
-  width: ${({ position }) => position.width}px;
-
-  /* Pass in active to reset position if mouse has left list area.*/
-  transform: translateX(
-    ${({ position, active }) => (active > 0 ? position.left : 0)}px
-  );
-`;
 
 export default Nav;

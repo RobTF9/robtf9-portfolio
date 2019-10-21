@@ -5,7 +5,7 @@ import colors from "../../shared/colors";
 import "./styles/init.css";
 import "./styles/type.css";
 import Nav from "../Navigation/Nav";
-import Footer from "../Footer/Footer";
+import NavDrawer from "../Navigation/NavDrawer";
 import { useSpring, animated, config } from "react-spring";
 
 const Layout = ({ children }) => {
@@ -20,16 +20,18 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Nav />
+      <Nav toggleNav={toggleNav} visible={visible} animation={animation} />
+      <Body />
       <Main
         style={{
           transform: animation.positive.interpolate(
-            y => `translate3d(0, ${y}vh, 0)`
+            y => `translate3d(0, ${y}rem, 0)`
           ),
         }}
       >
         {children}
       </Main>
+      <NavDrawer toggleNav={toggleNav} visible={visible} />
     </>
   );
 };
