@@ -52,7 +52,6 @@ export const Bar = styled.span`
 
 export const MenuButton = styled.button`
   position: absolute;
-  z-index: 3000;
   cursor: pointer;
   display: flex;
   right: calc(100vw / 12);
