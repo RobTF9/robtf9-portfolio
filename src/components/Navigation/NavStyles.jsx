@@ -16,7 +16,11 @@ export const Logo = styled(animated.img)`
   position: absolute;
   left: calc(100vw / 12);
   top: 0;
-  width: 7rem;
+  width: 5rem;
+
+  ${breakpoints.tablet768} {
+    width: 7rem;
+  }
 `;
 
 export const LinkList = styled.ul`
@@ -52,7 +56,7 @@ export const MenuButton = styled.button`
   cursor: pointer;
   display: flex;
   right: calc(100vw / 12);
-  height: 7rem;
+  height: 5rem;
 
   svg {
     fill: ${colors.white};

@@ -36,12 +36,6 @@ const Layout = ({ children }) => {
   );
 };
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export default Layout;
-
 const Body = createGlobalStyle`
   html {
     background-color: ${colors.black};
@@ -69,3 +63,9 @@ const Main = styled(animated.main)`
     }
   }
 `;
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Layout;
