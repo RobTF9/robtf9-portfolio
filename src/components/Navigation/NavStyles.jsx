@@ -29,6 +29,10 @@ export const LinkList = styled.ul`
   right: calc(100vw / 12);
   height: 7rem;
 
+  /* Backface visibility stops the bug making LinkList flicker */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
   ${breakpoints.tablet768} {
     display: flex;
   }
