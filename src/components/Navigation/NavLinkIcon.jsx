@@ -32,7 +32,6 @@ const CustomLink = styled.a`
 
   svg {
     fill: ${colors.white};
-    transform: translateY(0.2rem);
   }
 `;
 

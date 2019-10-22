@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Img from "gatsby-image";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import breakpoints from "../../shared/breakpoints";
 import { transitions } from "../../shared/transitions";
@@ -7,10 +6,15 @@ import { transitions } from "../../shared/transitions";
 export const Card = styled.article`
   position: relative;
   border: 0.1rem ${({ color }) => color} solid;
-  padding: 4rem 4rem 12rem;
+  padding: 2rem 2rem 10rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-column-gap: 4rem;
+
+  ${breakpoints.tablet} {
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem 4rem 12rem;
+  }
 `;
 
 export const Copy = styled.div`
@@ -25,12 +29,18 @@ export const Client = styled.p`
   color: ${({ color }) => color};
 `;
 
-export const Image = styled(Img)`
-  position: absolute !important;
+export const ImageWrapper = styled.div`
+  position: absolute;
+  background-color: aqua;
   top: 0;
   right: 0;
-  width: 50%;
-  max-height: 100%;
+  width: 100%;
+  height: 5rem;
+  overflow: hidden;
+
+  .gatsby-image-wrapper {
+    max-width: 50%;
+  }
 `;
 
 export const Button = styled(AniLink)`

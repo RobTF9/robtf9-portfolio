@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FaArrowRight } from "react-icons/fa";
-import { Card, Copy, Client, Button } from "./ProjectCardStyles";
+import Img from "gatsby-image";
+import { Card, Copy, Client, Button, ImageWrapper } from "./ProjectCardStyles";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -11,7 +12,9 @@ const ProjectCard = ({ project }) => {
         <Client color={project.color}>{project.client}</Client>
         <p>{project.outline}</p>
       </Copy>
-      {/* <Image fluid={project.featuredimage.childImageSharp.fluid} /> */}
+      <ImageWrapper>
+        <Img fluid={project.featuredimage.childImageSharp.fluid} />
+      </ImageWrapper>
       <Button
         to={`/projects${project.slug}`}
         aria-label={`Read more about ${project.title}`}
