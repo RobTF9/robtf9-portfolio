@@ -2,55 +2,63 @@ import styled from "styled-components";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import breakpoints from "../../shared/breakpoints";
 import { transitions } from "../../shared/transitions";
+import colors from "../../shared/colors";
 
 export const Card = styled.article`
   position: relative;
-  border: 0.1rem ${({ color }) => color} solid;
-  padding: 2rem 2rem 10rem;
+  padding-top: 35%;
+`;
+
+export const Background = styled.span`
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: ${colors.white};
+  opacity: 0.025;
+`;
+
+export const Container = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 4rem;
 
   ${breakpoints.tablet} {
     grid-template-columns: 1fr 1fr;
-    padding: 4rem 4rem 12rem;
   }
 `;
 
 export const Copy = styled.div`
-  h3 {
-    margin-bottom: 1.5rem;
-  }
+  position: relative;
+  padding: 4rem;
 `;
 
 export const Client = styled.p`
-  font-weight: 900;
-  margin-bottom: 1.5rem;
+  font-weight: 800;
   color: ${({ color }) => color};
 `;
 
 export const ImageWrapper = styled.div`
-  position: absolute;
-  background-color: aqua;
-  top: 0;
-  right: 0;
+  background-color: ${({ color }) => color};
   width: 100%;
-  height: 5rem;
+  height: 100%;
   overflow: hidden;
-
-  .gatsby-image-wrapper {
-    max-width: 50%;
-  }
 `;
 
 export const Button = styled(AniLink)`
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
-  width: calc(100% - 8rem);
   padding: 1.5rem 4rem;
   text-align: right;
-  background-color: ${({ bg }) => bg};
+  background-color: ${({ color }) => color};
 
   svg {
     margin: 0 0 -0.3rem;
