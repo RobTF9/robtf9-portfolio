@@ -4,7 +4,7 @@ client: Panasonic
 title: Global design system
 slug: panasonic-design-system
 color: '#0062AF'
-featuredimage: /img/apps.png
+featuredimage: /img/global-cover.png
 outline: >-
   Designed the UI and brand assets for a clientside application. Ethvault allows
   users to interface with decentralized apps on the Ethereum block chain, all in
