@@ -1,5 +1,5 @@
 ---
-date: 2019-10-20T09:18:38.927Z
+date: 2019-10-04T09:18:00.000Z
 client: Panasonic
 title: Global design system
 slug: panasonic-design-system
