@@ -1,5 +1,5 @@
 ---
-date: 2019-07-03T20:51:00.000Z
+date: 2019-10-03T20:51:00.000Z
 client: RAC
 title: Payment journey
 slug: /rac
