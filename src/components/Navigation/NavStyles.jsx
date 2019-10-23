@@ -18,7 +18,7 @@ export const Logo = styled(animated.img)`
   top: 0;
   width: 5rem;
 
-  ${breakpoints.tablet768} {
+  ${breakpoints.desktop} {
     width: 7rem;
   }
 `;
@@ -33,7 +33,7 @@ export const LinkList = styled.ul`
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 
-  ${breakpoints.tablet768} {
+  ${breakpoints.desktop} {
     display: flex;
   }
 `;
@@ -65,7 +65,7 @@ export const MenuButton = styled.button`
     fill: ${colors.white};
   }
 
-  ${breakpoints.tablet768} {
+  ${breakpoints.desktop} {
     display: none;
   }
 `;

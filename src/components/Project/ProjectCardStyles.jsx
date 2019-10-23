@@ -6,7 +6,11 @@ import colors from "../../shared/colors";
 
 export const Card = styled.article`
   position: relative;
-  padding-top: 35%;
+  padding-top: 100%;
+
+  ${breakpoints.desktop} {
+    padding-top: 35%;
+  }
 `;
 
 export const Background = styled.span`
@@ -28,16 +32,19 @@ export const Container = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-column-gap: 4rem;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.desktop} {
     grid-template-columns: 1fr 1fr;
   }
 `;
 
 export const Copy = styled.div`
   position: relative;
-  padding: 4rem;
+  padding: 2rem 2rem 8rem 2rem;
+
+  ${breakpoints.desktop} {
+    padding: 4rem;
+  }
 `;
 
 export const Client = styled.p`
