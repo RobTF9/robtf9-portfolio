@@ -1,10 +1,10 @@
 ---
 date: 2019-07-01T20:59:00.000Z
 client: MaiBee
-title: E-commerce site
+title: E-commerce platform
 slug: /maibee
 color: '#E1AE2A'
-featuredimage: /img/maibee-cover-image.png
+featuredimage: /img/maibee-cover.png
 outline: >-
   Created a flexible brand and design system, then created UI designs. Turned
   visual designs into high fidelity prototypes to test. Built custome Shopify
