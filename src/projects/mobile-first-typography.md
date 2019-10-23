@@ -1,5 +1,5 @@
 ---
-date: 2019-07-02T20:58:00.000Z
+date: 2019-10-02T20:58:00.000Z
 client: Osborne Clarke
 title: Pattern library
 slug: /osborne-clarke
