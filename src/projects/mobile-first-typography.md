@@ -3,7 +3,7 @@ date: 2019-07-02T20:58:00.000Z
 client: Osborne Clarke
 title: Pattern library
 slug: /osborne-clarke
-color: '#1D8BB5'
+color: '#043144'
 featuredimage: /img/oc-cover.png
 outline: >-
   Designed, curated and implemented a typography first pattern library for
