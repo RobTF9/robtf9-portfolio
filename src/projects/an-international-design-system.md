@@ -4,7 +4,7 @@ client: Panasonic America
 title: Parametric search
 slug: /panasonic-parametric-search
 color: '#EF5F50'
-featuredimage: /img/pansonic-cover-image.png
+featuredimage: /img/parametric-cover.png
 outline: >-
   Designed, prototyped and user tested a complex search solution for Panasonic
   Industrial Devices Sales Company Of America, allowing users to search their
