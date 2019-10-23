@@ -1,7 +1,7 @@
 ---
 date: 2019-07-02T20:58:00.000Z
 client: Osborne Clarke
-title: Type first pattern library
+title: Pattern library
 slug: /osborne-clarke
 color: '#1D8BB5'
 featuredimage: /img/oc-cover.png
