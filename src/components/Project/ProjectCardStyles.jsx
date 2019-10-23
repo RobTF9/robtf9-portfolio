@@ -46,6 +46,11 @@ export const Copy = styled.div`
   top: 0;
   padding: 2rem;
 
+  h2,
+  p {
+    font-size: 1.8rem;
+  }
+
   color: ${({ client }) =>
     client === "MyEthvault" ? `#02394A` : colors.white};
 
@@ -58,11 +63,18 @@ export const Copy = styled.div`
       client === "MaiBee"
         ? `auto`
         : `0`};
+
+    h2 {
+      font-size: 4rem;
+    }
   }
 `;
 
 export const Client = styled.p`
-  font-weight: 800;
+  font-weight: 200;
+  ${breakpoints.desktop} {
+    font-weight: 400;
+  }
 `;
 
 export const ImageWrapper = styled.div`

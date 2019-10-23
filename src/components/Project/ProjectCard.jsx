@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
       to={`/projects${project.slug}`}
       aria-label={`Read more about ${project.title}`}
       cover
-      direction="down"
+      direction="right"
     >
       <Container>
         <Copy client={project.client}>
