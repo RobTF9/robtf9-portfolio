@@ -4,12 +4,18 @@ import breakpoints from "../../shared/breakpoints";
 import { transitions } from "../../shared/transitions";
 import colors from "../../shared/colors";
 
-export const Card = styled.article`
+export const Card = styled(AniLink)`
   position: relative;
+  overflow: hidden;
   padding-top: 100%;
+  grid-column: span 2;
 
-  ${breakpoints.desktop} {
-    padding-top: 35%;
+  ${breakpoints.tablet} {
+    padding-top: ${({ client }) =>
+      client === "RAC" || client === "MaiBee" ? `50%` : `100%`};
+
+    grid-column: ${({ client }) =>
+      client === "RAC" || client === "MaiBee" ? `span 2` : `span 1`};
   }
 `;
 
@@ -20,8 +26,7 @@ export const Background = styled.span`
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: ${colors.white};
-  opacity: 0.025;
+  background-color: ${({ color }) => color};
 `;
 
 export const Container = styled.div`
@@ -32,54 +37,86 @@ export const Container = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-
-  ${breakpoints.desktop} {
-    grid-template-columns: 1fr 1fr;
-  }
 `;
 
 export const Copy = styled.div`
-  position: relative;
-  padding: 2rem 2rem 8rem 2rem;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  padding: 2rem;
+
+  color: ${({ client }) =>
+    client === "MyEthvault" ? `#02394A` : colors.white};
 
   ${breakpoints.desktop} {
     padding: 4rem;
+    top: auto;
+    bottom: ${({ client }) =>
+      client === "MyEthvault" ||
+      client === "Osborne Clarke" ||
+      client === "MaiBee"
+        ? `auto`
+        : `0`};
   }
 `;
 
 export const Client = styled.p`
   font-weight: 800;
-  color: ${({ color }) => color};
 `;
 
 export const ImageWrapper = styled.div`
-  background-color: ${({ color }) => color};
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-`;
-
-export const Button = styled(AniLink)`
   position: absolute;
-  right: 0;
   bottom: 0;
-  padding: 1.5rem 4rem;
-  text-align: right;
-  background-color: ${({ color }) => color};
+  right: 0;
+  width: ${({ client }) =>
+    client === "RAC" || client === "MaiBee" ? `50%` : `100%`};
+  height: ${({ client }) =>
+    client === "RAC" || client === "MaiBee" ? `50%` : `100%`};
+  overflow: hidden;
+  transform: scale(1);
+  ${transitions.satanSnap};
+  transform-origin: ${({ client }) =>
+    client === "Osborne Clarke" ? `50% 100%` : `50%`};
 
-  svg {
-    margin: 0 0 -0.3rem;
-    font-size: 1.6rem;
-    transform: translate3d(0.5rem, 0, 0);
-    ${transitions.quickSnap}
+  ${Card}:hover & {
+    transform: scale(1.1);
   }
 
   ${breakpoints.tablet} {
-    &:hover {
-      svg {
-        transform: translate3d(1rem, 0, 0);
-        ${transitions.quickSnap}
-      }
-    }
+    height: 100%;
+  }
+`;
+
+export const Button = styled.button`
+  position: absolute;
+  right: 2rem;
+  bottom: 0;
+  padding: 1.5rem 4rem;
+  text-align: right;
+  color: ${colors.white};
+  background-color: ${colors.black};
+  transform: translateY(6rem);
+  ${transitions.mediumSnap};
+
+  ${Card}:hover & {
+    transform: translateY(0rem);
+  }
+
+  ${breakpoints.desktop} {
+    right: 4rem;
+    bottom: ${({ client }) =>
+      client === "MyEthvault" ||
+      client === "Osborne Clarke" ||
+      client === "MaiBee"
+        ? `0`
+        : `auto`};
+
+    transform: ${({ client }) =>
+      client === "MyEthvault" ||
+      client === "Osborne Clarke" ||
+      client === "MaiBee"
+        ? `translateY(6rem)`
+        : `translateY(-6rem)`};
   }
 `;
