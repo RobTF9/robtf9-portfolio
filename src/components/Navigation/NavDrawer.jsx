@@ -5,6 +5,7 @@ import styled from "styled-components";
 import colors from "../../shared/colors";
 import { Link } from "gatsby";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import breakpoints from "../../shared/breakpoints";
 
 const NavDrawer = ({ toggleNav }) => {
   return (
@@ -45,6 +46,10 @@ const Drawer = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: ${colors.blue};
+
+  ${breakpoints.desktop} {
+    display: none;
+  }
 `;
 
 const DrawerList = styled.ul`
