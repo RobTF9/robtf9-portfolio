@@ -4,7 +4,7 @@ client: Osborne Clarke
 title: Type first pattern library
 slug: /osborne-clarke
 color: '#1D8BB5'
-featuredimage: /img/oc-cover-image.png
+featuredimage: /img/oc-cover.png
 outline: >-
   Designed, curated and implemented a typography first pattern library for
   Osborne Clarke. A content heavy site with high number of articles focusing on
