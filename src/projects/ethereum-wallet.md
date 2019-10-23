@@ -2,7 +2,7 @@
 date: 2019-10-05T09:18:00.000Z
 client: MyEthvault
 title: Ethereum wallet
-slug: ethereum-wallet
+slug: /ethereum-wallet
 color: '#DAEBF1'
 featuredimage: /img/ethvault-cover.png
 outline: >-
