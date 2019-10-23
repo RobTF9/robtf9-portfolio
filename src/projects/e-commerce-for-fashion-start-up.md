@@ -1,5 +1,5 @@
 ---
-date: 2019-07-01T20:59:00.000Z
+date: 2019-10-06T20:59:00.000Z
 client: MaiBee
 title: E-commerce platform
 slug: /maibee
