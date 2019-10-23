@@ -1,5 +1,5 @@
 ---
-date: 2019-10-20T09:18:38.927Z
+date: 2019-10-05T09:18:00.000Z
 client: MyEthvault
 title: Ethereum wallet
 slug: ethereum-wallet
