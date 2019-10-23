@@ -2,7 +2,7 @@
 date: 2019-10-04T09:18:00.000Z
 client: Panasonic
 title: Global design system
-slug: panasonic-design-system
+slug: /panasonic-design-system
 color: '#0062AF'
 featuredimage: /img/global-cover.png
 outline: >-
