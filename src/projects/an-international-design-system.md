@@ -6,9 +6,12 @@ slug: /panasonic-parametric-search
 color: '#EF5F50'
 featuredimage: /img/parametric-cover.png
 outline: >-
-  Designed, prototyped and user tested a complex search solution for Panasonic
-  Industrial Devices Sales Company Of America, allowing users to search their
-  vast product database.
+  Parametric searches are typically a mess of cluttered interface components and
+  unreadable data. I created a solution for Pansonic America that strips away
+  the complexity and provides users with a an easy way to configure and refine
+  the parameters of their search. My deliverables for this project were an
+  interactive wireframe, and high fidelity prototype created using Sketch and
+  Adobe XD.
 ---
 <div class="OffsetContent Logo">
 
