@@ -11,10 +11,10 @@ import {
   Background,
 } from "./ProjectCardStyles";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, index }) => {
   return (
     <Card
-      client={project.client}
+      index={index + 1}
       color={project.color}
       bg={project.color}
       to={`/projects${project.slug}`}
@@ -27,7 +27,7 @@ const ProjectCard = ({ project }) => {
           <Client color={project.color}>{project.client}</Client>
           <h2>{project.title}</h2>
         </Copy>
-        <ImageWrapper client={project.client} color={project.color}>
+        <ImageWrapper index={index + 1} client={project.client}>
           <Img fluid={project.featuredimage.childImageSharp.fluid} />
         </ImageWrapper>
         <Button color={project.color} client={project.client}>

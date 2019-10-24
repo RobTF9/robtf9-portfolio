@@ -39,8 +39,12 @@ const ProjectList = () => {
     <ProjectListContainer style={animations.verticleSlide(`15rem`, 0)}>
       <h1>Projects</h1>
       <Grid>
-        {allMarkdownRemark.edges.map(({ node }) => (
-          <ProjectCard key={node.frontmatter.slug} project={node.frontmatter} />
+        {allMarkdownRemark.edges.map(({ node }, index) => (
+          <ProjectCard
+            index={index}
+            key={node.frontmatter.slug}
+            project={node.frontmatter}
+          />
         ))}
       </Grid>
     </ProjectListContainer>

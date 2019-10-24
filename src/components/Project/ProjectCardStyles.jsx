@@ -11,11 +11,9 @@ export const Card = styled(AniLink)`
   grid-column: span 2;
 
   ${breakpoints.tablet} {
-    padding-top: ${({ client }) =>
-      client === "RAC" || client === "MaiBee" ? `50%` : `100%`};
+    padding-top: ${({ index }) => (index % 3 === 0 ? `50%` : `100%`)};
 
-    grid-column: ${({ client }) =>
-      client === "RAC" || client === "MaiBee" ? `span 2` : `span 1`};
+    grid-column: ${({ index }) => (index % 3 === 0 ? `span 2` : `span 1`)};
   }
 `;
 
@@ -81,10 +79,8 @@ export const ImageWrapper = styled.div`
   position: absolute;
   bottom: 0;
   right: 0;
-  width: ${({ client }) =>
-    client === "RAC" || client === "MaiBee" ? `50%` : `100%`};
-  height: ${({ client }) =>
-    client === "RAC" || client === "MaiBee" ? `50%` : `100%`};
+  width: ${({ index }) => (index % 3 === 0 ? `50%` : `100%`)};
+  height: ${({ index }) => (index % 3 === 0 ? `50%` : `100%`)};
   overflow: hidden;
   transform: scale(1);
   ${transitions.satanSnap};
