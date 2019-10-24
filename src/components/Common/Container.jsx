@@ -22,12 +22,18 @@ export const ContentContainer = styled(Container)`
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: min-content;
 
-    h1 {
+    .full {
+      grid-column: span 2;
+    }
+
+    h1,
+    .left {
       grid-column: span 1;
     }
 
     article,
-    p {
+    p,
+    .right {
       grid-column-start: 2;
     }
   }

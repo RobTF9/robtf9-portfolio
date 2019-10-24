@@ -1,36 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import breakpoints from "../../../shared/breakpoints";
-import colors from "../../../shared/colors";
+import { transitions } from "../../../shared/transitions";
 import Img from "gatsby-image";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const OtherProjects = ({ projects }) => {
   return (
     <OtherProjectList>
-      <Title>Other projects</Title>
-      <Container>
-        {projects.map(({ node }) => {
-          return (
-            <AniLink
-              key={node.frontmatter.slug}
-              to={`/projects${node.frontmatter.slug}`}
-              aria-label={`Read more about ${node.frontmatter.title}`}
-              cover
-              bg={node.frontmatter.color}
-              direction="up"
-            >
-              <Card color={node.frontmatter.color}>
-                <p>{node.frontmatter.client}</p>
-                <h4>{node.frontmatter.title}</h4>
-                <Image
-                  fluid={node.frontmatter.featuredimage.childImageSharp.fluid}
-                />
-              </Card>
-            </AniLink>
-          );
-        })}
-      </Container>
+      {projects.map(({ node }) => {
+        return (
+          <AniLink
+            key={node.frontmatter.slug}
+            to={`/projects${node.frontmatter.slug}`}
+            aria-label={`Read more about ${node.frontmatter.title}`}
+            cover
+            bg={node.frontmatter.color}
+            direction="up"
+          >
+            <Card color={node.frontmatter.color}>
+              <p>{node.frontmatter.client}</p>
+              <h4>{node.frontmatter.title}</h4>
+              <Image
+                fluid={node.frontmatter.featuredimage.childImageSharp.fluid}
+              />
+            </Card>
+          </AniLink>
+        );
+      })}
     </OtherProjectList>
   );
 };
@@ -41,34 +38,18 @@ const OtherProjectList = styled.div`
   grid-column: 2 / 12;
   margin-bottom: 5rem;
   display: grid;
-  border-top: 0.05rem ${colors.translucent} solid;
   padding-top: 1.5rem;
 
   ${breakpoints.tablet} {
     padding-top: 5rem;
-    grid-template-columns: 1fr 3fr;
-  }
-
-  ${breakpoints.desktop} {
     grid-column: 3 / 11;
-    grid-template-columns: 1fr 3fr;
   }
-`;
-
-const Container = styled.div`
-  display: grid;
 
   ${breakpoints.desktop} {
     margin-bottom: 15rem;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 1rem;
   }
-`;
-
-const Title = styled.p`
-  padding-bottom: 1.5rem;
-  margin-bottom: 3rem;
-  font-weight: 200;
 `;
 
 const Card = styled.div`
@@ -79,6 +60,13 @@ const Card = styled.div`
   padding: 2rem;
   padding-bottom: 4rem;
   margin-bottom: 2rem;
+  transform: translateY(0rem);
+  ${transitions.satanSnap};
+
+  &:hover {
+    transform: translateY(-2.5rem);
+    ${transitions.mediumSnap};
+  }
 
   p,
   h4 {
@@ -99,8 +87,7 @@ const Card = styled.div`
 const Image = styled(Img)`
   position: absolute !important;
   z-index: 0;
-  bottom: -65%;
-  right: -15%;
+  bottom: 0;
+  right: 0;
   width: 100%;
-  opacity: 0.2;
 `;
