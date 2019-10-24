@@ -18,12 +18,12 @@ export const transitions = {
 };
 
 export const animations = {
-  verticleSlide: (from, duration) =>
+  verticleSlide: (from, delay) =>
     useSpring({
       opacity: 1,
       transform: "translate3d(0, 0rem, 0)",
       from: { opacity: 0, transform: `translate3d(0, ${from}, 0)` },
       config: config.snap,
-      delay: duration,
+      delay: delay,
     }),
 };

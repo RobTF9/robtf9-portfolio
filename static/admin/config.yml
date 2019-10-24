@@ -35,3 +35,19 @@ collections:
       - { label: "Role", name: "role", widget: "string" }
       - { label: "Order", name: "order", widget: "number" }
       - { label: "Description", name: "description", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/content/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }

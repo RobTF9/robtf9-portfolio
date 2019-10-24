@@ -1,27 +1,19 @@
 import React from "react";
 import SEO from "../components/Layout/SEO";
-import Hero from "../components/Common/Hero";
 import Container from "../components/Common/Container";
 import styled from "styled-components";
 import breakpoints from "../shared/breakpoints";
 import { useSpring, config } from "react-spring";
 import { Link } from "gatsby";
 import colors from "../shared/colors";
+import { animations } from "../shared/transitions";
 
 const About = () => {
-  const animation = useSpring({
-    transform: "translate3d(0, 0rem, 0)",
-    from: { transform: "translate3d(0, 15rem, 0)" },
-    config: config.molasses,
-  });
-
   return (
     <>
       <SEO title="About" />
-      <Hero>
-        <span>About</span> me.
-      </Hero>
-      <AboutContainer style={animation}>
+      <AboutContainer style={animations.verticleSlide(`15rem`, 0)}>
+        <h1>About me.</h1>
         <p>
           <strong>
             By day I work as a UI designer with a focus on creating compelling
@@ -64,7 +56,8 @@ const About = () => {
 export default About;
 
 const AboutContainer = styled(Container)`
-  grid-gap: 3rem;
+  margin-top: 30vh;
+  grid-gap: 2rem;
 
   ${breakpoints.tablet} {
     grid-gap: 3rem;
@@ -72,7 +65,7 @@ const AboutContainer = styled(Container)`
 
   ${breakpoints.desktop} {
     grid-gap: 3rem;
-    grid-column: 7 / 11;
+    grid-column: 3 / 11;
   }
 
   a {
