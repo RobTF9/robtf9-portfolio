@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Nav toggleNav={toggleNav} visible={visible} animation={animation} />
-      <Body />
+      <Body visible={visible} />
       <Main
         style={{
           transform: animation.positive.interpolate(

@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <HomeContainer>
-      <Text style={animations.verticleSlide(`-15rem`, 0)}>
+      <Text style={animations.verticleSlide(`15rem`, 0)}>
         <h1>Hey, my name’s Rob.</h1>
         <p>I’m a user interface designer and developer based in Bristol, UK.</p>
         <TextLink to="/about" text="More about me" />

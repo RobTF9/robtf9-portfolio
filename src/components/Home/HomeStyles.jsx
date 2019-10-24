@@ -21,7 +21,11 @@ export const HomeContainer = styled(Container)`
 
 export const Text = styled(animated.div)`
   p {
-    margin: 1rem 0 8rem 0;
+    margin: 1rem 0 5rem 0;
+
+    ${breakpoints.desktop} {
+      margin: 1rem 0 8rem 0;
+    }
   }
 `;
 
@@ -29,13 +33,14 @@ export const Image = styled(animated.div)`
   position: absolute !important;
   bottom: 0;
   right: 0;
-  width: 80%;
+  width: 50%;
 
   .gatsby-image-wrapper {
     position: absolute !important;
     bottom: 0;
     right: 0;
-    width: 100%;
+    left: 0;
+    margin: 0 auto;
   }
 
   ${breakpoints.desktop} {

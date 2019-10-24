@@ -1,11 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 import navArray from "../../shared/navigationArray";
 import styled from "styled-components";
 import colors from "../../shared/colors";
 import { Link } from "gatsby";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import breakpoints from "../../shared/breakpoints";
+import logo from "../../images/logo.svg";
 
 const NavDrawer = ({ toggleNav }) => {
   return (
@@ -23,6 +23,8 @@ const NavDrawer = ({ toggleNav }) => {
             </Link>
           </DrawerLink>
         ))}
+      </DrawerList>
+      <IconList>
         <DrawerLink onClick={toggleNav}>
           <a href="https://github.com/robtf9" target="_blank">
             <FaGithub />
@@ -33,7 +35,8 @@ const NavDrawer = ({ toggleNav }) => {
             <FaLinkedinIn />
           </a>
         </DrawerLink>
-      </DrawerList>
+      </IconList>
+      <Logo src={logo} alt="Robert Squires - Logo" />
     </Drawer>
   );
 };
@@ -53,12 +56,19 @@ const Drawer = styled.div`
 `;
 
 const DrawerList = styled.ul`
-  position: absolute;
-  top: 0;
-  right: 3.5rem;
+  position: relative;
+  width: calc(100vw - ((100vw / 12) * 2));
+  text-align: right;
+  padding: 7rem calc(100vw / 12) 0rem;
+`;
+
+const IconList = styled.ul`
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: calc(100vw - ((100vw / 12) * 2));
   text-align: right;
   height: calc(100% - 21rem);
-  padding: 14rem 0 7rem;
+  padding: 3.5rem calc(100vw / 12) 7rem;
 `;
 
 const DrawerLink = styled.li`
@@ -69,6 +79,15 @@ const DrawerLink = styled.li`
     color: ${colors.black};
     opacity: 0.5;
   }
+`;
+
+const Logo = styled.img`
+  position: absolute;
+  z-index: 5;
+  opacity: 0.25;
+  left: 0;
+  bottom: -1rem;
+  width: 50%;
 `;
 
 export default NavDrawer;

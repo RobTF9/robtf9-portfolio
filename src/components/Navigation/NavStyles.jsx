@@ -61,6 +61,10 @@ export const MenuButton = styled.button`
   right: calc(100vw / 12);
   height: 5rem;
 
+  /* Backface visibility stops the bug making LinkList flicker */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
   svg {
     fill: ${colors.white};
   }
