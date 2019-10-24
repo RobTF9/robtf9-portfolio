@@ -14,4 +14,23 @@ const Container = styled(animated.div)`
   }
 `;
 
+export const ContentContainer = styled(Container)`
+  grid-row-gap: 2rem;
+  margin-top: 30vh;
+
+  ${breakpoints.desktop} {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+
+    h1 {
+      grid-column: span 1;
+    }
+
+    article,
+    p {
+      grid-column-start: 2;
+    }
+  }
+`;
+
 export default Container;

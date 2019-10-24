@@ -2,9 +2,9 @@ import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import Img from "gatsby-image";
-import SEO from "../Layout/SEO";
+import SEO from "../../Layout/SEO";
 import OtherProjects from "./OtherProjects";
-import breakpoints from "../../shared/breakpoints";
+import breakpoints from "../../../shared/breakpoints";
 import Body from "./ProjectBody";
 import { useSpring, animated, config } from "react-spring";
 

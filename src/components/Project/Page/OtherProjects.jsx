@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import breakpoints from "../../shared/breakpoints";
-import colors from "../../shared/colors";
+import breakpoints from "../../../shared/breakpoints";
+import colors from "../../../shared/colors";
 import Img from "gatsby-image";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 

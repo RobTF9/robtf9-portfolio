@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import colors from "../../shared/colors";
-import breakpoints from "../../shared/breakpoints";
+import colors from "../../../shared/colors";
+import breakpoints from "../../../shared/breakpoints";
 
 const Body = styled.article`
   grid-column: 2 / 12;

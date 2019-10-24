@@ -26,7 +26,7 @@ const Home = () => {
         <TextLink to="/about" text="More about me" />
         <TextLink to="/projects" text="My recent projects" />
         <TextLink to="/contact" text="Get in touch" />
-        <TextLink to="/experience" text="Take a look at my CV" />
+        <TextLink to="/experience" text="View my experience" />
       </Text>
       <Image style={animations.verticleSlide(`15rem`, 0)}>
         <Img fluid={file.childImageSharp.fluid} />

@@ -1,10 +1,8 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { useSpring, config } from "react-spring";
-import styled from "styled-components";
-import Container from "../Common/Container";
+import { ContentContainer } from "../Common/Container";
 import ExperienceCard from "./ExperienceCard";
-import breakpoints from "../../shared/breakpoints";
+import { animations } from "../../shared/transitions";
 
 const ExperienceList = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
@@ -29,36 +27,17 @@ const ExperienceList = () => {
       }
     }
   `);
-
-  const animation = useSpring({
-    transform: "translate3d(0, 0rem, 0)",
-    from: { transform: "translate3d(0, 15rem, 0)" },
-    config: config.molasses,
-  });
-
   return (
-    <ExperienceContainer style={animation}>
+    <ContentContainer style={animations.verticleSlide(`15rem`, 0)}>
+      <h1>Experience</h1>
       {allMarkdownRemark.edges.map(({ node }) => (
         <ExperienceCard
           key={node.frontmatter.title}
           experience={node.frontmatter}
         />
       ))}
-    </ExperienceContainer>
+    </ContentContainer>
   );
 };
 
 export default ExperienceList;
-
-const ExperienceContainer = styled(Container)`
-  grid-gap: 3rem;
-
-  ${breakpoints.tablet} {
-    grid-gap: 3rem;
-  }
-
-  ${breakpoints.desktop} {
-    grid-gap: 3rem;
-    grid-column: 7 / 11;
-  }
-`;

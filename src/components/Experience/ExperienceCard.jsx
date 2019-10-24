@@ -4,12 +4,13 @@ import styled from "styled-components";
 import colors from "../../shared/colors";
 
 const ExperienceCard = ({ experience }) => {
+  const from = experience.from.split(" ").join("/");
+  const to = experience.to.split(" ").join("/");
   return (
     <Card>
-      <Role>{experience.role}</Role>
       <Company>{experience.title}</Company>
       <Date>
-        {experience.from} - {!experience.current ? experience.to : "Present"}
+        {from} - {!experience.current ? to : "Present"}
       </Date>
       <p>{experience.description}</p>
     </Card>
@@ -24,19 +25,13 @@ export default ExperienceCard;
 
 const Card = styled.article`
   position: relative;
-  cursor: pointer;
   padding: 2rem 0;
 `;
 
-const Company = styled.h4`
-  color: ${colors.blue};
-  font-weight: 600;
+const Company = styled.p`
+  font-weight: 900;
 `;
 
-const Role = styled.h4``;
-
-const Date = styled.h4`
-  margin-bottom: 2rem;
-  font-weight: 400;
-  font-style: italic;
+const Date = styled.p`
+  color: ${colors.blue};
 `;
