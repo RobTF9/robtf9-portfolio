@@ -39,7 +39,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/content/about/index.md"
+      - file: "src/content/about.md"
         label: "About"
         name: "about"
         fields:
