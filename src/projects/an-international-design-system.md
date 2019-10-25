@@ -26,3 +26,21 @@ outline: >-
 <p class="Caption">My solution for the parametric search.</p>
 
 </div>
+
+<div class="TextBlock">
+
+This solution required an in-depth understanding of not only the data but of how users consumed it. During early user research one of the major pain points highlighted was the lack of connection between the filter settings and results table. To solve this I combined the filters and results table using a drawer mechanism to hide and show the filter options. This drawer, along with the filter headers, follow the user down the page always allowing them the opportunity to tweak and refine their search no matter how far they have scrolled.
+
+ </div>
+
+<div class="full">
+
+![Parametric mobile screens](/img/parametric-mobile.png "Parametric mobile screens")
+
+</div>
+
+<div class="full">
+
+![Parametric desktop screen](/img/parametric-desktop.png "Parametric desktop screen")
+
+</div>
