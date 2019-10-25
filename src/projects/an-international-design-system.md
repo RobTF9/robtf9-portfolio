@@ -18,3 +18,11 @@ outline: >-
 <p class="Caption">An example of a cluttered parametric search.</p>
 
 </div>
+
+<div class="ImageWithCaption full">
+
+![My solution](/img/parametric-demo.jpg "My solution")
+
+<p class="Caption">My solution for the parametric search.</p>
+
+</div>
