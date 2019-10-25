@@ -11,7 +11,7 @@ outline: >-
   the complexity and provides users with an easy way to configure and refine the
   parameters of their search.
 ---
-<div class="ImageWithCaption">
+<div class="ImageWithCaption full">
 
 ![Parametric search example](/img/screenshot-2019-10-25-at-09.34.59.png "Parametric search example")
 
