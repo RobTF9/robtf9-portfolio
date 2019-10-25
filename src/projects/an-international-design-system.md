@@ -9,9 +9,7 @@ outline: >-
   Parametric searches are typically a mess of cluttered interface components and
   unreadable data. I created a solution for Panasonic America that strips away
   the complexity and provides users with an easy way to configure and refine the
-  parameters of their search. My deliverables for this project were an
-  interactive wireframe, and high fidelity prototype created using Sketch and
-  Adobe XD.
+  parameters of their search.
 ---
 <div class="ImageWithCaption">
 
