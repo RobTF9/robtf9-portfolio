@@ -15,6 +15,6 @@ outline: >-
 
 ![Parametric search example](/img/screenshot-2019-10-25-at-09.34.59.png "Parametric search example")
 
-<p>An example of a cluttered parametric search.</p>
+<p class="Caption">An example of a cluttered parametric search.</p>
 
 </div>
