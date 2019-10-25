@@ -2,26 +2,51 @@ import React from "react";
 import { ContentContainer } from "../../Common/Container";
 import styled from "styled-components";
 import breakpoints from "../../../shared/breakpoints";
+import colors from "../../../shared/colors";
 
-const ProjectContent = ({ content }) => {
+const ProjectContent = ({ content, color }) => {
   return (
     <ProjectContentContainer
+      color={color}
       dangerouslySetInnerHTML={{ __html: content }}
     ></ProjectContentContainer>
   );
 };
 
 const ProjectContentContainer = styled(ContentContainer)`
-  margin-top: 12em;
+  margin-top: 6rem;
+  margin-bottom: 24rem;
 
-  ${breakpoints.desktop} {
-    padding: 0rem calc(100vw / 12);
+  .ImageWithCaption {
+    position: relative;
+    margin-bottom: 12rem;
+
+    .Caption {
+      position: absolute;
+      left: 2rem;
+      bottom: 0;
+      max-width: calc(50% - 8rem);
+      padding: 2rem;
+      background-color: ${colors.black};
+    }
   }
-`;
 
-const Copy = styled.h3`
-  line-height: 1.4;
-  font-weight: 300;
+  .TextBlock {
+    grid-column: span 2;
+
+    ${breakpoints.desktop} {
+      padding: 0rem calc(100vw / 12);
+      margin-bottom: 12rem;
+    }
+  }
+
+  .full {
+    margin-bottom: 12rem;
+  }
+
+  .gatsby-resp-image-background-image {
+    background-image: none !important;
+  }
 `;
 
 export default ProjectContent;

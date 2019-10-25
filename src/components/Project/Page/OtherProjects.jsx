@@ -36,7 +36,7 @@ export default OtherProjects;
 
 const OtherProjectList = styled.div`
   grid-column: 2 / 12;
-  margin-bottom: 5rem;
+  margin-bottom: 0rem;
   display: grid;
   padding-top: 1.5rem;
 
@@ -46,7 +46,6 @@ const OtherProjectList = styled.div`
   }
 
   ${breakpoints.desktop} {
-    margin-bottom: 15rem;
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 1rem;
   }

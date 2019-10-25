@@ -24,7 +24,7 @@ const postLayout = ({ data }) => {
         color={frontmatter.color}
       />
       <ProjectIntro copy={frontmatter.outline} />
-      <ProjectContent content={html} />
+      <ProjectContent content={html} color={frontmatter.color} />
       <OtherProjects projects={projects} />
     </>
   );
