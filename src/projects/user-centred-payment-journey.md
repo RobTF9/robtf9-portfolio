@@ -4,7 +4,7 @@ client: RAC
 title: Payment journey
 slug: /rac
 color: '#EF6C00'
-featuredimage: /img/rac.png
+featuredimage: /img/rac-cover-image.png
 outline: >-
   Designed, prototyped and user tested a complex search solution for  Panasonic
   Industrial Devices Sales Company Of America, allowing users to search their
