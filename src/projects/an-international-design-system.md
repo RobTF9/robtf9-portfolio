@@ -4,7 +4,7 @@ client: Panasonic
 title: Parametric search
 slug: /panasonic-parametric-search
 color: '#EF5F50'
-featuredimage: /img/parametric-cover.png
+featuredimage: /img/parametric-cover-image.png
 outline: >-
   Parametric searches are typically a mess of cluttered interface components and
   unreadable data. I designed, user tested and prototyped a fully reponsive
