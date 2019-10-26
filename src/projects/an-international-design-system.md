@@ -13,7 +13,7 @@ outline: >-
 ---
 <div class="ImageWithCaption full">
 
-![Parametric search example](/img/screenshot-2019-10-25-at-09.34.59.png "Parametric search example")
+![Parametric search example](/img/parametric-example-bad.png "Parametric search example")
 
 <p class="Caption">An example of a cluttered parametric search.</p>
 
@@ -21,7 +21,7 @@ outline: >-
 
 <div class="ImageWithCaption full">
 
-![My parametric solution](/img/parametric-demo.jpg "My parametric solution")
+![My parametric solution](/img/parametric-example-good.jpg "My parametric solution")
 
 <p class="Caption">My solution for the parametric search.</p>
 
@@ -29,14 +29,18 @@ outline: >-
 
 <div class="full">
 
-
-
-![Parametric desktop](/img/parametric-desktop.png "Parametric desktop")
+![Parametric desktop](/img/parametric-desktop-one.png "Parametric desktop")
 
 </div>
 
 <div class="full">
 
 ![Parametric mobile](/img/parametric-mobile.png "Parametric mobile")
+
+</div>
+
+<div class="full">
+
+![Parametric mobile](/img/parametric-desktop-two.png "Parametric mobile")
 
 </div>
