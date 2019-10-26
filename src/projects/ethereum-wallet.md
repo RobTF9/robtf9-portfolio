@@ -4,7 +4,7 @@ client: MyEthvault
 title: Ethereum wallet
 slug: /ethereum-wallet
 color: '#DAEBF1'
-featuredimage: /img/ethvault-cover.png
+featuredimage: /img/ethvault-cover-image.png
 outline: >-
   Designed the UI and brand assets for a clientside application. Ethvault allows
   users to interface with decentralized apps on the Ethereum block chain, all in
