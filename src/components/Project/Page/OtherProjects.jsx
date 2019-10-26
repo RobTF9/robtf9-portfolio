@@ -7,28 +7,30 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const OtherProjects = ({ projects }) => {
   return (
-    <OtherProjectList>
-      {projects.map(({ node }) => {
-        return (
-          <AniLink
-            key={node.frontmatter.slug}
-            to={`/projects${node.frontmatter.slug}`}
-            aria-label={`Read more about ${node.frontmatter.title}`}
-            cover
-            bg={node.frontmatter.color}
-            direction="up"
-          >
-            <Card color={node.frontmatter.color}>
-              <p>{node.frontmatter.client}</p>
-              <h4>{node.frontmatter.title}</h4>
-              <Image
-                fluid={node.frontmatter.featuredimage.childImageSharp.fluid}
-              />
-            </Card>
-          </AniLink>
-        );
-      })}
-    </OtherProjectList>
+    <>
+      <OtherProjectList>
+        {projects.map(({ node }) => {
+          return (
+            <AniLink
+              key={node.frontmatter.slug}
+              to={`/projects${node.frontmatter.slug}`}
+              aria-label={`Read more about ${node.frontmatter.title}`}
+              cover
+              bg={node.frontmatter.color}
+              direction="up"
+            >
+              <Card color={node.frontmatter.color}>
+                <p>{node.frontmatter.client}</p>
+                <h4>{node.frontmatter.title}</h4>
+                {/* <Image
+                  fluid={node.frontmatter.featuredimage.childImageSharp.fluid}
+                /> */}
+              </Card>
+            </AniLink>
+          );
+        })}
+      </OtherProjectList>
+    </>
   );
 };
 

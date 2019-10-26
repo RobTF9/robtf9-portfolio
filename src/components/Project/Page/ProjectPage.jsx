@@ -5,9 +5,11 @@ import OtherProjects from "./OtherProjects";
 import ProjectHero from "./ProjectHero";
 import ProjectIntro from "./ProjectIntro";
 import ProjectContent from "./ProjectContent";
+import ProjectLink from "./ProjectLink";
 
 const postLayout = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
+  const { client, title, color, outline, featuredimage } = frontmatter;
   const { edges } = data.allMarkdownRemark;
 
   // This is how you get the other projects array
@@ -17,14 +19,11 @@ const postLayout = ({ data }) => {
 
   return (
     <>
-      <SEO title={frontmatter.client} />
-      <ProjectHero
-        title={frontmatter.title}
-        client={frontmatter.client}
-        color={frontmatter.color}
-      />
-      <ProjectIntro copy={frontmatter.outline} />
-      <ProjectContent content={html} color={frontmatter.color} />
+      <SEO title={client} />
+      <ProjectHero title={title} client={client} color={color} />
+      <ProjectIntro copy={outline} />
+      <ProjectContent content={html} color={color} />
+      <ProjectLink client={client} title={title} color={color} />
       <OtherProjects projects={projects} />
     </>
   );

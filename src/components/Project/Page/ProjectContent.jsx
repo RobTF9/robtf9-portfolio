@@ -15,7 +15,6 @@ const ProjectContent = ({ content, color }) => {
 
 const ProjectContentContainer = styled(ContentContainer)`
   margin-top: 6rem;
-  margin-bottom: 24rem;
 
   .ImageWithCaption {
     position: relative;
@@ -31,21 +30,17 @@ const ProjectContentContainer = styled(ContentContainer)`
     }
   }
 
-  .TextBlock {
-    grid-column: span 2;
-
-    ${breakpoints.desktop} {
-      padding: 0rem calc(100vw / 12);
-      margin-bottom: 12rem;
-    }
-  }
-
   .full {
     margin-bottom: 12rem;
   }
 
   .gatsby-resp-image-background-image {
     background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  .gatsby-resp-image-image {
+    box-shadow: none !important;
   }
 `;
 
