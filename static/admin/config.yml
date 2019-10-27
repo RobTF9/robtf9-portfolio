@@ -17,6 +17,7 @@ collections:
       - { label: "Client", name: "client", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Link", name: "link", widget: "string" }
       - { label: "Color", name: "color", widget: "string" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Outline", name: "outline", widget: "text" }

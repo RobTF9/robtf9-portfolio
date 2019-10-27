@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import breakpoints from "../../../shared/breakpoints";
+import colors from "../../../shared/colors";
 
 const ProjectHero = ({ client, title, color }) => {
   return (
-    <Hero color={color}>
+    <Hero color={color} client={client}>
       <Copy>
         <p>{client}</p>
         <h1>{title}</h1>
@@ -17,6 +18,8 @@ const Hero = styled.header`
   position: relative;
   grid-column: 1 / -1;
   background-color: ${({ color }) => color};
+  color: ${({ client }) =>
+    client === "MyEthvault" ? `#02394A` : colors.white};
   height: 40vh;
 `;
 

@@ -4,6 +4,7 @@ import breakpoints from "../../../shared/breakpoints";
 import { transitions } from "../../../shared/transitions";
 import Img from "gatsby-image";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import colors from "../../../shared/colors";
 
 const OtherProjects = ({ projects }) => {
   return (
@@ -19,12 +20,15 @@ const OtherProjects = ({ projects }) => {
               bg={node.frontmatter.color}
               direction="up"
             >
-              <Card color={node.frontmatter.color}>
+              <Card
+                client={node.frontmatter.client}
+                color={node.frontmatter.color}
+              >
                 <p>{node.frontmatter.client}</p>
                 <h4>{node.frontmatter.title}</h4>
-                {/* <Image
+                <Image
                   fluid={node.frontmatter.featuredimage.childImageSharp.fluid}
-                /> */}
+                />
               </Card>
             </AniLink>
           );
@@ -48,7 +52,7 @@ const OtherProjectList = styled.div`
   }
 
   ${breakpoints.desktop} {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 1rem;
   }
 `;
@@ -58,6 +62,8 @@ const Card = styled.div`
   overflow: hidden;
   cursor: pointer;
   background-color: ${({ color }) => color};
+  color: ${({ client }) =>
+    client === "MyEthvault" ? `#02394A` : colors.white};
   padding: 2rem;
   padding-bottom: 4rem;
   margin-bottom: 2rem;

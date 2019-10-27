@@ -12,10 +12,11 @@ const ProjectIntro = ({ copy }) => {
 };
 
 const IntroContainer = styled(ContentContainer)`
-  margin-top: 12em;
+  margin-top: 6rem;
 
   ${breakpoints.desktop} {
     padding: 0rem calc(100vw / 12);
+    margin-top: 12rem;
   }
 `;
 

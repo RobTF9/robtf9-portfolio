@@ -22,7 +22,7 @@ const postLayout = ({ data }) => {
       <SEO title={client} />
       <ProjectHero title={title} client={client} color={color} />
       <ProjectIntro copy={outline} />
-      <ProjectContent content={html} color={color} />
+      <ProjectContent client={client} content={html} color={color} />
       <ProjectLink client={client} title={title} color={color} />
       <OtherProjects projects={projects} />
     </>
