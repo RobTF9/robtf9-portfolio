@@ -6,8 +6,49 @@ slug: /ethereum-wallet
 color: '#DAEBF1'
 featuredimage: /img/ethvault-cover-image.png
 outline: >-
-  Designed the UI and brand assets for a clientside application. Ethvault allows
-  users to interface with decentralized apps on the Ethereum block chain, all in
-  the browser.
+  MyEthvault is an open source application that allows users to interact with
+  dApps on the Ethereum block chain without leaving the browser. Currently in
+  the prototype phase, my role has been to develop a brand aesthetic as well as
+  working on the front end React app.
 ---
-Test body
+<div class="ImageWithCaption full">
+
+![Ethvault landing page](/img/ethvault-landing-page.jpg "Ethvault landing page")
+
+<div class="Caption">
+
+<p><strong>MyEthvault landing page</strong><br/>To get people to use the application we need an informative and well designed landing page to help build trust with out potential user base.</p>
+
+</div>
+
+</div>
+
+<div class="ImageWithCaption full">
+
+![Ethvault components](/img/ethvault-components.jpg "Ethvault components")
+
+<div class="Caption">
+
+<p><strong>The interface</strong><br/>Having a well crafted interface for the application is another way to garner trust with your user base. I wanted the UI to be reminisent of a finacial product so users would feel secure,</p>
+
+</div>
+
+</div>
+
+<div class="full">
+
+![Ethvault desktop](/img/ethvault-desktop-one.png "Ethvault desktop")
+
+</div>
+
+<div class="full">
+
+![Ethvault mobile](/img/ethvault-mobile.png "Ethvault mobile")
+
+</div>
+
+<div class="full">
+
+![Ethvault desktop](/img/ethvault-desktop-two.png "Ethvault desktop")
+
+</div>
