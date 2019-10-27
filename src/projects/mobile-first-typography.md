@@ -28,7 +28,7 @@ The headers scale proportionally dependent on what device they are being viewed 
 
 <div class="ImageWithCaption full">
 
-![Osborne Clarke responsive type system](/img/osborne-clarke-illustrations.jpg "Osborne Clarke responsive type system")
+![Osborne Clarke illustrations](/img/osborne-clarke-illustrations.jpg "Osborne Clarke illustrations")
 
 <div class="Caption">
 
