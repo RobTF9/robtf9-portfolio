@@ -3,6 +3,7 @@ date: 2019-10-05T09:18:00.000Z
 client: MyEthvault
 title: Ethereum wallet
 slug: /ethereum-wallet
+link: 'https://myethvault.com/'
 color: '#DAEBF1'
 featuredimage: /img/ethvault-cover-image.png
 outline: >-
@@ -17,7 +18,7 @@ outline: >-
 
 <div class="Caption">
 
-<p><strong>MyEthvault landing page</strong><br/>To get people to use the application we need an informative and well designed landing page to help build trust with out potential user base.</p>
+<p><strong>Ethvault landing page</strong><br/>To get people to use the application we need an informative and well designed landing page to help build trust with our potential user base.</p>
 
 </div>
 
@@ -29,7 +30,7 @@ outline: >-
 
 <div class="Caption">
 
-<p><strong>The interface</strong><br/>Having a well crafted interface for the application is another way to garner trust with your user base. I wanted the UI to be reminisent of a finacial product so users would feel secure,</p>
+<p><strong>The interface</strong><br/>Having a well crafted interface for the application is another way to garner trust with your user base. I wanted the UI to be reminiscent of a financial product so users would feel secure.</p>
 
 </div>
 
