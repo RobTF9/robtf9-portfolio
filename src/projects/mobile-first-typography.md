@@ -25,3 +25,19 @@ The headers scale proportionally dependent on what device they are being viewed 
 </div>
 
 </div>
+
+<div class="ImageWithCaption full">
+
+![Osborne Clarke responsive type system](/img/osborne-clarke-illustrations.jpg "Osborne Clarke responsive type system")
+
+<div class="Caption">
+
+<strong>Illustrative icons</strong>
+
+<br/><br/>
+
+Osborne Clarkes brand makes use of illustrative iconagraphy to convey the breadth of sectors in which they have expertise.
+
+</div>
+
+</div>
