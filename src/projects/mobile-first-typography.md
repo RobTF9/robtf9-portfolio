@@ -16,11 +16,7 @@ outline: >-
 
 <div class="Caption">
 
-<strong>Responsive type system</strong>
-
-<br/><br/>
-
-The headers scale proportionally dependent on what device they are being viewed on. H5 and P remain consistent across all devices at 18px and 16px respectively.
+<p><strong>Responsive type system</strong><br/>The headers scale proportionally dependent on what device they are being viewed on. H5 and P remain consistent across all devices at 18px and 16px respectively.</p>
 
 </div>
 
@@ -32,11 +28,7 @@ The headers scale proportionally dependent on what device they are being viewed 
 
 <div class="Caption">
 
-<strong>Illustrative icons</strong>
-
-<br/><br/>
-
-Osborne Clarkes brand makes use of illustrative iconagraphy to convey the breadth of sectors in which they have expertise.
+<p><strong>Illustrative icons</strong><br/>Osborne Clarkes brand makes use of illustrative iconagraphy to convey the breadth of sectors in which they have expertise.</p>
 
 </div>
 
