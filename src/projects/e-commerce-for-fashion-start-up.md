@@ -3,6 +3,7 @@ date: 2019-10-06T20:59:00.000Z
 client: MaiBee
 title: E-commerce platform
 slug: /maibee
+link: 'https://maibee.com/'
 color: '#E1AE2A'
 featuredimage: /img/maibee-cover-image.png
 outline: >-
