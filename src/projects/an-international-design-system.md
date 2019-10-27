@@ -15,7 +15,7 @@ outline: >-
 
 ![Parametric search example](/img/parametric-example-bad.png "Parametric search example")
 
-<p class="Caption">An example of a cluttered parametric search.</p>
+<p class="Caption"><strong>Overcrowded</strong><br/>An example of a competitors parametric search, a lot of useful data is being displayed but the user cannot easily scan the table.</p>
 
 </div>
 
@@ -23,7 +23,7 @@ outline: >-
 
 ![My parametric solution](/img/parametric-example-good.jpg "My parametric solution")
 
-<p class="Caption">My solution for the parametric search.</p>
+<p class="Caption"><strong>Simplified</strong><br/>My solution simplifies the layout and removes uneccesary interface elements. I h also combined the table and the filters to allow the user to easily modify their search while scrolling.</p>
 
 </div>
 
