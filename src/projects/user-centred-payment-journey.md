@@ -3,6 +3,7 @@ date: 2019-10-03T20:51:00.000Z
 client: RAC
 title: Payment journey
 slug: /rac
+link: 'http://rac-idd.herokuapp.com/option-c-1'
 color: '#EF6C00'
 featuredimage: /img/rac-cover-image.png
 outline: >-
