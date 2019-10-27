@@ -10,4 +10,18 @@ outline: >-
   Osborne Clarke. A content heavy site with high number of articles focusing on
   legal insights.
 ---
-jtf
+<div class="ImageWithCaption full">
+
+![Osborne Clarke responsive type system](/img/osborne-clarke-type-system.png "Osborne Clarke responsive type system")
+
+<p class="Caption">
+
+<strong>Responsive type system</strong>
+
+<br/><br/>
+
+The headers scale proportionally dependent on what device they are being viewed on. H5 and P remain consistent across all devices at 18px and 16px respectively.
+
+</p>
+
+</div>
