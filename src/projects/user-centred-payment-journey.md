@@ -15,7 +15,11 @@ outline: >-
 
 ![RAC user flows](/img/rac-user-flows.jpg "RAC user flows")
 
-<div class="Caption"><strong>User journey mapping</strong><br/>After user testing both competitors and the current RAC journey we began to build up an idea of where users were failing to understand the products they were buying.</div>
+<div class="Caption">
+
+<p><strong>User journey mapping</strong><br/>After user testing both competitors and the current RAC journey we began to build up an idea of where users were failing to understand the products they were buying.</p>
+
+</div>
 
 </div>
 
