@@ -3,6 +3,8 @@ date: 2019-10-01T20:51:00.000Z
 client: Panasonic
 title: Parametric search
 slug: /panasonic-parametric-search
+link: >-
+  https://na.industrial.panasonic.com/parametric-search/resistors/smd-chip-resistors/high-power-anti-surge-high-voltage
 color: '#EF5F50'
 featuredimage: /img/parametric-cover-image.png
 outline: >-
