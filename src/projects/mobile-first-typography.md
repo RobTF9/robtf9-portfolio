@@ -3,6 +3,7 @@ date: 2019-10-02T20:58:00.000Z
 client: Osborne Clarke
 title: Pattern library
 slug: /osborne-clarke
+link: 'https://proctors.invisionapp.com/share/N3Q5PPUHD7F'
 color: '#043144'
 featuredimage: /img/osborne-clarke-cover-image.png
 outline: >-
