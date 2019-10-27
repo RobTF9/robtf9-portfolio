@@ -33,6 +33,6 @@ outline: >-
 
 <div class="full">
 
-![RAC mobile](/img/parametric-desktop-two.png "RAC mobile")
+![RAC desktop](/img/rac-desktop-two.png "RAC desktop")
 
 </div>
