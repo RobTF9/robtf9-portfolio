@@ -19,8 +19,28 @@ collections:
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Color", name: "color", widget: "string" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Featured Image", name: "featuredimage", widget: "image" }
       - { label: "Outline", name: "outline", widget: "text" }
+      - {
+          label: "Content",
+          name: "content",
+          widget: "list",
+          fields:
+            [
+              { label: "Image", name: "image", widget: image },
+              { label: "Copy", name: "copy", widget: "text" },
+              {
+                label: "Layout",
+                name: "layout",
+                widget: "select",
+                options:
+                  [
+                    { label: "Right", value: "Right" },
+                    { label: "Left", value: "Left" },
+                  ],
+              },
+            ],
+        }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "experience"
@@ -36,19 +56,3 @@ collections:
       - { label: "Role", name: "role", widget: "string" }
       - { label: "Order", name: "order", widget: "number" }
       - { label: "Description", name: "description", widget: "markdown" }
-
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "src/content/about.md"
-        label: "About"
-        name: "about"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "about-page",
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
