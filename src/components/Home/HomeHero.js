@@ -58,7 +58,7 @@ const HomeHero = () => {
       <Text style={scrollAnimation}>
         <h4>Robert Squires</h4>
         <h1>
-          I'm a <span>UI Designer</span> with a passion for UX and coding.
+          I'm a <span>UX/UI Designer</span> with a passion for coding.
         </h1>
       </Text>
       <Image style={scrollAnimation}>
