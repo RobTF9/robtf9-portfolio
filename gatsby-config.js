@@ -44,7 +44,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#222222`,
         theme_color: `#222222`,
-        display: `minimal-ui`,
+        display: `fullscreen`,
         icon: `src/images/favicon.jpg`,
       },
     },
