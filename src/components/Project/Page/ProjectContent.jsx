@@ -5,10 +5,6 @@ import breakpoints from "../../../shared/breakpoints";
 import colors from "../../../shared/colors";
 
 const ProjectContent = ({ content, color, client }) => {
-  useEffect(() => {
-    console.log(document.getElementsByClassName("full"));
-  }, []);
-
   return (
     <ProjectContentContainer
       color={color}

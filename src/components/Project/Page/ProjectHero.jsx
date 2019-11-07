@@ -2,10 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import breakpoints from "../../../shared/breakpoints";
 import colors from "../../../shared/colors";
+import { animated } from "react-spring";
+import { animations } from "../../../shared/transitions";
 
 const ProjectHero = ({ client, title, color }) => {
   return (
-    <Hero color={color} client={client}>
+    <Hero
+      style={animations.horizontalSlide(`-15rem`, 0)}
+      color={color}
+      client={client}
+    >
       <Copy>
         <p>{client}</p>
         <h1>{title}</h1>
@@ -14,7 +20,7 @@ const ProjectHero = ({ client, title, color }) => {
   );
 };
 
-const Hero = styled.header`
+const Hero = styled(animated.header)`
   position: relative;
   grid-column: 1 / -1;
   background-color: ${({ color }) => color};

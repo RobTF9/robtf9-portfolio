@@ -26,4 +26,12 @@ export const animations = {
       config: config.snap,
       delay: delay,
     }),
+  horizontalSlide: (from, delay) =>
+    useSpring({
+      opacity: 1,
+      transform: "translate3d(0rem, 0, 0)",
+      from: { opacity: 0, transform: `translate3d(${from}, 0, 0)` },
+      config: config.snap,
+      delay: delay,
+    }),
 };

@@ -2,10 +2,11 @@ import React from "react";
 import { ContentContainer } from "../../Common/Container";
 import styled from "styled-components";
 import breakpoints from "../../../shared/breakpoints";
+import { animations } from "../../../shared/transitions";
 
 const ProjectIntro = ({ copy }) => {
   return (
-    <IntroContainer>
+    <IntroContainer style={animations.horizontalSlide(`-15rem`, 100)}>
       <Copy className="full">{copy}</Copy>
     </IntroContainer>
   );

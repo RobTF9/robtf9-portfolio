@@ -1,18 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import { ContentContainer } from "../../Common/Container";
-import { Link } from "gatsby";
 import colors from "../../../shared/colors";
-import { transitions } from "../../../shared/transitions";
+import Img from "gatsby-image";
+import breakpoints from "../../../shared/breakpoints";
 
-const ProjectLink = ({ color, image }) => {
+const ProjectLink = ({ color, image, link }) => {
   return (
     <LinkContainer color={color}>
       <h2>Want to know more?</h2>
-      <span>
-        <Button to="/">View the project</Button>
-        <ContactButton to="/contact">Get in touch</ContactButton>
-      </span>
+      <ExternalButton target="_blank" href={link}>
+        View the project
+      </ExternalButton>
     </LinkContainer>
   );
 };
@@ -20,46 +19,44 @@ const ProjectLink = ({ color, image }) => {
 const LinkContainer = styled(ContentContainer)`
   position: relative;
   margin-top: 6rem;
-  margin-bottom: 24rem;
+  margin-bottom: 12rem;
   background-color: ${({ color }) => color};
   padding: 6rem;
 
   h2 {
     position: absolute;
-    top: -3.25rem;
+    top: -2.25rem;
     left: 1rem;
-  }
 
-  span {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    ${breakpoints.tablet} {
+      top: -2.75rem;
+    }
+
+    ${breakpoints.desktop} {
+      top: -3.25rem;
+    }
   }
 `;
 
-const Button = styled(Link)`
-  position: relative;
+const Image = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+`;
+
+const ExternalButton = styled.a`
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
   z-index: 1;
   font-weight: 400;
   padding: 1.5rem 4rem;
-  margin-right: 2rem;
-  text-align: right;
+  text-align: center;
   color: ${colors.white};
   background-color: ${colors.black};
-  transform: translateY(6rem);
-  ${transitions.mediumSnap};
-
-  ${LinkContainer}:hover & {
-    transform: translateY(0rem);
-  }
-`;
-
-const ContactButton = styled(Button)`
-  ${transitions.satanSnap};
 `;
 
 export default ProjectLink;
