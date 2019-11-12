@@ -11,7 +11,7 @@ export const Container = styled.nav`
   top: 0;
   width: 100vw;
   height: 5rem;
-  background: rgba(34, 34, 34, 0.8);
+
   ${breakpoints.desktop} {
     height: 7rem;
   }

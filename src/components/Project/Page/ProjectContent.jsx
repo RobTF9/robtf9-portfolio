@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { ContentContainer } from "../../Common/Container";
 import styled from "styled-components";
 import breakpoints from "../../../shared/breakpoints";
 import colors from "../../../shared/colors";
@@ -14,17 +13,34 @@ const ProjectContent = ({ content, color, client }) => {
   );
 };
 
-const ProjectContentContainer = styled(ContentContainer)`
+const ProjectContentContainer = styled.div`
+  position: relative;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-row-gap: 8rem;
+  margin-bottom: 8rem;
+  grid-template-columns: repeat(12, 1fr);
   margin-top: 6rem;
 
+  ${breakpoints.tablet} {
+    grid-column: 1 / -1;
+  }
+
   .ImageWithCaption {
+    position: relative;
+    grid-column: 1 / 10;
+
     .Caption {
-      position: relative;
-      padding: 2rem;
+      position: absolute;
+      padding: 4rem;
+      bottom: calc(-100vh / 12);
+      right: calc(-100vh / 12);
+      max-width: calc((100vh / 12) * 6);
       background-color: ${({ color }) => color};
       color: ${({ client }) =>
         client === "MyEthvault" ? `#02394A` : colors.white};
       margin-top: 2rem;
+      box-shadow: 0 0 3rem rgba(0, 0, 0, 0.25);
     }
   }
 
