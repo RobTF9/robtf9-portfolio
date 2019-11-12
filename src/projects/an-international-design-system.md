@@ -13,7 +13,7 @@ outline: >-
   solution for Panasonic America that strips away the complexity and provides
   users with an easy way to configure and refine the parameters of their search.
 ---
-<div class="ImageWithCaption full">
+<div class="ImageWithCaption left">
 
 ![Parametric search example](/img/parametric-example-bad.png "Parametric search example")
 
@@ -21,7 +21,7 @@ outline: >-
 
 </div>
 
-<div class="ImageWithCaption full">
+<div class="ImageWithCaption right">
 
 ![My parametric solution](/img/parametric-example-good.jpg "My parametric solution")
 
@@ -29,19 +29,19 @@ outline: >-
 
 </div>
 
-<div class="full">
+<div class="center">
 
 ![Parametric desktop](/img/parametric-desktop-one.png "Parametric desktop")
 
 </div>
 
-<div class="full">
+<div class="center">
 
 ![Parametric mobile](/img/parametric-mobile.png "Parametric mobile")
 
 </div>
 
-<div class="full">
+<div class="center">
 
 ![Parametric mobile](/img/parametric-desktop-two.png "Parametric mobile")
 
