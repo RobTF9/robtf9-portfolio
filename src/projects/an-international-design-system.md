@@ -20,13 +20,24 @@ content:
     image: /img/parametric-examples.jpg
     layout: Left
     title: The problem
-  - layout: middle
-    video: 4jGQP37-HEw
   - copy: >-
       To get the layout working well we focused on the functionality by
       prototyping and testing iteratively with stripped back wireframes.
     image: /img/parametric-wireframes.jpg
     layout: right
     title: Wireframes
+  - copy: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    image: /img/parametric-responsive.jpg
+    layout: right
+    title: UI design
+  - layout: middle
+    video: 4jGQP37-HEw
 ---
 
