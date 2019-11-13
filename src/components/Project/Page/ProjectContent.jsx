@@ -28,13 +28,12 @@ const ProjectContentContainer = styled.div`
 
   .ImageWithCaption {
     position: relative;
-    grid-column: 1 / 10;
+    margin-bottom: 8rem;
 
     .Caption {
       position: absolute;
       padding: 4rem;
       bottom: calc(-100vh / 12);
-      right: calc(-100vh / 12);
       max-width: calc((100vh / 12) * 6);
       background-color: ${({ color }) => color};
       color: ${({ client }) =>
@@ -42,6 +41,26 @@ const ProjectContentContainer = styled.div`
       margin-top: 2rem;
       box-shadow: 0 0 3rem rgba(0, 0, 0, 0.25);
     }
+  }
+
+  .left {
+    grid-column: 1 / 10;
+
+    .Caption {
+      right: calc(-100vh / 12);
+    }
+  }
+
+  .right {
+    grid-column: 3 / -1;
+
+    .Caption {
+      left: calc(-100vh / 12);
+    }
+  }
+
+  .center {
+    grid-column: 3 / 11;
   }
 
   .full {
