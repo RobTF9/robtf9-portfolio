@@ -27,21 +27,38 @@ collections:
           widget: "list",
           fields:
             [
-              { label: "Image", name: "image", widget: image },
-              { label: "Copy", name: "copy", widget: "text" },
+              {
+                label: "Image",
+                name: "image",
+                widget: "image",
+                required: false,
+              },
+              {
+                label: "Video",
+                name: "video",
+                widget: "string",
+                required: false,
+              },
+              {
+                label: "Title",
+                name: "title",
+                widget: "string",
+                required: false,
+              },
+              { label: "Copy", name: "copy", widget: "text", required: false },
               {
                 label: "Layout",
                 name: "layout",
                 widget: "select",
                 options:
                   [
-                    { label: "Right", value: "Right" },
-                    { label: "Left", value: "Left" },
+                    { label: "Right", value: "right" },
+                    { label: "Left", value: "left" },
+                    { label: "Middle", value: "middle" },
                   ],
               },
             ],
         }
-      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "experience"
     label: "Experience"

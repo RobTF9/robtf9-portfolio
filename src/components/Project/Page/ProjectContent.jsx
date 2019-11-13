@@ -3,12 +3,11 @@ import styled from "styled-components";
 import breakpoints from "../../../shared/breakpoints";
 import colors from "../../../shared/colors";
 
-const ProjectContent = ({ content, color, client }) => {
+const ProjectContent = ({ color, client }) => {
   return (
     <ProjectContentContainer
       color={color}
       client={client}
-      dangerouslySetInnerHTML={{ __html: content }}
     ></ProjectContentContainer>
   );
 };
