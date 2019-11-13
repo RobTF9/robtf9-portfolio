@@ -7,6 +7,7 @@ import {
   RightContent,
   MiddleContent,
   Text,
+  Video,
 } from "./ContentBlocks";
 
 const ProjectContent = ({ color, client, content }) => {
@@ -17,13 +18,7 @@ const ProjectContent = ({ color, client, content }) => {
           return (
             <LeftContent>
               {image ? <Img fluid={image.childImageSharp.fluid} /> : null}
-              {video ? (
-                <iframe
-                  src={`https://www.youtube.com/embed/${video}?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1&amp;playlist=${video}`}
-                  frameborder="0"
-                  allowfullscreen=""
-                ></iframe>
-              ) : null}
+              {video ? <Video video={video} /> : null}
               {title ? (
                 <Text layout={layout} color={color}>
                   <h3>{title}</h3>
@@ -38,13 +33,7 @@ const ProjectContent = ({ color, client, content }) => {
           return (
             <RightContent>
               {image ? <Img fluid={image.childImageSharp.fluid} /> : null}
-              {video ? (
-                <iframe
-                  src={`https://www.youtube.com/embed/${video}?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1&amp;playlist=${video}`}
-                  frameborder="0"
-                  allowfullscreen=""
-                ></iframe>
-              ) : null}
+              {video ? <Video video={video} /> : null}
               {title ? (
                 <Text layout={layout} color={color}>
                   <h3>{title}</h3>
@@ -54,17 +43,11 @@ const ProjectContent = ({ color, client, content }) => {
             </RightContent>
           );
         }
-        if (layout === "Middle") {
+        if (layout === "middle") {
           return (
             <MiddleContent>
               {image ? <Img fluid={image.childImageSharp.fluid} /> : null}
-              {video ? (
-                <iframe
-                  src={`https://www.youtube.com/embed/${video}?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1&amp;playlist=${video}`}
-                  frameborder="0"
-                  allowfullscreen=""
-                ></iframe>
-              ) : null}
+              {video ? <Video video={video} /> : null}
               {title ? (
                 <Text layout={layout} color={color}>
                   <h3>{title}</h3>

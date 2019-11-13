@@ -1,8 +1,14 @@
+import React from "react";
 import styled from "styled-components";
 import breakpoints from "../../../shared/breakpoints";
 
 const Content = styled.div`
   position: relative;
+  margin-bottom: calc(100vh / 6);
+
+  iframe {
+    width: 100%;
+  }
 `;
 
 export const LeftContent = styled(Content)`
@@ -39,4 +45,28 @@ export const Text = styled.div`
       return;
     }
   }}
+`;
+
+export const Video = ({ video }) => (
+  <Wrapper>
+    <iframe
+      src={`https://www.youtube.com/embed/${video}?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1&amp;playlist=${video}`}
+      frameborder="0"
+      allowfullscreen=""
+    ></iframe>
+  </Wrapper>
+);
+
+const Wrapper = styled.div`
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+
+  iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 `;
