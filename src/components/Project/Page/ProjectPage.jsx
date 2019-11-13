@@ -48,6 +48,7 @@ export const query = graphql`
           }
         }
         content {
+          video
           image {
             childImageSharp {
               fluid(maxWidth: 3840) {
