@@ -17,10 +17,16 @@ content:
       An example of how cluttered parametric searches can be. Are solution
       needed to display the same range of information with a clearer structure
       and more considered usability.
-    image: /img/parametric-example-bad.png
+    image: /img/parametric-examples.jpg
     layout: Left
     title: The problem
   - layout: middle
     video: 4jGQP37-HEw
+  - copy: >-
+      To get the layout working well we focused on the functionality by
+      prototyping and testing iteratively with stripped back wireframes.
+    image: /img/parametric-wireframes.jpg
+    layout: right
+    title: Wireframes
 ---
 
