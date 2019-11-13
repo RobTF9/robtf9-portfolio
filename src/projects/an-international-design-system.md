@@ -5,7 +5,7 @@ title: Parametric search
 slug: /panasonic-parametric-search
 link: >-
   https://na.industrial.panasonic.com/parametric-search/resistors/smd-chip-resistors/high-power-anti-surge-high-voltage
-color: '#EF5F50'
+color: "#EF5F50"
 featuredimage: /img/parametric-cover-image.png
 outline: >-
   Parametric searches are typically a mess of cluttered interface components and
@@ -35,9 +35,8 @@ content:
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
     image: /img/parametric-responsive.jpg
-    layout: right
+    layout: Left
     title: UI design
   - layout: middle
     video: 4jGQP37-HEw
 ---
-

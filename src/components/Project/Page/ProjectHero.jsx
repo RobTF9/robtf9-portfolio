@@ -36,6 +36,8 @@ const Image = styled(Img)`
   right: 0;
   bottom: 0;
   width: 80vh;
+  height: 100%;
+  overflow: hidden;
 `;
 
 const Copy = styled.div`

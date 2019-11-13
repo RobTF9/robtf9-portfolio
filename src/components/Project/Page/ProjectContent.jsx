@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import breakpoints from "../../../shared/breakpoints";
 import Img from "gatsby-image";
 import {
   LeftContent,
@@ -20,36 +19,33 @@ const ProjectContent = ({ color, client, content }) => {
               {image ? <Img fluid={image.childImageSharp.fluid} /> : null}
               {video ? <Video video={video} /> : null}
               {title ? (
-                <Text layout={layout} color={color}>
+                <Text client={client} layout={layout} color={color}>
                   <h3>{title}</h3>
                   <p>{copy}</p>
                 </Text>
               ) : null}
             </LeftContent>
           );
-        }
-
-        if (layout === "Right") {
+        } else if (layout === "right") {
           return (
             <RightContent>
               {image ? <Img fluid={image.childImageSharp.fluid} /> : null}
               {video ? <Video video={video} /> : null}
               {title ? (
-                <Text layout={layout} color={color}>
+                <Text client={client} layout={layout} color={color}>
                   <h3>{title}</h3>
                   <p>{copy}</p>
                 </Text>
               ) : null}
             </RightContent>
           );
-        }
-        if (layout === "middle") {
+        } else if (layout === "middle") {
           return (
             <MiddleContent>
               {image ? <Img fluid={image.childImageSharp.fluid} /> : null}
               {video ? <Video video={video} /> : null}
               {title ? (
-                <Text layout={layout} color={color}>
+                <Text client={client} layout={layout} color={color}>
                   <h3>{title}</h3>
                   <p>{copy}</p>
                 </Text>
@@ -57,7 +53,7 @@ const ProjectContent = ({ color, client, content }) => {
             </MiddleContent>
           );
         } else {
-          return;
+          return null;
         }
       })}
     </ProjectContentContainer>
@@ -68,14 +64,9 @@ const ProjectContentContainer = styled.div`
   position: relative;
   grid-column: 1 / -1;
   display: grid;
-  grid-row-gap: 8rem;
-  margin-bottom: 16rem;
+  grid-column-gap: 1rem;
   grid-template-columns: repeat(12, 1fr);
   margin-top: 6rem;
-
-  ${breakpoints.tablet} {
-    grid-column: 1 / -1;
-  }
 `;
 
 export default ProjectContent;

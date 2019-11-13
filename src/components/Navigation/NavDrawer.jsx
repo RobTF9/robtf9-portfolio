@@ -90,7 +90,7 @@ const DrawerLink = styled.li`
 `;
 
 const Logo = styled.img`
-  position: absolute;
+  position: fixed;
   z-index: 5;
   opacity: 0.25;
   left: 0;

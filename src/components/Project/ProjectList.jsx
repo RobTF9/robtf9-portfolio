@@ -23,7 +23,7 @@ const ProjectList = () => {
               outline
               featuredimage {
                 childImageSharp {
-                  fluid(maxWidth: 1300) {
+                  fluid(maxWidth: 1300, quality: 100) {
                     ...GatsbyImageSharpFluid
                   }
                 }
