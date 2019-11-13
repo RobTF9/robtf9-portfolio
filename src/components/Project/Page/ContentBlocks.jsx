@@ -1,15 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import breakpoints from "../../../shared/breakpoints";
-import colors from "../../../shared/colors";
 
 const Content = styled.div`
   position: relative;
   margin-bottom: calc(100vh / 6);
-  grid-column: 3 / 11;
+  grid-column: 2 / 12;
 
   iframe {
     width: 100%;
+  }
+
+  ${breakpoints.tablet} {
+    grid-column: 3 / 11;
   }
 
   ${breakpoints.desktop} {
@@ -38,7 +41,7 @@ export const MiddleContent = styled(Content)`
 export const Text = styled.div`
   position: relative;
   padding: 3rem;
-  background-color: ${colors.black};
+  background-color: ${({ color }) => color};
   box-shadow: 0 0 5rem rgba(0, 0, 0, 0.25);
   width: calc(100% - 6rem);
 
@@ -59,7 +62,7 @@ export const Text = styled.div`
         return `left: calc(-100vh / 12);`;
       }
       if (layout === "middle") {
-        return;
+        return null;
       }
     }}
   }
