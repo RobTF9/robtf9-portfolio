@@ -2,13 +2,15 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import breakpoints from "../../../shared/breakpoints";
 import colors from "../../../shared/colors";
+import Img from "gatsby-image";
 
-const ProjectContent = ({ color, client }) => {
+const ProjectContent = ({ color, client, content }) => {
   return (
-    <ProjectContentContainer
-      color={color}
-      client={client}
-    ></ProjectContentContainer>
+    <ProjectContentContainer color={color} client={client}>
+      {content.map(({ title, copy, layout, image, video }) =>
+        image ? <Img fluid={image.childImageSharp.fluid} /> : null
+      )}
+    </ProjectContentContainer>
   );
 };
 
