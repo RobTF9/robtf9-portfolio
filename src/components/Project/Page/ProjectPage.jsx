@@ -47,12 +47,12 @@ export const query = graphql`
             }
           }
         }
-      }
-      content {
-        image {
-          childImageSharp {
-            fluid(maxWidth: 3840) {
-              ...GatsbyImageSharpFluid
+        content {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 3840) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }
