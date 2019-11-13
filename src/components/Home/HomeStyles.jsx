@@ -1,7 +1,6 @@
 import { animated } from "react-spring";
 import Container from "../Common/Container";
 import styled from "styled-components";
-import colors from "../../shared/colors";
 import breakpoints from "../../shared/breakpoints";
 
 export const HomeContainer = styled(Container)`

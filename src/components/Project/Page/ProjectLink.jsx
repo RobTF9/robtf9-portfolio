@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { ContentContainer } from "../../Common/Container";
 import colors from "../../../shared/colors";
-import Img from "gatsby-image";
 import breakpoints from "../../../shared/breakpoints";
 
 const ProjectLink = ({ color, image, link }) => {
@@ -36,15 +35,6 @@ const LinkContainer = styled(ContentContainer)`
       top: -3.25rem;
     }
   }
-`;
-
-const Image = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 `;
 
 const ExternalButton = styled.a`

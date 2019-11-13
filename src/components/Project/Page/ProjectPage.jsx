@@ -9,7 +9,15 @@ import ProjectLink from "./ProjectLink";
 
 const postLayout = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  const { client, title, color, outline, link, content } = frontmatter;
+  const {
+    client,
+    title,
+    color,
+    outline,
+    link,
+    content,
+    featuredimage,
+  } = frontmatter;
   const { edges } = data.allMarkdownRemark;
 
   // This is how you get the other projects array
@@ -20,7 +28,12 @@ const postLayout = ({ data }) => {
   return (
     <>
       <SEO title={client} />
-      <ProjectHero title={title} client={client} color={color} />
+      <ProjectHero
+        title={title}
+        client={client}
+        color={color}
+        image={featuredimage.childImageSharp.fluid}
+      />
       <ProjectIntro copy={outline} />
       <ProjectContent client={client} content={content} color={color} />
       <ProjectLink link={link} client={client} title={title} color={color} />
@@ -48,6 +61,10 @@ export const query = graphql`
           }
         }
         content {
+          video
+          title
+          copy
+          layout
           image {
             childImageSharp {
               fluid(maxWidth: 3840) {

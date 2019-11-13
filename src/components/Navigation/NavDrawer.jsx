@@ -26,12 +26,20 @@ const NavDrawer = ({ toggleNav }) => {
       </DrawerList>
       <IconList>
         <DrawerLink onClick={toggleNav}>
-          <a href="https://github.com/robtf9" target="_blank">
+          <a
+            href="https://github.com/robtf9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithub />
           </a>
         </DrawerLink>
         <DrawerLink onClick={toggleNav}>
-          <a href="https://www.linkedin.com/in/robtf9/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/robtf9/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaLinkedinIn />
           </a>
         </DrawerLink>

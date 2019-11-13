@@ -4,14 +4,16 @@ import breakpoints from "../../../shared/breakpoints";
 import colors from "../../../shared/colors";
 import { animated } from "react-spring";
 import { animations } from "../../../shared/transitions";
+import Img from "gatsby-image";
 
-const ProjectHero = ({ client, title, color }) => {
+const ProjectHero = ({ client, title, color, image }) => {
   return (
     <Hero
       style={animations.horizontalSlide(`-15rem`, 0)}
       color={color}
       client={client}
     >
+      <Image fluid={image} />
       <Copy>
         <p>{client}</p>
         <h1>{title}</h1>
@@ -27,6 +29,13 @@ const Hero = styled(animated.header)`
   color: ${({ client }) =>
     client === "MyEthvault" ? `#02394A` : colors.white};
   height: 40vh;
+`;
+
+const Image = styled(Img)`
+  position: absolute !important;
+  right: 0;
+  bottom: 0;
+  width: 80vh;
 `;
 
 const Copy = styled.div`
