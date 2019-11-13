@@ -36,7 +36,7 @@ collections:
               {
                 label: "Video",
                 name: "video",
-                widget: "string",
+                widget: string,
                 required: false,
               },
               {
