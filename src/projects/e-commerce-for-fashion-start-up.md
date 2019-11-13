@@ -19,4 +19,5 @@ content:
     image: /img/parametric-example-bad.png
     layout: Left
     title: The problem
+    video: Hello
 ---
