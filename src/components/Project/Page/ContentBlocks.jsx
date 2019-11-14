@@ -1,98 +1,171 @@
-import React from "react";
-import styled from "styled-components";
-import breakpoints from "../../../shared/breakpoints";
-import colors from "../../../shared/colors";
+import React, { useState } from "react";
+import Img from "gatsby-image";
+import {
+  LeftContent,
+  RightContent,
+  MiddleContent,
+  Text,
+  Video,
+} from "./ContentBlockStyles";
+import { animated, useSpring, config } from "react-spring";
+import { Waypoint } from "react-waypoint";
 
-const Content = styled.div`
-  position: relative;
-  margin-bottom: calc(100vh / 6);
-  grid-column: 2 / 12;
+const AnimatedImage = animated(Img);
+const AnimatedText = animated(Text);
+const AnimatedVideo = animated(Video);
 
-  iframe {
-    width: 100%;
-  }
+export const LeftContentBlock = props => {
+  const [view, setView] = useState(false);
+  const [textView, setTextView] = useState(false);
+  return (
+    <LeftContent>
+      <Waypoint onEnter={() => setView(true)} />
+      {props.image ? (
+        <AnimatedImage
+          style={useSpring({
+            opacity: view ? 1 : 0,
+            transform: view
+              ? `translate3d(0rem, 0, 0)`
+              : `translate3d(-30rem, 0, 0)`,
+            config: config.slow,
+          })}
+          fluid={props.image.childImageSharp.fluid}
+        />
+      ) : null}
+      {props.video ? (
+        <AnimatedVideo
+          style={useSpring({
+            opacity: view ? 1 : 0,
+            transform: view
+              ? `translate3d(0rem, 0, 0)`
+              : `translate3d(-30rem, 0, 0)`,
+            config: config.slow,
+          })}
+          video={props.video}
+        />
+      ) : null}
+      {props.title ? (
+        <AnimatedText
+          style={useSpring({
+            opacity: textView ? 1 : 0,
+            transform: textView
+              ? `translate3d(0rem, 0, 0)`
+              : `translate3d(-30rem, 0, 0)`,
+            config: config.slow,
+          })}
+          client={props.client}
+          layout={props.layout}
+          color={props.color}
+        >
+          <Waypoint onEnter={() => setTextView(true)} />
+          <h3>{props.title}</h3>
+          <p>{props.copy}</p>
+        </AnimatedText>
+      ) : null}
+    </LeftContent>
+  );
+};
 
-  ${breakpoints.tablet} {
-    grid-column: 3 / 11;
-  }
+export const RightContentBlock = props => {
+  const [view, setView] = useState(false);
+  const [textView, setTextView] = useState(false);
+  return (
+    <RightContent>
+      <Waypoint onEnter={() => setView(true)} />
+      {props.image ? (
+        <AnimatedImage
+          style={useSpring({
+            opacity: view ? 1 : 0,
+            transform: view
+              ? `translate3d(0rem, 0, 0)`
+              : `translate3d(30rem, 0, 0)`,
+            config: config.slow,
+          })}
+          fluid={props.image.childImageSharp.fluid}
+        />
+      ) : null}
+      {props.video ? (
+        <AnimatedVideo
+          style={useSpring({
+            opacity: view ? 1 : 0,
+            transform: view
+              ? `translate3d(0rem, 0, 0)`
+              : `translate3d(30rem, 0, 0)`,
+            config: config.slow,
+          })}
+          video={props.video}
+        />
+      ) : null}
+      {props.title ? (
+        <AnimatedText
+          style={useSpring({
+            opacity: textView ? 1 : 0,
+            transform: textView
+              ? `translate3d(0rem, 0, 0)`
+              : `translate3d(30rem, 0, 0)`,
+            config: config.slow,
+          })}
+          client={props.client}
+          layout={props.layout}
+          color={props.color}
+        >
+          <Waypoint onEnter={() => setTextView(true)} />
+          <h3>{props.title}</h3>
+          <p>{props.copy}</p>
+        </AnimatedText>
+      ) : null}
+    </RightContent>
+  );
+};
 
-  ${breakpoints.desktop} {
-    margin-bottom: calc(100vh / 3);
-  }
-`;
-
-export const LeftContent = styled(Content)`
-  ${breakpoints.desktop} {
-    grid-column: 1 / 10;
-  }
-`;
-
-export const RightContent = styled(Content)`
-  ${breakpoints.desktop} {
-    grid-column: 4 / -1;
-  }
-`;
-
-export const MiddleContent = styled(Content)`
-  ${breakpoints.desktop} {
-    grid-column: 3 / 11;
-  }
-`;
-
-export const Text = styled.div`
-  position: relative;
-  padding: 3rem;
-  background-color: ${({ color }) => color};
-  color: ${({ client }) =>
-    client === "MyEthvault" ? `#02394A` : colors.white};
-  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.25);
-  width: calc(100% - 6rem);
-
-  h3 {
-    margin-bottom: 1rem;
-  }
-
-  ${breakpoints.desktop} {
-    position: absolute;
-    padding: 5rem;
-    max-width: 25%;
-    bottom: calc(-100vh / 12);
-    ${({ layout }) => {
-      if (layout === "Left") {
-        return `right: calc(-100vh / 12);`;
-      }
-      if (layout === "right") {
-        return `left: calc(-100vh / 12);`;
-      }
-      if (layout === "middle") {
-        return null;
-      }
-    }}
-  }
-`;
-
-export const Video = ({ video, client }) => (
-  <Wrapper>
-    <iframe
-      title={client}
-      aria-hidden="true"
-      src={`https://www.youtube.com/embed/${video}?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1&amp;playlist=${video}`}
-      frameborder="0"
-      allowfullscreen=""
-    ></iframe>
-  </Wrapper>
-);
-
-const Wrapper = styled.div`
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-
-  iframe {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-`;
+export const MiddleContentBlock = props => {
+  const [view, setView] = useState(false);
+  const [textView, setTextView] = useState(false);
+  return (
+    <MiddleContent>
+      <Waypoint onEnter={() => setView(true)} />
+      {props.image ? (
+        <AnimatedImage
+          style={useSpring({
+            opacity: view ? 1 : 0,
+            transform: view
+              ? `translate3d(0, 0rem, 0)`
+              : `translate3d(0, 30rem, 0)`,
+            config: config.slow,
+          })}
+          fluid={props.image.childImageSharp.fluid}
+        />
+      ) : null}
+      {props.video ? (
+        <AnimatedVideo
+          style={useSpring({
+            opacity: view ? 1 : 0,
+            transform: view
+              ? `translate3d(0, 0rem, 0)`
+              : `translate3d(0, 30rem, 0)`,
+            config: config.slow,
+          })}
+          video={props.video}
+        />
+      ) : null}
+      {props.title ? (
+        <AnimatedText
+          style={useSpring({
+            opacity: textView ? 1 : 0,
+            transform: textView
+              ? `translate3d(0, 0rem, 0)`
+              : `translate3d(0, 30rem, 0)`,
+            config: config.slow,
+          })}
+          client={props.client}
+          layout={props.layout}
+          color={props.color}
+        >
+          <Waypoint onEnter={() => setTextView(true)} />
+          <h3>{props.title}</h3>
+          <p>{props.copy}</p>
+        </AnimatedText>
+      ) : null}
+    </MiddleContent>
+  );
+};

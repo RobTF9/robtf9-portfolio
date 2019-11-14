@@ -1,12 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Img from "gatsby-image";
 import {
-  LeftContent,
-  RightContent,
-  MiddleContent,
-  Text,
-  Video,
+  LeftContentBlock,
+  RightContentBlock,
+  MiddleContentBlock,
 } from "./ContentBlocks";
 
 const ProjectContent = ({ color, client, content }) => {
@@ -15,42 +12,39 @@ const ProjectContent = ({ color, client, content }) => {
       {content.map(({ image, title, copy, layout, video }) => {
         if (layout === "Left") {
           return (
-            <LeftContent>
-              {image ? <Img fluid={image.childImageSharp.fluid} /> : null}
-              {video ? <Video video={video} /> : null}
-              {title ? (
-                <Text client={client} layout={layout} color={color}>
-                  <h3>{title}</h3>
-                  <p>{copy}</p>
-                </Text>
-              ) : null}
-            </LeftContent>
+            <LeftContentBlock
+              image={image}
+              title={title}
+              copy={copy}
+              layout={layout}
+              video={video}
+              client={client}
+              color={color}
+            />
           );
         } else if (layout === "right") {
           return (
-            <RightContent>
-              {image ? <Img fluid={image.childImageSharp.fluid} /> : null}
-              {video ? <Video video={video} /> : null}
-              {title ? (
-                <Text client={client} layout={layout} color={color}>
-                  <h3>{title}</h3>
-                  <p>{copy}</p>
-                </Text>
-              ) : null}
-            </RightContent>
+            <RightContentBlock
+              image={image}
+              title={title}
+              copy={copy}
+              layout={layout}
+              video={video}
+              client={client}
+              color={color}
+            />
           );
         } else if (layout === "middle") {
           return (
-            <MiddleContent>
-              {image ? <Img fluid={image.childImageSharp.fluid} /> : null}
-              {video ? <Video video={video} /> : null}
-              {title ? (
-                <Text client={client} layout={layout} color={color}>
-                  <h3>{title}</h3>
-                  <p>{copy}</p>
-                </Text>
-              ) : null}
-            </MiddleContent>
+            <MiddleContentBlock
+              image={image}
+              title={title}
+              copy={copy}
+              layout={layout}
+              video={video}
+              client={client}
+              color={color}
+            />
           );
         } else {
           return null;
