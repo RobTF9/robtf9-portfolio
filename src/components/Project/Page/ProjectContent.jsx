@@ -56,6 +56,7 @@ const ProjectContent = ({ color, client, content }) => {
 
 const ProjectContentContainer = styled.div`
   position: relative;
+  overflow: hidden;
   grid-column: 1 / -1;
   display: grid;
   grid-column-gap: 1rem;

@@ -12,7 +12,6 @@ import { Waypoint } from "react-waypoint";
 
 const AnimatedImage = animated(Img);
 const AnimatedText = animated(Text);
-const AnimatedVideo = animated(Video);
 
 export const LeftContentBlock = props => {
   const [view, setView] = useState(false);
@@ -32,18 +31,7 @@ export const LeftContentBlock = props => {
           fluid={props.image.childImageSharp.fluid}
         />
       ) : null}
-      {props.video ? (
-        <AnimatedVideo
-          style={useSpring({
-            opacity: view ? 1 : 0,
-            transform: view
-              ? `translate3d(0rem, 0, 0)`
-              : `translate3d(-30rem, 0, 0)`,
-            config: config.slow,
-          })}
-          video={props.video}
-        />
-      ) : null}
+      {props.video ? <Video video={props.video} /> : null}
       {props.title ? (
         <AnimatedText
           style={useSpring({
@@ -84,18 +72,7 @@ export const RightContentBlock = props => {
           fluid={props.image.childImageSharp.fluid}
         />
       ) : null}
-      {props.video ? (
-        <AnimatedVideo
-          style={useSpring({
-            opacity: view ? 1 : 0,
-            transform: view
-              ? `translate3d(0rem, 0, 0)`
-              : `translate3d(30rem, 0, 0)`,
-            config: config.slow,
-          })}
-          video={props.video}
-        />
-      ) : null}
+      {props.video ? <Video video={props.video} /> : null}
       {props.title ? (
         <AnimatedText
           style={useSpring({
@@ -136,18 +113,7 @@ export const MiddleContentBlock = props => {
           fluid={props.image.childImageSharp.fluid}
         />
       ) : null}
-      {props.video ? (
-        <AnimatedVideo
-          style={useSpring({
-            opacity: view ? 1 : 0,
-            transform: view
-              ? `translate3d(0, 0rem, 0)`
-              : `translate3d(0, 30rem, 0)`,
-            config: config.slow,
-          })}
-          video={props.video}
-        />
-      ) : null}
+      {props.video ? <Video video={props.video} /> : null}
       {props.title ? (
         <AnimatedText
           style={useSpring({

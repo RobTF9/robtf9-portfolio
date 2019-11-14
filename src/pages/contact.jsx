@@ -10,7 +10,10 @@ const Contact = () => {
     <>
       <SEO title="Contact" />
       <ContentContainer style={animations.verticleSlide(`15rem`, 0)}>
-        <ContactCard />
+        <ContactCard
+          title="Contact"
+          copy="Leave a message or call the number below."
+        />
         <ContactForm name="Contact Form" />
       </ContentContainer>
     </>

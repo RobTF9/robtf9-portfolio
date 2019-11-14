@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { animated } from "react-spring";
 import breakpoints from "../../../shared/breakpoints";
 import colors from "../../../shared/colors";
 
@@ -78,13 +77,13 @@ export const Video = ({ video, client }) => (
       title={client}
       aria-hidden="true"
       src={`https://www.youtube.com/embed/${video}?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1&amp;playlist=${video}`}
-      frameborder="0"
-      allowfullscreen=""
+      frameBorder="0"
+      allowFullScreen=""
     ></iframe>
   </Wrapper>
 );
 
-const Wrapper = styled(animated.div)`
+const Wrapper = styled.div`
   position: relative;
   width: 100%;
   padding-top: 56.25%;

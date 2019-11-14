@@ -9,7 +9,7 @@ const ContactCard = ({ title, copy, link }) => {
       <h1>{title}</h1>
       <p>{copy}</p>
       {link ? (
-        <a href={link}>
+        <a href={link} target="_blank" rel="noopener noreferrer">
           View the project <FaLink />
         </a>
       ) : (
