@@ -5,7 +5,9 @@ import OtherProjects from "./OtherProjects";
 import ProjectHero from "./ProjectHero";
 import ProjectIntro from "./ProjectIntro";
 import ProjectContent from "./ProjectContent";
-import ProjectLink from "./ProjectLink";
+import ContactForm from "../../Contact/ContactForm";
+import ContactCard from "../../Contact/ContactCard";
+import { ContactContainer } from "../../Common/Container";
 
 const postLayout = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
@@ -36,7 +38,14 @@ const postLayout = ({ data }) => {
       />
       <ProjectIntro copy={outline} />
       <ProjectContent client={client} content={content} color={color} />
-      <ProjectLink link={link} client={client} title={title} color={color} />
+      <ContactContainer color={color} client={client}>
+        <ContactCard
+          link={link}
+          title="Want to know more?"
+          copy="Take a look at the project below or get in touch using the form."
+        />
+        <ContactForm cname="Contact Form" />
+      </ContactContainer>
       <OtherProjects projects={projects} />
     </>
   );

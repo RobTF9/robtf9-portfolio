@@ -18,7 +18,7 @@ const OtherProjects = ({ projects }) => {
               aria-label={`Read more about ${node.frontmatter.title}`}
               cover
               bg={node.frontmatter.color}
-              direction="up"
+              direction="right"
             >
               <Card
                 client={node.frontmatter.client}
@@ -41,19 +41,13 @@ const OtherProjects = ({ projects }) => {
 export default OtherProjects;
 
 const OtherProjectList = styled.div`
-  grid-column: 2 / 12;
+  grid-column: 1 / -1;
   margin-bottom: 0rem;
   display: grid;
-  padding-top: 1.5rem;
+  grid-row-gap: 0;
 
   ${breakpoints.tablet} {
-    padding-top: 5rem;
-    grid-column: 3 / 11;
-  }
-
-  ${breakpoints.desktop} {
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 1rem;
   }
 `;
 
@@ -66,7 +60,6 @@ const Card = styled.div`
     client === "MyEthvault" ? `#02394A` : colors.white};
   padding: 2rem;
   padding-bottom: 4rem;
-  margin-bottom: 2rem;
   transform: translateY(0rem);
   ${transitions.satanSnap};
 
@@ -82,11 +75,6 @@ const Card = styled.div`
   }
 
   ${breakpoints.tablet} {
-    min-height: 10rem;
-    padding-bottom: 0;
-  }
-
-  ${breakpoints.desktop} {
     min-height: 20rem;
   }
 `;
@@ -97,4 +85,5 @@ const Image = styled(Img)`
   bottom: 0;
   right: 0;
   width: 100%;
+  opacity: 0.25;
 `;

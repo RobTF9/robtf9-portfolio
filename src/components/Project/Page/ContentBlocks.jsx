@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import breakpoints from "../../../shared/breakpoints";
+import colors from "../../../shared/colors";
 
 const Content = styled.div`
   position: relative;
@@ -42,6 +43,8 @@ export const Text = styled.div`
   position: relative;
   padding: 3rem;
   background-color: ${({ color }) => color};
+  color: ${({ client }) =>
+    client === "MyEthvault" ? `#02394A` : colors.white};
   box-shadow: 0 0 5rem rgba(0, 0, 0, 0.25);
   width: calc(100% - 6rem);
 
