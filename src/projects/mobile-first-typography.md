@@ -13,11 +13,11 @@ outline: >-
 content:
   - copy: ''
     image: ''
-    layout: left
-    title: Desktop
+    layout: middle
+    title: ''
     video: QeIhMpn9PYQ
-  - layout: right
-    title: Mobile
+  - layout: middle
+    title: ''
     video: 6c8HgFBzhDM
 ---
 
