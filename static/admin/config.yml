@@ -50,6 +50,7 @@ collections:
                 label: "Layout",
                 name: "layout",
                 widget: "select",
+                default: "left",
                 options:
                   [
                     { label: "Right", value: "right" },

@@ -5,7 +5,7 @@ title: Parametric search
 slug: /panasonic-parametric-search
 link: >-
   https://na.industrial.panasonic.com/parametric-search/resistors/smd-chip-resistors/high-power-anti-surge-high-voltage
-color: '#EF5F50'
+color: "#EF5F50"
 featuredimage: /img/parametric-cover-image.png
 outline: >-
   Parametric searches are typically a mess of cluttered interface components and
@@ -18,7 +18,7 @@ content:
       needed to display the same range of information with a clearer structure
       and more considered usability.
     image: /img/parametric-examples.jpg
-    layout: Left
+    layout: left
     title: The problem
   - copy: >-
       To get the layout working well we focused on the functionality by
@@ -35,7 +35,7 @@ content:
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
     image: /img/parametric-ui.jpg
-    layout: Left
+    layout: left
     title: UI design
   - copy: Lorem ipsum dolor sit amet
     image: /img/parametric-drawer.jpg
@@ -44,4 +44,3 @@ content:
   - layout: middle
     video: ewmjGEqdJQI
 ---
-

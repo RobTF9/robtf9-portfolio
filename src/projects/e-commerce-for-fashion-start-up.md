@@ -17,7 +17,7 @@ content:
       needed to display the same range of information with a clearer structure
       and more considered usability.
     image: /img/parametric-example-bad.png
-    layout: Left
+    layout: left
     title: The problem
     video: Hello
 ---

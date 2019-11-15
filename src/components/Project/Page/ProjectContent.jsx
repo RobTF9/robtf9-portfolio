@@ -10,7 +10,7 @@ const ProjectContent = ({ color, client, content }) => {
   return (
     <ProjectContentContainer color={color} client={client}>
       {content.map(({ image, title, copy, layout, video }) => {
-        if (layout === "Left") {
+        if (layout === "left") {
           return (
             <LeftContentBlock
               image={image}
