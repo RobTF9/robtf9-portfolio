@@ -11,6 +11,10 @@ outline: >-
   Osborne Clarke. A content heavy site with high number of articles focusing on
   legal insights.
 content:
+  - copy: Type scaling is great blah blah blah
+    image: /img/osborne-clarke-responsive.jpg
+    layout: right
+    title: Type scaling
   - copy: ''
     image: ''
     layout: middle
@@ -19,9 +23,5 @@ content:
   - layout: middle
     title: ''
     video: 6c8HgFBzhDM
-  - copy: Type scaling is great blah blah blah
-    image: /img/osborne-clarke-responsive.jpg
-    layout: left
-    title: Type scaling
 ---
 
