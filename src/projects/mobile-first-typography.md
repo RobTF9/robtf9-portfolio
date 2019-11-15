@@ -13,7 +13,7 @@ outline: >-
 content:
   - copy: Type scaling is great blah blah blah
     image: /img/osborne-clarke-responsive.jpg
-    layout: right
+    layout: left
     title: Type scaling
   - copy: ''
     image: ''
