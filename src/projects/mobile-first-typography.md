@@ -19,5 +19,9 @@ content:
   - layout: middle
     title: ''
     video: 6c8HgFBzhDM
+  - copy: Type scaling is great blah blah blah
+    image: /img/osborne-clarke-responsive.jpg
+    layout: left
+    title: Type scaling
 ---
 
