@@ -3,8 +3,8 @@ date: 2019-10-02T20:58:00.000Z
 client: Osborne Clarke
 title: Pattern library
 slug: /osborne-clarke
-link: 'https://proctors.invisionapp.com/share/N3Q5PPUHD7F'
-color: '#043144'
+link: "https://proctors.invisionapp.com/share/N3Q5PPUHD7F"
+color: "#043144"
 featuredimage: /img/osborne-clarke-cover-image.png
 outline: >-
   Designed, curated and implemented a typography first pattern library for
@@ -17,13 +17,18 @@ content:
     title: Type scaling
   - image: /img/osborne-clarke-type-system.png
     layout: middle
-  - copy: ''
-    image: ''
+  - copy: Type scaling is great blah blah blah
+    image: /img/osborne-clarke-sectors.jpg
+    layout: right
+    title: Type scaling
+  - image: /img/osborne-clarke-illustrations.png
     layout: middle
-    title: ''
+  - copy: "To allow users to browse to level content without leaving the page I designed a number of "
+    image: ""
+    layout: left
+    title: "Animated components"
     video: QeIhMpn9PYQ
   - layout: middle
-    title: ''
+    title: ""
     video: 6c8HgFBzhDM
 ---
-
