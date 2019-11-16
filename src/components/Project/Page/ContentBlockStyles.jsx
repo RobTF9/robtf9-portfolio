@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import breakpoints from "../../../shared/breakpoints";
 import colors from "../../../shared/colors";
+import { animated } from "react-spring";
 
 const Content = styled.div`
   position: relative;
@@ -83,7 +84,7 @@ export const Video = ({ video, client }) => (
   </Wrapper>
 );
 
-const Wrapper = styled.div`
+const Wrapper = styled(animated.div)`
   position: relative;
   width: 100%;
   padding-top: 56.25%;

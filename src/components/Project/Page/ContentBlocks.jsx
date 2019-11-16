@@ -31,7 +31,18 @@ export const LeftContentBlock = props => {
           fluid={props.image.childImageSharp.fluid}
         />
       ) : null}
-      {props.video ? <Video video={props.video} /> : null}
+      {props.video ? (
+        <Video
+          style={useSpring({
+            opacity: view ? 1 : 0,
+            transform: view
+              ? `translate3d(0rem, 0, 0)`
+              : `translate3d(-30rem, 0, 0)`,
+            config: config.slow,
+          })}
+          video={props.video}
+        />
+      ) : null}
       {props.title ? (
         <AnimatedText
           style={useSpring({
@@ -72,7 +83,18 @@ export const RightContentBlock = props => {
           fluid={props.image.childImageSharp.fluid}
         />
       ) : null}
-      {props.video ? <Video video={props.video} /> : null}
+      {props.video ? (
+        <Video
+          style={useSpring({
+            opacity: view ? 1 : 0,
+            transform: view
+              ? `translate3d(0rem, 0, 0)`
+              : `translate3d(30rem, 0, 0)`,
+            config: config.slow,
+          })}
+          video={props.video}
+        />
+      ) : null}
       {props.title ? (
         <AnimatedText
           style={useSpring({
@@ -113,7 +135,18 @@ export const MiddleContentBlock = props => {
           fluid={props.image.childImageSharp.fluid}
         />
       ) : null}
-      {props.video ? <Video video={props.video} /> : null}
+      {props.video ? (
+        <Video
+          style={useSpring({
+            opacity: view ? 1 : 0,
+            transform: view
+              ? `translate3d(0, 0rem, 0)`
+              : `translate3d(0, 30rem, 0)`,
+            config: config.slow,
+          })}
+          video={props.video}
+        />
+      ) : null}
       {props.title ? (
         <AnimatedText
           style={useSpring({
