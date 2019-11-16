@@ -58,7 +58,7 @@ export const Text = styled.div`
     max-width: 25%;
     bottom: calc(-100vh / 12);
     ${({ layout }) => {
-      if (layout === "Left") {
+      if (layout === "left") {
         return `right: calc(-100vh / 12);`;
       }
       if (layout === "right") {
