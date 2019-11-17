@@ -18,26 +18,22 @@ content:
     layout: left
     title: Overcrowded
   - copy: >-
-      To get the layout working well we focused on the functionality by
-      prototyping and testing iteratively with stripped back wireframes.
+      As we already had an established design system I iteratively prototyped my
+      ideas with wireframes to get faster feedback from users, the dev team and
+      the client.
     image: /img/parametric-wireframe.jpg
     layout: right
-    title: Wireframes
+    title: Wireframing
   - copy: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      Very few exsisting parametric searches are responsive. My solution works
+      seemlessly across all devices.
     image: /img/parametric-ui.jpg
     layout: left
-    title: UI design
-  - copy: Lorem ipsum dolor sit amet
+    title: Responsive
+  - copy: ''
     image: /img/parametric-drawer.jpg
     layout: right
-    title: Layered
+    title: ''
   - layout: middle
     video: ewmjGEqdJQI
 ---
