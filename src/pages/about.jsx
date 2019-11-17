@@ -30,7 +30,7 @@ const About = () => {
           Outside of work I like to work on full stack web applications with a
           combination of React and backend services like Firebase and Netlify.
           This allows me play around with new technology and gives me a better
-          understanding of digital industry as a whole. It's also incredibly
+          understanding of the digital industry as a whole. It's also incredibly
           fun!
           <br />
           <br />
