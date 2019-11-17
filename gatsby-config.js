@@ -97,5 +97,12 @@ module.exports = {
         layout: require.resolve(`./src/components/Layout/Layout.jsx`),
       },
     },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: 1575311,
+        sv: 6,
+      },
+    },
   ],
 };
