@@ -12,10 +12,13 @@ outline: >-
   a business website and brand. I helped them created an adaptable brand system
   as well as designing and developing a completely bespoke Shopify theme.
 content:
-  - copy: ''
+  - copy: >-
+      98.7% of traffic to maibee.com is on smartphones. With most of that coming
+      straight from their Instagram. The primary focus was making the experience
+      on mobile as easy to use a s possible.
     image: /img/maibee-mobile-home.jpg
     layout: left
-    title: ''
+    title: Mobile first
     video: ''
   - image: /img/maibee-logos.png
     layout: middle
