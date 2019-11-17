@@ -13,6 +13,15 @@ outline: >-
   scalable, responsive design system and headless front end application that has
   allowed PIDSA to implement industry leading features with ease.
 content:
-  - layout: left
+  - image: /img/panasonic-desktop-home.jpg
+    layout: left
+  - image: /img/panasonic-mobile-double.jpg
+    layout: right
+  - image: /img/panasonic-laptop-mobile.jpg
+    layout: left
+  - image: /img/panasonic-mobile.jpg
+    layout: right
+  - image: /img/panasonic-tablets.jpg
+    layout: left
 ---
 
