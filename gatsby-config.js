@@ -44,7 +44,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#222222`,
         theme_color: `#222222`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/favicon.jpg`,
       },
     },
@@ -82,7 +82,7 @@ module.exports = {
         fonts: [
           {
             family: `Source Sans Pro`,
-            variants: [`300`, `400`, `600`, `900`],
+            variants: [`300`, `400`, `600`, `700`, `900`],
           },
         ],
       },
@@ -94,7 +94,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-transition-link`,
       options: {
-        layout: require.resolve(`./src/components/Layout/Layout.js`),
+        layout: require.resolve(`./src/components/Layout/Layout.jsx`),
       },
     },
   ],

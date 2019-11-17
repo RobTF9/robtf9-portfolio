@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: master
+  branch: qa
   repo: RobTF9/gatsby-portfolio
 
 media_folder: /static/img
@@ -17,10 +17,49 @@ collections:
       - { label: "Client", name: "client", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Link", name: "link", widget: "string" }
       - { label: "Color", name: "color", widget: "string" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Featured Image", name: "featuredimage", widget: "image" }
       - { label: "Outline", name: "outline", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Content",
+          name: "content",
+          widget: "list",
+          fields:
+            [
+              {
+                label: "Image",
+                name: "image",
+                widget: "image",
+                required: false,
+              },
+              {
+                label: "Video",
+                name: "video",
+                widget: "string",
+                required: false,
+              },
+              {
+                label: "Title",
+                name: "title",
+                widget: "string",
+                required: false,
+              },
+              { label: "Copy", name: "copy", widget: "text", required: false },
+              {
+                label: "Layout",
+                name: "layout",
+                widget: "select",
+                default: "left",
+                options:
+                  [
+                    { label: "Right", value: "right" },
+                    { label: "Left", value: "left" },
+                    { label: "Middle", value: "middle" },
+                  ],
+              },
+            ],
+        }
 
   - name: "experience"
     label: "Experience"

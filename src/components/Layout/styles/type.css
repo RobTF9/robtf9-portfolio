@@ -42,8 +42,12 @@ button,
 label,
 input {
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 2.2rem;
+}
+
+a {
+  font-weight: 700;
 }
 
 @media (min-width: 600px) {
@@ -52,7 +56,7 @@ input {
   }
 
   h2 {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
   }
 
   h3 {
