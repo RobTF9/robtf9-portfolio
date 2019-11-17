@@ -8,9 +8,10 @@ color: '#DAEBF1'
 featuredimage: /img/ethvault-cover-image.png
 outline: >-
   MyEthvault is an open source application that allows users to interact with
-  dApps on the Ethereum block chain without leaving the browser. Currently in
-  the prototype phase, my role has been to develop a brand aesthetic as well as
-  working on the front end React app.
+  dApps on the Ethereum blockchain without leaving the browser. Currently in the
+  prototype phase, my role has been to develop a brand aesthetic as well as
+  working on the front-end React application. This app is a first of it's which
+  means a blank canvas when it comes to experience and interface patterns.
 content:
   - copy: ''
     image: /img/ethvault-landing-page.jpg
