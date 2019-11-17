@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Img from "gatsby-image";
 import {
   LeftContent,
@@ -16,6 +16,16 @@ const AnimatedText = animated(Text);
 export const LeftContentBlock = props => {
   const [view, setView] = useState(false);
   const [textView, setTextView] = useState(false);
+
+  useEffect(() => {
+    setView(false);
+    setTextView(false);
+    return () => {
+      setView(false);
+      setTextView(false);
+    };
+  }, []);
+
   return (
     <LeftContent>
       <Waypoint onEnter={() => setView(true)} />
@@ -68,6 +78,16 @@ export const LeftContentBlock = props => {
 export const RightContentBlock = props => {
   const [view, setView] = useState(false);
   const [textView, setTextView] = useState(false);
+
+  useEffect(() => {
+    setView(false);
+    setTextView(false);
+    return () => {
+      setView(false);
+      setTextView(false);
+    };
+  }, []);
+
   return (
     <RightContent>
       <Waypoint onEnter={() => setView(true)} />
@@ -120,6 +140,16 @@ export const RightContentBlock = props => {
 export const MiddleContentBlock = props => {
   const [view, setView] = useState(false);
   const [textView, setTextView] = useState(false);
+
+  useEffect(() => {
+    setView(false);
+    setTextView(false);
+    return () => {
+      setView(false);
+      setTextView(false);
+    };
+  }, []);
+
   return (
     <MiddleContent>
       <Waypoint onEnter={() => setView(true)} />

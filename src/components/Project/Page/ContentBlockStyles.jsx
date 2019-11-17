@@ -72,8 +72,8 @@ export const Text = styled.div`
   }
 `;
 
-export const Video = ({ video, client }) => (
-  <Wrapper>
+export const Video = ({ video, client, style }) => (
+  <Wrapper style={style}>
     <iframe
       title={client}
       aria-hidden="true"
