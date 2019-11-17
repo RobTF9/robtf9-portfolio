@@ -64,7 +64,7 @@ export const query = graphql`
         link
         featuredimage {
           childImageSharp {
-            fluid(maxWidth: 3840, quality: 100) {
+            fluid(maxWidth: 1920, quality: 80) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -76,7 +76,7 @@ export const query = graphql`
           layout
           image {
             childImageSharp {
-              fluid(maxWidth: 3840, quality: 100) {
+              fluid(maxWidth: 1920, quality: 80) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -97,7 +97,7 @@ export const query = graphql`
             color
             featuredimage {
               childImageSharp {
-                fluid(maxWidth: 3840, quality: 100) {
+                fluid(maxWidth: 1920, quality: 80) {
                   ...GatsbyImageSharpFluid
                 }
               }
