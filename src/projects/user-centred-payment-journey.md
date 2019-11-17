@@ -10,17 +10,21 @@ outline: >-
   IDD regulations introduced in 2018 meant consumers had to understand every
   item in their insurance product. I worked on the agile prototyping team that
   designed and user tested the succesful solution for the RAC. My role within
-  the team focused primarily on UI design and interface animation.
+  the team focused primarily on UI design and interface animation. Our
+  deliverable for this project was fully interactive code prototype.
 content:
-  - copy: Before begining the project we did some journey mapping.
+  - copy: >-
+      Before begining the project we mapped out current and prospective journeys
+      by conducting in depth user research of both the RAC and competitor
+      payment journeys.
     image: /img/rac-user-flows.jpg
     layout: left
-    title: Journey mapping
+    title: Mapping
   - image: /img/rac-responsive-intro.jpg
     layout: right
   - image: /img/rac-desktop-ui.jpg
     layout: left
   - image: /img/rac-mobile.jpg
-    layout: left
+    layout: right
 ---
 
