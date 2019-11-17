@@ -16,5 +16,13 @@ content:
     image: /img/ethvault-landing-page.jpg
     layout: left
     title: ''
+  - image: /img/ethvault-desktop-drawer.jpg
+    layout: right
+  - image: /img/ethvault-mobile.jpg
+    layout: left
+  - image: /img/ethvault-responsive.jpg
+    layout: right
+  - layout: middle
+    video: ZpHvXBpd0Tc
 ---
 
