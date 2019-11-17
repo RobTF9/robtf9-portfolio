@@ -36,7 +36,7 @@ const Image = styled(Img)`
   right: 0;
   bottom: 0;
   width: 80vh;
-
+  opacity: 0.25;
   overflow: hidden;
 `;
 
@@ -44,6 +44,7 @@ const Copy = styled.div`
   position: absolute;
   left: calc(100vw / 12);
   bottom: -1rem;
+  text-shadow: 0 0 5rem rgba(0, 0, 0, 0.25);
 
   ${breakpoints.tablet} {
     left: calc((100vw / 12) * 2);
