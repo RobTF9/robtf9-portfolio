@@ -25,13 +25,17 @@ const Layout = ({ children }) => {
       <Main
         style={{
           transform: animation.positive.interpolate(
-            y => `translate3d(0, ${y}rem, 0)`
+            y => `translate3d(0, ${y}vh, 0)`
           ),
         }}
       >
         {children}
       </Main>
-      <NavDrawer toggleNav={toggleNav} visible={visible} />
+      <NavDrawer
+        toggleNav={toggleNav}
+        visible={visible}
+        animation={animation}
+      />
     </>
   );
 };

@@ -35,7 +35,7 @@ const postLayout = ({ data }) => {
         <ContactCard
           link={link}
           title="Want to know more?"
-          copy="Take a look at the project or get say hello!"
+          copy="Take a look at the project or say hello!"
         />
         <ContactForm cname="Contact Form" />
       </ContactContainer>

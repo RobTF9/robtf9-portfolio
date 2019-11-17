@@ -22,7 +22,10 @@ const Home = () => {
     <HomeContainer>
       <Text style={animations.verticleSlide(`15rem`, 0)}>
         <h1>Hey, my name’s Rob.</h1>
-        <p>I’m a user interface designer and developer based in Bristol, UK.</p>
+        <p>
+          I’m a user centred interface and experience designer based in Bristol,
+          UK.
+        </p>
         <TextLink to="/about" text="More about me" />
         <TextLink to="/projects" text="My recent projects" />
         <TextLink to="/contact" text="Get in touch" />

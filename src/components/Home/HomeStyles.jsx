@@ -4,6 +4,7 @@ import styled from "styled-components";
 import breakpoints from "../../shared/breakpoints";
 
 export const HomeContainer = styled(Container)`
+  position: relative;
   display: flex;
   align-items: center;
   height: 100vh;
@@ -29,10 +30,11 @@ export const Text = styled(animated.div)`
 `;
 
 export const Image = styled(animated.div)`
-  position: absolute !important;
-  bottom: 0;
+  position: fixed !important;
+  bottom: -100vh;
   right: 0;
   width: 50%;
+  padding-top: 50%;
 
   .gatsby-image-wrapper {
     position: absolute !important;
@@ -43,6 +45,7 @@ export const Image = styled(animated.div)`
   }
 
   ${breakpoints.desktop} {
-    width: 40%;
+    width: 30%;
+    margin-right: calc(12vh);
   }
 `;

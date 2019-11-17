@@ -6,10 +6,17 @@ import { Link } from "gatsby";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import breakpoints from "../../shared/breakpoints";
 import logo from "../../images/logo.svg";
+import { animated } from "react-spring";
 
-const NavDrawer = ({ toggleNav }) => {
+const NavDrawer = ({ toggleNav, animation }) => {
   return (
-    <Drawer>
+    <Drawer
+      style={{
+        transform: animation.negative.interpolate(
+          y => `translate3d(0, -${y}vh, 0)`
+        ),
+      }}
+    >
       <DrawerList>
         <DrawerLink onClick={toggleNav}>
           <Link activeClassName="active" to="/">
@@ -49,13 +56,14 @@ const NavDrawer = ({ toggleNav }) => {
   );
 };
 
-const Drawer = styled.div`
+const Drawer = styled(animated.div)`
   position: fixed;
-  z-index: -1;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background-color: ${colors.blue};
 
   ${breakpoints.desktop} {

@@ -5,7 +5,7 @@ import breakpoints from "../../shared/breakpoints";
 import { animated } from "react-spring";
 
 export const Container = styled.nav`
-  z-index: 1000;
+  z-index: 1100;
   position: fixed;
   left: 0;
   top: 0;
