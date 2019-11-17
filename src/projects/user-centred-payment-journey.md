@@ -16,5 +16,11 @@ content:
     image: /img/rac-user-flows.jpg
     layout: left
     title: Journey mapping
+  - image: /img/rac-responsive-intro.jpg
+    layout: right
+  - image: /img/rac-desktop-ui.jpg
+    layout: left
+  - image: /img/rac-mobile.jpg
+    layout: left
 ---
 
