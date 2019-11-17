@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
 import SEO from "../../Layout/SEO";
-import OtherProjects from "./OtherProjects";
 import ProjectHero from "./ProjectHero";
 import ProjectIntro from "./ProjectIntro";
 import ProjectContent from "./ProjectContent";
@@ -20,12 +19,6 @@ const postLayout = ({ data }) => {
     content,
     featuredimage,
   } = frontmatter;
-  const { edges } = data.allMarkdownRemark;
-
-  // This is how you get the other projects array
-  const projects = edges.filter(edge => {
-    return edge.node.frontmatter.slug !== `${frontmatter.slug}`;
-  });
 
   return (
     <>
@@ -46,7 +39,6 @@ const postLayout = ({ data }) => {
         />
         <ContactForm cname="Contact Form" />
       </ContactContainer>
-      <OtherProjects projects={projects} />
     </>
   );
 };
@@ -78,28 +70,6 @@ export const query = graphql`
             childImageSharp {
               fluid(maxWidth: 1920, quality: 80) {
                 ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { fileAbsolutePath: { regex: "/projects/" } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            client
-            slug
-            color
-            featuredimage {
-              childImageSharp {
-                fluid(maxWidth: 1920, quality: 80) {
-                  ...GatsbyImageSharpFluid
-                }
               }
             }
           }
