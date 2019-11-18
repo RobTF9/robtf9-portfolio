@@ -7,7 +7,7 @@ export const HomeContainer = styled(Container)`
   position: relative;
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: ${({ height }) => height}px;
   margin-bottom: 0rem;
 
   ${breakpoints.tablet} {
