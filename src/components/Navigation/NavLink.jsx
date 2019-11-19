@@ -8,7 +8,11 @@ import { transitions } from "../../shared/transitions";
 const NavLink = ({ text, to, mouseOver }) => {
   const wrapperRef = useRef(null);
   return (
-    <Wrapper ref={wrapperRef} onMouseOver={() => mouseOver(wrapperRef.current)}>
+    <Wrapper
+      ref={wrapperRef}
+      onFocus={() => mouseOver(wrapperRef.current)}
+      onMouseOver={() => mouseOver(wrapperRef.current)}
+    >
       <CustomLink to={to} activeClassName="active">
         {text}
       </CustomLink>

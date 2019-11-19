@@ -20,20 +20,27 @@ const StyledLink = styled(Link)`
   display: block;
   color: ${colors.white};
   margin-bottom: 2rem;
+  transform: translate3d(0rem, 0, 0);
+  ${transitions.satanSnap}
 
   svg {
     color: ${colors.blue};
     margin: 0 0 -0.3rem;
     font-size: 1.6rem;
     transform: translate3d(0.5rem, 0, 0);
-    ${transitions.quickSnap}
+    ${transitions.satanSnap}
   }
 
   ${breakpoints.tablet} {
-    &:hover {
+    &:hover,
+    &:focus {
+      color: ${colors.blue};
+      transform: translate3d(-0.5rem, 0, 0);
+      ${transitions.satanSnap}
+
       svg {
-        transform: translate3d(1rem, 0, 0);
-        ${transitions.quickSnap}
+        transform: translate3d(1.5rem, 0, 0);
+        ${transitions.satanSnap}
       }
     }
   }

@@ -91,6 +91,10 @@ export const ImageWrapper = styled.div`
     transform: scale(1.1);
   }
 
+  ${Card}:focus & {
+    transform: scale(1.1);
+  }
+
   ${breakpoints.tablet} {
     height: 100%;
   }
@@ -108,6 +112,9 @@ export const Button = styled.button`
   ${transitions.mediumSnap};
 
   ${Card}:hover & {
+    transform: translateY(0rem);
+  }
+  ${Card}:focus & {
     transform: translateY(0rem);
   }
 

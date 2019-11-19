@@ -7,7 +7,11 @@ import { transitions } from "../../shared/transitions";
 const NavLinkIcon = ({ icon, to, mouseOver }) => {
   const wrapperRef = useRef(null);
   return (
-    <Wrapper ref={wrapperRef} onMouseOver={() => mouseOver(wrapperRef.current)}>
+    <Wrapper
+      ref={wrapperRef}
+      onMouseOver={() => mouseOver(wrapperRef.current)}
+      onFocus={() => mouseOver(wrapperRef.current)}
+    >
       <CustomLink
         aria-label={`Visit ${to}`}
         target="_blank"

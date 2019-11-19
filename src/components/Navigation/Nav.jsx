@@ -50,7 +50,12 @@ const Nav = ({ toggleNav, visible, animation }) => {
           alt="Robert Squires - Logo"
         />
       </Link>
-      <LinkList onMouseOver={mouseEnterList} onMouseOut={mouseLeaveList}>
+      <LinkList
+        onFocus={mouseEnterList}
+        onBlur={mouseLeaveList}
+        onMouseOver={mouseEnterList}
+        onMouseOut={mouseLeaveList}
+      >
         {navArray.map((item, key) => (
           <NavLink
             mouseOver={mouseOver}

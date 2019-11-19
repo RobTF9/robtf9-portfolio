@@ -40,7 +40,8 @@ a,
 li,
 button,
 label,
-input {
+input,
+textarea {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.2rem;
