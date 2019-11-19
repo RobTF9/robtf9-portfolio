@@ -47,7 +47,7 @@ const OtherProjectList = styled.div`
   grid-row-gap: 0;
 
   ${breakpoints.tablet} {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 `;
 

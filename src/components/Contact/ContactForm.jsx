@@ -86,7 +86,7 @@ const ButtonSpan = styled.span`
   width: 100%;
   height: 100%;
   background-color: ${colors.black};
-  opacity: 0.5;
+  opacity: 0.05;
   transform: scale3d(1, 0, 1);
   transform-origin: 50% 100%;
   ${transitions.mediumSnap}

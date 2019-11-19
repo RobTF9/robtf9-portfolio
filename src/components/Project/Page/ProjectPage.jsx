@@ -7,6 +7,7 @@ import ProjectContent from "./ProjectContent";
 import ContactForm from "../../Contact/ContactForm";
 import ContactCard from "../../Contact/ContactCard";
 import { ContactContainer } from "../../Common/Container";
+import OtherProjects from "./OtherProjects";
 
 const postLayout = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
@@ -19,6 +20,12 @@ const postLayout = ({ data }) => {
     content,
     featuredimage,
   } = frontmatter;
+
+  // This is how you get the other projects array
+  const { edges } = data.allMarkdownRemark;
+  const projects = edges.filter(edge => {
+    return edge.node.frontmatter.slug !== `${frontmatter.slug}`;
+  });
 
   return (
     <>
@@ -39,6 +46,7 @@ const postLayout = ({ data }) => {
         />
         <ContactForm name="Contact Form" />
       </ContactContainer>
+      <OtherProjects projects={projects} />
     </>
   );
 };
@@ -70,6 +78,28 @@ export const query = graphql`
             childImageSharp {
               fluid(maxWidth: 1920, quality: 80) {
                 ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fileAbsolutePath: { regex: "/projects/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            client
+            slug
+            color
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 1920, quality: 80) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
