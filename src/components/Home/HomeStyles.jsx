@@ -1,21 +1,20 @@
 import { animated } from "react-spring";
-import Container from "../Common/Container";
 import styled from "styled-components";
 import breakpoints from "../../shared/breakpoints";
+import Div100vh from "react-div-100vh";
 
-export const HomeContainer = styled(Container)`
+export const HomeContainer = styled(Div100vh)`
   position: relative;
+  grid-column: 2 / 12;
+  display: grid;
+  grid-row-gap: 8rem;
+  margin-bottom: 8rem;
   display: flex;
   align-items: center;
-  height: ${({ height }) => height}px;
   margin-bottom: 0rem;
 
   ${breakpoints.tablet} {
-    margin-bottom: 0rem;
-  }
-
-  ${breakpoints.desktop} {
-    margin-bottom: 0rem;
+    grid-column: 3 / 11;
   }
 `;
 

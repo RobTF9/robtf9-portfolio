@@ -63,7 +63,6 @@ const Main = styled(animated.main)`
       color: ${colors.white};
       background-color: ${colors.black};
       min-height: 100vh;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     }
   }
 `;
