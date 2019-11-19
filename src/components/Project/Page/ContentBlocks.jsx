@@ -31,6 +31,7 @@ export const LeftContentBlock = props => {
       <Waypoint onEnter={() => setView(true)} />
       {props.image ? (
         <AnimatedImage
+          alt={`${props.client + "-" + (props.index + 1)}`}
           style={useSpring({
             opacity: view ? 1 : 0,
             transform: view
@@ -93,6 +94,7 @@ export const RightContentBlock = props => {
       <Waypoint onEnter={() => setView(true)} />
       {props.image ? (
         <AnimatedImage
+          alt={`${props.client + "-" + props.index}`}
           style={useSpring({
             opacity: view ? 1 : 0,
             transform: view
@@ -117,6 +119,7 @@ export const RightContentBlock = props => {
       ) : null}
       {props.title ? (
         <AnimatedText
+          alt={`${props.client + "-" + props.index}`}
           style={useSpring({
             opacity: textView ? 1 : 0,
             transform: textView
@@ -155,6 +158,7 @@ export const MiddleContentBlock = props => {
       <Waypoint onEnter={() => setView(true)} />
       {props.image ? (
         <AnimatedImage
+          alt={`${props.client + "-" + props.index}`}
           style={useSpring({
             opacity: view ? 1 : 0,
             transform: view

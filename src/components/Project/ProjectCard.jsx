@@ -28,7 +28,10 @@ const ProjectCard = ({ project, index }) => {
           <h2>{project.title}</h2>
         </Copy>
         <ImageWrapper index={index + 1} client={project.client}>
-          <Img fluid={project.featuredimage.childImageSharp.fluid} />
+          <Img
+            alt={project.title}
+            fluid={project.featuredimage.childImageSharp.fluid}
+          />
         </ImageWrapper>
         <Button color={project.color} client={project.client}>
           Read more

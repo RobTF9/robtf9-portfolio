@@ -16,22 +16,22 @@ const ContactForm = ({ name }) => {
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value={name} />
       <Input>
-        <label>
+        <label htmlFor="name">
           <p>Your name</p>
         </label>
-        <input type="text" name="name" required />
+        <input type="text" name="name" id="name" required />
       </Input>
       <Input>
-        <label>
+        <label htmlFor="email">
           <p>Your email</p>
         </label>
-        <input type="email" name="email" required />
+        <input type="email" name="email" id="email" required />
       </Input>
       <Input>
-        <label>
+        <label htmlFor="message">
           <p>Message</p>
         </label>
-        <textarea name="message" required />
+        <textarea name="message" id="message" required />
       </Input>
       <Button type="submit">
         <p>Send</p>

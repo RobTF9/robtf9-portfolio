@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import colors from "../../shared/colors";
 
 const ExperienceCard = ({ experience }) => {
   const from = experience.from.split(" ").join("/");
@@ -33,5 +32,5 @@ const Company = styled.p`
 `;
 
 const Date = styled.p`
-  color: ${colors.blue};
+  opacity: 0.6;
 `;

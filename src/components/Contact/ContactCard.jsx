@@ -12,9 +12,7 @@ const ContactCard = ({ title, copy, link }) => {
         <a href={link} target="_blank" rel="noopener noreferrer">
           View the project <FaLink />
         </a>
-      ) : (
-        <a href="tel:+447784329127">(+44) 7784 329 127</a>
-      )}
+      ) : null}
     </Card>
   );
 };

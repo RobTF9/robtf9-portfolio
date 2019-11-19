@@ -8,7 +8,13 @@ const NavLinkIcon = ({ icon, to, mouseOver }) => {
   const wrapperRef = useRef(null);
   return (
     <Wrapper ref={wrapperRef} onMouseOver={() => mouseOver(wrapperRef.current)}>
-      <CustomLink target="_blank" href={to} activeClassName="active">
+      <CustomLink
+        aria-label={`Visit ${to}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={to}
+        activeClassName="active"
+      >
         {icon}
       </CustomLink>
     </Wrapper>

@@ -9,10 +9,12 @@ import {
 const ProjectContent = ({ color, client, content }) => {
   return (
     <ProjectContentContainer color={color} client={client}>
-      {content.map(({ image, title, copy, layout, video }) => {
+      {content.map(({ image, title, copy, layout, video }, i) => {
         if (layout === "left") {
           return (
             <LeftContentBlock
+              key={i}
+              index={i}
               image={image}
               title={title}
               copy={copy}
@@ -25,6 +27,8 @@ const ProjectContent = ({ color, client, content }) => {
         } else if (layout === "right") {
           return (
             <RightContentBlock
+              key={i}
+              index={i}
               image={image}
               title={title}
               copy={copy}
@@ -37,6 +41,8 @@ const ProjectContent = ({ color, client, content }) => {
         } else if (layout === "middle") {
           return (
             <MiddleContentBlock
+              key={i}
+              index={i}
               image={image}
               title={title}
               copy={copy}
