@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import { HomeContainer, Text, Image } from "./HomeStyles";
@@ -6,21 +6,6 @@ import TextLink from "../Common/TextLink";
 import { animations } from "../../shared/transitions";
 
 const Home = () => {
-  const windowScope = typeof window !== "undefined" && window;
-  const [height, setHeight] = useState();
-
-  useEffect(() => {
-    setHeight(windowScope.innerHeight);
-    windowScope.addEventListener("resize", () => {
-      setHeight(windowScope.innerHeight);
-    });
-    return () => {
-      windowScope.removeEventListener("resize", () => {
-        setHeight(windowScope.innerHeight);
-      });
-    };
-  }, []);
-
   const { file } = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "rs-hero.png" }) {
@@ -34,7 +19,7 @@ const Home = () => {
   `);
 
   return (
-    <HomeContainer height={height}>
+    <HomeContainer>
       <Text style={animations.verticleSlide(`15rem`, 0)}>
         <h1>Hey, my name’s Rob.</h1>
         <p>

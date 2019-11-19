@@ -8,7 +8,6 @@ export const HomeContainer = styled(Div100vh)`
   grid-column: 2 / 12;
   display: grid;
   grid-row-gap: 8rem;
-  margin-bottom: 8rem;
   display: flex;
   align-items: center;
   margin-bottom: 0rem;
@@ -29,8 +28,8 @@ export const Text = styled(animated.div)`
 `;
 
 export const Image = styled(animated.div)`
-  position: fixed !important;
-  bottom: -100vh;
+  position: absolute !important;
+  bottom: 0;
   right: 0;
   width: 50%;
   padding-top: 50%;
@@ -44,7 +43,6 @@ export const Image = styled(animated.div)`
   }
 
   ${breakpoints.desktop} {
-    width: 30%;
-    margin-right: calc(12vh);
+    width: 40%;
   }
 `;
