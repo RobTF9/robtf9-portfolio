@@ -49,6 +49,7 @@ export const ContactContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   padding: calc(100vh / 6) 0;
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.25);
 
   div {
     grid-column: 2 / 12;
