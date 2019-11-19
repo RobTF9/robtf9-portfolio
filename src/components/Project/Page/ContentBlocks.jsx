@@ -46,8 +46,6 @@ const Content = props => {
     };
   }, []);
 
-  console.log(view);
-
   return (
     <>
       <Waypoint onEnter={() => setView(true)} />
