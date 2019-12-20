@@ -1,8 +1,8 @@
 ---
 title: Proctor + Stevenson
 from: 10 18
-to: 08 19
-current: true
+to: 06 20
+current: false
 role: Digital Designer
 order: 1
 description: >-
