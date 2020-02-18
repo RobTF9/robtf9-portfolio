@@ -43,12 +43,14 @@ const ExperienceList = () => {
           Download CV <FaFilePdf />
         </a>
       </Card>
-      {allMarkdownRemark.edges.map(({ node }) => (
-        <ExperienceCard
-          key={node.frontmatter.title}
-          experience={node.frontmatter}
-        />
-      ))}
+      <div>
+        {allMarkdownRemark.edges.map(({ node }) => (
+          <ExperienceCard
+            key={node.frontmatter.title}
+            experience={node.frontmatter}
+          />
+        ))}
+      </div>
     </ContentContainer>
   );
 };
