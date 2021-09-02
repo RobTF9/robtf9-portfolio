@@ -27,6 +27,7 @@ export const workHistory: {
   end: [number, number];
   role: string;
   company: string;
+  url: string;
 }[] = [
   // {
   //   name: "elliptic",
@@ -41,6 +42,7 @@ export const workHistory: {
     end: graphEnd,
     role: "Founder",
     company: "Parrot",
+    url: "https://www.meetup.com/Womens-Tech-Hub-Bristol/",
   },
   {
     name: "mentor",
@@ -48,13 +50,15 @@ export const workHistory: {
     end: graphEnd,
     role: "Mentor",
     company: "CodeHub & WTH",
+    url: "https://www.meetup.com/Womens-Tech-Hub-Bristol/",
   },
   {
     name: "ranges",
     start: [1, 2020],
     end: graphEnd,
     role: "Senior Product Designer",
-    company: "ranges.io",
+    company: "Tomahawque",
+    url: "https://www.tomahawque.com/",
   },
   {
     name: "vojo",
@@ -62,6 +66,7 @@ export const workHistory: {
     end: [3, 2020],
     role: "Consultant",
     company: "Vojo",
+    url: "https://vojo.health/",
   },
   {
     name: "maibee",
@@ -69,13 +74,15 @@ export const workHistory: {
     end: [10, 2019],
     role: "Consultant",
     company: "Maibee",
+    url: "https://maibee.com/",
   },
   {
     name: "ps",
     start: [10, 2018],
     end: [1, 2020],
     role: "Digital Designer",
-    company: "Protctor + Stevenson",
+    company: "Proctor + Stevenson",
+    url: "https://www.proctors.co.uk/",
   },
   {
     name: "rac",
@@ -83,6 +90,7 @@ export const workHistory: {
     end: [10, 2018],
     role: "Digital Designer",
     company: "RAC",
+    url: "https://www.rac.co.uk/",
   },
   {
     name: "e78",
@@ -90,6 +98,7 @@ export const workHistory: {
     end: [3, 2018],
     role: "Digital Designer",
     company: "Element78",
+    url: "https://www.element78.co.uk/",
   },
   {
     name: "unite",
@@ -97,6 +106,7 @@ export const workHistory: {
     end: [3, 2017],
     role: "Junior Designer",
     company: "Unite Students",
+    url: "https://www.unitestudents.com/",
   },
   {
     name: "filtration",
@@ -104,5 +114,6 @@ export const workHistory: {
     end: [7, 2016],
     role: "Designer & Developer",
     company: "Filtration Ltd",
+    url: "https://www.filtration-ltd.co.uk/",
   },
 ];
