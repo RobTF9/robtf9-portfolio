@@ -35,7 +35,7 @@ export const Item = styled.div<{
   animation: ${fadeIn} 1.2s ${({ index }) => (index + 1) / 10 + 1 * 1.2}s
     ease-in-out forwards;
 
-  button {
+  div {
     position: absolute;
     left: 0;
     top: 0;
@@ -67,7 +67,8 @@ export const Item = styled.div<{
     }
   }
 
-  p {
+  a {
+    display: block;
     color: ${({ name }) =>
       name === "ps" || name === "ranges" ? "var(--black)" : "var(--white)"};
     position: relative;
@@ -77,6 +78,7 @@ export const Item = styled.div<{
     opacity: 0;
     transition: all 0.3s ease-in-out 0.1s;
     cursor: pointer;
+    text-decoration: none;
 
     span {
       opacity: 0.6;
@@ -88,8 +90,8 @@ export const Item = styled.div<{
     }
   }
 
-  &:hover button,
-  button:focus {
+  &:hover div,
+  div:focus {
     transform: scale(1);
     margin-left: 0;
     border: none;
@@ -100,7 +102,7 @@ export const Item = styled.div<{
       transition: all 0.3s ease-in-out;
     }
 
-    + p {
+    + a {
       opacity: 1;
       transform: translateX(10px);
     }

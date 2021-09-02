@@ -11,7 +11,7 @@ import { HistoryWrapper, Item } from "./styles";
 const History = () => {
   return (
     <HistoryWrapper>
-      {workHistory.map(({ name, start, end, role, company }, index) => {
+      {workHistory.map(({ name, start, end, role, company, url }, index) => {
         const width = prcntg(monthDuration(start, end));
         const left = (monthDuration(graphEnd, end) / graphWidth) * 100;
 
@@ -24,8 +24,8 @@ const History = () => {
             name={name}
             index={index}
           >
-            <button></button>
-            <p>
+            <div />
+            <a href={url} target="_blank">
               {role} <span>at</span> {company}{" "}
               {end === graphEnd ? (
                 <>
@@ -39,7 +39,7 @@ const History = () => {
                   {end[0]}/{end[1]}
                 </>
               )}
-            </p>
+            </a>
           </Item>
         );
       })}

@@ -6,9 +6,9 @@ const Nav = () => {
     <NavWrapper>
       <h1>Rob Squires</h1>
       <div>
-        <a href="">Github</a>
-        <a href="">LinkedIn</a>
-        <a href="">CV</a>
+        <a href="https://github.com/RobTF9">Github</a>
+        <a href="https://www.linkedin.com/in/robtf9/">LinkedIn</a>
+        <a href="/rob-squires-cv.pdf">CV</a>
       </div>
     </NavWrapper>
   );
