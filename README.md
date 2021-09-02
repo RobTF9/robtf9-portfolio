@@ -1,37 +1,61 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://robertsquires.co.uk">
-    <img alt="Robert Squires" src="https://github.com/RobTF9/gatsby-portfolio/blob/master/src/images/favicon.jpg" width="60" />
+  <img src="https://user-images.githubusercontent.com/26466516/107675788-31f54e00-6c77-11eb-96c9-58fd8a4c69ac.png" alt="Gatsby and TypeScript">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&style=for-the-badge&color=24B36B&labelColor=000000" alt="PRs welcome!" />
+
+  <img alt="License" src="https://img.shields.io/github/license/jpedroschmitz/gatsby-starter-ts?style=for-the-badge&color=24B36B&labelColor=000000">
+
+  <a href="https://twitter.com/intent/follow?screen_name=jpedroschmitz">
+    <img src="https://img.shields.io/twitter/follow/jpedroschmitz?style=for-the-badge&color=24B36B&labelColor=000000" alt="Follow @jpedroschmitz" />
   </a>
 </p>
-<h1 align="center">
-  My portfolio website
-</h1>
 
-Built with React, Gatsby and animated with React Spring. I use Netlify CMS to store all my projects. Feel free to play around, I'm always looking for feedback on how I can improve my work.
+<br>
 
-## 🚀 To start
+A TypeScript starter for Gatsby. No plugins and styling. Exactly the necessary to start 🔥
 
-1.  **Yarn**
+No plugins installed, great for advanced users.
 
-    I used yarn as my package manager. Use the yarn command in the terminal to install all dependencies.
-    
-    ```sh
-      cd gatsby-portfolio/
-      yarn
-    ```
-    
-    
-1.  **Start developing.**
+- 📏 **ESLint** — Pluggable JavaScript linter
+- 💖 **Prettier** - Opinionated Code Formatter
+- 🐶 **Husky** — Use git hooks with ease
+- 📄 **Commitizen** - Conventional commit messages CLI
+- 🐐 **Tests** - Jest and Testing Library
+- 🚓 **Commitlint** - Lint commit messages
+- 🖌 **Renovate** - Dependency update tool
+- 🚫 **lint-staged** - Run linters against staged git files
+- 🗂 **Root import** - Import folders and files using the `@` prefix.
 
-    Start using the yarn start command. I've also added a "yarn pull-content" command if you have made updates on the CMS this will pull down the content changes and refresh the cache, avoiding issues with gatsby-image.
+## 🚀 Getting started
 
-    ```sh
-    yarn start
-    ```
-    or
-    ```sh
-    yarn pull-content
-    ```
+The best way to start with this template is using the Gatsby CLI.
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+```
+npx gatsby new starter-ts https://github.com/jpedroschmitz/gatsby-starter-ts
+```
+
+If you prefer you can clone this repository and run the following commands inside the project folder:
+
+1. `npm install` or `yarn`;
+2. `yarn start`;
+
+To view the project you can open `http://localhost:8000`.
+
+## 🤝 Contributing
+
+1. Fork this repository;
+2. Create your branch: `git checkout -b my-new-feature`;
+3. Commit your changes: `git commit -m 'Add some feature'`;
+4. Push to the branch: `git push origin my-new-feature`.
+
+**After your pull request is merged**, you can safely delete your branch.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more information.
+
+---
+
+Made with ♥ by João Pedro Schmitz
