@@ -10,6 +10,7 @@
     "prettier": "^2.8.8"
   },
   "scripts": {
-    "dev": "parcel serve ./src/index.html"
+    "dev": "parcel serve ./src/index.html",
+    "build": "parcel ./src/index.html"
   }
 }
