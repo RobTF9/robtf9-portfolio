@@ -1,0 +1,176 @@
+:root {
+  --bg: #393939;
+  --fg: #fff;
+  --bl: #3178c6;
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Serif', serif;
+  color: var(--fg);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  background-color: var(--bg);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.wrapper {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.logo {
+  position: relative;
+  border-bottom-right-radius: 1rem;
+  width: 5em;
+  height: 5rem;
+  background-color: var(--bl);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0.5rem;
+  box-shadow: var(--shadow);
+}
+
+.logo--text {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation--links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.home--header {
+  height: calc(100vh - 6rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home--header--title {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.home--header--intro {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 6rem;
+}
+
+.grid {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 10rem;
+}
+
+.grid--title {
+  position: absolute;
+  font-size: 3rem;
+  top: -3rem;
+  z-index: 100;
+}
+
+.grid--card {
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.grid--card:nth-of-type(2),
+.grid--card:nth-of-type(3) {
+  width: calc(50% - 0.5rem);
+}
+
+.grid--card--copy {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.grid--card--copy span {
+  display: block;
+}
+
+.grid--card--img {
+  position: absolute;
+}
+
+.mr-1 {
+  top: 1.5rem;
+  left: -47px;
+  width: 287px;
+  height: 323px;
+}
+
+.mr-2 {
+  top: -8px;
+  right: -47px;
+  width: 208px;
+  height: 520px;
+}
+
+.papaya-1 {
+  top: 1rem;
+  left: 1rem;
+  height: 80px;
+}
+
+.codehub-1 {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-60%);
+  width: 140px;
+}
+
+.mr {
+  background-color: #26293f;
+}
+
+.papaya {
+  background-color: #1c211c;
+}
+
+.codehub {
+  background-color: #c65a5a;
+}
+
+.basis {
+  background-color: #c86448;
+}
+
+.ranges {
+  background-color: #1a1b20;
+}
+
+.elliptic {
+  background-color: #13282f;
+}
+
+.parrot {
+  background-color: #395fbf;
+}
