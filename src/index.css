@@ -43,6 +43,7 @@ ul {
   z-index: 100;
   animation: outerIntro 1s forwards;
   visibility: visible;
+  min-height: 110vh;
 }
 
 .wrapper {
