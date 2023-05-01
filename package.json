@@ -11,6 +11,6 @@
   },
   "scripts": {
     "dev": "parcel serve ./src/index.html",
-    "build": "parcel ./src/index.html"
+    "build": "parcel build ./src/index.html"
   }
 }
