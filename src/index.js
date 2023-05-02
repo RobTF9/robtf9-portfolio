@@ -34,10 +34,10 @@ const urlRoute = (event) => {
 }
 
 const urlLocationHandler = async () => {
+  let location = window.location.pathname
   if (location.length == 0) {
     location = '/'
   }
-
   const route = urlRoutes[location] || urlRoutes['404']
   const html = await fetch(route.template).then((response) => response.text())
   document.getElementById('content').innerHTML = html
