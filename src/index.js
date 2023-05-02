@@ -38,6 +38,15 @@ const urlLocationHandler = async () => {
   if (location.length == 0) {
     location = '/'
   }
+
+  const local = localStorage.getItem('animation')
+  if (location !== '/' || local === '') {
+    document
+      .querySelectorAll('[data-animated]')
+      .forEach((e) => e.classList.remove('animated'))
+    localStorage.setItem('animation', '')
+  }
+
   const route = urlRoutes[location] || urlRoutes['404']
   const html = await fetch(route.template).then((response) => response.text())
   document.getElementById('content').innerHTML = html
