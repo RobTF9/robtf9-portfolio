@@ -15,8 +15,9 @@ window.onbeforeunload = function () {
 
 document.addEventListener('click', (e) => {
   const { target } = e
+
   console.log(target)
-  if (!target.matches('a.grid--card')) {
+  if (!target.matches('a.grid--card') || !target.matches('a.page--back')) {
     return
   }
   e.preventDefault()

@@ -173,11 +173,9 @@ ul {
 
 @keyframes gridIntro {
   from {
-    opacity: 0;
     transform: translateY(6rem);
   }
   to {
-    opacity: 1;
     transform: translateY(0rem);
   }
 }
@@ -190,7 +188,6 @@ ul {
 }
 
 .grid.animated {
-  opacity: 0;
   transform: translateY(6rem);
   animation: gridIntro 1s 5.5s forwards;
 }
@@ -213,6 +210,10 @@ ul {
   transform: scale(1);
   transition: all 0.3s cubic-bezier(1, 0, 0, 1);
   text-decoration: none;
+}
+
+.grid--card * {
+  pointer-events: none;
 }
 
 .grid--card:before {
