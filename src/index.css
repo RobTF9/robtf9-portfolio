@@ -402,3 +402,7 @@ ul {
   padding: 4rem 2rem;
   background-color: var(--bg);
 }
+
+.page--back {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+}
