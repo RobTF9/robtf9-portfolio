@@ -40,18 +40,23 @@ const urlLocationHandler = async () => {
     location = '/'
   }
 
-  document.getElementById('content').classList.remove('page')
-  document.querySelector('html').style.overflow = 'scroll'
-  document.querySelector('html').style.pointerEvents = 'all'
+  const content = document.getElementById('content')
+  const html = document.querySelector('html')
+  const outer = document.querySelector('.outer')
+
+  content.classList.remove('page')
+  html.style.overflow = 'scroll'
+  outer.style.pointerEvents = 'all'
 
   if (location === '/') {
-    document.querySelector('html').style.overflow = 'scroll'
-    document.querySelector('.outer').style.pointerEvents = 'all'
-    document.getElementById('content').classList.remove('page')
+    html.style.overflow = 'scroll'
+    outer.style.pointerEvents = 'all'
+    content.classList.remove('page')
   } else {
-    document.querySelector('html').style.overflow = 'hidden'
-    document.querySelector('.outer').style.pointerEvents = 'none'
-    document.getElementById('content').classList.add('page')
+    html.style.overflow = 'hidden'
+    outer.style.pointerEvents = 'none'
+    content.classList.add('page')
+
     document.addEventListener('click', (e) => {
       if (!e.target.matches('div#content')) {
         window.history.pushState({}, '', '/')
@@ -68,8 +73,10 @@ const urlLocationHandler = async () => {
   }
 
   const route = urlRoutes[location] || urlRoutes['404']
-  const html = await fetch(route.template).then((response) => response.text())
-  document.getElementById('content').innerHTML = html
+  const template = await fetch(route.template).then((response) =>
+    response.text()
+  )
+  content.innerHTML = template
   document.title = route.title
   document
     .querySelector('meta[name="description"]')
