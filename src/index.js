@@ -4,6 +4,15 @@ import about from './templates/about.html'
 
 const urlPageTitle = 'Robert Squires'
 
+document.addEventListener('DOMContentLoaded', function () {
+  var scrollpos = localStorage.getItem('scrollpos')
+  if (scrollpos) window.scrollTo(0, scrollpos)
+})
+
+window.onbeforeunload = function () {
+  localStorage.setItem('scrollpos', window.scrollY)
+}
+
 document.addEventListener('click', (e) => {
   const { target } = e
   console.log(target)
