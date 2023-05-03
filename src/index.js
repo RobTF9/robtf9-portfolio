@@ -6,7 +6,8 @@ const urlPageTitle = 'Robert Squires'
 
 document.addEventListener('click', (e) => {
   const { target } = e
-  if (!target.matches('nav a')) {
+  console.log(target)
+  if (!target.matches('a.grid--card')) {
     return
   }
   e.preventDefault()
@@ -37,6 +38,25 @@ const urlLocationHandler = async () => {
   let location = window.location.pathname
   if (location.length == 0) {
     location = '/'
+  }
+
+  document.getElementById('content').classList.remove('page')
+  document.querySelector('html').style.overflow = 'scroll'
+  document.querySelector('html').style.pointerEvents = 'all'
+
+  if (location === '/') {
+    document.querySelector('html').style.overflow = 'scroll'
+    document.querySelector('.outer').style.pointerEvents = 'all'
+    document.getElementById('content').classList.remove('page')
+  } else {
+    document.querySelector('html').style.overflow = 'hidden'
+    document.querySelector('.outer').style.pointerEvents = 'none'
+    document.getElementById('content').classList.add('page')
+    document.addEventListener('click', (e) => {
+      if (!e.target.matches('div#content')) {
+        window.history.pushState({}, '', '/')
+      }
+    })
   }
 
   const local = localStorage.getItem('animation')
