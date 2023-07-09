@@ -10,6 +10,11 @@ export const ProjectWrapper = styled.div`
   flex-direction: column;
   gap: 3rem;
 
+  & > .flex {
+    display: flex;
+    gap: 1rem;
+  }
+
   img {
     position: relative !important;
   }
@@ -90,7 +95,8 @@ export const ProjectWrapper = styled.div`
   }
 
   .figma,
-  .github {
+  .github,
+  .parrot {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -125,6 +131,18 @@ export const ProjectWrapper = styled.div`
     }
   }
 
+  .parrot {
+    span {
+      background: url('/parrot.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+
   p strong {
     display: block;
     color: var(--wt);
@@ -148,9 +166,11 @@ export const ProjectImageWrapper = styled.div`
     width: 100%;
   }
 
-  img {
+  img,
+  video {
     position: relative;
     transform: translate(-2rem);
+    width: 100%;
 
     @media screen and (max-width: 1000px) {
       transform: translate(-1rem);

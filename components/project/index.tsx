@@ -36,4 +36,20 @@ export const ProjectImage = ({ img, text }: ImageProps) => {
   )
 }
 
+interface VideoProps {
+  video: string
+  text: string
+}
+
+export const ProjectVideo = ({ video, text }: VideoProps) => {
+  return (
+    <ProjectImageWrapper>
+      <video controls>
+        <source src="/parrot.m4v" type="video/mp4"></source>
+      </video>
+      <em>{text}</em>
+    </ProjectImageWrapper>
+  )
+}
+
 export default Project
