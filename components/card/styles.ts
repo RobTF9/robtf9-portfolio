@@ -80,7 +80,7 @@ export const GridCard = styled.a<{ noEvents?: true }>`
     content: '';
     width: 100%;
     height: 1px;
-    background-color: var(--fg);
+    background-color: var(--wt);
     transform: scale(0, 1);
     transform-origin: 100% 0%;
     transition: transform 0.3s cubic-bezier(1, 0, 0, 1);
