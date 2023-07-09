@@ -37,11 +37,16 @@ export default function Threat() {
             market with a responsibility to ensure the applications and products
             they ship are secure.
           </p>
-          <p>
-            I can’t go into too many details about this project at the moment,
-            but I can say it has seen me undertake the following activities:
-          </p>
+          <q>
+            Delivered three distinct, de-risked product concepts ready for
+            investment
+          </q>
+
           <ul>
+            <p>
+              I can’t go into too many details about this project at the moment,
+              but I can say it has seen me undertake the following activities:
+            </p>
             <li>
               Planning and facilitating generative interviews with ~30
               participants across different roles within product engineering
@@ -62,18 +67,7 @@ export default function Threat() {
               AI, Anthropic).
             </li>
           </ul>
-          <section>
-            <em>
-              <h3>Task models...</h3>
-            </em>
-            <Image alt="Task model" src="/task-model-1.jpg" fill />
-            <Image alt="Task model" src="/task-model-2.jpg" fill />
-            <Image alt="Task model" src="/task-model-3.jpg" fill />
-            <Image alt="Task model" src="/task-model-4.jpg" fill />
-          </section>
-          <em>
-            <h3>Try the AI...</h3>
-          </em>
+          <p>Get in touch to find out more!</p>
         </Project>
       </Layout>
     </>

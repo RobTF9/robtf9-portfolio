@@ -72,8 +72,16 @@ export const ProjectWrapper = styled.div`
   }
 
   ul {
+    position: relative;
     list-style-type: disc;
     padding: 0 0 0 2.5rem;
+
+    p {
+      position: relative;
+      width: calc(100% + 2.5rem);
+      margin-left: -2.5rem;
+      margin-bottom: 1rem;
+    }
   }
 
   .figma,

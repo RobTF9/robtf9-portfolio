@@ -52,10 +52,7 @@ export default function Home() {
         <Grid title="Currently...">
           <>
             <Card
-              images={[
-                { width: 287, height: 323, src: '/mr-1.png' },
-                { width: 208, height: 520, src: '/mr-2.png' },
-              ]}
+              images={[{ width: 287, height: 323, src: '/mr-1.png' }]}
               project="mr"
               copy={[
                 'Prototyping services to reduce',
