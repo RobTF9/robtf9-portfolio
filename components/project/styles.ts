@@ -71,7 +71,8 @@ export const ProjectWrapper = styled.div`
     }
   }
 
-  ul {
+  ul,
+  ol {
     position: relative;
     list-style-type: disc;
     padding: 0 0 0 2.5rem;
@@ -82,6 +83,10 @@ export const ProjectWrapper = styled.div`
       margin-left: -2.5rem;
       margin-bottom: 1rem;
     }
+  }
+
+  ol {
+    list-style-type: decimal;
   }
 
   .figma,
@@ -95,6 +100,7 @@ export const ProjectWrapper = styled.div`
     width: fit-content;
     border-radius: 0.5rem;
     box-shadow: 0.25rem 0.25rem rgba(0, 0, 0, 0.6);
+    color: var(--wt);
 
     span {
       background: url('/figma.png');
@@ -116,6 +122,18 @@ export const ProjectWrapper = styled.div`
       width: 1.5rem;
       height: 1.5rem;
       margin-right: 0.5rem;
+    }
+  }
+
+  p strong {
+    display: block;
+    color: var(--wt);
+    font-style: italic;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 490px) {
+      font-size: 1.5rem;
     }
   }
 `

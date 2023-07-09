@@ -1,7 +1,7 @@
 import Breadcrumbs from '@/components/breadcrumbs'
 import Card from '@/components/card'
 import Layout from '@/components/layout'
-import Project from '@/components/project'
+import Project, { ProjectImage } from '@/components/project'
 import Head from 'next/head'
 
 export default function CodeHub() {
@@ -15,8 +15,8 @@ export default function CodeHub() {
         <Card
           className="main"
           noEvents
-          project="codehub"
-          images={[{ src: '/codehub.png', width: 140, height: 177 }]}
+          project="codehub-hero"
+          images={[{ src: '/codehub-hero.png', fill: true }]}
           copy={[]}
         />
         <Project
@@ -26,24 +26,29 @@ export default function CodeHub() {
           ]}
         >
           <p>
-            I initially joined CodeHub just as a mentor and occasional wokrshop
-            lead. The most succesful project I ran while there was the build
-            (almost - explained later) of a content API and front end for
-            Bristol Tech Fair, a knowledge source for children who want to learn
-            more about STEM subjects.
+            At CodeHub, I joined as a mentor and conducted workshops covering a
+            wide range of topics, from functional programming in TypeScript to
+            organising research repositories. One of the most successful
+            workshops I facilitated was centred around designing and building a
+            content API and front-end for Bristol Tech Fair, a platform aimed at
+            providing educational resources about STEM subjects for children.
+            Throughout the project, my role involved management and mentoring
+            for all the collaborators involved.
           </p>
+          <q>
+            Mentored 18 developers and 1 designer through an end to end web
+            development project. All now in full time employment and used this
+            project during their interview process.
+          </q>
           <p>
-            I mentored the designer responsible for UI/UX on that part of the
-            project, she had started fresh out of a UX bootcamp. We focused the
-            approach for this project around the gaps in her skillset, what she
-            was missing was a rigourous approach to component design and no
-            experience with usability testing.
-          </p>
-          <p>
-            I introduced her to component driven design, and we collaborated on
-            breaking apart some of her intial mock ups to help her understand
-            how to properly structure and componetise UIs. She then led on the
-            creation of a design system with guidance from me.
+            The designer on the team had recently completed a UX bootcamp and
+            had strong illustration skills. To optimise her skillset for
+            collaborative design team environments, we focused on addressing the
+            gaps in her knowledge. We adopted a structured approach, emphasising
+            component-driven design principles. Working together, we
+            deconstructed her initial mock-ups to help her grasp proper UI
+            structuring and componentization. Additionally, she led the creation
+            of a design system with my guidance.
           </p>
           <a
             className="figma"
@@ -51,6 +56,7 @@ export default function CodeHub() {
           >
             <span /> Open Figma Project
           </a>
+          <ProjectImage img="/codehub-char.png" text="The BTF mascot" />
           <p>
             I also led the engineering effort, one thing I’d observed from my
             time mentoring people looking to get in to the industry is a lack of
@@ -59,43 +65,51 @@ export default function CodeHub() {
             pipeline is on the job.
           </p>
           <p>
-            I set up a repo for the content API that used Express.js and MongoDB
-            to introduce the team to RESTful API design. And a frontend repo
-            using React and Storybook so they could learn to best practice for
-            building component driven UIs. Both repos had extremely strict
-            linting combined with Git hooks to enforce best practice and teach
-            them what contributing to a production codebase is like.
+            For the back-end, we utilized Node.js with Express and MongoDB to
+            create a robust REST API. On the front-end, we leveraged React along
+            with Storybook, enabling engineers to seamlessly translate the
+            component-driven Figma design into code. To ensure adherence to best
+            practices and facilitate a realistic production codebase experience,
+            both repositories employed strict linting rules combined with Git
+            hooks.
           </p>
-
           <a className="github" href="https://github.com/bristol-tech-fair">
             <span /> Open Github Organization
           </a>
-          <section>
-            <h2>What it achieved</h2>
+          <p>
+            <strong>Outcome</strong>While the Bristol Tech Fair project was not
+            released to the public, the primary objective of this endeavour was
+            not the launch itself but rather the learning and growth it
+            facilitated. Out of the 19 participants involved, all of them have
+            successfully transitioned into full-time employment. Although
+            individual brilliance played a significant role in their
+            achievements, each participant cited the Bristol Tech Fair project
+            as a standout example during their interview process.
+          </p>
+          <ol>
             <p>
-              Unfortunately this project was never released, fortunately that
-              wasn’t the point! Of the 19 people who were involved, 19 are now
-              in full time employment. Although I and this project can’t take
-              full credit for the brilliance of the indivduals involved, all
-              used Bristol Tech Fair as an example during their succesful
-              interview process.
+              <strong>Lessons learned</strong>
             </p>
-            <h2>What I&apos;d do differently</h2>
-            <ul>
-              <li>
-                <em>Slightly</em> less strict linting, lot’s of red errors
-                became intimidating for some beginners!
-              </li>
-              <li>
-                Dockerize the project, plenty of issues with local set up that
-                could have been avoided.
-              </li>
-              <li>
-                Use more 3rd party services to build faster, although this
-                wasn’t theobjective would have been nice to get something live.
-              </li>
-            </ul>
-          </section>
+            <li>
+              Adjusting linting Rules: In hindsight, it would have been
+              beneficial to adopt a slightly less strict linting configuration.
+              The abundance of red error messages proved overwhelming for some
+              beginners, potentially hindering their learning experience.
+            </li>
+            <li>
+              Dockerization for Simplified Setup: To mitigate issues encountered
+              during local setup, Dockerizing the project would have been
+              advantageous. This would have provided a standardised and
+              simplified environment for all contributors.
+            </li>
+            <li>
+              Leveraging Third-Party Services: While the project&apos;s
+              objective did not solely focus on achieving a live deployment,
+              incorporating more third-party services could have expedited the
+              development process. This would have allowed us to showcase a live
+              version of the project, further enhancing the learning experience.
+            </li>
+          </ol>
         </Project>
       </Layout>
     </>

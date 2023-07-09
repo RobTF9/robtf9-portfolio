@@ -3,7 +3,6 @@ import Card from '@/components/card'
 import Layout from '@/components/layout'
 import Project, { ProjectImage } from '@/components/project'
 import Head from 'next/head'
-import Image from 'next/image'
 
 export default function Ranges() {
   return (
