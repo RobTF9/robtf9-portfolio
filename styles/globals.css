@@ -1,0 +1,60 @@
+:root {
+  --bk: #111417;
+  --bg: #21262c;
+  --fg: #becad7;
+  --bl: #144a86;
+  --wt: #fff;
+}
+
+html {
+  background-color: var(--bl);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--fg);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.mr {
+  background-color: #26293f;
+}
+
+.papaya {
+  background-color: #1c211c;
+}
+
+.codehub {
+  background-color: #c65a5a;
+}
+
+.ranges {
+  background-color: #1a1b20;
+}
+
+.elliptic {
+  background-image: url('/elliptic.png');
+  background-size: cover;
+  background-color: #13282f;
+}
+
+.parrot {
+  background-color: #395fbf;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+q {
+  font-style: italic;
+  font-weight: 500;
+}
