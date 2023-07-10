@@ -8,9 +8,11 @@ export default function Header() {
     <HeaderWrapper animate={active}>
       <h1>Robert Squires</h1>
       <p>
-        <span>Experienced design, research and technology practitioner, </span>
-        <span>curiously building unprecedented tools and products, </span>
-        <span>passionate about making the internet a better place.</span>
+        <span>Helping companies build better tools and products, </span>
+        <span>
+          solving complicated problems with design, research and tech,{' '}
+        </span>
+        <span>curiously making the internet a better place for 8 years.</span>
       </p>
     </HeaderWrapper>
   )
