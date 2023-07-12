@@ -55,10 +55,10 @@ export default function Ranges() {
             period was accommodating the varied processes, approaches, and
             technical abilities of SANS’ content creators, known as authors
             (hackers turned teachers). To gain insights into the content
-            creation process, I conducted extensive field research by working
-            closely with a variety of authors. This research allowed me to
-            understand their perspectives, thought processes, and content
-            development methodologies.
+            creation process I conducted extensive field research by working
+            closely with a variety of authors. I observed the authoring and
+            infrastucture creation process within ranges.io and with other
+            existing systems.
           </p>
           <ProjectImage
             img="/combined-task-models.jpg"
