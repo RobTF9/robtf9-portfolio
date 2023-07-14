@@ -69,9 +69,9 @@ export const GridCard = styled.a<{ noEvents?: true }>`
     position: relative;
     width: fit-content;
 
-    /* @media screen and (max-width: 490px) {
+    @media screen and (max-width: 445px) {
       display: inline;
-    } */
+    }
   }
 
   p span:after {
