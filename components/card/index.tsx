@@ -36,7 +36,7 @@ export default function Card({
       ))}
       <p>
         {copy.map((c) => (
-          <span key={c}>{c}</span>
+          <span key={c}>{c} </span>
         ))}
       </p>
     </GridCard>
