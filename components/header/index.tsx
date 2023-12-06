@@ -12,7 +12,7 @@ export default function Header() {
         <span>
           solving complicated problems with design, research and tech,{' '}
         </span>
-        <span>curiously making the internet a better place for 8 years.</span>
+        <span>curiously making the internet a better place for 10 years.</span>
       </p>
     </HeaderWrapper>
   )
