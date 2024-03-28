@@ -1,0 +1,28 @@
+:root {
+  --blue: #00acdd;
+  --yellow: #ffe200;
+  --black: #000;
+  --white: #fff;
+  --padding: 1rem;
+
+  --ranges: #1a1b20;
+  --elliptic: #13282f;
+  --perceptive: #fff;
+  --parrot: #317962;
+  --codehub: #b93b3b;
+  --ethvault: #daebf2;
+  --rac: #ef6c00;
+  --panasonic: #e85e51;
+  --maibee: #e0ae29;
+  --oc: #043144;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--blue);
+}

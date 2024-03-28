@@ -1,28 +1,32 @@
-import { useAnimationContext } from '@/context/animations'
-import { Navigation } from './styles'
-import Link from 'next/link'
+import Link from "next/link";
+import styles from "./nav.module.css";
 
-export default function Nav() {
-  const { active } = useAnimationContext()
+interface Props {
+  light?: boolean;
+}
 
+export default function Nav({ light }: Props) {
   return (
-    <Navigation animate={active}>
-      <div>
-        <Link href={'/'}>
-          <span>RS</span>
-        </Link>
-      </div>
+    <nav className={styles.nav}>
+      <Link href={`/`}>Rob Squires</Link>
       <ul>
         <li>
-          <a href="https://www.linkedin.com/in/robtf9/">LinkedIn</a>
+          <a
+            href="https://github.com/RobTF9/"
+            className={light ? styles.light : ""}
+          >
+            Code
+          </a>
         </li>
         <li>
-          <a href="https://github.com/RobTF9">GitHub</a>
-        </li>
-        <li>
-          <a href="/rob-squires-cv.pdf">CV</a>
+          <a
+            href="https://www.linkedin.com/in/robtf9/"
+            className={light ? styles.light : ""}
+          >
+            LinkedIn
+          </a>
         </li>
       </ul>
-    </Navigation>
-  )
+    </nav>
+  );
 }

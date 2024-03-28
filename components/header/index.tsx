@@ -1,19 +1,23 @@
-import { useAnimationContext } from '@/context/animations'
-import { HeaderWrapper } from './styles'
+import Image from "next/image";
+import meAndRani from "@/public/me-and-rani.png";
+import styles from "./header.module.css";
 
 export default function Header() {
-  const { active } = useAnimationContext()
-
   return (
-    <HeaderWrapper animate={active}>
-      <h1>Robert Squires</h1>
-      <p>
-        <span>Helping companies build better tools and products, </span>
-        <span>
-          solving complicated problems with design, research and tech,{' '}
-        </span>
-        <span>curiously making the internet a better place for 10 years.</span>
-      </p>
-    </HeaderWrapper>
-  )
+    <header className={styles.header}>
+      <h1>
+        Helping companies <span>identify valuable opportunities</span> and{" "}
+        <span>solve complicated problems</span>. Using research, design and
+        engineering to craft products that <span>create real impact</span>
+      </h1>
+      <div>
+        <Image
+          src={meAndRani}
+          placeholder="blur"
+          alt="A picture of Rob Squires and his dog, Rani"
+          fill
+        />
+      </div>
+    </header>
+  );
 }

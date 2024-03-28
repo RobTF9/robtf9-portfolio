@@ -1,0 +1,113 @@
+.project {
+  max-width: 980px;
+  padding: var(--padding);
+  margin: 0 auto;
+
+  & > a {
+    display: block;
+    width: 100%;
+    text-align: right;
+    color: var(--blue) !important;
+  }
+
+  header {
+    h1 {
+      color: var(--white);
+      font-weight: 300;
+      font-size: 3rem;
+      letter-spacing: -0.1rem;
+      line-height: 1.666;
+
+      @media screen and (width <= 860px) {
+        font-size: 2rem;
+      }
+
+      @media (width <= 700px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    h1 > span {
+      font-weight: bold;
+      color: var(--yellow);
+    }
+  }
+
+  h2 {
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  p,
+  em,
+  li,
+  ul,
+  a {
+    color: var(--white);
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-weight: 200;
+    margin-bottom: 3rem;
+
+    @media screen and (max-width: 490px) {
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+  }
+
+  em {
+    color: var(--yellow);
+
+    a {
+      color: var(--blue);
+    }
+  }
+
+  li {
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  margin: 3rem 0;
+  height: fit-content;
+
+  img {
+    position: relative !important;
+  }
+
+  video {
+    width: 100%;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  span {
+    opacity: 0.5;
+    color: var(--white);
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-weight: 200;
+    margin-bottom: 3rem;
+
+    @media screen and (max-width: 490px) {
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+  }
+
+  * {
+    color: var(--white);
+  }
+
+  a {
+    color: var(--blue);
+  }
+}

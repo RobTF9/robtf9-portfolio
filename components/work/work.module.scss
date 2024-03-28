@@ -1,0 +1,225 @@
+.work {
+  position: relative;
+  max-width: 100rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--padding);
+
+  @media screen and (width <= 860px) {
+    position: relative;
+    top: auto;
+  }
+
+  @media (width <= 700px) {
+    transform: translateY(-1.4rem);
+  }
+}
+
+.work__header {
+  position: relative;
+  font-size: 5rem;
+  color: var(--yellow);
+  z-index: 2;
+
+  @media (width <= 700px) {
+    font-size: 3rem;
+  }
+}
+
+.work__list {
+  transform: translateY(-1.4rem);
+  position: relative;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  @media (width <= 700px) {
+    transform: translateY(-0.9rem);
+  }
+}
+
+.work__list__item {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:before {
+    content: "Read more";
+    display: block;
+    position: absolute;
+    background-color: var(--yellow);
+    color: var(--black);
+    padding: var(--padding);
+    top: 0;
+    right: var(--padding);
+    z-index: 200;
+    transform: scale(1, 0);
+    transform-origin: 0% 0%;
+    transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+  }
+
+  &:hover:before {
+    color: var(--black);
+    transform: scale(1, 1);
+    transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+  }
+
+  &:nth-of-type(1),
+  &:nth-of-type(2),
+  &:nth-of-type(6),
+  &:nth-of-type(7) {
+    grid-column: span 6;
+    padding-top: 50%;
+
+    @media screen and (width <= 970px) {
+      grid-column: span 12;
+      background-size: contain;
+    }
+
+    @media screen and (width <=560px) {
+      padding-top: 100%;
+    }
+  }
+
+  &:nth-of-type(3),
+  &:nth-of-type(4),
+  &:nth-of-type(5),
+  &:nth-of-type(8),
+  &:nth-of-type(9),
+  &:nth-of-type(10) {
+    grid-column: span 4;
+    padding-top: 100%;
+
+    @media screen and (width <= 1260px) {
+      padding-top: 75%;
+      grid-column: span 6;
+    }
+
+    @media screen and (width <= 970px) {
+      padding-top: 50%;
+      grid-column: span 12;
+    }
+
+    @media screen and (width <=560px) {
+      padding-top: 100%;
+    }
+  }
+}
+
+.work__list__item__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--padding);
+  color: inherit;
+  text-decoration: none;
+
+  & > p {
+    font-weight: lighter;
+
+    & > span {
+      display: block;
+      position: relative;
+      width: fit-content;
+      margin-top: 0.5rem;
+
+      @media screen and (max-width: 560px) {
+        display: inline;
+        line-height: 1.5rem;
+      }
+
+      &:after {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        transform: scale(0, 1);
+        transform-origin: 100% 0%;
+        transition: transform 0.3s cubic-bezier(1, 0, 0, 1);
+      }
+    }
+  }
+
+  &:hover > p > span:after {
+    transform: scale(1, 1);
+    transform-origin: 0% 0%;
+    transition: transform 0.3s cubic-bezier(1, 0, 0, 1);
+  }
+}
+
+.ranges {
+  background-color: var(--ranges);
+}
+
+.elliptic {
+  background-color: var(--elliptic);
+  background-size: cover;
+}
+
+.perceptive {
+  background-color: var(--perceptive);
+  color: var(--black);
+
+  * {
+    color: var(--black);
+  }
+
+  a > p > span:after {
+    background-color: var(--black);
+  }
+}
+
+.parrot {
+  background-color: var(--parrot);
+  background-position: right !important;
+}
+
+.codehub {
+  background-color: var(--codehub);
+}
+
+.ethvault {
+  background-color: var(--ethvault);
+  color: var(--black);
+
+  * {
+    color: var(--black);
+  }
+
+  a > p > span:after {
+    background-color: var(--black);
+  }
+}
+
+.rac {
+  background-color: var(--rac);
+}
+
+.panasonic {
+  background-color: var(--panasonic);
+}
+
+.maibee {
+  background-color: var(--maibee);
+  background-position: right;
+}
+
+.oc {
+  background-color: var(--oc);
+  background-size: cover;
+}

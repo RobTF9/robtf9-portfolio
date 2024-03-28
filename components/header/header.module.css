@@ -1,0 +1,70 @@
+.header {
+  position: relative;
+  max-width: 100rem;
+  margin: 0 auto;
+  height: calc(100vmin - 10rem);
+  padding: 4rem var(--padding) 0;
+
+  @media (height >= 900px) {
+    padding-top: 15vh;
+  }
+
+  @media (width <= 860px), screen and (height <= 700px) {
+    height: fit-content;
+  }
+
+  @media (width <= 700px) {
+    padding: 1rem var(--padding) 0;
+  }
+}
+
+.header > div {
+  --size: 20rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: var(--size);
+  width: var(--size);
+  transform: translateY(6rem);
+
+  @media screen and (width <= 860px), screen and (height <= 700px) {
+    position: relative;
+    margin-left: auto;
+    --size: 10rem;
+  }
+
+  @media (width <= 700px) {
+    transform: translateY(3rem);
+  }
+}
+
+.header > h1 {
+  font-weight: 200;
+  font-size: 3rem;
+  letter-spacing: -0.1rem;
+  line-height: 1.666;
+
+  @media screen and (width >= 1420px) {
+    font-size: 3.25rem;
+  }
+
+  @media screen and (width >= 1477px) {
+    font-size: 3.5rem;
+  }
+
+  @media screen and (width >= 1599px) {
+    font-size: 3.75rem;
+  }
+
+  @media screen and (width <= 860px), screen and (height <= 700px) {
+    font-size: 2rem;
+  }
+
+  @media (width <= 700px) {
+    font-size: 1.5rem;
+  }
+}
+
+.header > h1 > span {
+  font-weight: bold;
+}
