@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./nav.module.css";
+import styles from "./nav.module.scss";
 
 interface Props {
   light?: boolean;
@@ -13,7 +13,7 @@ export default function Nav({ light }: Props) {
         <li>
           <a
             href="https://github.com/RobTF9/"
-            className={light ? styles.light : ""}
+            className={light ? styles.light : styles.dark}
           >
             Code
           </a>
@@ -21,7 +21,7 @@ export default function Nav({ light }: Props) {
         <li>
           <a
             href="https://www.linkedin.com/in/robtf9/"
-            className={light ? styles.light : ""}
+            className={light ? styles.light : styles.dark}
           >
             LinkedIn
           </a>

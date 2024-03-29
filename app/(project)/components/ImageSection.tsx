@@ -10,7 +10,7 @@ interface Props {
 export default function ImageSection({ caption, src }: Props) {
   return (
     <section className={styles.section}>
-      <Image priority placeholder="blur" fill alt={caption + ""} src={src} />
+      <Image placeholder="blur" fill alt={caption + ""} src={src} />
       <em>{caption}</em>
     </section>
   );
