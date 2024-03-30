@@ -26,11 +26,10 @@ export default function PerceptivePage() {
       />
       <h2>Identification of Opportunity</h2>
       <p>
-        When rejoining Magnetic Rock, I was tasked with pinpointing large,
-        untapped markets and user groups with significant cybersecurity
-        responsibilities. I quickly gravitated towards software engineers and
-        application developers, who bear an immense but often deprioritized
-        security burden.
+        During a research project to identify large untapped markets and user
+        groups adjacent to cybersecurity. I quickly gravitated towards software
+        engineers and application developers, who bear an immense but often
+        deprioritized security burden.
       </p>
       <ImageSection
         src={perceptive2}
@@ -57,13 +56,11 @@ export default function PerceptivePage() {
 
       <h2>Iteration to Solution</h2>
       <p>
-        After being made redundant, I partnered with Perceptive&apos;s CEO to
-        explore potential solutions using the research insights. We rapidly
-        prototyped injecting security guidance as early as possible in the
-        software development lifecycle. Our approach landed on leveraging LLMs
-        fine tuned on AWS Bedrock with cybersecurity professionals to analyze
-        new development tickets and surface relevant security implications
-        during the planning phase itself.
+        I rapidly prototyped different concepts for injecting security guidance
+        as early as possible in the software development lifecycle. The approach
+        I landed on was leveraging LLMs fine tuned on AWS Bedrock with
+        cybersecurity professionals to analyze new development tickets and
+        surface relevant security implications during the planning phase itself.
       </p>
       <ImageSection
         src={perceptive3}
