@@ -5,6 +5,7 @@ import elliptc2 from "@/public/img/elliptic-2.jpg";
 import elliptc3 from "@/public/img/elliptic-3.png";
 import elliptc4 from "@/public/img/elliptic-4.jpg";
 import Link from "next/link";
+import Footer from "@/components/footer";
 
 export default function EllipticPage() {
   return (
@@ -71,7 +72,7 @@ export default function EllipticPage() {
         successfully democratized powerful cross-chain tracing abilities in a
         workflow-optimized package tailored to enterprise compliance use cases.
       </p>
-      <Link href="/rac">Next Project</Link>
+      <Footer next="/rac" />
     </>
   );
 }

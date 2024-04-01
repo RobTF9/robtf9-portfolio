@@ -5,6 +5,7 @@ import rac2 from "@/public/img/rac-2.jpg";
 import rac3 from "@/public/img/rac-3.png";
 import rac4 from "@/public/img/rac-4.jpg";
 import Link from "next/link";
+import Footer from "@/components/footer";
 
 export default function RACPage() {
   return (
@@ -64,7 +65,7 @@ export default function RACPage() {
         more coverages. This reinforced the RAC&apos;s trustworthiness while
         unlocking impactful business results.
       </p>
-      <Link href="/codehub">Next Project</Link>
+      <Footer next="/codehub" />
     </>
   );
 }

@@ -3,6 +3,7 @@ import ImageSection from "../components/ImageSection";
 import VideoSection from "../components/VideoSection";
 import parrot2 from "@/public/img/parrot-2.jpg";
 import parrot3 from "@/public/img/parrot-3.jpg";
+import Footer from "@/components/footer";
 
 export default function ParrotPage() {
   return (
@@ -70,7 +71,7 @@ export default function ParrotPage() {
         learning feel more achievable for users while providing mechanisms to
         boost long-term retention.
       </p>
-      <Link href="/panasonic">Next Project</Link>
+      <Footer next="/panasonic" />
     </>
   );
 }

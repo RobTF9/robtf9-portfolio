@@ -3,6 +3,7 @@ import perceptive1 from "@/public/img/perceptive-1.png";
 import perceptive2 from "@/public/img/perceptive-3.png";
 import perceptive3 from "@/public/img/perceptive-2.png";
 import Link from "next/link";
+import Footer from "@/components/footer";
 
 export default function PerceptivePage() {
   return (
@@ -94,7 +95,7 @@ export default function PerceptivePage() {
         adoption of secure coding best practices.
       </p>
       <p>(Will provide update on measured impacts post-launch)</p>
-      <Link href="/ranges">Next Project</Link>
+      <Footer next="/ranges" />
     </>
   );
 }

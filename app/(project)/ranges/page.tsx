@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import ImageSection from "../components/ImageSection";
 import ranges1 from "@/public/img/ranges-1.jpg";
 import ranges2 from "@/public/img/ranges-2.jpg";
@@ -79,7 +80,7 @@ export default function RangesPage() {
         $34.5M annually in operational costs while accelerating author
         productivity in the process.
       </p>
-      <Link href="/elliptic">Next Project</Link>
+      <Footer next="/elliptic" />
     </>
   );
 }

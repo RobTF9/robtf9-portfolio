@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import ImageSection from "../components/ImageSection";
 import maibee1 from "@/public/img/maibee-1.jpg";
 import maibee2 from "@/public/img/maibee-2.png";
@@ -63,7 +64,7 @@ export default function MaibeePage() {
         creating digital experiences able to withstand &quot;going viral&quot;
         from day one.
       </p>
-      <Link href="/oc">Next Project</Link>
+      <Footer next="/oc" />
     </>
   );
 }

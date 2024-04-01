@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import ImageSection from "../components/ImageSection";
 import VideoSection from "../components/VideoSection";
 import panasonic1 from "@/public/img/panasonic-1.jpg";
@@ -74,7 +75,7 @@ export default function PanasonicPage() {
         conversion bottleneck into a sales acceleration tool demonstrating
         substantial business impact.
       </p>
-      <Link href="/ethvault">Next Project</Link>
+      <Footer next="/ethvault" />
     </>
   );
 }

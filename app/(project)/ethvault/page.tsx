@@ -5,6 +5,7 @@ import ethvault1 from "@/public/img/ethvault-1.jpg";
 import ethvault2 from "@/public/img/ethvault-2.jpg";
 import ethvault3 from "@/public/img/ethvault-3.jpg";
 import Link from "next/link";
+import Footer from "@/components/footer";
 
 export default function EthvaultPage() {
   return (
@@ -61,7 +62,7 @@ export default function EthvaultPage() {
         paradigms. It also highlighted how community trust accumulates through
         network effects, often prioritized over upfront transparency.
       </p>
-      <Link href="/maibee">Next Project</Link>
+      <Footer next="/maibee" />
     </>
   );
 }

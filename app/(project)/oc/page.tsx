@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import ImageSection from "../components/ImageSection";
 import VideoSection from "../components/VideoSection";
 import oc1 from "@/public/img/oc-1.jpg";
@@ -75,7 +76,7 @@ export default function OcPage() {
         usability while unlocking significant time savings. My approach balanced
         top-line marketing needs with bottom-line development efficiencies.
       </p>
-      <Link href="/perceptive">Next Project</Link>
+      <Footer next="/perceptive" />
     </>
   );
 }

@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--padding);
+
+  a {
+    color: var(--blue);
+  }
+
+  a:last-of-type {
+    margin-left: auto;
+  }
+}
