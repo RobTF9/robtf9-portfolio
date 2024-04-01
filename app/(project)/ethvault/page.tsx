@@ -1,11 +1,10 @@
-import React from "react";
 import ImageSection from "../components/ImageSection";
 import VideoSection from "../components/VideoSection";
 import ethvault1 from "@/public/img/ethvault-1.jpg";
 import ethvault2 from "@/public/img/ethvault-2.jpg";
 import ethvault3 from "@/public/img/ethvault-3.jpg";
-import Link from "next/link";
 import Footer from "@/components/footer";
+import Image from "next/image";
 
 export default function EthvaultPage() {
   return (
@@ -16,10 +15,14 @@ export default function EthvaultPage() {
           <span>Ethereum wallet</span>
         </h1>
       </header>
-      <ImageSection
-        src={ethvault1}
-        caption="Responsive marketing site designs"
-      />
+      <ImageSection caption="Responsive marketing site designs">
+        <Image
+          fill
+          placeholder="blur"
+          src={ethvault1}
+          alt="Responsive marketing site designs"
+        />
+      </ImageSection>
       <h2>Identification of Opportunity</h2>
       <p>
         As cryptocurrency gained greater traction, users sought trustworthy
@@ -27,7 +30,14 @@ export default function EthvaultPage() {
         applications (dApps). An opportunity emerged to provide an open and
         transparent wallet experience.
       </p>
-      <ImageSection src={ethvault2} caption="Ethvault on mobile" />
+      <ImageSection caption="Ethvault on mobile">
+        <Image
+          fill
+          placeholder="blur"
+          alt="Ethvault on mobile"
+          src={ethvault2}
+        />
+      </ImageSection>
       <h2>Definition of Problem</h2>
       <p>
         Our hypothesis was that an open-source, in-browser wallet and dApp
@@ -35,7 +45,9 @@ export default function EthvaultPage() {
         browser extensions. We believed allowing users to audit the code and
         avoid installing additional software would instill more confidence.
       </p>
-      <ImageSection src={ethvault3} caption="Component design" />
+      <ImageSection caption="Component design">
+        <Image fill placeholder="blur" src={ethvault3} alt="Component design" />
+      </ImageSection>
       <h2>Iteration to Solution</h2>
       <p>
         As a designer and UI engineer, I worked on iterating and refining an

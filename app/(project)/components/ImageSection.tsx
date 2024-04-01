@@ -1,16 +1,15 @@
-import Image, { StaticImageData } from "next/image";
 import styles from "../layout.module.scss";
 import { ReactNode } from "react";
 
 interface Props {
   caption: string | ReactNode;
-  src: StaticImageData;
+  children: ReactNode;
 }
 
-export default function ImageSection({ caption, src }: Props) {
+export default function ImageSection({ caption, children }: Props) {
   return (
     <section className={styles.section}>
-      <Image placeholder="blur" fill alt={caption + ""} src={src} />
+      {children}
       <em>{caption}</em>
     </section>
   );

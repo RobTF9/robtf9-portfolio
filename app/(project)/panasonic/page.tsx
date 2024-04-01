@@ -4,7 +4,7 @@ import VideoSection from "../components/VideoSection";
 import panasonic1 from "@/public/img/panasonic-1.jpg";
 import panasonic2 from "@/public/img/panasonic-2.jpg";
 import panasonic3 from "@/public/img/panasonic-3.png";
-import Link from "next/link";
+import Image from "next/image";
 
 export default function PanasonicPage() {
   return (
@@ -15,10 +15,14 @@ export default function PanasonicPage() {
           <span>increased number of sales</span> through site
         </h1>
       </header>
-      <ImageSection
-        src={panasonic1}
-        caption="An example of how cluttered and unintuitive parametric searches can be"
-      />
+      <ImageSection caption="An example of how cluttered and unintuitive parametric searches can be">
+        <Image
+          fill
+          placeholder="blur"
+          src={panasonic1}
+          alt="An example of how cluttered and unintuitive parametric searches can be"
+        />
+      </ImageSection>
       <h2>Identification of Opportunity</h2>
       <p>
         While working on a new design system for Panasonic Industrial, I noticed
@@ -27,10 +31,14 @@ export default function PanasonicPage() {
         experience loaded all products upfront and relied on cumbersome top
         filters, resulting in a slow and frustrating process.
       </p>
-      <ImageSection
-        src={panasonic2}
-        caption="What a user first saw on the old search experience"
-      />
+      <ImageSection caption="What a user first saw on the old search experience">
+        <Image
+          fill
+          placeholder="blur"
+          src={panasonic2}
+          alt="What a user first saw on the old search experience"
+        />
+      </ImageSection>
       <h2>Definition of Problem</h2>
       <p>
         Through usability testing, I aimed to deeply understand the task models
@@ -39,10 +47,14 @@ export default function PanasonicPage() {
         to incrementally narrow options by selecting key categories before
         seeing any product data.
       </p>
-      <ImageSection
-        src={panasonic3}
-        caption="The refined interface, visible only after explicit categories have been selected"
-      />
+      <ImageSection caption="The refined interface, visible only after explicit categories have been selected">
+        <Image
+          fill
+          placeholder="blur"
+          src={panasonic3}
+          alt="The refined interface, visible only after explicit categories have been selected"
+        />
+      </ImageSection>
       <h2>Iteration to Solution</h2>
       <p>
         I iterated on redesigning the parametric search flow to be both simple

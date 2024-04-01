@@ -26,6 +26,10 @@
     font-weight: bold;
     color: var(--white);
     margin-bottom: 1rem;
+
+    @media (width <= 700px) {
+      font-size: 1.25rem;
+    }
   }
 
   p,
@@ -63,6 +67,7 @@
 
   img {
     position: relative !important;
+    width: 100%;
   }
 
   video {

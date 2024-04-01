@@ -1,11 +1,10 @@
-import React from "react";
 import ImageSection from "../components/ImageSection";
 import elliptc1 from "@/public/img/elliptic-1.jpg";
 import elliptc2 from "@/public/img/elliptic-2.jpg";
 import elliptc3 from "@/public/img/elliptic-3.png";
 import elliptc4 from "@/public/img/elliptic-4.jpg";
-import Link from "next/link";
 import Footer from "@/components/footer";
+import Image from "next/image";
 
 export default function EllipticPage() {
   return (
@@ -16,10 +15,14 @@ export default function EllipticPage() {
           <span>reduced AML investigation duration by 75%</span>
         </h1>
       </header>
-      <ImageSection
-        src={elliptc1}
-        caption="The old journey, across 4 seperate apps, needed to investigate a suspicious wallet"
-      />
+      <ImageSection caption="The old journey, across 4 seperate apps, needed to investigate a suspicious wallet">
+        <Image
+          fill
+          placeholder="blur"
+          src={elliptc1}
+          alt="The old journey, across 4 seperate apps, needed to investigate a suspicious wallet"
+        />
+      </ImageSection>
       <h2>Identification of Opportunity</h2>
       <p>
         At Elliptic, a blockchain intelligence company, I worked on the
@@ -40,10 +43,14 @@ export default function EllipticPage() {
         efficiently with the current toolset. Addressing this data requirement
         meant an extensive API refactor - a major undertaking.
       </p>
-      <ImageSection
-        src={elliptc2}
-        caption="An early information architecture artefact to refine the new data structure"
-      />
+      <ImageSection caption="An early information architecture artefact to refine the new data structure">
+        <Image
+          alt="An early information architecture artefact to refine the new data structure"
+          fill
+          placeholder="blur"
+          src={elliptc2}
+        />
+      </ImageSection>
       <h2>Iteration to Solution</h2>
       <p>
         To provide clarity upfront, I conducted an information architecture
@@ -54,14 +61,22 @@ export default function EllipticPage() {
         contextual information in one place, users had what they needed to
         rapidly file reports.
       </p>
-      <ImageSection
-        src={elliptc3}
-        caption="A refined version of the information architecture diagram"
-      />
-      <ImageSection
-        src={elliptc4}
-        caption="The final version of the app, allowing a full investigation in a single product"
-      />
+      <ImageSection caption="A refined version of the information architecture diagram">
+        <Image
+          fill
+          placeholder="blur"
+          alt="A refined version of the information architecture diagram"
+          src={elliptc3}
+        />
+      </ImageSection>
+      <ImageSection caption="The final version of the app, allowing a full investigation in a single product">
+        <Image
+          fill
+          placeholder="blur"
+          src={elliptc4}
+          alt="The final version of the app, allowing a full investigation in a single product"
+        ></Image>
+      </ImageSection>
       <h2>Impact</h2>
       <p>
         The streamlined Holistic experience reduced the average time for

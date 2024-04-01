@@ -1,11 +1,10 @@
-import React from "react";
 import ImageSection from "../components/ImageSection";
 import rac1 from "@/public/img/rac-1.jpg";
 import rac2 from "@/public/img/rac-2.jpg";
 import rac3 from "@/public/img/rac-3.png";
 import rac4 from "@/public/img/rac-4.jpg";
-import Link from "next/link";
 import Footer from "@/components/footer";
+import Image from "next/image";
 
 export default function RACPage() {
   return (
@@ -16,10 +15,14 @@ export default function RACPage() {
           <span>8% annual revenue increase</span>
         </h1>
       </header>
-      <ImageSection
-        src={rac1}
-        caption="Information architecture for variants of the prototype"
-      />
+      <ImageSection caption="Information architecture for variants of the prototype">
+        <Image
+          fill
+          placeholder="blur"
+          src={rac1}
+          alt="Information architecture for variants of the prototype"
+        />
+      </ImageSection>
       <h2>Identification of Opportunity</h2>
       <p>
         New regulations from the IDD required the RAC to allow customers to
@@ -28,10 +31,14 @@ export default function RACPage() {
         regulations was necessary, the business viewed this as a potential risk
         to revenue streams.
       </p>
-      <ImageSection
-        src={rac2}
-        caption="The introduction the new checkout flow"
-      />
+      <ImageSection caption="The introduction the new checkout flow">
+        <Image
+          fill
+          placeholder="blur"
+          src={rac2}
+          alt="The introduction the new checkout flow"
+        />
+      </ImageSection>
       <h2>Definition of Problem</h2>
       <p>
         To assess the true impact, I designed a research project investigating
@@ -39,10 +46,14 @@ export default function RACPage() {
         chose when customizing their breakdown packages during checkout. With an
         objective to prove comprehension was key to mitigating revenue risks.
       </p>
-      <ImageSection
-        src={rac3}
-        caption="An example of a question, the cart to the right updates as users add elements"
-      />
+      <ImageSection caption="An example of a question, the cart to the right updates as users add elements">
+        <Image
+          fill
+          placeholder="blur"
+          src={rac3}
+          alt="An example of a question, the cart to the right updates as users add elements"
+        />
+      </ImageSection>
       <h2>Iteration to Solution</h2>
       <p>
         This initiative operated in weekly agile sprints. From Monday-Wednesday,
@@ -54,7 +65,14 @@ export default function RACPage() {
         oversaw development as we transitioned this prototype design into
         production on the live RAC platform.
       </p>
-      <ImageSection src={rac4} caption="The checkout flow on mobile devices" />
+      <ImageSection caption="The checkout flow on mobile devices">
+        <Image
+          fill
+          placeholder="blur"
+          src={rac4}
+          alt="The checkout flow on mobile devices"
+        />
+      </ImageSection>
       <h2>Impact</h2>
       <p>
         Not only did the revamped user-centric journey meet compliance standards

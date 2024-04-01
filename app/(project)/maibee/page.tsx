@@ -5,6 +5,7 @@ import maibee2 from "@/public/img/maibee-2.png";
 import maibee3 from "@/public/img/maibee-3.png";
 import maibee4 from "@/public/img/maibee-3.png";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function MaibeePage() {
   return (
@@ -14,20 +15,23 @@ export default function MaibeePage() {
           Full stack build of <span>ecommerce site</span>
         </h1>
       </header>
-      <ImageSection
-        src={maibee1}
-        caption="Logo variants provided by Maibee, used to define the UI system"
-      />
+      <ImageSection caption="Logo variants provided by Maibee, used to define the UI system">
+        <Image
+          src={maibee1}
+          alt="Logo variants provided by Maibee, used to define the UI system"
+          fill
+          placeholder="blur"
+        />
+      </ImageSection>
       <h2>Identification of Opportunity</h2>
       <p>
         MaiBee, an Instagram fashion brand with a following of nearly 800k,
         needed a highly scalable ecommerce website capable of handling immense
         traffic spikes after promoting new product drops to their audience.
       </p>
-      <ImageSection
-        src={maibee2}
-        caption="Landing page and product page on mobile"
-      />
+      <ImageSection caption="Landing page and product page on mobile">
+        <Image src={maibee2} alt="Landing page and product page on mobile" />
+      </ImageSection>
       <h2>Definition of Problem</h2>
       <p>
         The key challenge was ensuring the site could remain resilient and fast
@@ -36,7 +40,14 @@ export default function MaibeePage() {
         design needed to reflect MaiBee&apos;s unique brand aesthetic in a
         simple yet extensible UI system.
       </p>
-      <ImageSection src={maibee3} caption="Desktop product list page" />
+      <ImageSection caption="Desktop product list page">
+        <Image
+          src={maibee3}
+          alt="Desktop product list page"
+          fill
+          placeholder="blur"
+        />
+      </ImageSection>
       <h2>Iteration to Solution</h2>
       <p>
         On the design front, I created a comprehensive UI kit and component
@@ -47,10 +58,14 @@ export default function MaibeePage() {
         time, this approach minimized backend strain during high traffic
         periods.
       </p>
-      <ImageSection
-        src={maibee4}
-        caption="Individual product pages on mobile"
-      />
+      <ImageSection caption="Individual product pages on mobile">
+        <Image
+          src={maibee4}
+          alt="Individual product pages on mobile"
+          fill
+          placeholder="blur"
+        />
+      </ImageSection>
       <h2>Impact</h2>
       <p>
         The final MaiBee ecommerce site successfully maintained performance and

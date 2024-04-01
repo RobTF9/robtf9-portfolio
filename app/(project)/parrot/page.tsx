@@ -4,6 +4,7 @@ import VideoSection from "../components/VideoSection";
 import parrot2 from "@/public/img/parrot-2.jpg";
 import parrot3 from "@/public/img/parrot-3.jpg";
 import Footer from "@/components/footer";
+import Image from "next/image";
 
 export default function ParrotPage() {
   return (
@@ -40,10 +41,14 @@ export default function ParrotPage() {
         apps. With a large disapora residing in the UK and wanting to connect
         with the language but having no straightforward way to do so.
       </p>
-      <ImageSection
-        src={parrot2}
-        caption="A WIP for a new feature teaching users the Bengali alphabet"
-      />
+      <ImageSection caption="A WIP for a new feature teaching users the Bengali alphabet">
+        <Image
+          fill
+          placeholder="blur"
+          src={parrot2}
+          alt="A WIP for a new feature teaching users the Bengali alphabet"
+        />
+      </ImageSection>
       <h2>Iteration to Solution</h2>
       <p>
         I initially built a proof-of-concept app called &quot;Lexicon&quot; that
@@ -57,10 +62,14 @@ export default function ParrotPage() {
         vocabulary feel more natural and achievable through bite-sized
         microlearning moments.
       </p>
-      <ImageSection
-        src={parrot3}
-        caption="Interface designs for adding multiple languages to teach your parrot"
-      />
+      <ImageSection caption="Interface designs for adding multiple languages to teach your parrot">
+        <Image
+          src={parrot3}
+          alt="Interface designs for adding multiple languages to teach your parrot"
+          placeholder="blur"
+          fill
+        />
+      </ImageSection>
       <h2>Impact</h2>
       <p>
         The parrot metaphor significantly improved engagement and retention. My

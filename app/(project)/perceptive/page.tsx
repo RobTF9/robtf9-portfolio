@@ -2,8 +2,8 @@ import ImageSection from "../components/ImageSection";
 import perceptive1 from "@/public/img/perceptive-1.png";
 import perceptive2 from "@/public/img/perceptive-3.png";
 import perceptive3 from "@/public/img/perceptive-2.png";
-import Link from "next/link";
 import Footer from "@/components/footer";
+import Image from "next/image";
 
 export default function PerceptivePage() {
   return (
@@ -16,7 +16,6 @@ export default function PerceptivePage() {
         </h1>
       </header>
       <ImageSection
-        src={perceptive1}
         caption={
           <>
             How Perceptive works in a nutshell, connect on{" "}
@@ -24,7 +23,14 @@ export default function PerceptivePage() {
             you&apos;d like a demo!
           </>
         }
-      />
+      >
+        <Image
+          src={perceptive1}
+          alt="Perceptive workflow"
+          fill
+          placeholder="blur"
+        />
+      </ImageSection>
       <h2>Identification of Opportunity</h2>
       <p>
         During a research project to identify large untapped markets and user
@@ -32,10 +38,14 @@ export default function PerceptivePage() {
         engineers and application developers, who bear an immense but often
         deprioritized security burden.
       </p>
-      <ImageSection
-        src={perceptive2}
-        caption="Observed models of different software development lifecycles and where security is considered"
-      />
+      <ImageSection caption="Observed models of different software development lifecycles and where security is considered">
+        <Image
+          fill
+          placeholder="blur"
+          src={perceptive2}
+          alt="Observed models of different software development lifecycles and where security is considered"
+        />
+      </ImageSection>
       <h2>Definition of Problem</h2>
       <p>
         Through over 30 interviews and task modeling sessions across engineering
@@ -46,7 +56,7 @@ export default function PerceptivePage() {
         <li>Engineers lack guidance on what security issues to watch for</li>
         <li>Competing priorities make security a lower focus day-to-day</li>
         <li>
-          Product managers want earlier infosec involvement but don&apos;t know
+          Product managers asked to involve infosec earlier but unsure of
           optimal timing
         </li>
         <li>
@@ -63,10 +73,14 @@ export default function PerceptivePage() {
         cybersecurity professionals to analyze new development tickets and
         surface relevant security implications during the planning phase itself.
       </p>
-      <ImageSection
-        src={perceptive3}
-        caption="The benefits of considering security, early"
-      />
+      <ImageSection caption="The benefits of considering security, early">
+        <Image
+          fill
+          placeholder="blur"
+          src={perceptive3}
+          alt="The benefits of considering security, early"
+        />
+      </ImageSection>
       <h2>Impact</h2>
       <p>
         Launching in April 2024, Perceptive aims to foster an improved

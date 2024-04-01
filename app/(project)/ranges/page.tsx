@@ -6,7 +6,7 @@ import ranges3 from "@/public/img/ranges-3.jpg";
 import ranges4 from "@/public/img/ranges-4.jpg";
 import ranges5 from "@/public/img/ranges-5.jpg";
 import ranges6 from "@/public/img/ranges-6.jpg";
-import Link from "next/link";
+import Image from "next/image";
 
 export default function RangesPage() {
   return (
@@ -17,10 +17,14 @@ export default function RangesPage() {
           <span>saved $34.5 million a year</span> in operational costs
         </h1>
       </header>
-      <ImageSection
-        src={ranges1}
-        caption="Typical setting for a Ranges.io competition, CyberThreat 2023, sponsored by NCSC"
-      />
+      <ImageSection caption="Typical setting for a Ranges.io competition, CyberThreat 2023, sponsored by NCSC">
+        <Image
+          fill
+          placeholder="blur"
+          src={ranges1}
+          alt="Typical setting for a Ranges.io competition, CyberThreat 2023, sponsored by NCSC"
+        />
+      </ImageSection>
       <h2>Identification of Opportunity</h2>
       <p>
         When I joined Ranges.io (formerly Tomahawque) as the first product
@@ -31,10 +35,14 @@ export default function RangesPage() {
         Their key issue was needing to fully build and test events themselves,
         wasting months per event.
       </p>
-      <ImageSection
-        src={ranges2}
-        caption="Diagrams created of various authoring workflows during research"
-      />
+      <ImageSection caption="Diagrams created of various authoring workflows during research">
+        <Image
+          fill
+          placeholder="blur"
+          src={ranges2}
+          alt="Diagrams created of various authoring workflows during research"
+        />
+      </ImageSection>
       <h2>Definition of Problem</h2>
       <p>
         During a task modelling research project to understand the workflow of
@@ -45,10 +53,14 @@ export default function RangesPage() {
         content production. I identified the editor as a major bottleneck
         limiting the platform&apos;s potential.
       </p>
-      <ImageSection
-        src={ranges3}
-        caption="The initial form based authoring experience"
-      />
+      <ImageSection caption="The initial form based authoring experience">
+        <Image
+          src={ranges3}
+          alt="The initial form based authoring experience"
+          placeholder="blur"
+          fill
+        />
+      </ImageSection>
       <h2>Iteration to Solution</h2>
       <p>
         I led design engineering on an editable layer placed over the player
@@ -60,18 +72,30 @@ export default function RangesPage() {
         solution cut average testing time down to just 2 weeks per event.
       </p>
 
-      <ImageSection
-        src={ranges4}
-        caption="An early prototype with the editor and preview side by side"
-      />
-      <ImageSection
-        src={ranges5}
-        caption="The preview mode for the new authoring experience"
-      />
-      <ImageSection
-        src={ranges6}
-        caption="The editor mode, author only interactions are distinguised with dashed borders"
-      />
+      <ImageSection caption="An early prototype with the editor and preview side by side">
+        <Image
+          src={ranges4}
+          alt="An early prototype with the editor and preview side by side"
+          fill
+          placeholder="blur"
+        />
+      </ImageSection>
+      <ImageSection caption="The preview mode for the new authoring experience">
+        <Image
+          src={ranges5}
+          alt="The preview mode for the new authoring experience"
+          fill
+          placeholder="blur"
+        />
+      </ImageSection>
+      <ImageSection caption="The editor mode, author only interactions are distinguised with dashed borders">
+        <Image
+          src={ranges6}
+          alt="The editor mode, author only interactions are distinguised with dashed borders"
+          fill
+          placeholder="blur"
+        />
+      </ImageSection>
       <h2>Impact</h2>
       <p>
         My improvements drove an 18-month acquisition by SANS Institute, the

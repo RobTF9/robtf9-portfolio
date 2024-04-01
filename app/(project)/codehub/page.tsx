@@ -1,7 +1,7 @@
-import React from "react";
 import ImageSection from "../components/ImageSection";
 import codehub1 from "@/public/img/codehub-1.jpg";
-import Link from "next/link";
+import Footer from "@/components/footer";
+import Image from "next/image";
 
 export default function CodehubPage() {
   return (
@@ -12,10 +12,14 @@ export default function CodehubPage() {
           <span>got 16 designers and developers their first job</span>
         </h1>
       </header>
-      <ImageSection
-        src={codehub1}
-        caption="Workshop Wednesdays before the pandemic"
-      />
+      <ImageSection caption="Workshop Wednesdays before the pandemic">
+        <Image
+          src={codehub1}
+          placeholder="blur"
+          fill
+          alt="Workshop Wednesdays before the pandemic"
+        />
+      </ImageSection>
       <h2>Identification of Opportunity</h2>
       <p>
         During the COVID pandemic, coding groups Codehub and Women&apos;s Tech
@@ -59,7 +63,7 @@ export default function CodehubPage() {
         career-accelerating results. This is one of my proudest professional
         achievements for its direct positive impact.
       </p>
-      <Link href="/parrot">Next Project</Link>
+      <Footer next="/parrot" />
     </>
   );
 }

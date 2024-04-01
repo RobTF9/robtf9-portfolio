@@ -5,7 +5,7 @@ import oc1 from "@/public/img/oc-1.jpg";
 import oc2 from "@/public/img/oc-2.png";
 import oc3 from "@/public/img/oc-3.png";
 import oc4 from "@/public/img/oc-4.png";
-import Link from "next/link";
+import Image from "next/image";
 
 export default function OcPage() {
   return (
@@ -15,10 +15,14 @@ export default function OcPage() {
           Lead creation of a new <span>design system</span>
         </h1>
       </header>
-      <ImageSection
-        src={oc1}
-        caption="Illustration system to accompany articles"
-      />
+      <ImageSection caption="Illustration system to accompany articles">
+        <Image
+          src={oc1}
+          alt="Illustration system to accompany articles"
+          fill
+          placeholder="blur"
+        />
+      </ImageSection>
       <h2>Identification of Opportunity</h2>
       <p>
         At Osborne Clarke, repetitive tasks around interface components were
@@ -26,7 +30,14 @@ export default function OcPage() {
         website ecosystem. An opportunity emerged to standardize design and
         development workflows through a cohesive design system.
       </p>
-      <ImageSection src={oc2} caption="Responsive typography system" />
+      <ImageSection caption="Responsive typography system">
+        <Image
+          src={oc2}
+          alt="Responsive typography system"
+          fill
+          placeholder="blur"
+        />
+      </ImageSection>
       <h2>Definition of Problem</h2>
       <p>
         My research identified key areas the existing website experience
@@ -37,11 +48,22 @@ export default function OcPage() {
         system could solve these issues while simultaneously reducing rework for
         developers.
       </p>
-      <ImageSection src={oc3} caption="Mobile views of the site" />
-      <ImageSection
-        src={oc4}
-        caption="Desktop view of the 'Insights' homepage"
-      />
+      <ImageSection caption="Mobile views of the site">
+        <Image
+          src={oc3}
+          alt="Mobile views of the site"
+          fill
+          placeholder="blur"
+        />
+      </ImageSection>
+      <ImageSection caption="Desktop view of the 'Insights' homepage">
+        <Image
+          fill
+          placeholder="blur"
+          src={oc4}
+          alt="Desktop view of the 'Insights' homepage"
+        />
+      </ImageSection>
       <h2>Iteration to Solution</h2>
       <p>
         I led the ideation and proposal for Osborne Clarke&apos;s design system.
