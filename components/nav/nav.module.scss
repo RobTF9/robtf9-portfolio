@@ -1,28 +1,40 @@
-.nav {
+.nav,
+.light_nav {
   position: relative;
   margin: 0 auto;
   max-width: 100rem;
   padding: var(--padding);
   display: flex;
-  justify-content: space-between;
-}
+  gap: 0.5rem;
 
-.nav > a {
-  font-weight: bold;
-  color: var(--yellow);
-  text-decoration: none;
+  a {
+    color: var(--black);
+  }
+
+  & > a {
+    font-weight: bold;
+    color: var(--yellow);
+    text-decoration: none;
+  }
+
+  span,
+  p {
+    font-weight: 200;
+    color: var(--white);
+  }
+
+  span {
+    opacity: 0.6;
+  }
 }
 
 .nav > ul {
   list-style: none;
   display: flex;
   gap: var(--padding);
+  margin-left: auto;
 }
 
-.light {
-  color: var(--white);
-}
-
-.dark {
-  color: var(--black);
+.light_nav {
+  max-width: 980px;
 }
