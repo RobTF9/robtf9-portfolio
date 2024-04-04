@@ -4,6 +4,7 @@ import perceptive2 from "@/public/img/perceptive-3.png";
 import perceptive3 from "@/public/img/perceptive-2.png";
 import Footer from "@/components/footer";
 import Image from "next/image";
+import VideoSection from "../components/VideoSection";
 
 export default function PerceptivePage() {
   return (
@@ -15,22 +16,10 @@ export default function PerceptivePage() {
           funding, designed and engineered initial product
         </h1>
       </header>
-      <ImageSection
-        caption={
-          <>
-            How Perceptive works in a nutshell, connect on{" "}
-            <a href="https://www.linkedin.com/in/robtf9/">LinkedIn</a> if
-            you&apos;d like a demo!
-          </>
-        }
-      >
-        <Image
-          src={perceptive1}
-          alt="Perceptive workflow"
-          fill
-          placeholder="blur"
-        />
-      </ImageSection>
+      <VideoSection
+        src="/img/perceptive-demo.mp4"
+        caption="Perceptive in action, connect on LinkedIn if you'd like a full demo"
+      ></VideoSection>
       <h2>Identification of Opportunity</h2>
       <p>
         During a research project to identify large untapped markets and user
@@ -73,12 +62,12 @@ export default function PerceptivePage() {
         cybersecurity professionals to analyze new development tickets and
         surface relevant security implications during the planning phase itself.
       </p>
-      <ImageSection caption="The benefits of considering security, early">
+      <ImageSection caption="How Perceptive works, in a nutshell">
         <Image
+          src={perceptive1}
+          alt="Perceptive workflow"
           fill
           placeholder="blur"
-          src={perceptive3}
-          alt="The benefits of considering security, early"
         />
       </ImageSection>
       <h2>Impact</h2>
